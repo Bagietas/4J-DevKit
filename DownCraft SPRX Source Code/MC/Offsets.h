@@ -49,7 +49,7 @@ enum Address
 {
 	HUD = 0x000,
 	LOCK = 0x001,
-}
+};
 
 namespace Offsets
 {
