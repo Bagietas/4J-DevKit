@@ -1,0 +1,1347 @@
+﻿  prx.cpp
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\PS3.h(259,9): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\PS3.h(598,16): warning 2520: invalid narrowing conversion from "int" to "char"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\dialog.h(230,6): warning 178: variable "ret" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\dialog.h(272,6): warning 552: variable "ret" was set but never used
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\UI.h(11,22): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\UI.h(15,20): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\UI.h(47,30): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(22,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(26,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(65,7): warning 429: qualified name is not allowed in member declaration
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(42,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(51,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(54,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(57,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(60,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(91,9): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(95,10): warning 432: returning reference to local temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(237,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(307,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\struct.h(422,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\var.h(483,17): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Hooking.h(11): warning 942: missing return statement at end of non-void function "asm_SetPresenceDetails_Hook"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Hooking.h(22): warning 942: missing return statement at end of non-void function "asm_destroyBlockHook"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(65,63): warning 1322: taking the address of a temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(65,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(65,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(69,63): warning 1322: taking the address of a temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(69,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(69,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\GameFunctionsCaller.h(73,89): warning 1322: taking the address of a temporary
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(215,8): warning 1070: returning pointer to local variable
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(301,15): warning 178: variable "srl" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(540,13): warning 178: variable "name" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(551,29): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (2 of keyboard) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(551,34): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (3 of keyboard) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(637,8): warning 1070: returning pointer to local variable
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(652,9): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(661,9): warning 1070: returning pointer to local variable
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(664): warning 942: missing return statement at end of non-void function "SendRequest"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(671,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(679,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(686,2): warning 551: variable "FreeMemory" is used before its value is set
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(687,16): warning 551: variable "HeapFree" is used before its value is set
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(688,2): warning 551: variable "UsedMemory" is used before its value is set
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Functions.h(749,36): warning 552: parameter "retBuffer" was set but never used
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\OSK.h(17,9): warning 1628: argument of type "char *(*)(const std::time_t *)" is incompatible with parameter (1 of memset) of type "void *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\OSK.h(75,2): warning 112: statement is unreachable
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(8,7): warning 178: variable "startl" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(9,7): warning 178: variable "endl" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(187,5): warning 178: variable "width" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(358,8): warning 178: variable "systemperature" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(560,12): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(561,14): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(567,13): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\HudsFunctions.h(568,15): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(12,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(18,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(28,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(34,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(45,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(49,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(119,42): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(127,3): warning 176: subscript out of range
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(158,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(213,35): warning 2520: invalid narrowing conversion from "int" to "unsigned char"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(631,103): warning 175: expression has no effect
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(631,103): warning 175: expression has no effect
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(681,8): warning 178: variable "color2" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\huds.h(611,5): warning 178: variable "color2" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(60,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(65,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(74,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(79,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(88,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(93,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(102,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(107,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(116,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(121,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(130,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(135,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(144,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(149,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(158,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(163,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(172,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(177,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(186,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(191,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(202,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(209,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(220,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(227,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(236,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(241,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(250,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(255,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(264,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(269,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(278,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(283,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(292,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(297,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(306,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(311,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(322,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(329,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(340,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(347,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(358,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(365,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(376,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(383,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(394,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(401,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(412,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(419,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(433,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(443,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(457,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(467,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(478,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(485,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(496,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(503,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(514,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(521,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(532,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(539,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(550,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(557,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(568,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(575,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(586,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(593,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(604,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(611,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(622,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(629,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(640,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(647,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(658,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(665,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(676,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(683,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(694,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(701,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(712,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(719,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(730,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(737,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(748,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(755,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(766,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(773,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(784,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(791,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(802,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(809,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(820,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(827,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(838,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(845,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(856,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(863,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(874,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(881,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(892,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(899,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(910,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(917,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(928,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(935,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(946,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(953,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(964,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(971,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(982,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(989,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1000,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1007,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1018,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1025,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1036,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1043,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1054,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1061,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1072,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1079,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1090,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1097,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1108,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1115,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1126,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1133,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1144,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1151,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1162,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1169,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1183,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1193,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1204,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1211,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1222,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1229,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1240,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1247,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1258,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1265,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1276,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1283,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1294,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1301,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1312,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1319,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1330,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1337,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1348,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1355,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1370,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1381,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1392,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1399,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1410,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1417,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1428,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1435,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1446,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1453,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1464,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1471,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1486,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1497,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1508,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1515,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1526,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1533,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1544,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1551,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1562,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1569,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1580,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1587,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1598,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1605,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1616,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1623,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1634,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1641,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1652,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1659,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1670,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1677,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1688,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1695,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1706,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1713,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1724,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1731,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1742,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1749,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1760,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1767,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1778,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1785,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1796,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1803,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1814,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1821,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1832,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1839,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1850,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1857,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1868,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1875,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1886,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1893,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1904,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1911,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1922,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1929,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1940,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1947,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1958,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1965,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1976,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1983,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(1999,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2011,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2022,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2029,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2040,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2047,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2058,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2065,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2076,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2083,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2106,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2113,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2124,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2131,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2142,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2149,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2160,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2167,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2178,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2185,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2196,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2203,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2214,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2221,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2232,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2239,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2250,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2257,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2268,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2275,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2303,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2315,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2326,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2333,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2344,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2351,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2362,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2369,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2380,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2387,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2398,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2405,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2414,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2419,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2430,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2437,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2448,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2455,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2466,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2473,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2484,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2491,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2502,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2509,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2520,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2527,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2538,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2545,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2556,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2563,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2574,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2581,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2602,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2619,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2630,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2637,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2648,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2655,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2666,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2673,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2684,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2691,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2702,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2709,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2720,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2727,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2748,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2765,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2776,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2783,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2794,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2801,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2812,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2819,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2830,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2837,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2848,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2855,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2870,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2881,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2892,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2899,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2917,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2931,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2949,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2963,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2974,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2981,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2992,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(2999,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3010,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3017,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3028,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3035,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3046,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3053,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3064,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3071,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3082,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3089,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3100,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3107,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3115,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3119,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3130,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3137,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3148,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3155,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3166,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3173,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3184,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3191,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3222,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3232,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3239,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3250,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3257,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3268,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3275,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3290,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3301,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3312,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3319,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3330,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3337,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3352,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3363,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3376,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3406,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3438,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3471,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3504,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3537,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3569,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3602,7): warning 178: variable "MOD8" was declared but never referenced
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3634,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3670,4): warning 551: variable "delay" is used before its value is set
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3673,9): warning 551: variable "value" is used before its value is set
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3721,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3728,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3739,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3746,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3760,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3770,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3781,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3788,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3799,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3806,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3817,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3824,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3832,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3836,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3844,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3848,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3859,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3866,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3877,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3884,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3895,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3902,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3913,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3920,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3931,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3938,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3949,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3956,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3967,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3974,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3985,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(3992,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4003,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4010,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4024,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4034,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4045,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4052,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4063,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4070,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4081,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4088,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4099,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4106,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4117,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4124,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4135,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4142,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4153,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4160,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4171,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4178,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4184,17): warning 2520: invalid narrowing conversion from "int" to "char"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4191,17): warning 2520: invalid narrowing conversion from "int" to "char"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4203,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4210,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4221,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4228,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4239,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4246,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4257,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4264,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4275,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4282,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4293,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4300,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4311,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4318,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4329,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4336,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4347,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4354,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4365,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4372,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4383,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4390,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4401,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4408,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4419,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4426,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4437,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4444,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4455,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4462,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4473,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4480,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4491,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4498,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4509,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4516,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4527,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4534,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4545,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4552,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4563,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4570,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4581,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4588,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4599,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4606,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4617,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4624,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4635,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4642,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4653,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4660,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4671,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4678,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4689,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4696,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4707,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4714,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4725,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4732,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4746,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4756,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4767,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4774,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4785,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4792,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4803,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4810,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4821,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4828,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4842,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4852,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4863,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4870,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4881,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4888,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4899,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4906,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4917,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4924,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4935,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4942,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4953,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4960,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4971,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4978,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4989,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(4996,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5007,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5014,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5025,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5032,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5043,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5050,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5061,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5068,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5079,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5086,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5097,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5104,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5115,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5122,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5133,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5140,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5151,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5158,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5179,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5196,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5207,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5214,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5225,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5232,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5243,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5250,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5261,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5268,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5279,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5286,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5297,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5304,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5315,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5322,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5333,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5340,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5351,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5358,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5371,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5383,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5395,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5407,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5455,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5485,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5496,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5503,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5514,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5521,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5532,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5539,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5548,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5556,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5579,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Offsets.h(5580,1): warning 942: missing return statement at end of non-void function "Offsets::NAME_CHANGER"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(457,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(458,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(463,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(464,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(469,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(470,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(475,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(476,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(481,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(482,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(487,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(488,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(493,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(494,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(499,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(500,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(505,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(506,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(511,29): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(512,26): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(521,27): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(731,13): warning 1773: implicitly converting a value of type "double" to an entity of type "int" in an assignment
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1214,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1219,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1224,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1229,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1234,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1239,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1244,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\Options.h(1249,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\menu.h(376,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\menu.h(574,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\menu.h(583,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\menu.h(584,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\menu.h(585,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(122,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(123,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(132,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(133,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(134,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\MC\prx.cpp(164,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of Show) of type "char *"
+  
+  MC.vcxproj -> C:\Users\rstei\Desktop\PC\DownCraft\DownCraft SPRX V4 Source Base Menu\PS3_Debug\MC.sprx
+  Cannot find the expected PRX Stub Library file: cellPrx_DownCraftSPRX_stub.a

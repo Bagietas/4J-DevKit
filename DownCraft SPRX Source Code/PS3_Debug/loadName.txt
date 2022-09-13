@@ -1,0 +1,2 @@
+MC.sprx
+useLoader=true
