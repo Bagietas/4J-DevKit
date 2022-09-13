@@ -86,18 +86,11 @@ namespace Offsets
 		}
 	}
 
-	void INSTANT_DAMAGE(bool toggle)
+	void INSTANT_DAMAGE(int value)
 	{
-		if (toggle)
-		{
-			*(int*)0x003A3FF0 = 0x40800000;
-			SetNotify(L"Instant Damage: ON");
-		}
-		else
-		{
-			*(int*)0x003A3FF0 = 0x3F000000;
-			SetNotify(L"Instant Damage: OFF");
-		}
+		char HEX[] = { NyTekCFW::IntToHex(value) };
+		sys_dbg_write_process_memory(0x003A3FF0, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory_ps3mapi(0x003A3FF0, &HEX, sizeof(HEX));
 	}
 
 	void CRITICAL_HIT(bool toggle)
@@ -4188,8 +4181,8 @@ namespace Offsets
 	void BIG_MODEL(int value)
 	{
 		char HEX[] = { NyTekCFW::IntToHex(value) };
-		sys_dbg_write_process_memory(0x00AD5ECD, &HEX, sizeof(HEX));
-		sys_dbg_write_process_memory_ps3mapi(0x00AD5ECD, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory(0x00AD5ECC, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory_ps3mapi(0x00AD5ECC, &HEX, sizeof(HEX));
 	}
 
 	void CHANGE_FOV(int value)

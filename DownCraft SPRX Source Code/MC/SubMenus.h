@@ -33,7 +33,7 @@ namespace SubMenu
 		AddDescription(L"Host Menu");
 		AddBoolOption(L"God Mode", !GodMode);
 		AddBoolOption(L"Demi God Mode", !DemiGodMode);
-		AddBoolOption(L"Instant Damage", !InstantDamage);
+		AddIntOption(L"Instant Damage", 63, InstantDamage);
 		AddBoolOption(L"Critical Hit", !CriticalHit);
 		AddBoolOption(L"Kill In Creative", !KillInCreative);
 		AddBoolOption(L"No Damage Hit", !NoDamageHit);
@@ -375,7 +375,7 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Vision Menu");
-		AddIntOption(L"Big Model", BigModel);
+		AddIntOption(L"Big Model", 63, BigModel);
 		AddBoolOption(L"Camera Left", !CameraLeft);
 		AddBoolOption(L"Camera Right", !CameraRight);
 		AddBoolOption(L"Big Particles", !BigParticles);
@@ -466,7 +466,7 @@ namespace SubMenu
 		AddBoolOption(L"Optimize Chunks", !OptimizeChunks);
 		AddBoolOption(L"Stop Chunks", !StopChunksLoad);
 		AddBoolOption(L"Real Jump Anim", !RealJumpAnim);
-		AddIntOption(L"FOV Value", ValueFOV);
+		AddIntOption(L"FOV Value", 128, ValueFOV);
 		AddBoolOption(L"Rainbow Sky", !RainbowSky);
 	}
 
@@ -745,8 +745,8 @@ namespace SubMenu
 		AddBoolOption(L"Gradient Colors", !UI::Settings::GradientRGB);
 		AddBoolOption(L"Show Scrollbar", !UI::Settings::Scrollbar);
 		AddBoolOption(L"Add Opacity", !UI::Settings::BGOpacity);
-		AddIntOption(L"Menu Lenght", menulenght);
-		AddIntOption(L"Change Opacity", shadowBG);
+		AddIntOption(L"Menu Lenght", 50, menulenght);
+		AddIntOption(L"Change Opacity", 200, shadowBG);
 		AddOption(L"Next Page");
 	}
 
@@ -772,7 +772,7 @@ namespace SubMenu
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Custom Crosshair Menu");
 		AddBoolOption(L"Enable Custom Crosshair", !custom_crosshair);
-		AddIntOption(L"Custom Crosshair", crosshair_value);
+		AddIntOption(L"Custom Crosshair", 0, crosshair_value);
 	}
 
     #pragma endregion

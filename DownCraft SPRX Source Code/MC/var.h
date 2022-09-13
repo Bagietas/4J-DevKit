@@ -46,7 +46,7 @@ bool DeveloperMenu = false;
 //Host Options
 bool GodMode = false;
 bool DemiGodMode = false;
-bool InstantDamage = false;
+int InstantDamage = 63;
 bool CriticalHit = false;
 bool KillInCreative = false;
 bool NoDamageHit = false;
@@ -282,7 +282,7 @@ bool PaperModel = false;
 bool DisableFog = false;
 
 //Vision Options 2
-int BigModel = 128;
+int BigModel = 63;
 bool CameraLeft = false;
 bool CameraRight = false;
 bool BigParticles = false;

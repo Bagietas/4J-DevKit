@@ -194,7 +194,6 @@ void DrawVerticalLine(int x, int startY, int endY, int* color)
 	DrawRectangle(x, startY + 1, 1, endY, color);
 }
 
-
 void snprintf(const char* text, int valeur, int X, int Y)
 {
 	char option4[0x100];
@@ -205,7 +204,6 @@ void snprintf(const char* text, int valeur, int X, int Y)
 	StringToWideCharacter(woption4, option4, _sys_strlen(option4));
 	DrawText(woption4, X, Y, color(UI::Color::WHITE));
 }
-
 
 #pragma endregion
 
@@ -608,4 +606,135 @@ void Custom_Crosshair(int value)
 			DrawRectangle(322, 177, 1, 6, UI::Color::WHITE);
 		}
 	}
+}
+
+int ColorHair[3] = { 250, 140, 17 };
+int ColorSkins[3] = { 248, 197, 170 };
+int ColorEyesWhite[3] = { 255, 255, 255 };
+int ColorEyes[3] = { 11, 139, 16 };
+int ColorMouth[3] = { 252, 172, 197 };
+int pos[2] = { 155, 12 };
+int size[2] = { 2, 2 };
+int space[7] = { 5, 10, 15, 20, 25, 30, 35 };
+
+float AlexBlinkEyes = 0;
+float AlexBlinkEyesTimer = 0;
+
+void DrawAlexHead()
+{
+	if (size[1] == 2)
+	{
+		space[0] = 2; space[1] = 4; space[2] = 6; space[3] = 8; space[4] = 10; space[5] = 12; space[6] = 14;
+	}
+	else if (size[1] == 3)
+	{
+		space[0] = 3; space[1] = 6; space[2] = 9; space[3] = 12; space[4] = 15; space[5] = 18; space[6] = 21;
+	}
+	else if (size[1] == 5)
+	{
+		space[0] = 5; space[1] = 10; space[2] = 15; space[3] = 20; space[4] = 25; space[5] = 30; space[6] = 35;
+	}
+	else if (size[1] == 10)
+	{
+		space[0] = 10; space[1] = 20; space[2] = 30; space[3] = 40; space[4] = 50; space[5] = 60; space[6] = 70;
+	}
+
+	DrawRectangle(pos[0], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[0], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[1], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[2], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[3], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[4], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[5], pos[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[6], pos[1], size[0], size[1], ColorHair);
+
+	DrawRectangle(pos[0], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[0], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[0], size[0], size[1], ColorHair);
+
+	DrawRectangle(pos[0], pos[1] + space[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[1], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[1], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[1], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[1], size[0], size[1], ColorHair);
+
+	DrawRectangle(pos[0], pos[1] + space[2], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[2], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[2], size[0], size[1], ColorHair);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[2], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[2], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[2], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[2], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[2], size[0], size[1], ColorHair);
+
+	if (AlexBlinkEyes > -1)
+		AlexBlinkEyes += 5;
+
+	if (AlexBlinkEyes > 1500)
+	{
+		DrawRectangle(pos[0], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[0], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[1], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[2], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[3], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[4], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[5], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[6], pos[1] + space[3], size[0], size[1], ColorSkins);
+
+		if (AlexBlinkEyesTimer > -1)
+			AlexBlinkEyesTimer += 1;
+
+		if (AlexBlinkEyesTimer > 30)
+		{
+			AlexBlinkEyesTimer = 0;
+			AlexBlinkEyes = 0;
+		}
+	}
+	else
+	{
+		DrawRectangle(pos[0], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[0], pos[1] + space[3], size[0], size[1], ColorEyesWhite);
+		DrawRectangle(pos[0] + space[1], pos[1] + space[3], size[0], size[1], ColorEyes);
+		DrawRectangle(pos[0] + space[2], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[3], pos[1] + space[3], size[0], size[1], ColorSkins);
+		DrawRectangle(pos[0] + space[4], pos[1] + space[3], size[0], size[1], ColorEyes);
+		DrawRectangle(pos[0] + space[5], pos[1] + space[3], size[0], size[1], ColorEyesWhite);
+		DrawRectangle(pos[0] + space[6], pos[1] + space[3], size[0], size[1], ColorSkins);
+	}
+
+
+	DrawRectangle(pos[0], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[4], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[4], size[0], size[1], ColorSkins);
+
+	DrawRectangle(pos[0], pos[1] + space[5], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[5], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[5], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[5], size[0], size[1], ColorMouth);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[5], size[0], size[1], ColorMouth);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[5], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[5], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[5], size[0], size[1], ColorSkins);
+
+	DrawRectangle(pos[0], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[0], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[1], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[2], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[3], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[4], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[5], pos[1] + space[6], size[0], size[1], ColorSkins);
+	DrawRectangle(pos[0] + space[6], pos[1] + space[6], size[0], size[1], ColorSkins);
 }

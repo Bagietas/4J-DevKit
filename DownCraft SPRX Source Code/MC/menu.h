@@ -354,6 +354,26 @@
 
  //MultiplayerLocalPlayer = 0x3373F5D0 / pWorld = 0x337389F0 / GetEntityWorld = 0x337389F0
 
+ void ModuleLoop()
+ {
+	 Modules::AntiVoid();
+	 Modules::BunnyJump();
+	 Modules::SkyboxRGB();
+	 Modules::Scaffold();
+	 Modules::NoFall();
+ }
+
+ void ChangeValueLoop()
+ {
+	 Offsets::BIG_MODEL(BigModel);
+	 Offsets::CHANGE_FOV(ValueFOV);
+	 Offsets::INSTANT_DAMAGE(InstantDamage);
+
+	 Offsets::ADD_CUSTOM_BANNER();
+	 Offsets::ANIMATED_BANNER_GIF();
+	 Offsets::ALL_PLAYERS_ZOOM_FOV();
+ }
+
  void LoopFunc()
  {
 	 Welcome_Message();
@@ -368,8 +388,8 @@
 	 VersionText();
 	 InventoryCreativeTumble();
 
-	 Offsets::BIG_MODEL(BigModel);
-	 Offsets::CHANGE_FOV(ValueFOV);
+	 ChangeValueLoop();
+	 ModuleLoop();
 
 	 SlideOpenMenuLoop();
 	 SlideCloseMenuLoop();
@@ -377,14 +397,6 @@
 	 MaxOption = 0;
 	 RGB1();
 	 RGB2();
-	 Modules::AntiVoid();
-	 Modules::BunnyJump();
-	 Modules::SkyboxRGB();
-	 Modules::Scaffold();
-	 Modules::NoFall();
-	 Offsets::ADD_CUSTOM_BANNER();
-	 Offsets::ANIMATED_BANNER_GIF();
-	 Offsets::ALL_PLAYERS_ZOOM_FOV();
 	 Custom_Crosshair(crosshair_value);
 	 GetNotify();
 	 logs::draw_logs();
@@ -405,11 +417,13 @@
 		 if (MainMenu)
 		 {
 			 SubMenu::MainMenu();
+			 DrawAlexHead();
 		 }
 
 		 if (HostPage)
 		 {
 			 SubMenu::HostMenu();
+			 ChangeIntOptions(HostPage, 2, 0, 255, InstantDamage);
 		 }
 
 		 if (HostPage1)
@@ -480,7 +494,7 @@
 		 if (VisionMenu2)
 		 {
 			 SubMenu::VisionsOptionsMenu2();
-			 //ChangeIntOptions(VisionMenu2, 0, 0, 255, BigModel);
+			 ChangeIntOptions(VisionMenu2, 0, 58, 255, BigModel);
 		 }
 
 		 if (VisionMenu3)

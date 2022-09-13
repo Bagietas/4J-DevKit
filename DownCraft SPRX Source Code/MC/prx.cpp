@@ -111,7 +111,7 @@ SYS_MODULE_STOP(_DownCraftSPRX_prx_stop);
 
 #pragma region "INJECT / UNINJECT"
 
-int load = 5;
+int load = 0;
 void LoadSPRX()
 {
 	int colorbg[3] = { 56, 56, 56 };
@@ -123,7 +123,7 @@ void LoadSPRX()
 	DrawTextC("Loading SPRX", 518, 165, color(UI::Color::WHITE));
 	snprintf("%i       ", load, 563, 137);
 
-	load++;
+	load += 1;
 
 	if (load > 194)
 	{

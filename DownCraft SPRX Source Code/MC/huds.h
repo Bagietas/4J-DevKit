@@ -719,7 +719,7 @@ void AddBoolOption(const wchar_t* opt, bool boolOption)
 	MaxOption += 1;
 }
 
-void AddIntOption(const wchar_t* opt, int IntOptions)
+void AddIntOption(const wchar_t* opt, int def, int IntOptions)
 {
 	if (UI::Settings::Scrollbar)
 	{
@@ -730,30 +730,6 @@ void AddIntOption(const wchar_t* opt, int IntOptions)
 		DrawText(opt, (MaxOption == CurrentOpt) ? AddOptX + 5 : AddOptX, AddOptY + (10 * MaxOption), color(UI::Color::WHITE));
 	}
 
-	char option46[0x100];
-	wchar_t woption46[0x100];
-	_sys_memset(option46, 0, 0x100);
-	_sys_memset(woption46, 0, 0x200);
-	_sys_snprintf(option46, 0x100, "< %i >    ", (int)IntOptions);
-	StringToWideCharacter(woption46, option46, _sys_strlen(option46));
-
-	/*
-	if (menulenght > 80)
-	{
-		DrawTextC(woption46, CheckBoxX - 55 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
-		drawRectBorder(CheckBoxX - 35 + menulenght, CheckBoxY + 2 + (10 * MaxOption), 40, 3, UI::Color::BLACK, GetThemeColor());
-		if (IntOptions > 1)
-		{
-			float value = IntOptions - 0.8;
-			DrawRectangle(CheckBoxX - 35 + menulenght, CheckBoxY + 2.5 + (10 * MaxOption), value, 2.3, UI::Color::WHITE);
-		}
-	}
-	else
-	{
-		DrawTextC(woption46, CheckBoxX - 3 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
-	}
-	*/
-
 	if (IntOptions > 99)
 	{
 		if (!UI::Settings::Scrollbar)
@@ -761,7 +737,15 @@ void AddIntOption(const wchar_t* opt, int IntOptions)
 			DrawRectangle(AddOptX, (MaxOption == CurrentOpt) ? AddOptY - 2 + (10 * MaxOption) : AddOptY - 2, 1, 10, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
 			DrawRectangle(AddOptX, AddOptY + 8 + (10 * MaxOption), bgW + menulenght - 6, 1, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
 		}
-		DrawText(woption46, CheckBoxX - 36 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+
+		if (IntOptions == def)
+		{
+			DrawText(L"< Default >    ", CheckBoxX - 56 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+		}
+		else
+		{
+			snprintf("< %i >    ", (int)IntOptions, CheckBoxX - 40 + menulenght, CheckBoxY + (10 * MaxOption));
+		}
 	}
 	else
 	{
@@ -770,7 +754,14 @@ void AddIntOption(const wchar_t* opt, int IntOptions)
 			DrawRectangle(AddOptX, (MaxOption == CurrentOpt) ? AddOptY - 2 + (10 * MaxOption) : AddOptY - 2, 1, 10, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
 			DrawRectangle(AddOptX, AddOptY + 8 + (10 * MaxOption), bgW + menulenght - 6, 1, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
 		}
-		DrawText(woption46, CheckBoxX - 37 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+		if (IntOptions == def)
+		{
+			DrawText(L"< Default >    ", CheckBoxX - 56 + menulenght, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+		}
+		else
+		{
+			snprintf("< %i >    ", (int)IntOptions, CheckBoxX - 35 + menulenght, CheckBoxY + (10 * MaxOption));
+		}
 	}
 	MaxOption += 1;
 }
