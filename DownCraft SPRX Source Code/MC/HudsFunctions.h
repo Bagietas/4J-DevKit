@@ -613,7 +613,7 @@ int ColorSkins[3] = { 248, 197, 170 };
 int ColorEyesWhite[3] = { 255, 255, 255 };
 int ColorEyes[3] = { 11, 139, 16 };
 int ColorMouth[3] = { 252, 172, 197 };
-int pos[2] = { 155, 12 };
+int pos[2] = { 150, 12 };
 int size[2] = { 2, 2 };
 int space[7] = { 5, 10, 15, 20, 25, 30, 35 };
 
