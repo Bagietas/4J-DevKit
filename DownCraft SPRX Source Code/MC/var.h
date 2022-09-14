@@ -228,6 +228,7 @@ bool ESPEntity = false;
 bool ESPTracer = false;
 bool ESPCOD = false;
 bool ESPWaypoint = false;
+bool PhaseV1BETA = false;
 
 //Players Options
 bool AllPlayersFastMine = false;
@@ -282,7 +283,7 @@ bool PaperModel = false;
 bool DisableFog = false;
 
 //Vision Options 2
-int BigModel = 63;
+int BigModel = 128;
 bool CameraLeft = false;
 bool CameraRight = false;
 bool BigParticles = false;
@@ -511,7 +512,7 @@ uint32_t cpu_t = 0;
 uint32_t rsx_t = 0;
 int RainbowSkyRGB;
 int RainbowSkyRGBSpeed = 10;
-int DEBUG_FUNCTIONS_MESSAGE = 34;
+int DEBUG_FUNCTIONS_MESSAGE = 36;
 bool devmenu = true;
 bool custom_crosshair = false;
 int crosshair_value = 0;

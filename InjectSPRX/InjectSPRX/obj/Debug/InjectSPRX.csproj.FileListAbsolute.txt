@@ -1,0 +1,11 @@
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\bin\Debug\InjectSPRX.exe.config
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\bin\Debug\InjectSPRX.exe
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\bin\Debug\InjectSPRX.pdb
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.AssemblyReference.cache
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.Form1.resources
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.Properties.Resources.resources
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.GenerateResource.cache
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.CoreCompileInputs.cache
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.exe
+C:\Users\rstei\source\repos\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.pdb

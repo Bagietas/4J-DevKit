@@ -4181,15 +4181,15 @@ namespace Offsets
 	void BIG_MODEL(int value)
 	{
 		char HEX[] = { NyTekCFW::IntToHex(value) };
-		sys_dbg_write_process_memory(0x00AD5ECC, &HEX, sizeof(HEX));
-		sys_dbg_write_process_memory_ps3mapi(0x00AD5ECC, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory(0x00AD5ECD, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory_ps3mapi(0x00AD5ECD, &HEX, sizeof(HEX));
 	}
 
 	void CHANGE_FOV(int value)
 	{
 		char HEX[] = { NyTekCFW::IntToHex(value) };
-		sys_dbg_write_process_memory(0x014C670D, &HEX, sizeof(HEX));
-		sys_dbg_write_process_memory_ps3mapi(0x014C670D, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory(0x00AD5ECD, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory_ps3mapi(0x00AD5ECD, &HEX, sizeof(HEX));
 	}
 
 	void CAMERA_LEFT(bool toggle)
@@ -5723,6 +5723,43 @@ namespace Offsets
 		else
 		{
 
+		}
+	}
+
+	void PHASE_MODE(bool toggle)
+	{
+		if (toggle)
+		{
+			char HEX[] = { 0xC5 };
+			char HEX1[] = { 0x00, 0x00, 0x00, 0x00 };
+			char HEX2[] = { 0x44 };
+			char HEX3[] = { 0x7F };
+			sys_dbg_write_process_memory(0x00AFB448, &HEX, sizeof(HEX));
+			sys_dbg_write_process_memory(0x013029BC, &HEX1, sizeof(HEX1));
+			sys_dbg_write_process_memory(0x0022FDC4, &HEX2, sizeof(HEX2));
+			sys_dbg_write_process_memory(0x00B01778, &HEX3, sizeof(HEX3));
+			sys_dbg_write_process_memory_ps3mapi(0x00AFB448, &HEX, sizeof(HEX));
+			sys_dbg_write_process_memory_ps3mapi(0x013029BC, &HEX1, sizeof(HEX1));
+			sys_dbg_write_process_memory_ps3mapi(0x0022FDC4, &HEX2, sizeof(HEX2));
+			sys_dbg_write_process_memory_ps3mapi(0x00B01778, &HEX3, sizeof(HEX3));
+			SetNotify(L"Phase V1 BETA: ON");
+
+		}
+		else
+		{
+			char HEX[] = { 0x3F };
+			char HEX1[] = { 0x3F, 0xE6, 0x66, 0x66 };
+			char HEX2[] = { 0x3F };
+			char HEX3[] = { 0x3F };
+			sys_dbg_write_process_memory(0x00AFB448, &HEX, sizeof(HEX));
+			sys_dbg_write_process_memory(0x013029BC, &HEX1, sizeof(HEX1));
+			sys_dbg_write_process_memory(0x0022FDC4, &HEX2, sizeof(HEX2));
+			sys_dbg_write_process_memory(0x00B01778, &HEX3, sizeof(HEX3));
+			sys_dbg_write_process_memory_ps3mapi(0x00AFB448, &HEX, sizeof(HEX));
+			sys_dbg_write_process_memory_ps3mapi(0x013029BC, &HEX1, sizeof(HEX1));
+			sys_dbg_write_process_memory_ps3mapi(0x0022FDC4, &HEX2, sizeof(HEX2));
+			sys_dbg_write_process_memory_ps3mapi(0x00B01778, &HEX3, sizeof(HEX3));
+			SetNotify(L"Phase V1 BETA: OFF");
 		}
 	}
 }

@@ -268,7 +268,7 @@ namespace SubMenu
 
 	void NonHostMenu5()
 	{
-		submmenuMax = 5;
+		submmenuMax = 6;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Non Host Menu");
@@ -277,6 +277,7 @@ namespace SubMenu
 		AddBoolOption(L"ESP Tracer", !ESPTracer);
 		AddBoolOption(L"ESP COD", !ESPCOD);
 		AddBoolOption(L"ESP Waypoint", !ESPWaypoint);
+		AddBoolOption(L"Phase V1 BETA", !PhaseV1BETA);
 	}
 
     #pragma endregion
@@ -375,7 +376,7 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Vision Menu");
-		AddIntOption(L"Big Model", 63, BigModel);
+		AddIntOption(L"Big Model", 128, BigModel);
 		AddBoolOption(L"Camera Left", !CameraLeft);
 		AddBoolOption(L"Camera Right", !CameraRight);
 		AddBoolOption(L"Big Particles", !BigParticles);

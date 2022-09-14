@@ -2819,6 +2819,20 @@ void Options()
 				ESPWaypoint = false;
 			}
 		}
+
+		if (CurrentOpt == 5)
+		{
+			if (!PhaseV1BETA)
+			{
+				Offsets::PHASE_MODE(true);
+				PhaseV1BETA = true;
+			}
+			else
+			{
+				Offsets::PHASE_MODE(false);
+				PhaseV1BETA = false;
+			}
+		}
 	}
 
      #pragma endregion

@@ -385,7 +385,7 @@
 	 get_temp();
 	 TitleMenu();
 	 DEBUG_FUNCTIONS_MESSAGES();
-	 VersionText();
+	 //VersionText();
 	 InventoryCreativeTumble();
 
 	 ChangeValueLoop();
@@ -400,11 +400,12 @@
 	 Custom_Crosshair(crosshair_value);
 	 GetNotify();
 	 logs::draw_logs();
-	 PlayerUpwardsJumpMotion(80);
  }
 
  void RenderMenu()
  {
+	 DrawAlexHead();
+
 	 if (!OpenMenu)
 	 {
 		 *(int*)0x0155847C = 0x00000000;
@@ -417,7 +418,6 @@
 		 if (MainMenu)
 		 {
 			 SubMenu::MainMenu();
-			 DrawAlexHead();
 		 }
 
 		 if (HostPage)

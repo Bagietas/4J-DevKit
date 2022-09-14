@@ -39,7 +39,7 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(422,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(483,17): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(484,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Hooking.h(11): warning 942: missing return statement at end of non-void function "asm_SetPresenceDetails_Hook"
   
@@ -99,15 +99,15 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunc
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(187,5): warning 178: variable "width" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(356,8): warning 178: variable "systemperature" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(361,8): warning 178: variable "systemperature" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(558,12): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(563,12): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(559,14): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(564,14): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(565,13): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(570,13): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(566,15): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(571,15): warning 2623: conversion from a string literal to "char *" is deprecated
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(12,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
@@ -1258,6 +1258,10 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.h(5578,12): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.h(5579,1): warning 942: missing return statement at end of non-void function "Offsets::NAME_CHANGER"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.h(5745,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.h(5762,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Options.h(457,29): warning 2623: conversion from a string literal to "char *" is deprecated
   
