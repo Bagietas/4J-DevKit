@@ -94,6 +94,7 @@
 #include "SubMenus.h"
 #include "Options.h"
 #include "menu.h"
+#include "Startup.h"
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -108,69 +109,9 @@ SYS_MODULE_INFO( DownCraftSPRX, 0, 1, 1);
 SYS_MODULE_START( _DownCraftSPRX_prx_entry );
 SYS_MODULE_STOP(_DownCraftSPRX_prx_stop);
 
-#pragma region "INJECT / UNINJECT"
-
-int load = 0;
-void LoadSPRX()
-{
-	int colorbg[3] = { 56, 56, 56 };
-
-	DrawRectangle(388, 134, 193, 42, colorbg);
-	DrawRectangle(388, 148, 193, 13, UI::Color::WHITE);
-	DrawRectangle(388, 148, load, 13, UI::Color::BLUE);
-	DrawTextC("DownCraft SPRX", 391, 137, color(UI::Color::WHITE));
-	DrawTextC("Loading SPRX", 518, 165, color(UI::Color::WHITE));
-	snprintf("%i       ", load, 563, 137);
-
-	load += 1;
-
-	if (load > 194)
-	{
-		InitializeSPRX = false;
-		UsableMenu = true;
-		logs::SendMessageDebug(L"Welcome to DownCraft SPRX", UI::MCTextColors::Red);
-		logs::SendMessageDebug(L"Version V4.2", UI::MCTextColors::Aqua);
-		logs::SendMessageDebug(L"Press L1 + DPAD UP for open the menu", UI::MCTextColors::LightPurple);
-	}
-}
-
-void Inject()
-{
-	if (FirstInfoMessage)
-	{
-		if (InWorld())
-		{
-			if (InitializeSPRX)
-			{
-				*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
-				*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
-				LoadSPRX();
-			}
-		}
-	}
-
-	if (noclipvars)
-	{
-		LoopFunc();
-		RenderMenu();
-		Scroll();
-	}
-}
-
-void UnInject()
-{
-	Dialog::msgdialog_mode = Dialog::MODE_STRING_OK;
-	Dialog::Show("Oops look like your not whitelisted, contact Misaki.");
-	UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-	UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
-}
-
-#pragma endregion
-
 void gameRender_Hook(uint32_t r3, uint32_t r4) 
 {
 	INITIALIZE_START();
-	//noclip_func(); //SPRX ACTIVATOR RTM
 	//WHITELIST(); //PSN WHITELIST
 	gameRender_Stub(r3, r4);
 	mc = (TheMinecraft*)(mcOfs);
@@ -181,7 +122,7 @@ void gameRender_Hook(uint32_t r3, uint32_t r4)
 	}
 	else
 	{
-		UnInject();
+		UnInject("Oops look like your not whitelisted :(");
 	}
 }
 
@@ -199,7 +140,6 @@ extern "C" int _DownCraftSPRX_prx_entry(void)
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));
 	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
-	//HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
 	INITIALIZE_SPRX = true;
 	return SYS_PRX_RESIDENT;
 }
@@ -209,6 +149,5 @@ extern "C" int _DownCraftSPRX_prx_stop(void)
 
 	UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
 	UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
-	//UnHookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook));
 	return SYS_PRX_RESIDENT;
 }

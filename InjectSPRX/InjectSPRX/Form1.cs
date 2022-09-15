@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ftp;
 
 namespace InjectSPRX
 {
@@ -22,6 +21,15 @@ namespace InjectSPRX
             InitializeComponent();
             this.TopMost = true;
         }
+
+        void Notify(string title, string text)
+        {
+            var notify = new NotifyIcon();
+            notify.Visible = true;
+            notify.Icon = Properties.Resources.image;
+            notify.ShowBalloonTip(1000, title, text, ToolTipIcon.Info);
+        }
+
         internal async void InjectSPRX()
         {
             string text = Application.StartupPath + "\\settings.txt";
@@ -51,6 +59,7 @@ namespace InjectSPRX
                                 label5.Text = "Reload the game and exiting app";
                                 var reload = new WebClient();
                                 reload.DownloadString("http://" + ConsoleIP + "/xmb.ps3$reloadgame");
+                                Notify("SPRX Injector By Misakiii", "SPRX injected, the game will restart!");
                                 await Task.Delay(4000);
                                 Application.Exit();
                             }

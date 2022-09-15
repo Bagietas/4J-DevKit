@@ -392,40 +392,6 @@ void ChangeFloatOptions(bool page, int currentopt, int min, int max, float& valu
 	}
 }
 
-void INITIALIZE_START()
-{
-	if (INITIALIZE_SPRX)
-	{
-		/*
-		bool BLES = (*(int*)0x31E7782C = 0x424C4553);
-		if (!BLES)
-		{
-			//if the game is not BLES
-		}
-		*/
-
-		PSN_NAME = PS3Lib::ReadString(0x3000ACC4);
-		REGION = PS3Lib::ReadString(0x3000AD48);
-		strcpy((char*)0x3000AE92, "DownCraft SPRX V4"); //unique ID
-
-		//detect special eboot = 0x01437D15
-
-		*(int*)0x31E7782C = 0x49600000; //pos images
-		*(int*)0x31E77830 = 0xC98D0000; //pos images
-
-		SaveTitleSlide = TitleTextX;
-		SaveTextSlide = textX;
-		SavebgSlide = bgX;
-		SaveAddOptSlide = AddOptX;
-		SaveCheckBoxSlide = CheckBoxX;
-		SaveScrollSlide = ScrollX;
-
-		//SAVE BLOCKS
-		SAVE_BLOCK_AIR = Blocks::AIR;
-		INITIALIZE_SPRX = false;
-	}
-}
-
 bool InWorld()
 {
 	return !(*(char*)0x3000CF6B != 0);
@@ -475,69 +441,6 @@ void SlideOpenMenu()
 	AddOptX += 200;
 	CheckBoxX += 200;
 	ScrollX += 200;
-}
-
-void noclip_func()
-{
-	char phase1[] = { 0xFF, 0x08, 0xAF, 0x25 };
-	char phase2[] = { 0x02, 0x04, 0x06, 0x08 };
-	char phase3[] = { 0x85, 0xF8, 0x05, 0xB4 };
-	char phase4[] = { 0x40, 0x90, 0xFF, 0xAB };
-
-	char phaseend[] = { 0x66, 0x66, 0x66, 0x66, 0x00 };
-
-	char* misaki1 = (char*)0x3000AF0F;
-	char* misaki2 = (char*)0x3000AF13;
-	char* misaki3 = (char*)0x3000AF17;
-	char* misaki4 = (char*)0x3000AF1B;
-
-	noclipvars = false;
-	for (int i = 0; i < 4; ++i)
-	{
-		if (misaki1[i] == phase1[i])
-		{
-			if (misaki2[i] != phase2[i])
-			{
-				if (misaki3[i] == phase3[i])
-				{
-					if (misaki4[i] != phase4[i])
-					{
-						noclipvars = true;
-					}
-				}
-			}
-		}
-
-		if (misaki4[i] == phaseend[i])
-		{
-			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-			UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
-			//UnHookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook));
-			*(int*)0x00785DBC = 0x40800028;
-			*(int*)0x00AD8320 = 0x408000CC;
-			*(int*)0x014CE214 = 0x01000001;
-		}
-	}
-}
-
-void WHITELIST()
-{
-	char hex[] = { 0x53, 0x61, 0x69, 0x6B, 0x6F, 0x4D, 0x69, 0x73, 0x61, 0x6B, 0x69 };
-
-	char* addr = (char*)0x3000ACC4;
-	WhitelistCheck = true;
-	for (int i = 0; i < 11; ++i)
-	{
-		if (addr[i] != hex[i])
-		{
-			WhitelistCheck = false;
-		}
-	}
-}
-
-void BLACKLIST()
-{
-	const char* name[2] = {"Misaki", "Misaki1" };
 }
 
 sys_ppu_thread_t ThreadModuleID;

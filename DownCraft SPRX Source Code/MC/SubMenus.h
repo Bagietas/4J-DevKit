@@ -53,6 +53,9 @@ namespace SubMenu
 		AddOption(L"Next Page");
 
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Turn everyone invincible"); }
+		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Turn entity & players invincible"); }
+		if (CurrentOpt == 2) { AddInformation(submmenuMax, L"Change attack damage delay"); }
+		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Bypass kill entity & players in creative"); }
 	}
 
 	void HostMenu1()

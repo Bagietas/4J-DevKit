@@ -20,3 +20,6 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\obj\Debug\Inject
 C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.CoreCompileInputs.cache
 C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.exe
 C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\bin\Debug\System.ValueTuple.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\obj\Debug\InjectSPRX.csproj.CopyComplete
+C:\Users\rstei\Documents\GitHub\4J-DevKit\InjectSPRX\InjectSPRX\bin\Debug\Newtonsoft.Json.dll

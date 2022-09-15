@@ -81,6 +81,7 @@ InjectSPRX.exe</Command>
     <ClInclude Include="Options.h" />
     <ClInclude Include="OSK.h" />
     <ClInclude Include="PS3.h" />
+    <ClInclude Include="Startup.h" />
     <ClInclude Include="struct.h" />
     <ClInclude Include="SubMenus.h" />
     <ClInclude Include="UI.h" />
