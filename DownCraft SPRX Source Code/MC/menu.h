@@ -228,6 +228,12 @@
 		 SettingsMenu = true;
 	 }
 
+	 if (DrawHeadLogoMenu)
+	 {
+		 DrawHeadLogoMenu = false;
+		 SettingsMenu = true;
+	 }
+
 	 if (CreditsMenu)
 	 {
 		 CreditsMenu = false;
@@ -368,6 +374,7 @@
 	 Offsets::BIG_MODEL(BigModel);
 	 Offsets::CHANGE_FOV(ValueFOV);
 	 Offsets::INSTANT_DAMAGE(InstantDamage);
+	 Offsets::SUPER_SPEED(SuperSpeed);
 
 	 Offsets::ADD_CUSTOM_BANNER();
 	 Offsets::ANIMATED_BANNER_GIF();
@@ -404,7 +411,7 @@
 
  void RenderMenu()
  {
-	 DrawAlexHead();
+	 DRAW_HEAD_PIXEL_LOGO();
 
 	 if (!OpenMenu)
 	 {
@@ -444,6 +451,7 @@
 		 if (NonHostPage)
 		 {
 			 SubMenu::NonHostMenu();
+			 ChangeIntOptions(NonHostPage, 0, 0, 255, SuperSpeed);
 		 }
 
 		 if (NonHostPage1)
@@ -610,13 +618,18 @@
 		 if (MicsSettings2)
 		 {
 			 SubMenu::MicsMenu2();
-			 ChangeIntOptions(MicsSettings2, 4, 0, 500, RainbowSkyRGBSpeed);
 		 }
 
 		 if (CrosshairMenu)
 		 {
 			 SubMenu::CrosshairMenu();
 			 ChangeIntOptions(CrosshairMenu, 1, 0, 5, crosshair_value);
+		 }
+
+		 if (DrawHeadLogoMenu)
+		 {
+			 SubMenu::DrawHeadLogoMenu();
+			 ChangeIntOptions(DrawHeadLogoMenu, 0, 0, 3, DrawHeadPixelLogo);
 		 }
 
 		 if (CreditsMenu)

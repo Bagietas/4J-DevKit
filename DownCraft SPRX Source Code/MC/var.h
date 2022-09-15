@@ -40,6 +40,7 @@ bool DebugMenu = false;
 bool MicsSettings = false;
 bool MicsSettings2 = false;
 bool CrosshairMenu = false;
+bool DrawHeadLogoMenu = false;
 bool CreditsMenu = false;
 bool DeveloperMenu = false;
 
@@ -114,10 +115,9 @@ bool GlitchDeadEntity = false;
 bool PlayersInfos = false;
 
 //Non Host Options
-bool SuperSpeed = false;
-bool SuperSpeedV2 = false;
-bool SuperSpeedV3 = false;
-bool SuperSpeedV4 = false;
+int SuperSpeed = 38;
+bool BunnyHoptoggle = false;
+bool PhaseV1BETA = false;
 bool MultiJump = false;
 bool JumpForBuild = false;
 bool JumpInSky = false;
@@ -223,12 +223,10 @@ bool BlockStaticCrack = false;
 bool BigVelocity = false;
 bool NoVelocity = false;
 bool AntiVoidtoggle = false;
-bool BunnyHoptoggle = false;
 bool ESPEntity = false;
 bool ESPTracer = false;
 bool ESPCOD = false;
 bool ESPWaypoint = false;
-bool PhaseV1BETA = false;
 
 //Players Options
 bool AllPlayersFastMine = false;
@@ -529,5 +527,6 @@ int SaveCheckBoxSlide;
 int SaveScrollSlide;
 
 int speedSlider = 10;
+int DrawHeadPixelLogo = 1;
 
 bool WhitelistCheck = true;

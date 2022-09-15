@@ -1,6 +1,4 @@
 
-#include <string>
-
 #define MAKE_FUNCTION(address, return_type, func_name, args) \
 	uint32_t func_name##opd[2] = { address, 0x014CDAB0 }; \
 	using func_name##_t = return_type(*)args; \

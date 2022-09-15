@@ -103,7 +103,6 @@
 #include <pthread.h>
 #include <cell/cell_fs.h>
 #include <cell/fs/cell_fs_file_api.h>
-#include <libpsutil.h>
 
 SYS_MODULE_INFO( DownCraftSPRX, 0, 1, 1);
 SYS_MODULE_START( _DownCraftSPRX_prx_entry );

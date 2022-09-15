@@ -132,10 +132,10 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Non Host Menu");
-		AddBoolOption(L"Super Speed", !SuperSpeed);
-		AddBoolOption(L"Super Speed V2", !SuperSpeedV2);
-		AddBoolOption(L"Super Speed V3", !SuperSpeedV3);
-		AddBoolOption(L"Super Speed V4", !SuperSpeedV4);
+		AddIntOption(L"Super Speed", 38, SuperSpeed);
+		AddBoolOption(L"Bunny Hop", !BunnyHoptoggle);
+		AddBoolOption(L"Phase V1 BETA", !PhaseV1BETA);
+		AddBoolOption(L"Block Static", !BlockStaticCrack);
 		AddBoolOption(L"Multi Jump", !MultiJump);
 		AddBoolOption(L"Jump For Build", !JumpForBuild);
 		AddBoolOption(L"Jump In Sky", !JumpInSky);
@@ -259,25 +259,22 @@ namespace SubMenu
 		AddBoolOption(L"Show Armor", !ShowArmor);
 		AddBoolOption(L"Unfair Attack", !UnfairAttack);
 		AddBoolOption(L"Hitbox BETA", !HitBoxBETA);
-		AddBoolOption(L"Block Static", !BlockStaticCrack);
 		AddBoolOption(L"Big Velocity", !BigVelocity);
 		AddBoolOption(L"No Velocity", !NoVelocity);
 		AddBoolOption(L"Anti Void", !AntiVoidtoggle);
+		AddBoolOption(L"ESP Entity", !ESPEntity);
 		AddOption(L"Next Page");
 	}
 
 	void NonHostMenu5()
 	{
-		submmenuMax = 6;
+		submmenuMax = 3;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Non Host Menu");
-		AddBoolOption(L"Bunny Hop", !BunnyHoptoggle);
-		AddBoolOption(L"ESP Entity", !ESPEntity);
 		AddBoolOption(L"ESP Tracer", !ESPTracer);
 		AddBoolOption(L"ESP COD", !ESPCOD);
 		AddBoolOption(L"ESP Waypoint", !ESPWaypoint);
-		AddBoolOption(L"Phase V1 BETA", !PhaseV1BETA);
 	}
 
     #pragma endregion
@@ -643,7 +640,7 @@ namespace SubMenu
 
 	void SettingsMenu()
 	{
-		submmenuMax = 6;
+		submmenuMax = 7;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Settings Menu");
@@ -653,6 +650,7 @@ namespace SubMenu
 		AddOption(L"Custom Image");
 		AddOption(L"Mics Settings");
 		AddOption(L"Custom Crosshair");
+		AddOption(L"Draw Head Logo");
 	}
 
 	void EditMenu()
@@ -774,6 +772,15 @@ namespace SubMenu
 		AddDescription(L"Custom Crosshair Menu");
 		AddBoolOption(L"Enable Custom Crosshair", !custom_crosshair);
 		AddIntOption(L"Custom Crosshair", 0, crosshair_value);
+	}
+
+	void DrawHeadLogoMenu()
+	{
+		submmenuMax = 1;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Draw Head Logo Menu");
+		AddIntOption(L"Draw Head Logo", 1, DrawHeadPixelLogo);
 	}
 
     #pragma endregion

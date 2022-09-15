@@ -20,8 +20,8 @@ namespace InjectSPRX
         public Form1()
         {
             InitializeComponent();
+            this.TopMost = true;
         }
-
         internal async void InjectSPRX()
         {
             string text = Application.StartupPath + "\\settings.txt";

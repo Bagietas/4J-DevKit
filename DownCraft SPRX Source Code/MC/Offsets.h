@@ -45,12 +45,6 @@ void Patch_block()
 }
 */
 
-enum Address
-{
-	HUD = 0x000,
-	LOCK = 0x001,
-};
-
 namespace Offsets
 {
 	void ChangeBlocks()
@@ -1133,82 +1127,11 @@ namespace Offsets
 		}
 	}
 
-	void SUPER_SPEED(bool toggle)
+	void SUPER_SPEED(int value)
 	{
-		if (toggle)
-		{
-			char HEX[] = { 0xFF, 0xFF, 0xFF };
-			sys_dbg_write_process_memory(0x003ABD49, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD49, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed: ON");
-		}
-		else
-		{
-			char HEX[] = { 0x26, 0xAD, 0x89 };
-			sys_dbg_write_process_memory(0x003ABD49, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD49, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed: OFF");
-		}
-	}
-
-	void SUPER_SPEED_V2(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x00 };
-			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed V2: ON");
-		}
-		else
-		{
-			char HEX[] = { 0x68 };
-			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed V2: OFF");
-		}
-	}
-
-	void SUPER_SPEED_V3(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x3F, 0x10, 0x23, 0x50 };
-			char HEX1[] = { 0x00 };
-			sys_dbg_write_process_memory(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory(0x003AA999, &HEX1, sizeof(HEX1));
-			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX1, sizeof(HEX1));
-			SetNotify(L"Super Speed V3: ON");
-		}
-		else
-		{
-			char HEX[] = { 0x3E, 0x26, 0xAD, 0x89 };
-			char HEX1[] = { 0x68 };
-			sys_dbg_write_process_memory(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory(0x003AA999, &HEX1, sizeof(HEX1));
-			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX1, sizeof(HEX1));
-			SetNotify(L"Super Speed V3: OFF");
-		}
-	}
-
-	void SUPER_SPEED_V4(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x3F, 0xFF, 0x00, 0x01 };
-			sys_dbg_write_process_memory(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD48, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed V4: ON");
-		}
-		else
-		{
-			char HEX[] = { 0x3E, 0x26, 0xAD, 0x89 };
-			sys_dbg_write_process_memory(0x003ABD48, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003ABD48, &HEX, sizeof(HEX));
-			SetNotify(L"Super Speed V4: OFF");
-		}
+		char HEX[] = { NyTekCFW::IntToHex(value) };
+		sys_dbg_write_process_memory(0x003ABD49, &HEX, sizeof(HEX));
+		sys_dbg_write_process_memory_ps3mapi(0x003ABD49, &HEX, sizeof(HEX));
 	}
 
 	void MULTI_JUMP(bool toggle)

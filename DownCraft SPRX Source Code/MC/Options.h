@@ -686,6 +686,13 @@ void Options()
 			CrosshairMenu = true;
 			CurrentOpt = 0;
 		}
+
+		if (CurrentOpt == 6)
+		{
+			SettingsMenu = false;
+			DrawHeadLogoMenu = true;
+			CurrentOpt = 0;
+		}
 	}
 
 #pragma endregion
@@ -2754,32 +2761,6 @@ void Options()
 	{
 		if (CurrentOpt == 0)
 		{
-			if (!BunnyHoptoggle)
-			{
-				BunnyHoptoggle = true;
-			}
-			else
-			{
-				BunnyHoptoggle = false;
-			}
-		}
-
-		if (CurrentOpt == 1)
-		{
-			if (!ESPEntity)
-			{
-				Offsets::ENTITY_ESP(true);
-				ESPEntity = true;
-			}
-			else
-			{
-				Offsets::ENTITY_ESP(false);
-				ESPEntity = false;
-			}
-		}
-
-		if (CurrentOpt == 2)
-		{
 			if (!ESPTracer)
 			{
 				Offsets::ESP_TRACER(true);
@@ -2792,7 +2773,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 3)
+		if (CurrentOpt == 1)
 		{
 			if (!ESPCOD)
 			{
@@ -2806,7 +2787,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 4)
+		if (CurrentOpt == 2)
 		{
 			if (!ESPWaypoint)
 			{
@@ -2817,20 +2798,6 @@ void Options()
 			{
 				Offsets::ESP_WAYPOINT(false);
 				ESPWaypoint = false;
-			}
-		}
-
-		if (CurrentOpt == 5)
-		{
-			if (!PhaseV1BETA)
-			{
-				Offsets::PHASE_MODE(true);
-				PhaseV1BETA = true;
-			}
-			else
-			{
-				Offsets::PHASE_MODE(false);
-				PhaseV1BETA = false;
 			}
 		}
 	}
@@ -3053,20 +3020,6 @@ void Options()
 
 		if (CurrentOpt == 15)
 		{
-			if (!BlockStaticCrack)
-			{
-				Offsets::BLOCK_STATIC_CRACK(true);
-				BlockStaticCrack = true;
-			}
-			else
-			{
-				Offsets::BLOCK_STATIC_CRACK(false);
-				BlockStaticCrack = false;
-			}
-		}
-
-		if (CurrentOpt == 16)
-		{
 			if (!BigVelocity)
 			{
 				Offsets::BIG_VELOCITY(true);
@@ -3079,7 +3032,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 17)
+		if (CurrentOpt == 16)
 		{
 			if (!NoVelocity)
 			{
@@ -3093,7 +3046,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 18)
+		if (CurrentOpt == 17)
 		{
 			if (!AntiVoidtoggle)
 			{
@@ -3102,6 +3055,20 @@ void Options()
 			else
 			{
 				AntiVoidtoggle = false;
+			}
+		}
+
+		if (CurrentOpt == 18)
+		{
+			if (!ESPEntity)
+			{
+				Offsets::ENTITY_ESP(true);
+				ESPEntity = true;
+			}
+			else
+			{
+				Offsets::ENTITY_ESP(false);
+				ESPEntity = false;
 			}
 		}
 
@@ -3964,59 +3931,43 @@ void Options()
 
 	if (NonHostPage)
 	{
-		if (CurrentOpt == 0)
-		{
-			if (!SuperSpeed)
-			{
-				Offsets::SUPER_SPEED(true);
-				SuperSpeed = true;
-			}
-			else
-			{
-				Offsets::SUPER_SPEED(false);
-				SuperSpeed = false;
-			}
-		}
-
 		if (CurrentOpt == 1)
 		{
-			if (!SuperSpeedV2)
+			if (!BunnyHoptoggle)
 			{
-				Offsets::SUPER_SPEED_V2(true);
-				SuperSpeedV2 = true;
+				BunnyHoptoggle = true;
 			}
 			else
 			{
-				Offsets::SUPER_SPEED_V2(false);
-				SuperSpeedV2 = false;
+				BunnyHoptoggle = false;
 			}
 		}
 
 		if (CurrentOpt == 2)
 		{
-			if (!SuperSpeedV3)
+			if (!PhaseV1BETA)
 			{
-				Offsets::SUPER_SPEED_V3(true);
-				SuperSpeedV3 = true;
+				Offsets::PHASE_MODE(true);
+				PhaseV1BETA = true;
 			}
 			else
 			{
-				Offsets::SUPER_SPEED_V3(false);
-				SuperSpeedV3 = false;
+				Offsets::PHASE_MODE(false);
+				PhaseV1BETA = false;
 			}
 		}
 
 		if (CurrentOpt == 3)
 		{
-			if (!SuperSpeedV4)
+			if (!BlockStaticCrack)
 			{
-				Offsets::SUPER_SPEED_V4(true);
-				SuperSpeedV4 = true;
+				Offsets::BLOCK_STATIC_CRACK(true);
+				BlockStaticCrack = true;
 			}
 			else
 			{
-				Offsets::SUPER_SPEED_V4(false);
-				SuperSpeedV4 = false;
+				Offsets::BLOCK_STATIC_CRACK(false);
+				BlockStaticCrack = false;
 			}
 		}
 

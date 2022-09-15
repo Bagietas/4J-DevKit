@@ -22,7 +22,6 @@ struct Color
 		return (a << 24) | (r << 16) | (g << 8) | b;
 	}
 
-
 	std::uint8_t a;
 	std::uint8_t r;
 	std::uint8_t g;

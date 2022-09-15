@@ -613,6 +613,8 @@ void Custom_Crosshair(int value)
 	}
 }
 
+#pragma region "DRAWING HEAD PIXEL"
+
 int AlexColorHair[3] = { 250, 140, 17 };
 int AlexColorSkins[3] = { 248, 197, 170 };
 int AlexColorEyesWhite[3] = { 255, 255, 255 };
@@ -743,3 +745,289 @@ void DrawAlexHead()
 	DrawRectangle(AlexHeadpos[0] + AlexHeadspace[5], AlexHeadpos[1] + AlexHeadspace[6], AlexHeadsize[0], AlexHeadsize[1], AlexColorSkins);
 	DrawRectangle(AlexHeadpos[0] + AlexHeadspace[6], AlexHeadpos[1] + AlexHeadspace[6], AlexHeadsize[0], AlexHeadsize[1], AlexColorSkins);
 }
+
+int SteveColorHair[3] = { 45, 32, 15 };
+int SteveColorSkins[3] = { 187, 137, 114 };
+int SteveColorEyesWhite[3] = { 255, 255, 255 };
+int SteveColorEyes[3] = { 24, 45, 108 };
+int SteveColorNose[3] = { 83, 51, 13 };
+int SteveColorMouth[3] = { 59, 38, 11 };
+int SteveHeadpos[2] = { 98, 8 };
+int SteveHeadsize[2] = { 2, 2 };
+int SteveHeadspace[7] = { 5, 10, 15, 20, 25, 30, 35 };
+
+float SteveBlinkEyes = 0;
+float SteveBlinkEyesTimer = 0;
+
+void DrawSteveHead()
+{
+	if (SteveHeadsize[1] == 2)
+	{
+		SteveHeadspace[0] = 2; SteveHeadspace[1] = 4; SteveHeadspace[2] = 6; SteveHeadspace[3] = 8; SteveHeadspace[4] = 10; SteveHeadspace[5] = 12; SteveHeadspace[6] = 14;
+	}
+	else if (SteveHeadsize[1] == 3)
+	{
+		SteveHeadspace[0] = 3; SteveHeadspace[1] = 6; SteveHeadspace[2] = 9; SteveHeadspace[3] = 12; SteveHeadspace[4] = 15; SteveHeadspace[5] = 18; SteveHeadspace[6] = 21;
+	}
+	else if (SteveHeadsize[1] == 5)
+	{
+		SteveHeadspace[0] = 5; SteveHeadspace[1] = 10; SteveHeadspace[2] = 15; SteveHeadspace[3] = 20; SteveHeadspace[4] = 25; SteveHeadspace[5] = 30; SteveHeadspace[6] = 35;
+	}
+	else if (SteveHeadsize[1] == 10)
+	{
+		SteveHeadspace[0] = 10; SteveHeadspace[1] = 20; SteveHeadspace[2] = 30; SteveHeadspace[3] = 40; SteveHeadspace[4] = 50; SteveHeadspace[5] = 60; SteveHeadspace[6] = 70;
+	}
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[0], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[1], SteveHeadsize[0], SteveHeadsize[1], SteveColorHair);
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[2], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+
+	if (SteveBlinkEyes > -1)
+		SteveBlinkEyes += 5;
+
+	if (SteveBlinkEyes > 1500)
+	{
+		DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+
+		if (SteveBlinkEyesTimer > -1)
+			SteveBlinkEyesTimer += 1;
+
+		if (SteveBlinkEyesTimer > 30)
+		{
+			SteveBlinkEyesTimer = 0;
+			SteveBlinkEyes = 0;
+		}
+	}
+	else
+	{
+		DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorEyesWhite);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorEyes);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorEyes);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorEyesWhite);
+		DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[3], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	}
+
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorNose);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorNose);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[4], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[5], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+
+	DrawRectangle(SteveHeadpos[0], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[0], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[1], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[2], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[3], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[4], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorMouth);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[5], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+	DrawRectangle(SteveHeadpos[0] + SteveHeadspace[6], SteveHeadpos[1] + SteveHeadspace[6], SteveHeadsize[0], SteveHeadsize[1], SteveColorSkins);
+}
+
+int EndermanColorSkins1[3] = { 1, 1, 1 };
+int EndermanColorSkins2[3] = { 22, 22, 22 };
+int EndermanColorEyes1[3] = { 224, 121, 252 };
+int EndermanColorEyes2[3] = { 205, 0, 249 };
+int EndermanHeadpos[2] = { 98, 8 };
+int EndermanHeadsize[2] = { 2, 2 };
+int EndermanHeadspace[7] = { 5, 10, 15, 20, 25, 30, 35 };
+
+float EndermanBlinkEyes = 0;
+float EndermanBlinkEyesTimer = 0;
+
+void DrawEndermanHead()
+{
+	if (EndermanHeadsize[1] == 2)
+	{
+		EndermanHeadspace[0] = 2; EndermanHeadspace[1] = 4; EndermanHeadspace[2] = 6; EndermanHeadspace[3] = 8; EndermanHeadspace[4] = 10; EndermanHeadspace[5] = 12; EndermanHeadspace[6] = 14;
+	}
+	else if (EndermanHeadsize[1] == 3)
+	{
+		EndermanHeadspace[0] = 3; EndermanHeadspace[1] = 6; EndermanHeadspace[2] = 9; EndermanHeadspace[3] = 12; EndermanHeadspace[4] = 15; EndermanHeadspace[5] = 18; EndermanHeadspace[6] = 21;
+	}
+	else if (EndermanHeadsize[1] == 5)
+	{
+		EndermanHeadspace[0] = 5; EndermanHeadspace[1] = 10; EndermanHeadspace[2] = 15; EndermanHeadspace[3] = 20; EndermanHeadspace[4] = 25; EndermanHeadspace[5] = 30; EndermanHeadspace[6] = 35;
+	}
+	else if (EndermanHeadsize[1] == 10)
+	{
+		EndermanHeadspace[0] = 10; EndermanHeadspace[1] = 20; EndermanHeadspace[2] = 30; EndermanHeadspace[3] = 40; EndermanHeadspace[4] = 50; EndermanHeadspace[5] = 60; EndermanHeadspace[6] = 70;
+	}
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[0], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[1], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+
+	if (EndermanBlinkEyes > -1)
+		EndermanBlinkEyes += 5;
+
+	if (EndermanBlinkEyes > 1500)
+	{
+		DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+
+		if (EndermanBlinkEyesTimer > -1)
+			EndermanBlinkEyesTimer += 1;
+
+		if (EndermanBlinkEyesTimer > 30)
+		{
+			EndermanBlinkEyesTimer = 0;
+			EndermanBlinkEyes = 0;
+		}
+	}
+	else
+	{
+		DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes1);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes1);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes1);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes2);
+		DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[2], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorEyes1);
+	}
+
+	
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[3], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[4], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[5], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+
+	DrawRectangle(EndermanHeadpos[0], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[0], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[1], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[2], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[3], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[4], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[5], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins1);
+	DrawRectangle(EndermanHeadpos[0] + EndermanHeadspace[6], EndermanHeadpos[1] + EndermanHeadspace[6], EndermanHeadsize[0], EndermanHeadsize[1], EndermanColorSkins2);
+}
+
+void DRAW_HEAD_PIXEL_LOGO()
+{
+	if (DrawHeadPixelLogo == 0)
+	{
+
+	}
+	else if (DrawHeadPixelLogo == 1)
+	{
+		DrawSteveHead();
+	}
+	else if (DrawHeadPixelLogo == 2)
+	{
+		DrawAlexHead();
+	}
+	else if (DrawHeadPixelLogo == 3)
+	{
+		DrawEndermanHead();
+	}
+}
+
+#pragma endregion
+
