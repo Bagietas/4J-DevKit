@@ -749,15 +749,21 @@ namespace SubMenu
 
 	void DebugDrawLineMenu()
 	{
-		submmenuMax = 9;
+		submmenuMax = 7;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Debug Draw Line Menu");
 		AddBoolOption(L"Enable Draw Line", !DebugDrawLine);
-		AddOption(L"Line X +");
-		AddOption(L"Line X -");
-		AddOption(L"Line Y +");
-		AddOption(L"Line Y -");
+		AddOption(L"Line X1 +");
+		AddOption(L"Line X1 -");
+		AddOption(L"Line X2 +");
+		AddOption(L"Line X2 -");
+		AddOption(L"Line Y1 +");
+		AddOption(L"Line Y1 -");
+		AddOption(L"Line Y2 +");
+		AddOption(L"Line Y2 -");
+		AddOption(L"Line Width +");
+		AddOption(L"Line Width -");
 	}
 
 	void CustomImageMenu()

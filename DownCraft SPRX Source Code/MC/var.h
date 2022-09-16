@@ -392,8 +392,11 @@ int DebugHudAlphaH = 0;
 
 //Debug Draw Line Menu
 bool DebugDrawLine = false;
-int DebugDrawLineX = 0;
-int DebugDrawLineY = 0;
+int DebugDrawLineX1 = 80;
+int DebugDrawLineX2 = 80;
+int DebugDrawLineY1 = 160;
+int DebugDrawLineY2 = 160;
+int DebugDrawLineWidth = 5;
 
 bool FirstInfoMessage = true;
 bool InitializeSPRX = true;

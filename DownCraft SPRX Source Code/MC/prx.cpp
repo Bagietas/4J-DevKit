@@ -36,6 +36,7 @@ extern "C" int _DownCraftSPRX_prx_entry(void)
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));
 	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
+
 	INITIALIZE_SPRX = true;
 	return SYS_PRX_RESIDENT;
 }

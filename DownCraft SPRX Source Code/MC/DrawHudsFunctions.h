@@ -204,4 +204,27 @@ void snprintf(const char* text, int valeur, int X, int Y)
 	DrawText(woption4, X, Y, color(UI::Color::WHITE));
 }
 
+void drawLineTest(const Vector2& start, const Vector2& end, int* color, float lineWidth)
+{
+	float modX = 0 - (start.y - end.y);
+	float modY = start.x - end.x;
+
+	float len = sqrtf(modX * modX + modY * modY);
+
+	modX /= len;
+	modY /= len;
+	modX *= lineWidth;
+	modY *= lineWidth;
+
+	uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
+	FUNCTIONS::Tesselator_Begin(pTesselator);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, start.x + modX, start.y + modY, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, start.x - modX, start.y - modY, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, end.x - modX, end.y - modY, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, start.x + modX, start.y + modY, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, end.x + modX, end.y + modY, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, end.x - modX, end.y - modY, 0, color);
+	FUNCTIONS::Tesselator_End(pTesselator);
+}
+
 #pragma endregion

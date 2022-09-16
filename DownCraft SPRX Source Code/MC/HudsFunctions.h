@@ -151,7 +151,9 @@ namespace logs
 
 			if (logs_count > -1)
 			{
-				DrawRectangle(0, 246 - (logs_count * 10), 190, 12 + (10 * logs_count), UI::Color::BLACK);
+				//DrawRectangle(0, 246 - (logs_count * 10), 190, 12 + (10 * logs_count), UI::Color::BLACK);
+				Color BLACK_OPACITY{ 15, 15, 15, 210 };
+				DrawRectangleAlpha(0, 257, 190, 246 - (10 * logs_count), BLACK_OPACITY);
 			}
 
 			for (byte a = 0; a < logs_count + 1; a++)
@@ -645,7 +647,10 @@ void AddBoolOption(const wchar_t* opt, bool boolOption)
 				}
 				else
 				{
-					DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK2;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
 				}
 			}
 			else
@@ -656,7 +661,10 @@ void AddBoolOption(const wchar_t* opt, bool boolOption)
 				}
 				else
 				{
-					DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE) : color(UI::Color::WHITE));
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE) : color(UI::Color::WHITE));
 				}
 			}
 		}
@@ -700,7 +708,12 @@ void AddBoolOption(const wchar_t* opt, bool boolOption)
 				}
 				else
 				{
-					DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+
+
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
 				}
 			}
 			else
@@ -711,7 +724,10 @@ void AddBoolOption(const wchar_t* opt, bool boolOption)
 				}
 				else
 				{
-					DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(GetThemeColor()) : color(UI::Color::WHITE));
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(GetThemeColor()) : color(UI::Color::WHITE));
 				}
 			}
 		}

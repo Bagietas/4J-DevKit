@@ -527,7 +527,7 @@ void Options()
 		}
 	}
 
-#pragma endregion
+    #pragma endregion
 
     #pragma region "DEBUG DRAW LINE MENU"
 
@@ -547,22 +547,52 @@ void Options()
 
 		if (CurrentOpt == 1)
 		{
-			DebugDrawLineX += 1;
+			DebugDrawLineX1 += 1;
 		}
 
 		if (CurrentOpt == 2)
 		{
-			DebugDrawLineX -= 1;
+			DebugDrawLineX1 -= 1;
 		}
 
 		if (CurrentOpt == 3)
 		{
-			DebugDrawLineY += 1;
+			DebugDrawLineX2 += 1;
 		}
 
 		if (CurrentOpt == 4)
 		{
-			DebugDrawLineY -= 1;
+			DebugDrawLineX2 -= 1;
+		}
+
+		if (CurrentOpt == 5)
+		{
+			DebugDrawLineY1 += 1;
+		}
+
+		if (CurrentOpt == 6)
+		{
+			DebugDrawLineY1 -= 1;
+		}
+
+		if (CurrentOpt == 7)
+		{
+			DebugDrawLineY2 += 1;
+		}
+
+		if (CurrentOpt == 8)
+		{
+			DebugDrawLineY2 -= 1;
+		}
+
+		if (CurrentOpt == 9)
+		{
+			DebugDrawLineWidth += 1;
+		}
+
+		if (CurrentOpt == 10)
+		{
+			DebugDrawLineWidth -= 1;
 		}
 	}
 

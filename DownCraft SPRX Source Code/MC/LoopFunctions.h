@@ -1,5 +1,6 @@
 #pragma once
 
+
 void ModuleLoop()
 {
 	Modules::AntiVoid();
@@ -53,17 +54,38 @@ void LoopFunc()
 	DRAW_HEAD_PIXEL_LOGO();
 
 	if (DebugText)
+	{
 		DrawTextC(initialDebugTxt, DebugTextX, DebugTextY, color(UI::Color::WHITE));
+		snprintf("Text X: %i", DebugTextX, 50, 80);
+		snprintf("Text Y: %i", DebugTextY, 50, 90);
+	}
 
 	if (DebugHud)
+	{
 		DrawRectangle(DebugHudX, DebugHudY, DebugHudW, DebugHudH, UI::Color::BLACK);
+		snprintf("Hud X: %i", DebugHudX, 50, 80);
+		snprintf("Hud Y: %i", DebugHudY, 50, 90);
+		snprintf("Hud W: %i", DebugHudW, 50, 100);
+		snprintf("Hud H: %i", DebugHudH, 50, 110);
+	}
 
 	if (DebugHudAlpha)
 	{
 		Color BLACK_OPACITY{ 15, 15, 15, 200 };
 		DrawRectangleAlpha(DebugHudAlphaX, DebugHudAlphaY, DebugHudAlphaW, DebugHudAlphaH, BLACK_OPACITY);
+		snprintf("Hud Alpha X: %i", DebugHudAlphaX, 50, 80);
+		snprintf("Hud Alpha Y: %i", DebugHudAlphaY, 50, 90);
+		snprintf("Hud Alpha W: %i", DebugHudAlphaW, 50, 100);
+		snprintf("Hud Alpha H: %i", DebugHudAlphaH, 50, 110);
 	}
 
 	if (DebugDrawLine)
-		drawLine(DebugDrawLineX, DebugDrawLineY, GetThemeColor());
+	{
+		drawLineTest(Vector2(DebugDrawLineX1, DebugDrawLineX2), Vector2(DebugDrawLineY1, DebugDrawLineY2), UI::Color::PURPLE, DebugDrawLineWidth);
+		snprintf("Draw Line X1: %i", DebugDrawLineX1, 50, 80);
+		snprintf("Draw Line X2: %i", DebugDrawLineX2, 50, 90);
+		snprintf("Draw Line Y1: %i", DebugDrawLineY1, 50, 100);
+		snprintf("Draw Line Y2: %i", DebugDrawLineY2, 50, 110);
+		snprintf("Draw Line Width: %i", DebugDrawLineWidth, 50, 120);
+	}
 }
