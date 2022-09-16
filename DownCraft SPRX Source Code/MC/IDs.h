@@ -17,7 +17,7 @@ namespace Blocks
 	uintptr_t OAK_PLANKS = 0x014C8944;
 	uintptr_t OAK_SAPLING = 0x014C8948;
 	uintptr_t BEDROCK = 0x014C894C;
-	uintptr_t OWING_WATER = 0x014C8950;
+	uintptr_t FLOWING_WATER = 0x014C8950;
 	uintptr_t WATER = 0x014C8954;
 	uintptr_t FLOWING_LAVA = 0x014C8958;
 	uintptr_t LAVA = 0x014C895C;
@@ -145,11 +145,17 @@ namespace Effect
 	int aa = 0x014C9B48;
 }
 
-namespace Sound
+namespace SoundEvent
 {
-	uintptr_t* pSoundEventBack = (uintptr_t*)0x14CA684;
-	uintptr_t* pSoundEventCraft = (uintptr_t*)0x14CA688;
-	uintptr_t* pSoundEventFocus = (uintptr_t*)0x14CA690;
-	uintptr_t* pSoundEventPress = (uintptr_t*)0x14CA694;
-	uintptr_t* pSoundEventScroll = (uintptr_t*)0x14CA698;
+	uintptr_t* SoundEventBack = (uintptr_t*)0x14CA684;
+	uintptr_t* SoundEventCraft = (uintptr_t*)0x14CA688;
+	uintptr_t* SoundEventCraftFail = (uintptr_t*)0x014CA68C;
+	uintptr_t* SoundEventFocus = (uintptr_t*)0x14CA690;
+	uintptr_t* SoundEventPress = (uintptr_t*)0x14CA694;
+	uintptr_t* SoundEventScroll = (uintptr_t*)0x14CA698;
+	uintptr_t* SoundEventTNT = (uintptr_t*)0x14CA69C;
+	uintptr_t* SoundEventWater = (uintptr_t*)0x14CA6A0;
+	uintptr_t* SoundEventIdk = (uintptr_t*)0x14CA6A4;
+
+	uintptr_t* SoundEventRandomOrb = (uintptr_t*)0x14C9F20;
 }

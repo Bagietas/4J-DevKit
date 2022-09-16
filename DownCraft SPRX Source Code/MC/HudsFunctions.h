@@ -578,6 +578,7 @@ void GetInfosLastPlayer()
 		}
 
 		strcpy((char*)0x3000AF0A, PLR_NAME); //unique ID
+
 		if (PLR_NAME == "cry_naegga")
 		{
 			DrawText(L"Misaki is here !", 37, 314, color(UI::Color::WHITE));

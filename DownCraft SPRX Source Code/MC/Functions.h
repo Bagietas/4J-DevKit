@@ -330,7 +330,7 @@ void ChangeIntOptions(bool page, int currentopt, int min, int max, int& value)
 					{
 						value = value - 1;
 					}
-					PlayUISound(Sound::pSoundEventCraft);
+					PlayUISound(SoundEvent::SoundEventCraft);
 				}
 			}
 			else if (Buttons::IsMCButtonPressed(Buttons::RIGHT))
@@ -345,7 +345,7 @@ void ChangeIntOptions(bool page, int currentopt, int min, int max, int& value)
 					{
 						value = value + 1;
 					}
-					PlayUISound(Sound::pSoundEventCraft);
+					PlayUISound(SoundEvent::SoundEventCraft);
 				}
 			}
 		}
@@ -370,7 +370,7 @@ void ChangeFloatOptions(bool page, int currentopt, int min, int max, float& valu
 					{
 						value = value - 5;
 					}
-					PlayUISound(Sound::pSoundEventCraft);
+					PlayUISound(SoundEvent::SoundEventCraft);
 				}
 			}
 			else if (Buttons::IsMCButtonPressed(Buttons::RIGHT))
@@ -385,7 +385,7 @@ void ChangeFloatOptions(bool page, int currentopt, int min, int max, float& valu
 					{
 						value = value + 5;
 					}
-					PlayUISound(Sound::pSoundEventCraft);
+					PlayUISound(SoundEvent::SoundEventCraft);
 				}
 			}
 		}
@@ -464,322 +464,22 @@ void DisplayKeyboard()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-char * removespace(const char * notify)
+#include "HudsFunctions.h"
+int milliseconds;
+int seconds;
+int minutes;
+int hours;
+void GetServerTime()
 {
-	char buffer[0x500];
-	_sys_strcat(buffer, notify);
-	for (int i = 0; i < 0x500; i++)
-	{
-		if (buffer[i] == ' ') 
-		{
-			buffer[i] = '+';
-		}
-	}
-	return buffer;
-}
+	int pos[2] = { 80, 70 };
 
-char* SendRequest(char* URL, char* Path)
-{
-	struct sockaddr_in SocketAddress;
-	char bufferReturn[500];
-	char RequestBuffer[1000];
-	memset(RequestBuffer, 0x00, 1000);
-	SocketAddress.sin_addr.s_addr = *((unsigned long*)gethostbyname(URL)->h_addr);
-	SocketAddress.sin_family = AF_INET;
-	SocketAddress.sin_port = htons(80);
-	int Socket = socket(AF_INET, SOCK_STREAM, 0);
-	if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
-	{
-		return "";
-	}
-	_sys_strcat(RequestBuffer, "GET /");
-	_sys_strcat(RequestBuffer, Path);
-	_sys_strcat(RequestBuffer, "\r\nConnection: close\r\n\r\n");
+	milliseconds = mc->gameTime;
+	seconds = (milliseconds / 60);
+	minutes = seconds / 60;
+	hours = minutes / 60;
 
-	send(Socket, RequestBuffer, _sys_strlen(RequestBuffer), 0);
-	while (recv(Socket, bufferReturn, 500, 0) > 0)
-	{
-		return bufferReturn;
-	}
-	socketclose(Socket);
-}
-
-void RestartGame()
-{
-	char buffer[0x200];
-	_sys_snprintf(buffer, 0x200, "xmb.ps3$reloadgame", "");
-	_sys_printf("%s\n", buffer);
-	SendRequest("192.168.1.17", buffer);
-}
-
-void Notify(const char * notify) 
-{
-	char buffer[0x200];
-	_sys_snprintf(buffer, 0x200, "ID.php", "");
-	_sys_printf("%s\n", buffer);
-	SendRequest("193.26.21.237", buffer);
-}
-
-void GetMemoryInfo()
-{
-	static sys_memory_info stat; size_t* FreeMemory, * UsedMemory; int HeapFree;
-	sys_memory_get_user_memory_size(&stat);
-	*FreeMemory = stat.available_user_memory;
-	*FreeMemory += HeapFree;
-	*UsedMemory = stat.total_user_memory - *FreeMemory;
-	const size_t RETAIL_SIZE = 213 * 1024 * 1024;
-	if (stat.total_user_memory > RETAIL_SIZE)
-	{
-		*FreeMemory -= stat.total_user_memory - RETAIL_SIZE;
-	}
-	else
-	{
-		*FreeMemory = 0;
-		*UsedMemory = 0;
-	}
-	return;
-}
-
-namespace HTTP
-{
-#define __WEB_H
-
-	#include <string.h>
-	#include <stdio.h>
-	#include <stdlib.h>
-	#include <cell/http.h>
-	#include <netex/net.h>
-	//int _HTTP_POOL_BUFFER = 0x10030000;
-	#define HTTP_POOL_SIZE      (64 * 1024)
-	#define HTTP_POOL_BUFFER 0x10030000 //change this to an address with a free size of 0x10000 bytes
-	static char r_buffer[0x6000];  //MAX is 0x6000
-	
-	void memCpy(void* destination, const void* source, size_t num)
-	{
-		for (int i = 0; i < num; i++)
-		{
-			*((char*)destination + i) = *((char*)source + i);
-		}
-	}
-
-
-	void memFree(char* ptr, int len)
-	{
-		for (int i = 0; i < len; i++)
-		{
-			*(char*)(ptr + i) = 0x00;
-		}
-	}
-
-
-	int strCmp(const char* str1, const char* str2)
-	{
-		int diff = 0;
-
-		if (*(str1) == 0x00 || *(str2) == 0x00) { return -1; }
-
-		for (int i = 0; i < 0x600; i++)
-		{
-			if (*(str1 + i) == 0x00 || *(str2 + i) == 0x00) { break; }
-			if (*(str1 + i) != *(str2 + i)) { diff++; }
-		}
-
-		return diff;
-	}
-
-	void SendRequest(char* url,  char* retBuffer, int bufMaxLen) //url = url to request ("http://www.google.com/")    | retBuffer = ptr where the answer will be written to  | bufMaxLen = Max length of the buffer
-	{
-			if(bufMaxLen > 0x6000) {return;} //ERROR, bufMaxLen is TOO BIG
-
-					CellHttpClientId client = 0;
-					CellHttpTransId trans = 0;
-					CellHttpUri uri;
-					int ret;
-					bool has_cl = true;
-					uint64_t length = 0;
-					uint64_t recvd;
-					size_t poolSize = 0;
-					void *uriPool = NULL;
-							void *httpPool = NULL;
-							const char *serverName;
-							size_t localRecv = 0;
-
-				serverName = url;  //set url
-							memFree(r_buffer, bufMaxLen);
-							sys_net_initialize_network(); //init network
-							httpPool = (void*)HTTP_POOL_BUFFER; //address to: 0x10000 free bytes
-
-							if (httpPool == NULL) 
-							{ 
-								ret = -1; 
-								goto end;
-							}
-
-							ret = cellHttpInit(httpPool, HTTP_POOL_SIZE);
-							if (ret < 0)
-							{ 
-								goto end; 
-							}
-
-							ret = cellHttpCreateClient(&client);
-							if (ret < 0) 
-							{ 
-								goto end; 
-							}
-
-							ret = cellHttpUtilParseUri(NULL, serverName, NULL, 0, &poolSize);
-							if (ret < 0)
-							{ 
-								goto end; 
-							}
-
-							char uriPoolAlloc[0x1024]; //allocate some space for the uri (a bit too much but eh)
-							uriPool = uriPoolAlloc;
-							if (NULL == uriPool) 
-							{ 
-								goto end; 
-							} //fail
-
-							ret = cellHttpUtilParseUri(&uri, serverName, uriPool, poolSize, NULL);
-							if (ret < 0) 
-							{
-								memFree((char*)uriPool, sizeof(uriPool)); 
-								goto end; 
-							}
-
-							ret = cellHttpCreateTransaction(&trans, client, CELL_HTTP_METHOD_GET, &uri);
-							memFree((char*)uriPool, sizeof(uriPool));
-
-							if (ret < 0) 
-							{ 
-								goto end; 
-							}
-
-							ret = cellHttpSendRequest(trans, NULL, 0, NULL); //send it :D
-							{//make a new scope for the status
-									int code = 0;
-									ret = cellHttpResponseGetStatusCode(trans, &code);
-									if (ret < 0) 
-									{ 
-										goto end; 
-									}
-
-							}//end of status scope
-
-							ret = cellHttpResponseGetContentLength(trans, &length);
-
-							if (ret < 0) 
-							{
-									if (ret == CELL_HTTP_ERROR_NO_CONTENT_LENGTH) 
-									{ 
-										has_cl = false;
-									}
-									else 
-									{ 
-										goto end; 
-									}
-							}
-
-							recvd = 0;
-
-							while ((!has_cl) || (recvd < length))
-							{
-									ret = cellHttpRecvResponse(trans, r_buffer, bufMaxLen-1, &localRecv);
-									if (ret < 0) {goto end; } else if (localRecv == 0) break;
-									recvd += localRecv;
-									r_buffer[localRecv] = '\0'; //null terminate it
-						}
-							ret = 0;
-							{
-								for(int i = 0;i<bufMaxLen;i++)
-								{
-									retBuffer = r_buffer;
-								}
-							}  //OUTPUT
-
-							// shutdown procedures
-		end:
-			if (trans) 
-			{
-					cellHttpDestroyTransaction(trans);
-					trans = 0;
-			}
-
-			if (client) 
-			{
-				cellHttpDestroyClient(client);client = 0;
-			}
-
-			cellHttpEnd();  //END OF HTTP
-
-			if (httpPool) 
-			{  
-				memFree((char*)httpPool, sizeof(httpPool));
-				httpPool = NULL;
-			}
-
-			sys_net_finalize_network();
-	}
+	snprintf("%i milliseconds", milliseconds, pos[0], pos[1]);
+	snprintf("%i seconds", int(seconds % 60), pos[0], pos[1] + 10);
+	snprintf("%i minutes", int(minutes % 60), pos[0], pos[1] + 20);
+	snprintf("%i hours", int(hours % 24), pos[0], pos[1] + 30);
 }

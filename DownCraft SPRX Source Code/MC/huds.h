@@ -136,6 +136,8 @@ namespace logs
 		logs[0].end_time = logs[0].start_time + duration;
 		if (logs_count < 11)
 			logs_count++;
+
+		PlayUISound(SoundEvent::SoundEventRandomOrb);
 	}
 
 	void draw_logs()

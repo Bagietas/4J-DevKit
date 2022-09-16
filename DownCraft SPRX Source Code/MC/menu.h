@@ -256,11 +256,11 @@
 	 int wI = 0;
 	 keyPressed[wI] = false;
 
-	 if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::R3))
+	 if (UsableMenu)
 	 {
-		 if (scrollWait(firstWaitTime, waitTime, wI))
+		 if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::R3))
 		 {
-			 if (UsableMenu)
+			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 if (OpenMenu)
 				 {
@@ -273,18 +273,18 @@
 				 return;
 			 }
 		 }
-	 }
 
-	 if (!OpenMenu)
-	 {
-		 if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::UP))
+		 if (!OpenMenu)
 		 {
-			 if (UsableMenu)
+			 if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::UP))
 			 {
-				 Opened = true;
-				 OpenMenu = true;
-				 MainMenu = true;
-				 SlideOpenMenu();
+				 if (UsableMenu)
+				 {
+					 Opened = true;
+					 OpenMenu = true;
+					 MainMenu = true;
+					 SlideOpenMenu();
+				 }
 			 }
 		 }
 	 }
@@ -296,7 +296,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 CurrentOpt = CurrentOpt - 1;
-				 PlayUISound(Sound::pSoundEventScroll);
+				 PlayUISound(SoundEvent::SoundEventScroll);
 				 return;
 			 }
 		 }
@@ -306,7 +306,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 CurrentOpt = CurrentOpt + 1;
-				 PlayUISound(Sound::pSoundEventScroll);
+				 PlayUISound(SoundEvent::SoundEventScroll);
 				 return;
 			 }
 		 }
@@ -329,7 +329,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 Options();
-				 PlayUISound(Sound::pSoundEventPress);
+				 PlayUISound(SoundEvent::SoundEventPress);
 				 return;
 			 }
 		 }
@@ -341,7 +341,7 @@
 				 BackSubMenu();
 				 CurrentOpt = 0;
 				 CurrentIndex = 0;
-				 PlayUISound(Sound::pSoundEventBack);
+				 PlayUISound(SoundEvent::SoundEventBack);
 				 return;
 			 }
 		 }
@@ -383,6 +383,8 @@
 
  void LoopFunc()
  {
+	 GetServerTime();
+
 	 Welcome_Message();
 	 GetPosition();
 	 GetPing();

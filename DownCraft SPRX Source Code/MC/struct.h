@@ -229,6 +229,15 @@ struct font_t {
 };
 
 
+class BlockPos { //basic "vec3" class just named as BlockPos as that is what mc calls it
+public:
+	int x;
+	int y;
+	int z;
+	BlockPos(int x, int y, int z);
+	BlockPos(double x, double y, double z);
+};
+
 class Timer {
 public:
 
@@ -424,6 +433,7 @@ public:
 	MultiplayerLocalPlayer* self;
 	int unkptr;
 	int entityId;
+
 	char __padding000[0x0060];
 	MultiPlayerLevel * pWorld;
 	char __padding001[0x0054];
@@ -434,52 +444,88 @@ public:
 	float rotPitch;
 	char __padding002[0x0004];
 	LivingEntity * ridingEnt;
-	char __padding003[0x0008];
+
+	/** If true, forces the World to spawn the entity and send it to clients even if the Chunk it is located in has not yet been loaded. */
+	bool forceSpawn;
+
+	/** Reference to the World object. */
 	MultiPlayerLevel * pWorld1;
 	char __padding004[0x0004];
 	double prevPosX;
 	double prevPosY;
 	double prevPosZ;
+
+	/** position of this entity, located at the center of its bounding box. */
 	double posX;
 	double posY;
 	double posZ;
+
+	/** Entity motion */
 	double motionX;
 	double motionY;
 	double motionZ;
+
+	/** Entity rotation Yaw */
 	float rotationYaw;
+
+	/** Entity rotation Pitch */
 	float rotationPitch;
 	float prevRotationYaw;
 	float prevRotationPitch;
+
+	/** Axis aligned bounding box. */
 	AxisAlignedBB* boundingBox;
 	bool onGround;
+
+	/** True if after a move this entity has collided */
 	bool isCollidedHorizontally;
 	bool isCollidedVertically;
 	bool isCollided;
+
 	char __padding005[0x0008];
 	float viewHeight1;
 	float viewHeight2;
 	char __padding006[0x0024];
 	bool isInWeb;
 	char __padding007[0x0002];
+
+	/** gets set by setEntityDead, so this must be the flag whether an Entity is dead (inactive may be better term)*/
 	bool isDead;
+
+	/** How wide this entity is considered to be */
 	float width;
 	float height;
+
+	/** The previous ticks distance walked multiplied by 0.6 */
 	float prevDistanceWalkedModified;
+
+	/** The distance walked multiplied by 0.6 */
 	float distanceWalkedModified;
 	float distanceWalkedOnStepModified;
 	float fallDistance;
+
 	int unk1;
 	int nextStepDistance;
 	float unkfloat1;
 	float unkfloat2;
+
+	/** The entity's X, Y, Z coordinate at the previous tick, used to calculate position during rendering routines*/
 	double lastTickPosX;
 	double lastTickPosY;
 	double lastTickPosZ;
+
+	/** How high this entity can step up when running into a block to try to get over it (currently make note the entity will always step up this amount and not just the amount needed)*/
 	float stepHeight;
+
+	/** Whether this entity won't clip with collision or not (make note it won't disable gravity)*/
 	bool noClip;
+
 	char __padding008[0x000B];
 	int ticksExisted;
+
+	/**Whether this entity is currently inside of water (if it handles water movement that is)*/
 	bool inWater;
+
 	char __padding009[0x0003];
 	int hurtResistantTime;
 	char unk;
@@ -490,9 +536,14 @@ public:
 	int chunkCoordZ;
 	char __padding00B[0x0024];
 	int timeUntilPortal;
+
+	/** Whether the entity is inside a Portal */
 	bool inPortal;
-	char __padding00C[0x0007];
+	int portalCounter;
+
+	/** Which dimension the player is in (-1 = the Nether, 0 = normal world) */
 	int dimension;
+
 	char __padding00D[0x0018];
 	const wchar_t * name;
 	char __padding00E[0x0045];
@@ -507,9 +558,9 @@ public:
 	virtual void nullsub_0(); //index 2
 	virtual void func_14C05F0(); //index 3
 	virtual void func_14A69F0(); //index 4
-	virtual uint32_t getPosition(uint32_t r4); //index 5
-	virtual void func_149BD18(); //index 6
-	virtual MultiPlayerLevel * getEntityWorld(); //index 7
+	virtual void sub_2387F8(); //index 5
+	virtual Vector3 getPositionVector(); //Get the position vector. <b>{@code null} is not allowed!</b> If you are not an entity in the world, return 0.0D, 0.0D, 0.0D
+	virtual MultiPlayerLevel * getEntityWorld(); //Get the world, if available. <b>{@code null} is not allowed!</b> If you are not an entity in the world, return the overworld
 	virtual void func_149BD28(); //index 8
 	virtual void func_14A6A58(); //index 9
 	virtual void func_149BD38(); //index 10
@@ -518,7 +569,7 @@ public:
 	virtual void func_14A1BB0(); //index 13
 	virtual void func_14A1B98(); //index 14
 	virtual void func_14A66D8(); //index 15
-	virtual void func_14A6778(); //index 16
+	virtual void preparePlayerToSpawn(); //Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity)
 	virtual void setDead(); //index 17
 	virtual void nullsub_1(); //index 18
 	virtual void func_149B760(); //index 19
@@ -635,10 +686,10 @@ public:
 	virtual void setIsIdle(); //index 130
 	virtual bool IsSprinting(); //index 131
 	virtual void setSprinting(bool sprint); //index 132
-	virtual void func_149BAD0(); //index 133
-	virtual void func_149BAD8(); //index 134
-	virtual void func_149BAE0(); //index 135
-	virtual void func_149BAE8(); //index 136
+	virtual bool isGlowing(); //index 133
+	virtual void setGlowing(bool glowingIn); //index 134
+	virtual bool isInvisible(); //index 135
+	virtual bool isInvisibleToPlayer(); //index 136
 	virtual void func_149BAF0(); //index 137
 	virtual void func_14C0768(); //index 138
 	virtual void func_14C0770(); //index 139
@@ -763,10 +814,10 @@ public:
 	virtual void func_14A6708(); //index 258
 	virtual void func_14A6710(); //index 259
 	virtual void func_14A6718(); //index 260
-	virtual void frostWalk(uint32_t r4); //index 261
-	virtual bool IsChild(); //index 262
-	virtual void onDeathUpdate(); //index 263
-	virtual bool canDropLoot(); //index 264
+	virtual void frostWalk(BlockPos* pos); //index 261
+	virtual bool IsChild(); //If Animal, checks if the age timer is negative
+	virtual void onDeathUpdate(); //handles entity death timer, experience orb and particle creation
+	virtual bool canDropLoot(); //Entity won't drop items or experience points if this returns false
 	virtual void decreaseAirSupply(uint32_t r4); //index 265
 	virtual void func_14A69B8(); //index 266
 	virtual void func_14A69C0(); //index 267
@@ -968,15 +1019,6 @@ public:
 	virtual void func_14C0808(); //index 463
 	virtual void func_14C0818(); //index 464
 
-};
-
-class BlockPos { //basic "vec3" class just named as BlockPos as that is what mc calls it
-public:
-	int x;
-	int y;
-	int z;
-	BlockPos(int x, int y, int z);
-	BlockPos(double x, double y, double z);
 };
 
 class Minecraft {

@@ -2,6 +2,7 @@
 
 #pragma region "Loading bar SPRX"
 
+int loadtimer = 0;
 int load = 0;
 void LoadSPRX()
 {
@@ -14,12 +15,19 @@ void LoadSPRX()
 	DrawTextC("Loading SPRX", 518, 165, color(UI::Color::WHITE));
 	snprintf("%i       ", load, 563, 137);
 
-	load += 1;
+	loadtimer += 1;
+
+	if (loadtimer > 10)
+	{
+		loadtimer = 0;
+		load += 1;
+	}
 
 	if (load > 194)
 	{
 		InitializeSPRX = false;
 		UsableMenu = true;
+		*(int*)0x0155847C = 0x01000000; //usable HUD
 		logs::SendMessageDebug(L"Welcome to DownCraft SPRX", UI::MCTextColors::Red);
 		logs::SendMessageDebug(L"Version V4.2", UI::MCTextColors::Aqua);
 		logs::SendMessageDebug(L"Press L1 + DPAD UP for open the menu", UI::MCTextColors::LightPurple);
@@ -38,6 +46,7 @@ void Inject()
 			{
 				*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
 				*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
+				*(int*)0x0155847C = 0x00000000; //unusable HUD
 				LoadSPRX();
 			}
 		}

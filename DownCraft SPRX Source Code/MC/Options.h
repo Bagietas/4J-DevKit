@@ -4798,6 +4798,7 @@ void Options()
 			if (!GodMode)
 			{
 				Offsets::GOD_MODE(true);
+				PlayUISound(SoundEvent::SoundEventIdk);
 				GodMode = true; 
 			}
 			else

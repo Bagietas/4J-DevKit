@@ -33,11 +33,11 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(95,10): warning 432: returning reference to local temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(237,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(246,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(307,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(316,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(422,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(431,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(482,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
@@ -67,30 +67,6 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Function
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(454,34): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (3 of keyboard) of type "wchar_t *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(540,8): warning 1070: returning pointer to local variable
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(555,9): warning 2623: conversion from a string literal to "char *" is deprecated
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(564,9): warning 1070: returning pointer to local variable
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(567): warning 942: missing return statement at end of non-void function "SendRequest"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(574,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(582,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(589,2): warning 551: variable "FreeMemory" is used before its value is set
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(590,16): warning 551: variable "HeapFree" is used before its value is set
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(591,2): warning 551: variable "UsedMemory" is used before its value is set
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(652,36): warning 552: parameter "retBuffer" was set but never used
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\OSK.h(17,9): warning 1628: argument of type "char *(*)(const std::time_t *)" is incompatible with parameter (1 of memset) of type "void *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\OSK.h(75,2): warning 112: statement is unreachable
-  
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(8,7): warning 178: variable "startl" was declared but never referenced
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(9,7): warning 178: variable "endl" was declared but never referenced
@@ -106,6 +82,30 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunc
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(570,13): warning 2623: conversion from a string literal to "char *" is deprecated
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\HudsFunctions.h(571,15): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(561,8): warning 1070: returning pointer to local variable
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(576,9): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(585,9): warning 1070: returning pointer to local variable
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(588): warning 942: missing return statement at end of non-void function "SendRequest"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(595,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(603,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of SendRequest) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(610,2): warning 551: variable "FreeMemory" is used before its value is set
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(611,16): warning 551: variable "HeapFree" is used before its value is set
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(612,2): warning 551: variable "UsedMemory" is used before its value is set
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(673,36): warning 552: parameter "retBuffer" was set but never used
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\OSK.h(17,9): warning 1628: argument of type "char *(*)(const std::time_t *)" is incompatible with parameter (1 of memset) of type "void *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\OSK.h(75,2): warning 112: statement is unreachable
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(12,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
@@ -123,17 +123,17 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(1
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(127,3): warning 176: subscript out of range
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(158,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(160,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(213,35): warning 2520: invalid narrowing conversion from "int" to "unsigned char"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(215,35): warning 2520: invalid narrowing conversion from "int" to "unsigned char"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(631,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(633,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(631,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(633,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(681,8): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(683,8): warning 178: variable "color2" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(611,5): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\huds.h(613,5): warning 178: variable "color2" was declared but never referenced
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Offsets.h(60,13): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SetNotify) of type "wchar_t *"
   
@@ -1307,27 +1307,27 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Options.
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Options.h(1256,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(403,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(405,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(596,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(605,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(606,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(598,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(607,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(13,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(608,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\menu.h(609,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(14,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(23,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(15,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(24,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(31,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(25,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(32,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(87,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of UnInject) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(33,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(96,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of UnInject) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\prx.cpp(125,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of UnInject) of type "char *"
   
