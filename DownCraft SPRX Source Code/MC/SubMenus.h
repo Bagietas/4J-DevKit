@@ -55,7 +55,7 @@ namespace SubMenu
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Turn everyone invincible"); }
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Turn entity & players invincible"); }
 		if (CurrentOpt == 2) { AddInformation(submmenuMax, L"Change attack damage delay"); }
-		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Bypass kill entity & players in creative"); }
+		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Bypass kill entity & players"); }
 	}
 
 	void HostMenu1()
@@ -689,15 +689,37 @@ namespace SubMenu
 
 	void DebugMenu()
 	{
-		submmenuMax = 16;
+		submmenuMax = 4;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
-		AddDescription(L"Settings Menu");
-		AddOption(L"Add Debug Text");
+		AddDescription(L"Debug Menu");
+		AddOption(L"Debug Text");
+		AddOption(L"Debug Hud");
+		AddOption(L"Debug Hud Alpha");
+		AddOption(L"Draw Line");
+	}
+
+	void DebugTextMenu()
+	{
+		submmenuMax = 6;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Debug Text Menu");
+		AddBoolOption(L"Enable Debug Text", !DebugText);
+		AddOption(L"Change Debug Text");
 		AddOption(L"Text X +");
 		AddOption(L"Text X -");
 		AddOption(L"Text Y +");
 		AddOption(L"Text Y -");
+	}
+
+	void DebugHudMenu()
+	{
+		submmenuMax = 9;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Debug HUD Menu");
+		AddBoolOption(L"Enable Debug HUD", !DebugHud);
 		AddOption(L"Hud X +");
 		AddOption(L"Hud X -");
 		AddOption(L"Hud Y +");
@@ -706,14 +728,36 @@ namespace SubMenu
 		AddOption(L"Hud W -");
 		AddOption(L"Hud H +");
 		AddOption(L"Hud H -");
-		AddOption(L"Line Start X +");
-		AddOption(L"Line Start X -");
-		AddOption(L"Line Start Y +");
-		AddOption(L"Line Start Y -");
-		AddOption(L"Line End X +");
-		AddOption(L"Line End X -");
-		AddOption(L"Line End Y +");
-		AddOption(L"Line End Y -");
+	}
+
+	void DebugHudAlphaMenu()
+	{
+		submmenuMax = 9;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Debug HUD Alpha Menu");
+		AddBoolOption(L"Enable Debug HUD Alpha", !DebugHudAlpha);
+		AddOption(L"Hud X +");
+		AddOption(L"Hud X -");
+		AddOption(L"Hud Y +");
+		AddOption(L"Hud Y -");
+		AddOption(L"Hud W +");
+		AddOption(L"Hud W -");
+		AddOption(L"Hud H +");
+		AddOption(L"Hud H -");
+	}
+
+	void DebugDrawLineMenu()
+	{
+		submmenuMax = 9;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Debug Draw Line Menu");
+		AddBoolOption(L"Enable Draw Line", !DebugDrawLine);
+		AddOption(L"Line X +");
+		AddOption(L"Line X -");
+		AddOption(L"Line Y +");
+		AddOption(L"Line Y -");
 	}
 
 	void CustomImageMenu()

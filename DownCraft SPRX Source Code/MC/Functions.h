@@ -23,7 +23,6 @@
 #pragma comment(lib, "net_stub")
 #pragma comment(lib, "netctl_stub")
 
-
 size_t StringToWideCharacter(wchar_t* dest, const char* scr, size_t len)
 {
 	int count = 0;

@@ -529,113 +529,237 @@ void Options()
 
 #pragma endregion
 
+    #pragma region "DEBUG DRAW LINE MENU"
+
+	if (DebugDrawlineMenu)
+	{
+		if (CurrentOpt == 0)
+		{
+			if (!DebugDrawLine)
+			{
+				DebugDrawLine = true;
+			}
+			else
+			{
+				DebugDrawLine = false;
+			}
+		}
+
+		if (CurrentOpt == 1)
+		{
+			DebugDrawLineX += 1;
+		}
+
+		if (CurrentOpt == 2)
+		{
+			DebugDrawLineX -= 1;
+		}
+
+		if (CurrentOpt == 3)
+		{
+			DebugDrawLineY += 1;
+		}
+
+		if (CurrentOpt == 4)
+		{
+			DebugDrawLineY -= 1;
+		}
+	}
+
+#pragma endregion
+
+    #pragma region "DEBUG HUD ALPHA MENU"
+
+	if (DebugHudAlphaMenu)
+	{
+		if (CurrentOpt == 0)
+		{
+			if (!DebugHudAlpha)
+			{
+				DebugHudAlpha = true;
+			}
+			else
+			{
+				DebugHudAlpha = false;
+			}
+		}
+
+		if (CurrentOpt == 1)
+		{
+			DebugHudAlphaX += 1;
+		}
+
+		if (CurrentOpt == 2)
+		{
+			DebugHudAlphaX -= 1;
+		}
+
+		if (CurrentOpt == 3)
+		{
+			DebugHudAlphaY += 1;
+		}
+
+		if (CurrentOpt == 4)
+		{
+			DebugHudAlphaY -= 1;
+		}
+
+		if (CurrentOpt == 5)
+		{
+			DebugHudAlphaW += 1;
+		}
+
+		if (CurrentOpt == 6)
+		{
+			DebugHudAlphaW -= 1;
+		}
+
+		if (CurrentOpt == 7)
+		{
+			DebugHudAlphaH += 1;
+		}
+
+		if (CurrentOpt == 8)
+		{
+			DebugHudAlphaH -= 1;
+		}
+	}
+
+#pragma endregion
+
+    #pragma region "DEBUG HUD MENU"
+
+	if (DebugHudMenu)
+	{
+		if (CurrentOpt == 0)
+		{
+			if (!DebugHud)
+			{
+				DebugHud = true;
+			}
+			else
+			{
+				DebugHud = false;
+			}
+		}
+
+		if (CurrentOpt == 1)
+		{
+			DebugHudX += 1;
+		}
+
+		if (CurrentOpt == 2)
+		{
+			DebugHudX -= 1;
+		}
+
+		if (CurrentOpt == 3)
+		{
+			DebugHudY += 1;
+		}
+
+		if (CurrentOpt == 4)
+		{
+			DebugHudY -= 1;
+		}
+
+		if (CurrentOpt == 5)
+		{
+			DebugHudW += 1;
+		}
+
+		if (CurrentOpt == 6)
+		{
+			DebugHudW -= 1;
+		}
+
+		if (CurrentOpt == 7)
+		{
+			DebugHudH += 1;
+		}
+
+		if (CurrentOpt == 8)
+		{
+			DebugHudH -= 1;
+		}
+	}
+
+#pragma endregion
+
+    #pragma region "DEBUG TEXT MENU"
+
+	if (DebugTextMenu)
+	{
+		if (CurrentOpt == 0)
+		{
+			if (!DebugText)
+			{
+				DebugText = true;
+			}
+			else
+			{
+				DebugText = false;
+			}
+		}
+
+		if (CurrentOpt == 1)
+		{
+			DisplayKeyboard();
+		}
+
+		if (CurrentOpt == 2)
+		{
+			DebugTextX += 1;
+		}
+
+		if (CurrentOpt == 3)
+		{
+			DebugTextX -= 1;
+		}
+
+		if (CurrentOpt == 4)
+		{
+			DebugTextY += 1;
+		}
+
+		if (CurrentOpt == 5)
+		{
+			DebugTextY -= 1;
+		}
+	}
+
+    #pragma endregion
+
     #pragma region "DEBUG MENU"
 
 	if (DebugMenu)
 	{
 		if (CurrentOpt == 0)
 		{
-			DisplayKeyboard();
+			DebugMenu = false;
+			DebugTextMenu = true;
+			CurrentOpt = 0;
 		}
 
 		if (CurrentOpt == 1)
 		{
-			DebugTextX += 1;
+			DebugMenu = false;
+			DebugHudMenu = true;
+			CurrentOpt = 0;
 		}
 
 		if (CurrentOpt == 2)
 		{
-			DebugTextX -= 1;
+			DebugMenu = false;
+			DebugHudAlphaMenu = true;
+			CurrentOpt = 0;
 		}
 
 		if (CurrentOpt == 3)
 		{
-			DebugTextY += 1;
-		}
-
-		if (CurrentOpt == 4)
-		{
-			DebugTextY -= 1;
-		}
-
-		if (CurrentOpt == 5)
-		{
-			DebugHudX += 1;
-		}
-
-		if (CurrentOpt == 6)
-		{
-			DebugHudX -= 1;
-		}
-
-		if (CurrentOpt == 7)
-		{
-			DebugHudY += 1;
-		}
-
-		if (CurrentOpt == 8)
-		{
-			DebugHudY -= 1;
-		}
-
-		if (CurrentOpt == 9)
-		{
-			DebugHudW += 1;
-		}
-
-		if (CurrentOpt == 10)
-		{
-			DebugHudW -= 1;
-		}
-
-		if (CurrentOpt == 11)
-		{
-			DebugHudH += 1;
-		}
-
-		if (CurrentOpt == 12)
-		{
-			DebugHudH -= 1;
-		}
-
-		if (CurrentOpt == 13)
-		{
-			DebugLineStartX += 1;
-		}
-
-		if (CurrentOpt == 14)
-		{
-			DebugLineStartX -= 1;
-		}
-
-		if (CurrentOpt == 15)
-		{
-			DebugLineStartY += 1;
-		}
-
-		if (CurrentOpt == 16)
-		{
-			DebugLineStartY -= 1;
-		}
-
-		if (CurrentOpt == 17)
-		{
-			DebugLineEndX += 1;
-		}
-
-		if (CurrentOpt == 18)
-		{
-			DebugLineEndX -= 1;
-		}
-
-		if (CurrentOpt == 19)
-		{
-			DebugLineEndY += 1;
-		}
-
-		if (CurrentOpt == 20)
-		{
-			DebugLineEndY -= 1;
+			DebugMenu = false;
+			DebugDrawlineMenu = true;
+			CurrentOpt = 0;
 		}
 	}
 

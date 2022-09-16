@@ -37,6 +37,10 @@ bool ThemeColors = false;
 bool EditMenu = false;
 bool CustomImageMenu = false;
 bool DebugMenu = false;
+bool DebugTextMenu = false;
+bool DebugHudMenu = false;
+bool DebugHudAlphaMenu = false;
+bool DebugDrawlineMenu = false;
 bool MicsSettings = false;
 bool MicsSettings2 = false;
 bool CrosshairMenu = false;
@@ -366,6 +370,31 @@ bool InventoryCreaTumble = false;
 bool InventoryCreaTumbleActive = false;
 bool CreaTumbleToggle = false;
 
+//Debug Text Menu
+bool DebugText = false;
+char* initialDebugTxt = "Debug Text";
+int DebugTextX = 0;
+int DebugTextY = 0;
+
+//Debug Hud Menu
+bool DebugHud = false;
+int DebugHudX = 0;
+int DebugHudY = 0;
+int DebugHudW = 0;
+int DebugHudH = 0;
+
+//Debug Hud Alpha Menu
+bool DebugHudAlpha = false;
+int DebugHudAlphaX = 0;
+int DebugHudAlphaY = 0;
+int DebugHudAlphaW = 0;
+int DebugHudAlphaH = 0;
+
+//Debug Draw Line Menu
+bool DebugDrawLine = false;
+int DebugDrawLineX = 0;
+int DebugDrawLineY = 0;
+
 bool FirstInfoMessage = true;
 bool InitializeSPRX = true;
 
@@ -441,12 +470,6 @@ int shadowBG = 200;
 int menulenght = 50;
 int TitleTextX = 448;
 int TitleTextY = 53;
-int DebugTextX = 0;
-int DebugTextY = 0;
-int DebugHudX = 0;
-int DebugHudY = 0;
-int DebugHudW = 0;
-int DebugHudH = 0;
 int DebugLineStartX = 0;
 int DebugLineStartY = 0;
 int DebugLineEndX = 0;

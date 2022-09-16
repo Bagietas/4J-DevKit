@@ -4,9 +4,6 @@
     <ClCompile Include="prx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="huds.h">
-      <Filter>header\Huds</Filter>
-    </ClInclude>
     <ClInclude Include="HudsFunctions.h">
       <Filter>header\Huds</Filter>
     </ClInclude>
@@ -58,11 +55,17 @@
     <ClInclude Include="OSK.h">
       <Filter>header\Functions</Filter>
     </ClInclude>
-    <ClInclude Include="GameFunctionsCaller.h">
-      <Filter>header\Functions</Filter>
-    </ClInclude>
     <ClInclude Include="Startup.h">
       <Filter>header\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopFunctions.h">
+      <Filter>header\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes.h">
+      <Filter>header\Variables</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawHudsFunctions.h">
+      <Filter>header\Huds</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -17,7 +17,7 @@ void LoadSPRX()
 
 	loadtimer += 1;
 
-	if (loadtimer > 10)
+	if (loadtimer > 5)
 	{
 		loadtimer = 0;
 		load += 1;
@@ -27,7 +27,7 @@ void LoadSPRX()
 	{
 		InitializeSPRX = false;
 		UsableMenu = true;
-		*(int*)0x0155847C = 0x01000000; //usable HUD
+		*(int*)0x0155847C = 0x01000000; //Usable HUD
 		logs::SendMessageDebug(L"Welcome to DownCraft SPRX", UI::MCTextColors::Red);
 		logs::SendMessageDebug(L"Version V4.2", UI::MCTextColors::Aqua);
 		logs::SendMessageDebug(L"Press L1 + DPAD UP for open the menu", UI::MCTextColors::LightPurple);
@@ -46,7 +46,7 @@ void Inject()
 			{
 				*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
 				*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
-				*(int*)0x0155847C = 0x00000000; //unusable HUD
+				*(int*)0x0155847C = 0x00000000; //Unusable HUD
 				LoadSPRX();
 			}
 		}

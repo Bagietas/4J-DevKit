@@ -68,13 +68,14 @@ InjectSPRX.exe</Command>
   <ItemGroup>
     <ClInclude Include="Buttons.h" />
     <ClInclude Include="dialog.h" />
+    <ClInclude Include="DrawHudsFunctions.h" />
     <ClInclude Include="GameFunctions.h" />
-    <ClInclude Include="GameFunctionsCaller.h" />
     <ClInclude Include="HudsFunctions.h" />
     <ClInclude Include="IDs.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Hooking.h" />
-    <ClInclude Include="huds.h" />
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="LoopFunctions.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Modules.h" />
     <ClInclude Include="Offsets.h" />

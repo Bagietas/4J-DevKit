@@ -2,6 +2,8 @@
 //X = < >
 //Y = /\ \/
 
+ //MultiplayerLocalPlayer = 0x3373F5D0 / pWorld = 0x337389F0 / GetEntityWorld = 0x337389F0
+
 #pragma region "Back Sub Menu"
 
  void BackSubMenu()
@@ -204,6 +206,30 @@
 		 SettingsMenu = true;
 	 }
 
+	 if (DebugTextMenu)
+	 {
+		 DebugTextMenu = false;
+		 DebugMenu = true;
+	 }
+
+	 if (DebugHudMenu)
+	 {
+		 DebugHudMenu = false;
+		 DebugMenu = true;
+	 }
+
+	 if (DebugHudAlphaMenu)
+	 {
+		 DebugHudAlphaMenu = false;
+		 DebugMenu = true;
+	 }
+
+	 if (DebugDrawlineMenu)
+	 {
+		 DebugDrawlineMenu = false;
+		 DebugMenu = true;
+	 }
+
 	 if (CustomImageMenu)
 	 {
 		 CustomImageMenu = false;
@@ -358,63 +384,10 @@
 
 #pragma endregion
 
- //MultiplayerLocalPlayer = 0x3373F5D0 / pWorld = 0x337389F0 / GetEntityWorld = 0x337389F0
-
- void ModuleLoop()
- {
-	 Modules::AntiVoid();
-	 Modules::BunnyJump();
-	 Modules::SkyboxRGB();
-	 Modules::Scaffold();
-	 Modules::NoFall();
- }
-
- void ChangeValueLoop()
- {
-	 Offsets::BIG_MODEL(BigModel);
-	 Offsets::CHANGE_FOV(ValueFOV);
-	 Offsets::INSTANT_DAMAGE(InstantDamage);
-	 Offsets::SUPER_SPEED(SuperSpeed);
-
-	 Offsets::ADD_CUSTOM_BANNER();
-	 Offsets::ANIMATED_BANNER_GIF();
-	 Offsets::ALL_PLAYERS_ZOOM_FOV();
- }
-
- void LoopFunc()
- {
-	 GetServerTime();
-
-	 Welcome_Message();
-	 GetPosition();
-	 GetPing();
-	 GetChunks();
-	 GetResolution();
-	 GetInfosLastPlayer();
-	 get_temp();
-	 TitleMenu();
-	 DEBUG_FUNCTIONS_MESSAGES();
-	 //VersionText();
-	 InventoryCreativeTumble();
-
-	 ChangeValueLoop();
-	 ModuleLoop();
-
-	 SlideOpenMenuLoop();
-	 SlideCloseMenuLoop();
-	 DrawTextC("     ", 0, 0, color(255, 255, 255));//dont move
-	 MaxOption = 0;
-	 RGB1();
-	 RGB2();
-	 Custom_Crosshair(crosshair_value);
-	 GetNotify();
-	 logs::draw_logs();
- }
+#pragma region "Render Menu"
 
  void RenderMenu()
  {
-	 DRAW_HEAD_PIXEL_LOGO();
-
 	 if (!OpenMenu)
 	 {
 		 *(int*)0x0155847C = 0x00000000;
@@ -594,10 +567,31 @@
 		 {
 			 Color BLACK_OPACITY{ 15, 15, 15, 200 };
 			 SubMenu::DebugMenu();
-			 DrawRectangle(DebugHudX, DebugHudY, DebugHudW, DebugHudH, UI::Color::BLACK);
-			 DrawTextC("Debug Text", DebugTextX, DebugTextY, color(UI::Color::WHITE));
-			 drawLine(Vector2(DebugLineStartX, DebugLineStartY), Vector2(DebugLineEndX, DebugLineEndY), GetThemeColor());
-			 DrawRectangleAlpha(DebugHudX, DebugHudY, DebugHudW, DebugHudH, BLACK_OPACITY);
+			 //DrawRectangleAlpha(DebugHudX, DebugHudY, DebugHudW, DebugHudH, BLACK_OPACITY);
+			 GetDebugXY();
+		 }
+
+		 if (DebugTextMenu)
+		 {
+			 SubMenu::DebugTextMenu();
+			 GetDebugXY();
+		 }
+
+		 if (DebugHudMenu)
+		 {
+			 SubMenu::DebugHudMenu();
+			 GetDebugXY();
+		 }
+
+		 if (DebugHudAlphaMenu)
+		 {
+			 SubMenu::DebugHudAlphaMenu();
+			 GetDebugXY();
+		 }
+
+		 if (DebugDrawlineMenu)
+		 {
+			 SubMenu::DebugDrawLineMenu();
 			 GetDebugXY();
 		 }
 
@@ -648,3 +642,5 @@
 		 }
 	 }
  }
+
+#pragma endregion

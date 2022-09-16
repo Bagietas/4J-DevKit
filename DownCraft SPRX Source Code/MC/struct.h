@@ -1,4 +1,6 @@
 
+#pragma region "Vector Struct"
+
 typedef struct Vector2
 {
 	float x, y;
@@ -191,6 +193,8 @@ namespace myMath {
 		return u;
 	}
 }
+
+#pragma endregion
 
 struct rgb{
 	int r;
