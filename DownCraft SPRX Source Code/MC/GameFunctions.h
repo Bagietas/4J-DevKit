@@ -12,7 +12,6 @@ GuiComponent* g_GuiComponent;
 
 namespace FUNCTIONS 
 {
-	//GLSTATEMANAGER
 	MAKE_FUNCTION(0x00A73F10, void, EnableBlend, ());
 	MAKE_FUNCTION(0x00A73ED4, void, DisableBlend, ());
 	MAKE_FUNCTION(0x00A73A30, void, DisableAlpha, ());
@@ -68,27 +67,6 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0x00A75024, void, Color1, (float colorRed, float colorGreen, float colorBlue, float colorAlpha));
 	MAKE_FUNCTION(0x00A75074, void, Color2, (float colorRed, float colorGreen, float ColorBlue));
 
-	//SELF
-	MAKE_FUNCTION(0x1B25B0, bool, CanHarmInCreative, ());
-	MAKE_FUNCTION(0xACA1C8, void, getMinecraft, ());
-	MAKE_FUNCTION(0x4B0930, void, setItemStackToSlot, ());
-	MAKE_FUNCTION(0x30E618, void, getHotbarSize, ());
-	MAKE_FUNCTION(0xAE4CD8, uint32_t, MultiPlayerGameMode_useItemOn, (void* gameMode, void* player, void* level, void* blockPos, void* direction, void* pos, uint32_t interactionHand, bool unk1, bool* unk2));
-	MAKE_FUNCTION(0xB33A08, void, MultiPlayerGameMode_tick, (void* multiPlayerGameMode));
-	MAKE_FUNCTION(0x886798, void, ConsoleUIController_PlayUISFX, (uintptr_t consoleUIController, uintptr_t soundEvent));
-	MAKE_FUNCTION(0xAE03B4, int, Minecraft_getLocalPlayerIdx, (void* minecraft));
-	MAKE_FUNCTION(0xB0E8F4, int, MultiPlayerLevel_getEntity, (void* outEntity, void* multiPlayerLevel, int id));
-	MAKE_FUNCTION(0xB34A6C, void, MultiPlayerGameMode_destroyBlock, (void* gamemode, void* blockPos));
-	MAKE_FUNCTION(0xA96E90, float, GameRenderer_GetFov, (void* gameRenderer, float datFloat, int datBoolean));
-	MAKE_FUNCTION(0xA98E30, void, GameRenderer_getFovAndAspect, (void* gameRenderer, float* fov, float* aspectRatio, uint32_t r6, bool someFovBool));
-	MAKE_FUNCTION(0xCB9910, int, __printf, (const char* format, ...));
-	MAKE_FUNCTION(0xCB9A10, int, __snprintf, (char* s, size_t n, const char* format, ...));
-	MAKE_FUNCTION(0xA891F0, void, Gui_render, (void* guiComponent, double unk));
-	MAKE_FUNCTION(0x39E1B8, void, onEntityUpdate, (uint32_t r3));
-	MAKE_FUNCTION(0xAFE690, void, SetXPStats, (double currentXP, int maxXP, int level));
-	MAKE_FUNCTION(0xA3ED78, void, RenderOffsetAABB, (int boundingBox, float x, float y, float z));
-	MAKE_FUNCTION(0x3AA780, void, PlayerUpwardsJumpMotion, (float jumpHeight));
-
 	//FONT RENDER
 	MAKE_FUNCTION(0xA7E2E8, void, DrawText, (uint32_t font, uint32_t r4, uint32_t x, uint32_t y, uint32_t color, uint32_t r8, uint32_t r9));
 	MAKE_FUNCTION(0xA7E5DC, void, DrawTextWithShadow, (void* guiComponent, uint32_t font, uint32_t text, uint32_t x, uint32_t y, uint32_t color));
@@ -103,6 +81,8 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0x9C170C, void, Tesselator_End, (uint32_t pTesselator));
 	MAKE_FUNCTION(0x9C2388, void, BufferBuilder_endVertex, (uint32_t pTesselator, float f1, float f2, float f3, float f4, float f5));
 	void Tesselator_EndVertex(uint32_t pTesselator, float X, float Y, float Z, int* Color) { FUNCTIONS::Tesselator_Color(pTesselator, Color[0], Color[1], Color[2], 255); FUNCTIONS::BufferBuilder_endVertex(pTesselator, X, Y, Z, 0, 0); }
+
+	MAKE_FUNCTION(0x886798, void, ConsoleUIController_PlayUISFX, (uintptr_t consoleUIController, uintptr_t soundEvent));
 }
 
 #pragma endregion
@@ -203,8 +183,9 @@ void PlayUISound(uintptr_t* SoundEvent) {
 	FUNCTIONS::ConsoleUIController_PlayUISFX(ConsoleUIController, *SoundEvent);
 }
 
-void PlayerUpwardsJumpMotion(float jumpHeight) {
-	FUNCTIONS::PlayerUpwardsJumpMotion(jumpHeight);
+void SetPlayerGameType()
+{
+
 }
 
 #pragma endregion

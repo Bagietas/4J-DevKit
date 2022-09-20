@@ -319,7 +319,7 @@ void ChangeIntOptions(bool page, int currentopt, int min, int max, int& value)
 		{
 			if (Buttons::IsMCButtonPressed(Buttons::LEFT))
 			{
-				if (frameTime(5, 1, false))
+				if (frameTime(3, 1, false))
 				{
 					if (value < min + 1)
 					{
@@ -329,12 +329,12 @@ void ChangeIntOptions(bool page, int currentopt, int min, int max, int& value)
 					{
 						value = value - 1;
 					}
-					PlayUISound(SoundEvent::SoundEventCraft);
+					PlayUISound(SoundEvent::CRAFT);
 				}
 			}
 			else if (Buttons::IsMCButtonPressed(Buttons::RIGHT))
 			{
-				if (frameTime(5, 1, false))
+				if (frameTime(3, 1, false))
 				{
 					if (value > max - 1)
 					{
@@ -344,7 +344,7 @@ void ChangeIntOptions(bool page, int currentopt, int min, int max, int& value)
 					{
 						value = value + 1;
 					}
-					PlayUISound(SoundEvent::SoundEventCraft);
+					PlayUISound(SoundEvent::CRAFT);
 				}
 			}
 		}
@@ -369,7 +369,7 @@ void ChangeFloatOptions(bool page, int currentopt, int min, int max, float& valu
 					{
 						value = value - 5;
 					}
-					PlayUISound(SoundEvent::SoundEventCraft);
+					PlayUISound(SoundEvent::CRAFT);
 				}
 			}
 			else if (Buttons::IsMCButtonPressed(Buttons::RIGHT))
@@ -384,7 +384,7 @@ void ChangeFloatOptions(bool page, int currentopt, int min, int max, float& valu
 					{
 						value = value + 5;
 					}
-					PlayUISound(SoundEvent::SoundEventCraft);
+					PlayUISound(SoundEvent::CRAFT);
 				}
 			}
 		}

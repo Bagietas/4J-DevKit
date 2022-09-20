@@ -139,7 +139,7 @@ namespace logs
 		if (logs_count < 11)
 			logs_count++;
 
-		PlayUISound(SoundEvent::SoundEventRandomOrb);
+		PlayUISound(SoundEvent::RANDOM_ORB);
 	}
 
 	void draw_logs()
@@ -611,7 +611,136 @@ void AddOption(const wchar_t* opt)
 	MaxOption += 1;
 }
 
+
 void AddBoolOption(const wchar_t* opt, bool boolOption)
+{
+	int color1[3] = { 65, 65, 65 };
+	int color2[3] = { 40, 40, 40 };
+	//drawRectBorder(115, 52 + (10 * MaxOption), 4, 4, (boolOption) ? UI::Color::BLACK : THEME, UI::Color::WHITE);
+	if (UI::Settings::Rainbow)
+	{
+		if (UI::Settings::Scrollbar)
+		{
+			DrawText(opt, AddOptX, AddOptY + (10 * MaxOption), color(UI::Color::WHITE));
+		}
+		else
+		{
+			DrawText(opt, AddOptX, AddOptY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE) : color(UI::Color::WHITE));
+		}
+		if (UI::Settings::Checkbox)
+		{
+			if (menulenght > 25)
+			{
+				DrawToggleONOFF(CheckBoxX - 50 + menulenght, CheckBoxY + (10 * MaxOption), color1, UI::Color::BLACK, boolOption);
+			}
+			else
+			{
+				drawRectBorderRGBV2(CheckBoxX + menulenght, CheckBoxY + 2 + (10 * MaxOption), 4, 4, (boolOption) ? 15, 15, 15 : UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE, UI::Color::WHITE);
+			}
+		}
+		else
+		{
+			if (UI::Settings::Scrollbar)
+			{
+				if (UI::Settings::CheckboxV2)
+				{
+
+				}
+				else
+				{
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK2;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+				}
+			}
+			else
+			{
+				if (UI::Settings::CheckboxV2)
+				{
+
+				}
+				else
+				{
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE) : color(UI::Color::WHITE));
+				}
+			}
+		}
+		if (UI::Settings::CheckboxV2 && !UI::Settings::Checkbox)
+		{
+			DrawToggleONOFFV2(CheckBoxX - 30 + menulenght, CheckBoxY + (10 * MaxOption), color1, UI::Color::BLACK, boolOption);
+		}
+	}
+	else
+	{
+		if (UI::Settings::Scrollbar)
+		{
+			DrawText(opt, AddOptX, AddOptY + (10 * MaxOption), color(UI::Color::WHITE));
+		}
+		else
+		{
+			DrawText(opt, (MaxOption == CurrentOpt) ? AddOptX + 5 : AddOptX, AddOptY + (10 * MaxOption), color(UI::Color::WHITE));
+			DrawRectangle(AddOptX, (MaxOption == CurrentOpt) ? AddOptY - 2 + (10 * MaxOption) : AddOptY - 2, 1, 10, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
+			DrawRectangle(AddOptX, AddOptY + 8 + (10 * MaxOption), bgW + menulenght - 6, 1, (MaxOption == CurrentOpt) ? GetThemeColor() : UI::Color::BLACK);
+		}
+		if (UI::Settings::Checkbox)
+		{
+			if (menulenght > 25)
+			{
+				int color1[3] = { 65, 65, 65 };
+				int color2[3] = { 40, 40, 40 };
+				DrawToggleONOFF(CheckBoxX - 50 + menulenght, CheckBoxY + (10 * MaxOption), color1, UI::Color::BLACK, boolOption);
+			}
+			else
+			{
+				drawRectBorder(CheckBoxX + menulenght, CheckBoxY + 2 + (10 * MaxOption), 4, 4, (boolOption) ? UI::Color::BLACK : GetThemeColor(), UI::Color::WHITE);
+			}
+		}
+		else
+		{
+			if (UI::Settings::Scrollbar)
+			{
+				if (UI::Settings::CheckboxV2)
+				{
+
+				}
+				else
+				{
+
+
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), color(UI::Color::WHITE));
+				}
+			}
+			else
+			{
+				if (UI::Settings::CheckboxV2)
+				{
+
+				}
+				else
+				{
+					int* insideColor = boolOption ? UI::Color::RED : UI::Color::GREEN;
+					int* outsideColor = UI::Color::BLACK;
+					drawRectBorder(CheckBoxX + menulenght - 21, CheckBoxY + 1 + (10 * MaxOption), 5, 5, insideColor, outsideColor);
+					//DrawText(boolOption ? L"" : L"+     ", CheckBoxX + menulenght - 21, CheckBoxY + (10 * MaxOption), (MaxOption == CurrentOpt) ? color(GetThemeColor()) : color(UI::Color::WHITE));
+				}
+			}
+		}
+		if (UI::Settings::CheckboxV2 && !UI::Settings::Checkbox)
+		{
+			DrawToggleONOFFV2(CheckBoxX - 30 + menulenght, CheckBoxY + (10 * MaxOption), color1, UI::Color::BLACK, boolOption);
+		}
+	}
+	MaxOption += 1;
+}
+
+void AddBoolOptionV2(const wchar_t* opt, void(*function)(), bool boolOption)
 {
 	int color1[3] = { 65, 65, 65 };
 	int color2[3] = { 40, 40, 40 };

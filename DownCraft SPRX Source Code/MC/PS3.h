@@ -96,6 +96,11 @@ int32_t sys_dbg_read_process_memory_ps3mapi(uint64_t ea, void* data, size_t size
 	return_to_user_prog(int32_t);
 }
 
+void WriteMemory(int address, char hex)
+{
+	*(int*)address = hex;
+}
+
 //Console Commands
 void sleep(usecond_t time)
 {

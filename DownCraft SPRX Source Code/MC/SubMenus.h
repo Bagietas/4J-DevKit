@@ -2,6 +2,84 @@
 
 namespace SubMenu
 {
+	/*
+	enum SubMenuPage
+	{
+		MainMenuPage,
+		HostMenuPage
+	};
+
+	void OpenSubMenuPage()
+	{
+		switch (CurrentMenu)
+		{
+		   case MainMenuPage:
+		   {
+			   if (devmenu) { submmenuMax = 12; }
+			   else { submmenuMax = 11; }
+			   AddHud(submmenuMax);
+			   AddTitle(L"DownCraft SPRX");
+			   AddDescription(L"Main Menu");
+			   AddOption(L"Host Options");
+			   AddOption(L"Non Host Options");
+			   AddOption(L"Players Options");
+			   AddOption(L"Weather Options");
+			   AddOption(L"Vision Options");
+			   AddOption(L"Name Changer");
+			   AddOption(L"Game Editor");
+			   AddOption(L"Mini-Game Options");
+			   AddOption(L"Teleport Options");
+			   AddOption(L"Settings Menu");
+			   AddOption(L"Credits Menu");
+			   if (devmenu) { AddOption(L"Developer Menu"); }
+			   AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
+		   }
+		   break;
+		}
+	}
+
+	void FunctionOptions()
+	{
+		switch (CurrentMenu)
+		{
+		    case MainMenuPage:
+			{
+				switch (CurrentOpt)
+				{
+				case(0):
+				{
+					MainMenu = false;
+					HostPage = true;
+					CurrentOpt = 0;
+				}
+				break;
+				case(1):
+				{
+					MainMenu = false;
+					NonHostPage = true;
+					CurrentOpt = 0;
+				}
+				break;
+				case(2):
+				{
+					MainMenu = false;
+					PlayersOptions = true;
+					CurrentOpt = 0;
+				}
+				break;
+				case(3):
+				{
+					MainMenu = false;
+					PlayersOptions = true;
+					CurrentOpt = 0;
+				}
+				break;
+				}
+			}
+		}
+	}
+	*/
+	
 	void MainMenu()
 	{
 		if (devmenu) { submmenuMax = 12; } else { submmenuMax = 11; }
@@ -31,7 +109,7 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Host Menu");
-		AddBoolOption(L"God Mode", !GodMode);
+		AddBoolOptionV2(L"God Mode", Offsets::GOD_MODEV2, !GodMode);
 		AddBoolOption(L"Demi God Mode", !DemiGodMode);
 		AddIntOption(L"Instant Damage", 63, InstantDamage);
 		AddBoolOption(L"Critical Hit", !CriticalHit);
@@ -643,7 +721,7 @@ namespace SubMenu
 
 	void SettingsMenu()
 	{
-		submmenuMax = 7;
+		submmenuMax = 8;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Settings Menu");
@@ -654,6 +732,7 @@ namespace SubMenu
 		AddOption(L"Mics Settings");
 		AddOption(L"Custom Crosshair");
 		AddOption(L"Draw Head Logo");
+		AddOption(L"Show Menu");
 	}
 
 	void EditMenu()
@@ -786,10 +865,6 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Settings Menu");
-		AddBoolOption(L"Show Position", !UI::Settings::ShowPosition);
-		AddBoolOption(L"Show Ping", !UI::Settings::ShowPING);
-		AddBoolOption(L"Show Chunks", !UI::Settings::ShowChunks);
-		AddBoolOption(L"Show Resolution", !UI::Settings::ShowResolution);
 		AddBoolOption(L"Show Notif", !UI::Settings::ShowNotif);
 		AddBoolOption(L"Show InfosBar", !UI::Settings::ShowInfosBar);
 		AddBoolOption(L"New Style", !UI::Settings::Style);
@@ -804,14 +879,13 @@ namespace SubMenu
 
 	void MicsMenu2()
 	{
-		submmenuMax = 7;
+		submmenuMax = 6;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Settings Menu");
 		AddOption(L"Exit Game");
 		AddOption(L"Unload SPRX");
 		AddOption(L"Restart Game");
-		AddBoolOption(L"Show CPU / RSX", !UI::Settings::ShowCPURSX);
 		AddBoolOption(L"Checkbox V2", !UI::Settings::CheckboxV2);
 		AddBoolOption(L"Show Logs", !UI::Settings::ShowLogs);
 		AddBoolOption(L"BO2 Design Menu", !UI::Settings::BO2Design);
@@ -834,6 +908,19 @@ namespace SubMenu
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Draw Head Logo Menu");
 		AddIntOption(L"Draw Head Logo", 1, DrawHeadPixelLogo);
+	}
+
+	void ShowMenu()
+	{
+		submmenuMax = 5;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Show Menu");
+		AddBoolOption(L"Show Position", !UI::Settings::ShowPosition);
+		AddBoolOption(L"Show Ping", !UI::Settings::ShowPING);
+		AddBoolOption(L"Show Chunks", !UI::Settings::ShowChunks);
+		AddBoolOption(L"Show Resolution", !UI::Settings::ShowResolution);
+		AddBoolOption(L"Show CPU / RSX", !UI::Settings::ShowCPURSX);
 	}
 
     #pragma endregion

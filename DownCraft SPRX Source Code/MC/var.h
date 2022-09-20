@@ -45,6 +45,7 @@ bool MicsSettings = false;
 bool MicsSettings2 = false;
 bool CrosshairMenu = false;
 bool DrawHeadLogoMenu = false;
+bool ShowMenu = false;
 bool CreditsMenu = false;
 bool DeveloperMenu = false;
 
@@ -556,3 +557,4 @@ int speedSlider = 10;
 int DrawHeadPixelLogo = 1;
 
 bool WhitelistCheck = true;
+int sizeNuker = 50;

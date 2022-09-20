@@ -22,6 +22,15 @@ void gameRender_Hook(uint32_t r3, uint32_t r4)
 	}
 }
 
+void callThreadFromEBOOT(uint64_t) 
+{
+	__asm("lis 3, 0x14C;");//oris r2, r2, 0x14C
+	__asm("lwz 3, 0(3);");
+	__asm("cmpwi 3, 0x3618;");//ori r2, r2, 0x361B
+	__asm("beq end;");
+	__asm("end:;");
+}
+
 extern "C" int _DownCraftSPRX_prx_entry(void)
 {	
 	const char* message;
@@ -36,6 +45,10 @@ extern "C" int _DownCraftSPRX_prx_entry(void)
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));
 	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
+	//HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
+
+	//sys_ppu_thread_t ThreadModuleID;
+	//sys_ppu_thread_create(&ThreadModuleID, callThreadFromEBOOT, 0, 0x4AA, 0x7000, 0, "Test");
 
 	INITIALIZE_SPRX = true;
 	return SYS_PRX_RESIDENT;

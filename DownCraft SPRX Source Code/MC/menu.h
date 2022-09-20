@@ -254,6 +254,12 @@
 		 SettingsMenu = true;
 	 }
 
+	 if (ShowMenu)
+	 {
+		 ShowMenu = false;
+		 SettingsMenu = true;
+	 }
+
 	 if (DrawHeadLogoMenu)
 	 {
 		 DrawHeadLogoMenu = false;
@@ -322,7 +328,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 CurrentOpt = CurrentOpt - 1;
-				 PlayUISound(SoundEvent::SoundEventScroll);
+				 PlayUISound(SoundEvent::SCROLL);
 				 return;
 			 }
 		 }
@@ -332,7 +338,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 CurrentOpt = CurrentOpt + 1;
-				 PlayUISound(SoundEvent::SoundEventScroll);
+				 PlayUISound(SoundEvent::SCROLL);
 				 return;
 			 }
 		 }
@@ -355,7 +361,7 @@
 			 if (scrollWait(firstWaitTime, waitTime, wI))
 			 {
 				 Options();
-				 PlayUISound(SoundEvent::SoundEventPress);
+				 PlayUISound(SoundEvent::PRESS);
 				 return;
 			 }
 		 }
@@ -367,7 +373,7 @@
 				 BackSubMenu();
 				 CurrentOpt = 0;
 				 CurrentIndex = 0;
-				 PlayUISound(SoundEvent::SoundEventBack);
+				 PlayUISound(SoundEvent::BACK);
 				 return;
 			 }
 		 }
@@ -614,6 +620,11 @@
 		 if (MicsSettings2)
 		 {
 			 SubMenu::MicsMenu2();
+		 }
+
+		 if (ShowMenu)
+		 {
+			 SubMenu::ShowMenu();
 		 }
 
 		 if (CrosshairMenu)

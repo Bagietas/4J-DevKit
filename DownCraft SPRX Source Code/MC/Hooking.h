@@ -18,22 +18,22 @@ int sceNpBasicSetPresenceDetails_Hook(SceNpBasicPresenceDetails2* pres, uint32_t
 
 int asm_destroyBlockHook(MultiPlayerGameMode* gamemode, BlockPos* blockPos) // ou (...) si tu veux opti apres  sa depend des fois sa marche des fois non
 {
-	__asm("li %r3, 0x332;");
+    __nop(); __nop(); __nop(); __nop(); __nop();
+	//__asm("li %r3, 0x332;");
 }
 int MultiPlayerGameMode_destroyBlockHook(MultiPlayerGameMode* gamemode, BlockPos* blockPos)
 {
-	int size = 5;
-	for (int x = 0 - size / 2; x < size / 2; x++)
-	{
-		for (int y = 0 - size / 2; y < size / 2; y++)
-		{
-			for (int z = 0 - size / 2; z < size / 2; z++)
-			{
-				blockPos->x += y;
-				blockPos->y += y;
-				blockPos->z += z;
-			}
-		}
-	}
+    for (int x = 0 - sizeNuker / 2; x < sizeNuker / 2; x++)
+    {
+        for (int y = 0 - sizeNuker / 2; y < sizeNuker / 2; y++)
+        {
+            for (int z = 0 - sizeNuker / 2; z < sizeNuker / 2; z++)
+            {
+                blockPos->x += x;
+                blockPos->y += y;
+                blockPos->z += z;
+            }
+        }
+    }
 	return asm_destroyBlockHook(gamemode, blockPos);
 }

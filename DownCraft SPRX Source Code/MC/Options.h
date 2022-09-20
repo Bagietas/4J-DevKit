@@ -26,104 +26,9 @@ void Options()
 
     #pragma endregion
 
-    #pragma region "CROSSHAIR MENU"
+    #pragma region "SHOW MENU"
 
-	if (CrosshairMenu)
-	{
-		if (CurrentOpt == 0)
-		{
-			if (custom_crosshair)
-			{
-				custom_crosshair = false;
-			}
-			else
-			{
-				custom_crosshair = true;
-			}
-		}
-
-		if (CurrentOpt == 1)
-		{
-
-		}
-	}
-
-    #pragma endregion
-
-    #pragma region "MICS SETTINGS MENU 2"
-
-	if (MicsSettings2)
-	{
-		if (CurrentOpt == 0)
-		{
-			Offsets::EXIT_GAME();
-		}
-
-		if (CurrentOpt == 1)
-		{
-			*(int*)0x0155847C = 0x00000000;
-			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-		}
-
-		if (CurrentOpt == 2)
-		{
-			RestartGame();
-		}
-
-		if (CurrentOpt == 3)
-		{
-			if (UI::Settings::ShowCPURSX)
-			{
-				UI::Settings::ShowCPURSX = false;
-			}
-			else
-			{
-				UI::Settings::ShowCPURSX = true;
-			}
-		}
-
-		if (CurrentOpt == 4)
-		{
-			if (UI::Settings::CheckboxV2)
-			{
-				UI::Settings::CheckboxV2 = false;
-			}
-			else
-			{
-				UI::Settings::CheckboxV2 = true;
-			}
-		}
-
-		if (CurrentOpt == 5)
-		{
-			if (UI::Settings::ShowLogs)
-			{
-				UI::Settings::ShowLogs = false;
-			}
-			else
-			{
-				UI::Settings::ShowLogs = true;
-			}
-		}
-
-		if (CurrentOpt == 6)
-		{
-			if (UI::Settings::BO2Design)
-			{
-				UI::Settings::BO2Design = false;
-			}
-			else
-			{
-				UI::Settings::BO2Design = true;
-			}
-		}
-	}
-
-#pragma endregion
-
-    #pragma region "MICS SETTINGS MENU"
-
-	if (MicsSettings)
+	if (ShowMenu)
 	{
 		if (CurrentOpt == 0)
 		{
@@ -175,6 +80,108 @@ void Options()
 
 		if (CurrentOpt == 4)
 		{
+			if (UI::Settings::ShowCPURSX)
+			{
+				UI::Settings::ShowCPURSX = false;
+			}
+			else
+			{
+				UI::Settings::ShowCPURSX = true;
+			}
+		}
+	}
+
+#pragma endregion
+
+    #pragma region "CROSSHAIR MENU"
+
+	if (CrosshairMenu)
+	{
+		if (CurrentOpt == 0)
+		{
+			if (custom_crosshair)
+			{
+				custom_crosshair = false;
+			}
+			else
+			{
+				custom_crosshair = true;
+			}
+		}
+
+		if (CurrentOpt == 1)
+		{
+
+		}
+	}
+
+    #pragma endregion
+
+    #pragma region "MICS SETTINGS MENU 2"
+
+	if (MicsSettings2)
+	{
+		if (CurrentOpt == 0)
+		{
+			Offsets::EXIT_GAME();
+		}
+
+		if (CurrentOpt == 1)
+		{
+			*(int*)0x0155847C = 0x00000000;
+			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
+		}
+
+		if (CurrentOpt == 2)
+		{
+			RestartGame();
+		}
+
+		if (CurrentOpt == 3)
+		{
+			if (UI::Settings::CheckboxV2)
+			{
+				UI::Settings::CheckboxV2 = false;
+			}
+			else
+			{
+				UI::Settings::CheckboxV2 = true;
+			}
+		}
+
+		if (CurrentOpt == 4)
+		{
+			if (UI::Settings::ShowLogs)
+			{
+				UI::Settings::ShowLogs = false;
+			}
+			else
+			{
+				UI::Settings::ShowLogs = true;
+			}
+		}
+
+		if (CurrentOpt == 5)
+		{
+			if (UI::Settings::BO2Design)
+			{
+				UI::Settings::BO2Design = false;
+			}
+			else
+			{
+				UI::Settings::BO2Design = true;
+			}
+		}
+	}
+
+#pragma endregion
+
+    #pragma region "MICS SETTINGS MENU"
+
+	if (MicsSettings)
+	{
+		if (CurrentOpt == 0)
+		{
 			if (UI::Settings::ShowNotif)
 			{
 				UI::Settings::ShowNotif = false;
@@ -185,7 +192,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 5)
+		if (CurrentOpt == 1)
 		{
 			if (UI::Settings::ShowInfosBar)
 			{
@@ -197,7 +204,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 6)
+		if (CurrentOpt == 2)
 		{
 			if (UI::Settings::Style)
 			{
@@ -209,7 +216,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 7)
+		if (CurrentOpt == 3)
 		{
 			if (UI::Settings::Checkbox)
 			{
@@ -221,7 +228,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 8)
+		if (CurrentOpt == 4)
 		{
 			if (UI::Settings::GradientRGB)
 			{
@@ -233,7 +240,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 9)
+		if (CurrentOpt == 5)
 		{
 			if (UI::Settings::Scrollbar)
 			{
@@ -245,7 +252,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 10)
+		if (CurrentOpt == 6)
 		{
 			if (UI::Settings::BGOpacity)
 			{
@@ -257,7 +264,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 13)
+		if (CurrentOpt == 7)
 		{
 			MicsSettings = false;
 			MicsSettings2 = true;
@@ -4952,7 +4959,6 @@ void Options()
 			if (!GodMode)
 			{
 				Offsets::GOD_MODE(true);
-				PlayUISound(SoundEvent::SoundEventIdk);
 				GodMode = true; 
 			}
 			else
