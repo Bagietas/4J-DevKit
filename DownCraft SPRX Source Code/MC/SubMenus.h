@@ -109,7 +109,7 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Host Menu");
-		AddBoolOptionV2(L"God Mode", Offsets::GOD_MODEV2, !GodMode);
+		AddBoolOption(L"God Mode", !GodMode);
 		AddBoolOption(L"Demi God Mode", !DemiGodMode);
 		AddIntOption(L"Instant Damage", 63, InstantDamage);
 		AddBoolOption(L"Critical Hit", !CriticalHit);
@@ -912,7 +912,7 @@ namespace SubMenu
 
 	void ShowMenu()
 	{
-		submmenuMax = 5;
+		submmenuMax = 6;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Show Menu");
@@ -921,6 +921,7 @@ namespace SubMenu
 		AddBoolOption(L"Show Chunks", !UI::Settings::ShowChunks);
 		AddBoolOption(L"Show Resolution", !UI::Settings::ShowResolution);
 		AddBoolOption(L"Show CPU / RSX", !UI::Settings::ShowCPURSX);
+		AddBoolOption(L"Show Gametime", !UI::Settings::ShowGametime);
 	}
 
     #pragma endregion
@@ -929,7 +930,7 @@ namespace SubMenu
 
 	void CreditsMenu()
 	{
-		submmenuMax = 5;
+		submmenuMax = 10;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Credits Menu");
@@ -938,6 +939,11 @@ namespace SubMenu
 		AddOption(L"PrismoMxdz (Helper)");
 		AddOption(L"Magethsi (Helper)");
 		AddOption(L"mizdx (Helper");
+		AddOption(L"TheRouletteBoi (helper)");
+		AddOption(L"TheWaffleMan1337 (helper)");
+		AddOption(L"VinDublin (helper)");
+		AddOption(L"MayhemModding (helper)");
+		AddOption(L"NELUxP MoDz (helper)");
 
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#0513"); }
 	}

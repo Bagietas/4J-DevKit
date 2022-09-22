@@ -89,6 +89,18 @@ void Options()
 				UI::Settings::ShowCPURSX = true;
 			}
 		}
+
+		if (CurrentOpt == 5)
+		{
+			if (UI::Settings::ShowGametime)
+			{
+				UI::Settings::ShowGametime = false;
+			}
+			else
+			{
+				UI::Settings::ShowGametime = true;
+			}
+		}
 	}
 
 #pragma endregion
@@ -852,6 +864,13 @@ void Options()
 		{
 			SettingsMenu = false;
 			DrawHeadLogoMenu = true;
+			CurrentOpt = 0;
+		}
+
+		if (CurrentOpt == 7)
+		{
+			SettingsMenu = false;
+			ShowMenu = true;
 			CurrentOpt = 0;
 		}
 	}

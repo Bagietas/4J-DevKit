@@ -574,31 +574,26 @@
 			 Color BLACK_OPACITY{ 15, 15, 15, 200 };
 			 SubMenu::DebugMenu();
 			 //DrawRectangleAlpha(DebugHudX, DebugHudY, DebugHudW, DebugHudH, BLACK_OPACITY);
-			 GetDebugXY();
 		 }
 
 		 if (DebugTextMenu)
 		 {
 			 SubMenu::DebugTextMenu();
-			 GetDebugXY();
 		 }
 
 		 if (DebugHudMenu)
 		 {
 			 SubMenu::DebugHudMenu();
-			 GetDebugXY();
 		 }
 
 		 if (DebugHudAlphaMenu)
 		 {
 			 SubMenu::DebugHudAlphaMenu();
-			 GetDebugXY();
 		 }
 
 		 if (DebugDrawlineMenu)
 		 {
 			 SubMenu::DebugDrawLineMenu();
-			 GetDebugXY();
 		 }
 
 		 if (CustomImageMenu)

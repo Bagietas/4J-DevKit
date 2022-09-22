@@ -6,7 +6,7 @@ int loadtimer = 0;
 int load = 0;
 void LoadSPRX()
 {
-	int colorbg[3] = { 56, 56, 56 };
+	int colorbg[3] = { 36, 36, 36 };
 
 	DrawRectangle(388, 134, 193, 42, colorbg);
 	DrawRectangle(388, 148, 193, 13, UI::Color::WHITE);
@@ -40,19 +40,16 @@ void Inject()
 {
 	if (FirstInfoMessage)
 	{
-		if (InWorld())
+		if (InitializeSPRX)
 		{
-			if (InitializeSPRX)
-			{
-				*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
-				*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
-				*(int*)0x0155847C = 0x00000000; //Unusable HUD
-				LoadSPRX();
-			}
+			*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
+			*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
+			*(int*)0x0155847C = 0x00000000; //Unusable HUD
+			LoadSPRX();
 		}
 	}
 
-	if (noclipvars)
+	if (xKzLAOD015Ax11)
 	{
 		LoopFunc();
 		RenderMenu();
@@ -81,6 +78,8 @@ void INITIALIZE_START()
 	{
 		PSN_NAME = PS3Lib::ReadString(0x3000ACC4);
 		REGION = PS3Lib::ReadString(0x3000AD48);
+
+		strcpy((char*)0x100102F9, "DownCraft SPRX"); //unique ID
 
 		char HEX[] = { 0x42, 0x4C, 0x45, 0x53, 0x30, 0x31, 0x39, 0x37, 0x36 }; //detected if the custom EBOOT is used
 		char* ADDRESS = (char*)0x01437D24; //address for | /dev_hdd0/game/BLES01976/USRDIR/MC.sprx

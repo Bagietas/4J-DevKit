@@ -24,8 +24,6 @@ void ChangeValueLoop()
 
 void LoopFunc()
 {
-	//GetServerTime();
-
 	Welcome_Message();
 	GetPosition();
 	GetPing();
@@ -33,6 +31,7 @@ void LoopFunc()
 	GetResolution();
 	GetInfosLastPlayer();
 	get_temp();
+	GetGameTime();
 	TitleMenu();
 	DEBUG_FUNCTIONS_MESSAGES();
 	//VersionText();

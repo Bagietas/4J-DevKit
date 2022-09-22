@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -12,6 +13,18 @@ namespace mcV1.Classes
 {
     internal class Offsets
     {
+        public static string Filename_SPRX = "MC.sprx";
+        public static string Filename_EBOOT = "EBOOT.BIN";
+        public static string DL_SPRX = "https://miisaakii.000webhostapp.com/Misaki/Minecraft";
+        public static string DL_EBOOT = "https://miisaakii.000webhostapp.com/Misaki/EBOOT";
+        public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/Misaki/ORIGINAL_EBOOT";
+        string SPRX = Path.GetTempPath() + "MC.sprx";
+        string EBOOT = Path.GetTempPath() + "EBOOT.BIN";
+        string ORIGINAL_EBOOT = Path.GetTempPath() + "ORIGINAL_EBOOT.BIN";
+
+        public static string playMinecraft = "http://" + ps3IP + "/play.ps3/dev_hdd0/GAMES/Minecraft";
+        public static string PathLocation = "/dev_hdd0/game/BLES01976/USRDIR/";
+
         #region "Variables"
 
         WebClient web = new WebClient();
@@ -47,12 +60,8 @@ namespace mcV1.Classes
         public static string RSX;
         public static string FIRMWARE;
 
-        string IDPS;
-        string PSID;
-
         #endregion
         #region "Connection Part"
-
         public void ChangeAPI()
         {
             if (API == "TMAPI")
@@ -183,12 +192,73 @@ namespace mcV1.Classes
         #endregion
         #region "Basic Functions"
 
-        void InjectSPRX()
+        public void InjectSPRX()
         {
             string url = "https://github.com/aldostools/webMAN-MOD/releases/download/1.47.42/webMAN_MOD_1.47.42_Installer.pkg";
             string path = "/dev_hdd0/tmp";
 
             web.DownloadString("http://" + ps3IP + "/download.ps3?to=" + path + "&url=" + url);
+        }
+
+        #endregion
+        #region "INJECT SPRX IN PS3"
+
+        public async void INJECT_SPRX_IN_PS3()
+        {
+            try
+            {
+                MessageBox.Show("Please wait, this can take 1-2 min", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Starting injection SPRX...");
+
+                web.DownloadFile(DL_SPRX, SPRX);
+                web.DownloadFile(DL_EBOOT, EBOOT);
+                web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
+
+                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
+
+                using (var client = new WebClient())
+                {
+                    client.Credentials = new NetworkCredential("", "");
+                    client.UploadFile("ftp://" + ps3IP + PathLocation + Filename_SPRX, WebRequestMethods.Ftp.UploadFile, SPRX);
+                    client.UploadFile("ftp://" + ps3IP + PathLocation + Filename_EBOOT, WebRequestMethods.Ftp.UploadFile, EBOOT);
+                    client.Dispose();
+                }
+
+                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX V4.2\nsuccessful injected, reload Minecraft");
+                await Task.Delay(5000);
+
+                web.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                 
+                File.Delete(SPRX);
+                File.Delete(EBOOT);
+                File.Delete(ORIGINAL_EBOOT);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error has occurred", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+        }
+
+        #endregion
+        #region "Enable SPRX"
+        public void ENABLE_SPRX()
+        {
+            PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
+            if (PSN_NAME == "") { PSN_NAME = PS3.Extension.ReadString(0x3000ABA4); }
+
+            if (PS3.Extension.ReadString(0x100102F9) == "DownCraft SPRX") //check if the ID is DownCraft SPRX
+            {
+                PS3.SetMemory(0x0043938C, new byte[] { 0x41, 0x82, 0x00, 0x1C });
+                PS3.SetMemory(0x006A0AF8, new byte[] { 0x41, 0x82, 0x00, 0x78 });
+                PS3.SetMemory(0x00B9EBD4, new byte[] { 0x41, 0x82, 0x00, 0x1C });
+                PS3.SetMemory(0x00FDF858, new byte[] { 0x41, 0x82, 0xFF, 0x8C });
+                StatusSPRX = true;
+            }
+            else
+            {
+                MessageBox.Show("Sorry, the SPRX is not installed on your Minecraft", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion

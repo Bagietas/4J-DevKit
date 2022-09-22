@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace mcV1
         public static int y;
         
         mcV1.Classes.Offsets OFFSETS = new mcV1.Classes.Offsets();
+        mcV1.Classes.Functions FUNCTIONS = new mcV1.Classes.Functions();
+
 
         public Form1()
         {
@@ -51,8 +54,12 @@ namespace mcV1
             this.gunaGradient2Panel1.MouseMove += this.xMouseMove;
             this.gunaGradient2Panel1.MouseDown += this.xMouseDown;
             this.gunaGradient2Panel1.MouseMove += this.xMouseMove;
+            this.label1.MouseDown += this.xMouseDown;
+            this.label1.MouseMove += this.xMouseMove;
+            this.label1.MouseDown += this.xMouseDown;
+            this.label1.MouseMove += this.xMouseMove;
 
-            Process.Start();
+            Functions.CheckBadProcess();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -62,12 +69,49 @@ namespace mcV1
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            if (guna2RadioButton1.Checked)
+                OFFSETS.API = "CCAPI";
+            else if (guna2RadioButton2.Checked)
+                OFFSETS.API = "TMAPI";
+            else if (guna2RadioButton3.Checked)
+                OFFSETS.API = "HEN";
+
             OFFSETS.ChangeAPI();
             OFFSETS.doConnect();
 
             if (mcV1.Classes.Offsets.ConnectStatus == true)
             {
-                //guna2Button1.ForeColor = Color.FromArgb(FUNCS.RED, FUNCS.GREEN, FUNCS.BLUE);
+                label2.Text = "Connected";
+                label2.ForeColor = Color.Green;
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (!mcV1.Classes.Offsets.ConnectStatus == true)
+            {
+                MessageBox.Show("Oops, you need to be connected to your PS3 before inject the SPRX.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                OFFSETS.INJECT_SPRX_IN_PS3();
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("How to use it ?\n\nStart your Minecraft (BLES01976 ONLY)\n\nWhen you are in Minecraft menu, connect the tool to your PS3 using (CCAPI, TMAPI, HEN).\n\nthen press 'Inject SPRX', wait 1-2 min (depends of your internet connection).\n\nWhen it's done, the game will restart when you are in the Minecraft menu again, join a random world and connect the tool to your console again.\n\nEnable 'Enable SPRX' and wait, the SPRX will be enabled in your game.\n\nMade By Misaki", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Offsets.ConnectStatus == true)
+            {
+                OFFSETS.ENABLE_SPRX();
+            }
+            else
+            {
+                MessageBox.Show("Oops, you need to be connected to your PS3 before use the SPRX.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

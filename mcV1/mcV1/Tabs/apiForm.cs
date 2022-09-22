@@ -12,10 +12,32 @@ namespace mcV1.Tabs
 {
     public partial class apiForm : Form
     {
+        public static Point newpoint = new Point();
+        public static int x;
+        public static int y;
+
         public apiForm()
         {
             InitializeComponent();
         }
+
+        #region "System Move Title Panel"
+        private void xMouseDown(object sender, MouseEventArgs e)
+        {
+            x = Control.MousePosition.X - base.Location.X;
+            y = Control.MousePosition.Y - base.Location.Y;
+        }
+        private void xMouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                newpoint = Control.MousePosition;
+                newpoint.X -= x;
+                newpoint.Y -= y;
+                base.Location = newpoint;
+            }
+        }
+        #endregion
 
         private void setColor()
         {
@@ -63,6 +85,11 @@ namespace mcV1.Tabs
 
         private void apiForm_Load(object sender, EventArgs e)
         {
+            this.label10.MouseDown += this.xMouseDown;
+            this.label10.MouseMove += this.xMouseMove;
+            this.label10.MouseDown += this.xMouseDown;
+            this.label10.MouseMove += this.xMouseMove;
+
             setColor();
             if (mcV1.Classes.Offsets.curAPI == "tm")
                 textBox1.Text = "" + mcV1.Classes.Offsets.targetIndex;

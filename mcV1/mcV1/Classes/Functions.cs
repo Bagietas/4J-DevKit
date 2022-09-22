@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace mcV1.Classes
 {
     internal class Functions
     {
+        #region "Variables"
+
+        #endregion
+        #region "Check bad program"
+
         public static bool BadProcess = true;
         public static void CheckBadProcess()
         {
@@ -54,8 +62,10 @@ namespace mcV1.Classes
                     bool process36 = Process.GetProcessesByName("Fiddler Everywhere").Any();
                     bool process37 = Process.GetProcessesByName("FiddlerCap").Any();
                     bool process38 = Process.GetProcessesByName("Fiddler").Any();
+                    bool process39 = Process.GetProcessesByName("JustDecompile").Any();
+                    bool process40 = Process.GetProcessesByName("ILSpy").Any();
 
-                    if (process1 || process2 || process3 || process4 || process5 || process6 || process7 || process8 || process9 || process10 || process11 || process12 || process13 || process14 || process15 || process16 || process17 || process18 || process19 || process20 || process21 || process22 || process23 || process24 || process25 || process26 || process27 || process28 || process29 || process30 || process31 || process32 || process33 || process34 || process35 || process36 || process37 || process38)
+                    if (process1 || process2 || process3 || process4 || process5 || process6 || process7 || process8 || process9 || process10 || process11 || process12 || process13 || process14 || process15 || process16 || process17 || process18 || process19 || process20 || process21 || process22 || process23 || process24 || process25 || process26 || process27 || process28 || process29 || process30 || process31 || process32 || process33 || process34 || process35 || process36 || process37 || process38 || process39 || process40)
                     {
                         System.Environment.Exit(1);
                     }
@@ -66,5 +76,7 @@ namespace mcV1.Classes
                 }
             }
         }
+
+        #endregion
     }
 }

@@ -2,6 +2,8 @@
 
 #include "DrawHudsFunctions.h"
 
+#pragma region "Huds Function"
+
 #define Color_s(a,r,g,b) (((((a)&0xff)<<24)|(((r)&0xff)<<16)|(((g)&0xff)<<8)|((b)&0xff)))
 
 void DrawToggleONOFF(float x, float y, int* Color1, int* Color2, bool checked)
@@ -986,34 +988,25 @@ void VersionText()
 
 void DEBUG_FUNCTIONS_MESSAGES()
 {
-	if (!UI::Settings::ShowPosition)
+	if (UI::Settings::ShowPosition)
 	{
-		DEBUG_FUNCTIONS_MESSAGE = 36;
-
-		if (UI::Settings::ShowPosition)
-		{
-			DEBUG_FUNCTIONS_MESSAGE = 38;
-
-			if (UI::Settings::ShowPING)
-			{
-				DEBUG_FUNCTIONS_MESSAGE = 49;
-
-				if (UI::Settings::ShowChunks)
-				{
-					DEBUG_FUNCTIONS_MESSAGE = 60;
-
-					if (UI::Settings::ShowResolution)
-					{
-						DEBUG_FUNCTIONS_MESSAGE = 71;
-
-						if (UI::Settings::ShowCPURSX)
-						{
-							DEBUG_FUNCTIONS_MESSAGE = 82;
-						}
-					}
-				}
-			}
-		}
+		DEBUG_FUNCTIONS_MESSAGE = 39;
+	}
+	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING)
+	{
+		DEBUG_FUNCTIONS_MESSAGE = 49;
+	}
+	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks)
+	{
+		DEBUG_FUNCTIONS_MESSAGE = 60;
+	}
+	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks && UI::Settings::ShowResolution)
+	{
+		DEBUG_FUNCTIONS_MESSAGE = 71;
+	}
+	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks && UI::Settings::ShowResolution && UI::Settings::ShowCPURSX)
+	{
+		DEBUG_FUNCTIONS_MESSAGE = 82;
 	}
 
 	if (mc->theMinecraft->cMultiplayerLocalPlayer->isInWeb == true)
@@ -1056,24 +1049,21 @@ void DEBUG_FUNCTIONS_MESSAGES()
 
 void Welcome_Message()
 {
-	if (UI::Settings::ShowPosition)
+	if (UI::Settings::ShowPING)
 	{
-
+		DrawText(L"Welcome: ", 20, 25, color(UI::Color::WHITE));
+		DrawTextC(PSN_NAME, 60, 25, color(UI::Color::ORANGE));
 	}
 	else
 	{
-		if (UI::Settings::ShowPING)
-		{
-			DrawText(L"Welcome: ", 20, 25, color(UI::Color::WHITE));
-			DrawTextC(PSN_NAME, 60, 25, color(UI::Color::ORANGE));
-		}
-		else
-		{
-			DrawText(L"Welcome: ", 20, 26, color(UI::Color::WHITE));
-			DrawTextC(PSN_NAME, 60, 26, color(UI::Color::ORANGE));
-		}
+		DrawText(L"Welcome: ", 20, 26, color(UI::Color::WHITE));
+		DrawTextC(PSN_NAME, 60, 26, color(UI::Color::ORANGE));
 	}
 }
+
+#pragma endregion
+
+#pragma region "Get function"
 
 void get_temperature(uint32_t a, uint32_t* b)
 {
@@ -1103,7 +1093,6 @@ void get_temp()
 		DrawTextWithShadow(woption, 20, 68, color(UI::MCTextColors::White));
 	}
 }
-
 
 void GetPosition()
 {
@@ -1281,6 +1270,10 @@ void GetTeleportXYZ()
 	DrawTextWithShadow(woption8, 130, 75, color(UI::MCTextColors::White));
 }
 
+#pragma endregion
+
+#pragma region "Get last player infos"
+
 void GetInfosLastPlayer()
 {
 	if (PlayersInfos)
@@ -1318,6 +1311,10 @@ void GetInfosLastPlayer()
 	}
 }
 
+#pragma endregion
+
+#pragma region "Custom Crosshair"
+
 void Custom_Crosshair(int value)
 {
 	if (custom_crosshair)
@@ -1341,6 +1338,47 @@ void Custom_Crosshair(int value)
 		}
 	}
 }
+
+#pragma endregion
+
+#pragma region "GET GAMETIME"
+
+#include "HudsFunctions.h"
+
+int milliseconds;
+int seconds;
+int minutes;
+int hours;
+int gametimeW = 103;
+void GetGameTime()
+{
+
+	if (UI::Settings::ShowGametime)
+	{
+		int pos[2] = { 144, 14 };
+		milliseconds = mc->gameTime;
+		seconds = (milliseconds / 60);
+		minutes = seconds / 60;
+		hours = minutes / 60;
+
+		if (seconds > 10)
+			gametimeW = 105;
+
+		if (minutes > 10 && seconds > 10) { gametimeW = 108; }
+		else { gametimeW = 105; }
+
+		char option4[0x100];
+		wchar_t woption4[0x100];
+		_sys_memset(option4, 0, 0x100);
+		_sys_memset(woption4, 0, 0x200);
+		_sys_snprintf(option4, 0x100, "Gametime: %ih:%imin:%isec", int(hours % 24), int(minutes % 60), int(seconds % 60));
+		StringToWideCharacter(woption4, option4, _sys_strlen(option4));
+		DrawRectangle(142, 13, gametimeW, 10, UI::Color::BLACK);
+		DrawText(woption4, pos[0], pos[1], color(UI::Color::WHITE));
+	}
+}
+
+#pragma endregion
 
 #pragma region "DRAWING HEAD PIXEL"
 

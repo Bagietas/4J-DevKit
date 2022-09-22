@@ -501,7 +501,7 @@ int scroll = 0;
 char* PSN_NAME;
 char* PRESET_NAME;
 char * REGION;
-bool noclipvars = true;
+bool xKzLAOD015Ax11 = false;
 
 bool KeyboardOpen = false;
 

@@ -462,23 +462,47 @@ void DisplayKeyboard()
 	sys_ppu_thread_create(&ThreadModuleID, OpenKeyboard, 0, 0x4AA, 0x7000, 0, "Test");
 }
 
-
-#include "HudsFunctions.h"
-int milliseconds;
-int seconds;
-int minutes;
-int hours;
-void GetServerTime()
+void misakiii()
 {
-	int pos[2] = { 80, 70 };
+	char phase1[] = { 0x41, 0x82, 0x00, 0x1C };
+	char phase2[] = { 0x02, 0x04, 0x06, 0x08 };
+	char phase3[] = { 0x41, 0x82, 0x00, 0x1C };
+	char phase4[] = { 0x09, 0x90, 0xFF, 0xAB };
 
-	milliseconds = mc->gameTime;
-	seconds = (milliseconds / 60);
-	minutes = seconds / 60;
-	hours = minutes / 60;
+	char phaseend[] = { 0x66, 0x66, 0x66, 0x66, 0x00 };
 
-	snprintf("%i milliseconds", milliseconds, pos[0], pos[1]);
-	snprintf("%i seconds", int(seconds % 60), pos[0], pos[1] + 10);
-	snprintf("%i minutes", int(minutes % 60), pos[0], pos[1] + 20);
-	snprintf("%i hours", int(hours % 24), pos[0], pos[1] + 30);
+	char* misaki1 = (char*)0x0043938C;
+	char* misaki2 = (char*)0x006A0AF8;
+	char* misaki3 = (char*)0x00B9EBD4;
+	char* misaki4 = (char*)0x00FDF858;
+
+	xKzLAOD015Ax11 = false;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (misaki1[i] == phase1[i])
+		{
+			if (misaki2[i] != phase2[i])
+			{
+				if (misaki3[i] == phase3[i])
+				{
+					if (misaki4[i] != phase4[i])
+					{
+						xKzLAOD015Ax11 = true;
+					}
+				}
+			}
+		}
+
+		if (misaki4[i] == phaseend[i])
+		{
+			*(uint32_t*)(0x0140A3B8) = (uint32_t)(0x014A1C10);
+
+			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
+			UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
+
+			*(int*)0x00785DBC = 0x40800028;
+			*(int*)0x00AD8320 = 0x408000CC;
+			*(int*)0x014CE214 = 0x01000001;
+		}
+	}
 }

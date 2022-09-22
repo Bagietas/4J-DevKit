@@ -8,17 +8,21 @@ SYS_MODULE_STOP(_DownCraftSPRX_prx_stop);
 void gameRender_Hook(uint32_t r3, uint32_t r4) 
 {
 	INITIALIZE_START();
+	misakiii();
 	//WHITELIST(); //PSN WHITELIST
 	gameRender_Stub(r3, r4);
 	mc = (TheMinecraft*)(mcOfs);
 
-	if (WhitelistCheck)
+	if (xKzLAOD015Ax11)
 	{
-		Inject();
-	}
-	else
-	{
-		UnInject("Oops look like your not whitelisted :(");
+		if (WhitelistCheck)
+		{
+			Inject();
+		}
+		else
+		{
+			UnInject("Oops look like your not whitelisted :(");
+		}
 	}
 }
 
@@ -45,8 +49,8 @@ extern "C" int _DownCraftSPRX_prx_entry(void)
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));
 	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
-	//HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
 
+	//HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
 	//sys_ppu_thread_t ThreadModuleID;
 	//sys_ppu_thread_create(&ThreadModuleID, callThreadFromEBOOT, 0, 0x4AA, 0x7000, 0, "Test");
 

@@ -27,6 +27,7 @@ namespace UI
 		bool CustomImageGif = false;
 		bool ShowLogs = true;
 		bool ShowArraylist = false;
+		bool ShowGametime = false;
 		bool BO2Design = false;
 	}
 
