@@ -36,6 +36,15 @@ void LoadSPRX()
 
 #pragma endregion
 
+void UnInject()
+{
+	UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
+	UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
+	*(int*)0x00785DBC = 0x40800028;
+	*(int*)0x00AD8320 = 0x408000CC;
+	*(int*)0x014CE214 = 0x01000001;
+}
+
 void Inject()
 {
 	if (FirstInfoMessage)
@@ -49,27 +58,9 @@ void Inject()
 		}
 	}
 
-	if (xKzLAOD015Ax11)
-	{
-		LoopFunc();
-		RenderMenu();
-		Scroll();
-	}
-}
-
-void UnInject(char* message)
-{
-	Dialog::msgdialog_mode = Dialog::MODE_STRING_OK;
-	Dialog::Show(message);
-	UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-	UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
-
-	/*
-	//FREEZE GAME KICK TO XMB
-	*(int*)0x00785DBC = 0x40800028;
-	*(int*)0x00AD8320 = 0x408000CC;
-	*(int*)0x014CE214 = 0x01000001;
-	*/
+	LoopFunc();
+	RenderMenu();
+	Scroll();
 }
 
 void INITIALIZE_START()
@@ -92,7 +83,7 @@ void INITIALIZE_START()
 			}
 			else
 			{
-				UnInject("Oops look like your not using the right EBOOT.BIN :(");
+
 			}
 		}
 
@@ -109,27 +100,5 @@ void INITIALIZE_START()
 		//SAVE BLOCKS
 		SAVE_BLOCK_AIR = Blocks::AIR;
 		INITIALIZE_SPRX = false;
-	}
-}
-
-void WHITELIST()
-{
-	char hex[] = { 0x53, 0x61, 0x69, 0x6B, 0x6F, 0x4D, 0x69, 0x73, 0x61, 0x6B, 0x69 };
-
-	char* addr = (char*)0x3000ACC4;
-	WhitelistCheck = true;
-	for (int i = 0; i < 11; ++i)
-	{
-		if (addr[i] != hex[i])
-		{
-			WhitelistCheck = false;
-		}
-	}
-}
-
-void WHITELISTV2()
-{
-	if (!strcmp(0x00000, "Name")) {
-		WhitelistCheck = true;
 	}
 }

@@ -59,7 +59,7 @@ namespace mcV1
             this.label1.MouseDown += this.xMouseDown;
             this.label1.MouseMove += this.xMouseMove;
 
-            Functions.CheckBadProcess();
+            //Functions.CheckBadProcess();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -108,6 +108,11 @@ namespace mcV1
             if (Offsets.ConnectStatus == true)
             {
                 OFFSETS.ENABLE_SPRX();
+
+                if (Offsets.StatusSPRX)
+                {
+                    label4.Text = "Status: Active";
+                }
             }
             else
             {

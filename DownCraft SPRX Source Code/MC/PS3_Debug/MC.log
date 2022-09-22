@@ -61,7 +61,9 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(376,24): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(509,17): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(505,22): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(511,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Hooking.h(11): warning 942: missing return statement at end of non-void function "asm_SetPresenceDetails_Hook"
   
@@ -88,6 +90,10 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Function
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(453,29): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (2 of keyboard) of type "wchar_t *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(453,34): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (3 of keyboard) of type "wchar_t *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(504,17): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(474,6): warning 178: variable "phaseend" was declared but never referenced
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\OSK.h(17,9): warning 1628: argument of type "char *(*)(const std::time_t *)" is incompatible with parameter (1 of memset) of type "void *"
   
@@ -1170,10 +1176,6 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(32,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(33,25): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Startup.h(95,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of UnInject) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\prx.cpp(24,12): warning 1628: argument of type "const char *" is incompatible with parameter (1 of UnInject) of type "char *"
   
   MC.vcxproj -> C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\PS3_Debug\MC.sprx
   Cannot find the expected PRX Stub Library file: cellPrx_DownCraftSPRX_stub.a

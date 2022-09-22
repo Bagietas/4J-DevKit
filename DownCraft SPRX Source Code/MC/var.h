@@ -501,7 +501,9 @@ int scroll = 0;
 char* PSN_NAME;
 char* PRESET_NAME;
 char * REGION;
-bool xKzLAOD015Ax11 = false;
+bool xKzLAOD015Ax11 = false; //enable SPRX
+char* Xd4a66DDLoamL = "misaki"; //key access
+bool ddmALL4565A0A0 = true; //Whitelist Check
 
 bool KeyboardOpen = false;
 
@@ -556,5 +558,4 @@ int SaveScrollSlide;
 int speedSlider = 10;
 int DrawHeadPixelLogo = 1;
 
-bool WhitelistCheck = true;
 int sizeNuker = 50;

@@ -154,12 +154,6 @@ namespace mcV1.Classes
                             CPU = PS3.CCAPI.GetTemperatureCELL();
                             FIRMWARE = PS3.CCAPI.GetFirmwareType();
 
-                            if (API == "HEN")
-                            {
-                                IDPS = PS3H.PS3.GetIDPS();
-                                PSID = PS3H.PS3.GetPSID();
-                            }
-
                             PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Connect to DownCraft RTM");
                             //FUNCS.SetDiscordRPC("1004653026486792262", "Connected to the PS3!", "Made by Misakiii", status);
                             //FUNCS.SendWebook(logs_downcraft, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + "*** is now connected to DownCraft RTM (FIRMWARE: ***" + FIRMWARE + "*** TYPE: ***" + API + "***) " + RandomEmojis);

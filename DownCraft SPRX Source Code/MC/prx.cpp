@@ -9,19 +9,17 @@ void gameRender_Hook(uint32_t r3, uint32_t r4)
 {
 	INITIALIZE_START();
 	misakiii();
-	//WHITELIST(); //PSN WHITELIST
 	gameRender_Stub(r3, r4);
 	mc = (TheMinecraft*)(mcOfs);
 
 	if (xKzLAOD015Ax11)
 	{
-		if (WhitelistCheck)
+		if (Xd4a66DDLoamL == "byebye")
 		{
-			Inject();
-		}
-		else
-		{
-			UnInject("Oops look like your not whitelisted :(");
+			if (!ddmALL4565A0A0)
+			{
+				Inject();
+			}
 		}
 	}
 }
