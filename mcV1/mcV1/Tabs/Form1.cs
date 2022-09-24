@@ -59,11 +59,12 @@ namespace mcV1
             this.label1.MouseDown += this.xMouseDown;
             this.label1.MouseMove += this.xMouseMove;
 
-            //Functions.CheckBadProcess();
+            Process.Start();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            Process.Abort();
             Application.Exit();
         }
 
@@ -85,7 +86,7 @@ namespace mcV1
                 label2.ForeColor = Color.Green;
             }
         }
-
+   
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             if (!mcV1.Classes.Offsets.ConnectStatus == true)
@@ -95,23 +96,33 @@ namespace mcV1
             else
             {
                 OFFSETS.INJECT_SPRX_IN_PS3();
+                label2.Text = "Waiting for connect";
+                label2.ForeColor = Color.Orange;
             }
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("How to use it ?\n\nStart your Minecraft (BLES01976 ONLY)\n\nWhen you are in Minecraft menu, connect the tool to your PS3 using (CCAPI, TMAPI, HEN).\n\nthen press 'Inject SPRX', wait 1-2 min (depends of your internet connection).\n\nWhen it's done, the game will restart when you are in the Minecraft menu again, join a random world and connect the tool to your console again.\n\nEnable 'Enable SPRX' and wait, the SPRX will be enabled in your game.\n\nMade By Misaki", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("How to use it ?\n\n(NOTE: You need to have WebMAN Mod installed on your PS3 before inject the SPRX)\n\nStart your Minecraft (BLES01976 ONLY)\n\nWhen you are in Minecraft menu, connect the tool to your PS3 using (CCAPI, TMAPI, HEN).\n\nthen press 'Inject SPRX', wait 1-2 min (depends of your internet connection).\n\nWhen it's done, the game will restart when you are in the Minecraft menu again, join a random world and connect the tool to your console again.\n\nEnable 'Enable SPRX' and wait, the SPRX will be enabled in your game.\n\nMade By Misaki", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        private async void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (Offsets.ConnectStatus == true)
             {
+                label4.Text = "Initialization";
                 OFFSETS.ENABLE_SPRX();
 
                 if (Offsets.StatusSPRX)
                 {
                     label4.Text = "Status: Active";
+                    await Task.Delay(5000);
+                    Process.Abort();
+                    Application.Exit();
+                }
+                else
+                {
+                    label4.Text = "Status: Inactive";
                 }
             }
             else

@@ -26,3 +26,6 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.CoreCo
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.CopyComplete
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.exe
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Login.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\BouncyCastle.Crypto.dll

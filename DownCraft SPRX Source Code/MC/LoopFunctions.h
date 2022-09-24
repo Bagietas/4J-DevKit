@@ -8,6 +8,7 @@ void ModuleLoop()
 	Modules::SkyboxRGB();
 	Modules::Scaffold();
 	Modules::NoFall();
+	Modules::AutoToss();
 }
 
 void ChangeValueLoop()

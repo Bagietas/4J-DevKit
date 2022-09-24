@@ -46,6 +46,7 @@ bool MicsSettings2 = false;
 bool CrosshairMenu = false;
 bool DrawHeadLogoMenu = false;
 bool ShowMenu = false;
+bool PlayerOptionsMenu = false;
 bool CreditsMenu = false;
 bool DeveloperMenu = false;
 
@@ -502,8 +503,6 @@ char* PSN_NAME;
 char* PRESET_NAME;
 char * REGION;
 bool xKzLAOD015Ax11 = false; //enable SPRX
-char* Xd4a66DDLoamL = "misaki"; //key access
-bool ddmALL4565A0A0 = true; //Whitelist Check
 
 bool KeyboardOpen = false;
 
@@ -540,7 +539,7 @@ uint32_t rsx_t = 0;
 int RainbowSkyRGB;
 int RainbowSkyRGBSpeed = 10;
 int DEBUG_FUNCTIONS_MESSAGE = 36;
-bool devmenu = true;
+bool devmenu = false;
 bool custom_crosshair = false;
 int crosshair_value = 0;
 int getlogsvalue = 0;

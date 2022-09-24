@@ -276,7 +276,7 @@ void Options()
 			}
 		}
 
-		if (CurrentOpt == 7)
+		if (CurrentOpt == 9)
 		{
 			MicsSettings = false;
 			MicsSettings2 = true;
@@ -3480,12 +3480,10 @@ void Options()
 		{
 			if (!AutoTossItems)
 			{
-				Offsets::AUTO_TOSS_ITEMS(true);
 				AutoTossItems = true;
 			}
 			else
 			{
-				Offsets::AUTO_TOSS_ITEMS(false);
 				AutoTossItems = false;
 			}
 		}
@@ -5320,11 +5318,18 @@ void Options()
 		if (CurrentOpt == 9)
 		{
 			MainMenu = false;
-			SettingsMenu = true;
+			PlayerOptionsMenu = true;
 			CurrentOpt = 0;
 		}
 
 		if (CurrentOpt == 10)
+		{
+			MainMenu = false;
+			SettingsMenu = true;
+			CurrentOpt = 0;
+		}
+
+		if (CurrentOpt == 11)
 		{
 			MainMenu = false;
 			CreditsMenu = true;
@@ -5333,7 +5338,7 @@ void Options()
 
 		if (devmenu)
 		{
-			if (CurrentOpt == 11)
+			if (CurrentOpt == 12)
 			{
 				MainMenu = false;
 				DeveloperMenu = true;

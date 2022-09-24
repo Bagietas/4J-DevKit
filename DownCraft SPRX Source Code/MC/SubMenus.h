@@ -82,23 +82,47 @@ namespace SubMenu
 	
 	void MainMenu()
 	{
-		if (devmenu) { submmenuMax = 12; } else { submmenuMax = 11; }
-		AddHud(submmenuMax);
-		AddTitle(L"DownCraft SPRX");
-		AddDescription(L"Main Menu");
-		AddOption(L"Host Options");
-		AddOption(L"Non Host Options");
-		AddOption(L"Players Options");
-		AddOption(L"Weather Options");
-		AddOption(L"Vision Options");
-		AddOption(L"Name Changer");
-		AddOption(L"Game Editor");
-		AddOption(L"Mini-Game Options");
-		AddOption(L"Teleport Options");
-		AddOption(L"Settings Menu");
-		AddOption(L"Credits Menu");
-		if (devmenu) { AddOption(L"Developer Menu"); }
-		AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
+		if (devmenu) 
+		{ 
+			submmenuMax = 13; 
+			AddHud(submmenuMax);
+			AddTitle(L"DownCraft SPRX");
+			AddDescription(L"Main Menu");
+			AddOption(L"Host Options");
+			AddOption(L"Non Host Options");
+			AddOption(L"Players Options");
+			AddOption(L"Weather Options");
+			AddOption(L"Vision Options");
+			AddOption(L"Name Changer");
+			AddOption(L"Game Editor");
+			AddOption(L"Mini-Game Options");
+			AddOption(L"Teleport Options");
+			AddOption(L"Players Options");
+			AddOption(L"Settings Menu");
+			AddOption(L"Credits Menu");
+			AddOption(L"Developer Menu");
+			AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
+		} 
+		else 
+		{ 
+			submmenuMax = 12;
+			AddHud(submmenuMax);
+			AddTitle(L"DownCraft SPRX");
+			AddDescription(L"Main Menu");
+			AddOption(L"Host Options");
+			AddOption(L"Non Host Options");
+			AddOption(L"Players Options");
+			AddOption(L"Weather Options");
+			AddOption(L"Vision Options");
+			AddOption(L"Name Changer");
+			AddOption(L"Game Editor");
+			AddOption(L"Mini-Game Options");
+			AddOption(L"Teleport Options");
+			AddOption(L"Players Options");
+			AddOption(L"Settings Menu");
+			AddOption(L"Credits Menu");
+			AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
+		}
 	}
 
     #pragma region "Host Pages"
@@ -134,6 +158,8 @@ namespace SubMenu
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Turn entity & players invincible"); }
 		if (CurrentOpt == 2) { AddInformation(submmenuMax, L"Change attack damage delay"); }
 		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Bypass kill entity & players"); }
+		if (CurrentOpt == 5) { AddInformation(submmenuMax, L"Remove attack damage"); }
+		if (CurrentOpt == 9) { AddInformation(submmenuMax, L"All items is dropped very far"); }
 	}
 
 	void HostMenu1()
@@ -861,7 +887,7 @@ namespace SubMenu
 
 	void MicsMenu()
 	{
-		submmenuMax = 14;
+		submmenuMax = 10;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Settings Menu");
@@ -930,7 +956,7 @@ namespace SubMenu
 
 	void CreditsMenu()
 	{
-		submmenuMax = 10;
+		submmenuMax = 11;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Credits Menu");
@@ -938,17 +964,41 @@ namespace SubMenu
 		AddOption(L"NyTekCFW (Helper)");
 		AddOption(L"PrismoMxdz (Helper)");
 		AddOption(L"Magethsi (Helper)");
-		AddOption(L"mizdx (Helper");
+		AddOption(L"mizdx (Helper)");
 		AddOption(L"TheRouletteBoi (helper)");
 		AddOption(L"TheWaffleMan1337 (helper)");
-		AddOption(L"VinDublin (helper)");
+		AddOption(L"Dublin Modz (helper)");
 		AddOption(L"MayhemModding (helper)");
 		AddOption(L"NELUxP MoDz (helper)");
+		AddOption(L"d.s.j (helper)");
 
-		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#0513"); }
+		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#0513");}
+		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Discord: NyTekCFW#4315");}
+		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Discord: mizdx#5066");}
+		if (CurrentOpt == 7) { AddInformation(submmenuMax, L"Discord: VinDublin#5716");}
+		if (CurrentOpt == 8) { AddInformation(submmenuMax, L"Discord: MayhemModding#3231");}
+		if (CurrentOpt == 10) { AddInformation(submmenuMax, L"Discord: d.s.j.#0598");}
 	}
 
     #pragma endregion
+
+	void PlayerMenu()
+	{
+		submmenuMax = 8;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Player Menu");
+		AddOption(L"[HOST] Misakiii");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+		AddOption(L"NOT CONNECTED");
+
+		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Still in developement :("); }
+	}
 
 	void DeveloperMenu()
 	{

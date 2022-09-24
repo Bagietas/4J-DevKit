@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Flagsec;
 
 namespace mcV1.Classes
 {
@@ -67,13 +68,83 @@ namespace mcV1.Classes
 
                     if (process1 || process2 || process3 || process4 || process5 || process6 || process7 || process8 || process9 || process10 || process11 || process12 || process13 || process14 || process15 || process16 || process17 || process18 || process19 || process20 || process21 || process22 || process23 || process24 || process25 || process26 || process27 || process28 || process29 || process30 || process31 || process32 || process33 || process34 || process35 || process36 || process37 || process38 || process39 || process40)
                     {
-                        System.Environment.Exit(1);
+                        Application.Exit();
                     }
                 }
                 catch
                 {
 
                 }
+            }
+        }
+
+        #endregion
+        #region "Webhook func"
+        public void SendWebook(string link, string name, string picture, string message)
+        {
+            Webhook hook = new Webhook(link);
+            hook.Name = name;
+            hook.ProfilePictureUrl = picture;
+
+            hook.SendMessage(message);
+        }
+
+        public void SendWebookFile(string link, string name, string picture, string message, string filename, string filepath)
+        {
+            WebhookFile hook1 = new WebhookFile(link);
+            hook1.Name = name;
+            hook1.ProfilePictureUrl = picture;
+
+            hook1.SendMessage(message, filename, filepath);
+        }
+
+        #endregion
+        #region "FTP func"
+        public void FTP_UPLOAD(string URL, string username, string password, string pathConsole, string filePC)
+        {
+            using (var client = new WebClient())
+            {
+                client.Credentials = new NetworkCredential(username, password);
+                client.UploadFile(URL + pathConsole, WebRequestMethods.Ftp.UploadFile, filePC);
+            }
+        }
+
+        public void FTP_DOWNLOAD(string URL, string username, string password, string pathConsole, string filePC)
+        {
+            using (var client = new WebClient())
+            {
+                client.Credentials = new NetworkCredential(username, password);
+                client.DownloadFile(URL + pathConsole, filePC);
+            }
+        }
+
+        internal bool FTP_DELETE(string uriString, bool ssl = false, bool binary = false, string ftpUsername = "def", string ftpPassword = "default")
+        {
+            var serverUri = new Uri(uriString);
+            try
+            {
+
+                if (serverUri.Scheme != Uri.UriSchemeFtp)
+                {
+                    return false;
+                }
+                // Get the object used to communicate with the server.
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverUri);
+                request.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
+                request.Method = WebRequestMethods.Ftp.DeleteFile;
+                request.UseBinary = binary;
+                request.AuthenticationLevel = System.Net.Security.AuthenticationLevel.MutualAuthRequired;
+
+                request.EnableSsl = ssl;
+                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                Console.WriteLine("[!¡] DEL: {0}", response.StatusDescription);
+                response.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[!*] ERR: {ex.GetType()} : {ex.Message} ||| {ex.StackTrace}");
+                return false;
             }
         }
 

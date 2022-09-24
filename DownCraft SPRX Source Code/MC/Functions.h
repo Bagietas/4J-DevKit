@@ -464,20 +464,17 @@ void DisplayKeyboard()
 
 void misakiii()
 {
-	char phase1[] = { 0x41, 0x82, 0x00, 0x1C };
-	char phase2[] = { 0x99, 0x82, 0x00, 0x78 };
-	char phase3[] = { 0x41, 0x82, 0x00, 0x1C };
-	char phase4[] = { 0x99, 0x90, 0xFF, 0xAB };
-
-	char phase5[] = { 0x41, 0x82, 0x00, 0x0C };
+	char phase1[] = { 0x02, 0x08, 0xAF, 0x2A };
+	char phase2[] = { 0x02, 0x04, 0x06, 0x08 };
+	char phase3[] = { 0x65, 0xF8, 0xFF, 0xB4 };
+	char phase4[] = { 0x40, 0x90, 0xFF, 0xAB };
 
 	char phaseend[] = { 0x66, 0x66, 0x66, 0x66, 0x00 };
 
-	char* misaki1 = (char*)0x0043938C;
-	char* misaki2 = (char*)0x006A0AF8;
-	char* misaki3 = (char*)0x00B9EBD4;
-	char* misaki4 = (char*)0x00FDF858;
-	char* misaki5 = (char*)0x006A6DD0;
+	char* misaki1 = (char*)0x3000AF0F;
+	char* misaki2 = (char*)0x3000AF13;
+	char* misaki3 = (char*)0x3000AF17;
+	char* misaki4 = (char*)0x3000AF1B;
 
 	xKzLAOD015Ax11 = false;
 	for (int i = 0; i < 4; ++i)
@@ -495,16 +492,19 @@ void misakiii()
 				}
 			}
 		}
-	}
 
-	for (int i = 0; i < 4; ++i)
-	{
-		if (misaki5[i] == phase5[i])
+		if (misaki4[i] == phaseend[i])
 		{
-			Xd4a66DDLoamL = "byebye";
+			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
+			UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
+			//UnHookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook));
+			*(int*)0x00785DBC = 0x40800028;
+			*(int*)0x00AD8320 = 0x408000CC;
+			*(int*)0x014CE214 = 0x01000001;
 		}
 	}
 
+	/*
 	char PSN1[] = { 0x53, 0x61, 0x69, 0x6b, 0x6f, 0x4d, 0x69, 0x73, 0x61, 0x6b, 0x69 }; //SaikoMisaki
 
 	char* addr = (char*)0x3000ACC4;
@@ -515,5 +515,39 @@ void misakiii()
 		{
 			ddmALL4565A0A0 = false;
 		}
+	}
+	*/
+}
+
+/*
+const wchar_t* getPlayerName(int player)
+{
+	//return (wchar_t*)(0x00b18388 + 0xc8 * player);
+	return (wchar_t*)(0x30F46D04 * player);
+}
+*/
+
+const wchar_t* getPlayerName1()
+{
+	return (wchar_t*)(0x30F46D04);
+}
+
+const wchar_t* getPlayerName2()
+{
+	return (wchar_t*)(0x30F46AC4);
+}
+
+void SetPos(double x, double y, double z)
+{
+	mc->theMinecraft->cMultiplayerLocalPlayer->motionX = x;
+	mc->theMinecraft->cMultiplayerLocalPlayer->motionY = y;
+	mc->theMinecraft->cMultiplayerLocalPlayer->motionZ = z;
+}
+
+void Aimbot()
+{
+	if (Buttons::IsMCButtonPressed(Buttons::R2))
+	{
+		SetPos(20, 50, 20);
 	}
 }

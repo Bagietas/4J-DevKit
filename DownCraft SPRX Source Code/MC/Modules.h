@@ -2,6 +2,21 @@
 
 namespace Modules
 {
+	void AutoToss()
+	{
+		if (AutoTossItems)
+		{
+			if (Buttons::IsMCButtonPressed(Buttons::O))
+			{
+				*(int*)0x00AEF428 = 0x40820024;
+			}
+			else
+			{
+				*(int*)0x00AEF428 = 0x41820024;
+			}
+		}
+	}
+
 	void NukerTNT()
 	{
 		if (Buttons::IsMCButtonPressed(Buttons::R1))

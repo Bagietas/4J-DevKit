@@ -260,6 +260,12 @@
 		 SettingsMenu = true;
 	 }
 
+	 if (PlayerOptionsMenu)
+	 {
+		 PlayerOptionsMenu = false;
+		 MainMenu = true;
+	 }
+
 	 if (DrawHeadLogoMenu)
 	 {
 		 DrawHeadLogoMenu = false;
@@ -608,8 +614,8 @@
 		 if (MicsSettings)
 		 {
 			 SubMenu::MicsMenu();
-			 ChangeIntOptions(MicsSettings, 11, -5, 255, menulenght);
-			 ChangeIntOptions(MicsSettings, 12, 0, 255, shadowBG);
+			 ChangeIntOptions(MicsSettings, 7, -5, 255, menulenght);
+			 ChangeIntOptions(MicsSettings, 8, 0, 255, shadowBG);
 		 }
 
 		 if (MicsSettings2)
@@ -632,6 +638,11 @@
 		 {
 			 SubMenu::DrawHeadLogoMenu();
 			 ChangeIntOptions(DrawHeadLogoMenu, 0, 0, 3, DrawHeadPixelLogo);
+		 }
+
+		 if (PlayerOptionsMenu)
+		 {
+			 SubMenu::PlayerMenu();
 		 }
 
 		 if (CreditsMenu)
