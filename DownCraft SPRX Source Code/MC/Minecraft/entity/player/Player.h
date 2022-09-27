@@ -108,7 +108,7 @@ public:
 	virtual void stopSleepInBed(bool, bool);
 	virtual void getSleepTimer();
 	virtual void openTextEdit(BlockEntity *);
-	virtual void isLocalPlayer();
+	virtual bool isLocalPlayer();
 	virtual void stopLoading();
 	virtual void closeContainer();
 	void _init();

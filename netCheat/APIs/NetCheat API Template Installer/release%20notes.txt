@@ -1,0 +1,4 @@
+To see the template, select the .NET v3.5 and look under Visual C#.
+You must reference the NCAppInterface.dll yourself after making the project.
+
+- NetCheat PS3 v4.50 -

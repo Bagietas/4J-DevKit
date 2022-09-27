@@ -20,8 +20,6 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0xCB9910, int, __printf, (const char* format, ...));
 	MAKE_FUNCTION(0xCB9A10, int, __snprintf, (char* s, size_t n, const char* format, ...));
 
-	MAKE_FUNCTION(0xAE1A04, uint32_t, MultiPlayerGameMode_initPlayer, (void* gameMode, void* player));
-
 	MAKE_FUNCTION(0x00A73F10, void, EnableBlend, ());
 	MAKE_FUNCTION(0x00A73ED4, void, DisableBlend, ());
 	MAKE_FUNCTION(0x00A73A30, void, DisableAlpha, ());
@@ -100,7 +98,6 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0xB0E8F4, void, MultiPlayerLevel_getEntity, (void* outEntity, void* multiPlayerLevel, int id));
 	MAKE_FUNCTION(0x85FA24, uintptr_t, CGameNetworkManager_GetPlayerByIndex, ());
 
-	MAKE_FUNCTION(0x2F93A0, void, GiveItemCommand, (void* serverPlayer, int args[]));
 	MAKE_FUNCTION(0x3A7F48, void, LivingEntity_actuallyHurt, (void* entity, void* entityDamageSource, float damage));
 	MAKE_FUNCTION(0x4A94B8, void, Player_actuallyHurt, (void* player, void* damageSource, float damage));
 	MAKE_FUNCTION(0x39F018, uint32_t, LivingEntity_onChangedBlock, (void* entity, void* pos));

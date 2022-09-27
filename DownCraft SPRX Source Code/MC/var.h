@@ -119,7 +119,7 @@ bool CreeperFire = false;
 bool DisableTotem = false;
 bool GlitchDeadEntity = false;
 bool PlayersInfos = false;
-bool TPAura = true;
+bool TPAura = false;
 
 //Non Host Options
 int SuperSpeed = 38;
@@ -564,6 +564,10 @@ int sizeNuker = 0;
 bool RainbowNameRender = true;
 int RainbowNameRenderColor = 0;
 int getFontWidth = 0;
+
+double TargetposX;
+double TargetposY;
+double TargetposZ;
 
 int debug_entity_id;
 bool debug_entity_alive;

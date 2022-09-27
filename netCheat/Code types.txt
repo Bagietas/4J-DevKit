@@ -1,0 +1,132 @@
+Codetypes for Dnawrkshp's NetCheat PS3:
+
+Format:
+[COMMAND][ARGS] [ADDRESS] [VALUE]
+
+---------- 0 -- X Byte Write
+Writes X number of bytes to a (address)
+TYPE:
+	1 - OR write
+	2 - AND write
+	3 - XOR write
+	everything else - Byte write
+
+0[TYPE] aaaaaaaa vvvvvv
+You can have as many bytes after it (no spaces, new lines, and must have even number of digits)
+0102030405 would work, but 010203040 would not
+
+Example byte write:
+0 00B1F4A1 FFFFFF01FFFFFF02FFFFFF03
+
+Example AND write:
+02 00B1F4A1 FFFFFF01FFFFFF02FFFFFF03
+
+---------- 1 -- Text write
+Writes the text to a (address)
+The text can contain spaces so be sure to not have comments on the same line
+
+1 aaaaaaaa TEXT
+
+Example:
+1 00B1F4A6 This is an example of a text write
+
+---------- 2 -- Float write
+Writes the float to a (address)
+
+2 aaaaaaaa float
+
+Example:
+2 00B1F4A0 -3.14159
+
+---------- 4 -- Multi/Condensed write
+Starting at a, the value v is written, a is incremented by the value i, and then v is incremented by the value VINC. This is done c many times.
+So if you look at the example below, the start address is 00B36E40.
+It then writes 0101 to 00B36E40 and then the value 0101 is incremented by the VINC, 1, and becomes 0102.
+Then it increments the address, 00B36E40, by 00000010 (i).
+So the address becomes 00B36E50 and 0102 is written there.
+That happens 0x27 times, which if you do the math, will end at 00B36E40 + (0x27 * 0x10) or 00B370B0.
+This is the alternative to having a huge X write that, in this case, would be 0x270 bytes in length
+
+4 aaaaaaaa vvvv
+4[VINC] iiiiiiii cc
+
+Example:
+4 00B36E40 0101
+41 00000010 27
+
+---------- 6 -- Pointer write
+Reads the value at a, adds o, then uses that as the address for the next line.
+a = address, o = offset, c = command, v = value
+
+6 aaaaaaaa oooooooo
+c 00000000 vvvvvvvv
+
+Example:
+6 00B611C4 000010FC
+0 00000000 424800003F800000
+
+---------- A -- Copy/Paste
+n number of bytes will be copied from a.
+A1 aaaaaaaa nnnn
+
+depending on the last copy, those bytes will be pasted at a.
+A2 aaaaaaaa 0000
+
+This is only useful for pointers and pasting the same thing to mayn different places. Otherwise use the F codetype.
+
+Example:
+6 0092BB80 00001FC8
+A1 00000000 04
+6 0092BB80 00001FC4
+A2 010D7250 00
+
+---------- B -- Find/Replace
+Searches the memory starting at a and going until b is reached.
+If COUNT is given and is greater than 0, the search will last until the number of replaces is equal to COUNT, or if b is reached.
+For every instance of o (aka OGP) found, it will be replaced with n (COP).
+Both o and n should be the same length.
+Game regions are used in the searching, so to make the code faster do specify/find/import the game's regions in the Range tab.
+
+Because of how complicated the use of this can be in regard to multiple codes using the same o (OGP) value... I've added another window to help manage the find/replace results
+If you got a code from somewhere but it is in OGP/COP format (no start/stop specified), just use the first region for the game (Range tab->Find Ranges).
+
+B[COUNT] aaaaaaaa bbbbbbbb
+B oooooooo nnnnnnnn
+
+Example:
+-- All within region
+B 00010000 01CC0000
+B 1234567890ABCDEF FEDCBA0987654321
+-- First 4 found
+B4 00010000 FFFFFFFC
+B 1234567890ABCDEF FEDCBA0987654321
+
+---------- D -- Equal To Comparison
+Reads the number of bytes v contains from a and compares it with v. If they are equal it will execute the count (hex) number of lines below it.
+D type codes must be constantly written!
+
+D[COUNT] aaaaaaaa vvvvvvvv
+
+Example:
+D1 00B122F8 0001000000000000
+0 009C356D 00006000
+
+---------- E -- Mask Unset Comparison
+Reads the number of bytes v contains from a and ands it with v. If that is equal to v it will execute the count number (hex) of lines below it.
+if ((intB & intA) == intA) From misc.ArrayCompare
+E type codes must be constantly written!
+
+E[COUNT] aaaaaaaa vvvvvvvv
+
+Example:
+E2 00B122F8 00000044
+0 010D4568 3E000000
+1 0125CCA4 Activated
+
+---------- F -- Copy bytes
+Reads COUNT number of bytes from a and stores it in b
+
+F[COUNT] aaaaaaaa bbbbbbbb
+
+Example:
+FC0 00B00000 00C00000

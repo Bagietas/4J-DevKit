@@ -4429,6 +4429,18 @@ void Options()
 				PlayersInfos = false;
 			}
 		}
+
+		if (CurrentOpt == 3)
+		{
+			if (!TPAura)
+			{
+				TPAura = true;
+			}
+			else
+			{
+				TPAura = false;
+			}
+		}
 	}
 
 #pragma endregion

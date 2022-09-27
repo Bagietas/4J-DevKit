@@ -3,6 +3,12 @@
 #include "Minecraft/entity/Entity.h"
 #include "Minecraft/entity/player/ServerPlayer.h"
 #include "Minecraft/world/entity/DamageSource.h"
+#include <string>
+#include <vector>
+#include "Minecraft/util/AABB.h"
+#include "Minecraft/util/Vec2.h"
+#include "Minecraft/util/Vec3.h"
+#include "Modules.h"
 
 #pragma region "ASM"
 
@@ -44,11 +50,6 @@ uint32_t asm_LivingEntity_onChangedBlockHook(Entity* entity, BlockPos* pos)
 	__nop(); __nop(); __nop(); __nop(); __nop();
 }
 
-uint32_t asm_MultiPlayerGameMode_initPlayerHook(MultiPlayerGameMode* gamemode, ServerPlayer* player)
-{
-	__nop(); __nop(); __nop(); __nop(); __nop();
-}
-
 #pragma endregion
 
 int MultiPlayerGameMode_destroyBlockHook(MultiPlayerGameMode* gamemode, BlockPos* blockPos)
@@ -75,43 +76,12 @@ int MultiPlayerGameMode_destroyBlockHook(MultiPlayerGameMode* gamemode, BlockPos
 	}
 }
 
-#include <string>
-#include <vector>
-#include "Minecraft/util/AABB.h"
-#include "Minecraft/util/Vec2.h"
-#include "Minecraft/util/Vec3.h"
 void LivingEntity_HurtHook(Entity* entity, EntityDamageSource* entityDamageSource, float damage)
 {
-	debug_entity_id = entity->entityId;
-
-	if (entity->isAlive())
-		debug_entity_alive = true;
-	else
-		debug_entity_alive = false;
-
-	double posX = entity->posX;
-	double posY = entity->posY;
-	double posZ = entity->posZ;
-
-	double ViewAngleX = entity->m_viewAnglesX;
-	double ViewAngleY = entity->m_viewAnglesY;
-
-	FUNCTIONS::__printf("EntityID: %i \n", entity->entityId);
-	FUNCTIONS::__printf("Entity Pos: %f, %f, %f \n", posX, posY, posZ);
-	FUNCTIONS::__printf("View Angles: %f, %f \n", ViewAngleX, ViewAngleY);
-
-	//AIMBOT TEST
-	//mc->theMinecraft->cMultiplayerLocalPlayer->setLocationAndAngles(ViewAngleX, ViewAngleY)
-
-	mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(posX + 0.5, posY + 1 + 0.5, posZ + 0.5);
-
-    damage = 1.f;
+	//FUNCTIONS::Player_getAttachPos(entity, 10);
     asm_LivingEntity_HurtHook(entity, entityDamageSource, damage);
 }
 
-double TargetposX;
-double TargetposY;
-double TargetposZ;
 void Player_actuallyHurtHook(ServerPlayer* player, DamageSource* damageSource, float damage)
 {
 	debug_entity_id = player->entityId;
@@ -122,29 +92,8 @@ void Player_actuallyHurtHook(ServerPlayer* player, DamageSource* damageSource, f
 	else
 		debug_entity_alive = false;
 
-	//TP AURA BETA
-	if (TPAura)
-	{
-		TargetposX = player->posX;
-		TargetposY = player->posY;
-		TargetposZ = player->posZ;
+	Modules::TP_Aura(player);
 
-		if (frameTime(1, 1, false))
-		{
-			mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(TargetposX, TargetposY, TargetposZ); //TARGET POS
-			*(int*)0x00AEBED4 = 0xBE800000; //UNFAIR ATTACk
-			*(int*)0x00233290 = 0xFF000000; //KILL AURA
-			*(int*)0x00AEC34C = 0x40820024; //AUTO HIT
-			sleep(250);
-			*(int*)0x00AEBED4 = 0x3E800000;
-			*(int*)0x00233290 = 0x00000000;
-			*(int*)0x00AEC34C = 0x41820024;
-		}
-	}
-
-	//FUNCTIONS::__printf("PSN: %d \n", PSN);
-
-    damage = 1.f;
     asm_Player_HurtHook(player, damageSource, damage);
 }
 
@@ -154,13 +103,6 @@ uint32_t LivingEntity_onChangedBlockHook(Entity* entity, BlockPos* pos)
 	return asm_LivingEntity_onChangedBlockHook(entity, pos);
 }
 
-uint32_t MultiPlayerGameMode_initPlayerHook(MultiPlayerGameMode* gamemode, ServerPlayer* player)
-{
-	debug_entity_id = player->entityId;
-	return asm_MultiPlayerGameMode_initPlayerHook(gamemode, player);
-}
-
-
 void InstallHooks()
 {
 	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
@@ -168,7 +110,6 @@ void InstallHooks()
 	HookFunctionStart(0x4A94B8, *(uint32_t*)(Player_actuallyHurtHook), *(uint32_t*)(asm_Player_HurtHook));
 	HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
 	//HookFunctionStart(0xAE1A04, *(uint32_t*)(LivingEntity_onChangedBlockHook), *(uint32_t*)(asm_LivingEntity_onChangedBlockHook));
-	HookFunctionStart(0xAE1A04, *(uint32_t*)(MultiPlayerGameMode_initPlayerHook), *(uint32_t*)(asm_MultiPlayerGameMode_initPlayerHook));
 }
 
 void UninstallHooks()
@@ -179,5 +120,4 @@ void UninstallHooks()
 	UnHookFunctionStart(0x4A94B8, *(uint32_t*)(Player_actuallyHurtHook));
 	UnHookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook));
 	//UnHookFunctionStart(0xAE1A04, *(uint32_t*)(LivingEntity_onChangedBlockHook));
-	UnHookFunctionStart(0xAE1A04, *(uint32_t*)(MultiPlayerGameMode_initPlayerHook));
 }

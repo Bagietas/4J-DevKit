@@ -196,4 +196,28 @@ namespace Modules
 			}
 		}
 	}
+
+	void TP_Aura(ServerPlayer* player)
+	{
+		if (TPAura)
+		{
+			TargetposX = player->posX;
+			TargetposY = player->posY;
+			TargetposZ = player->posZ;
+
+			if (frameTime(0, 1, false))
+			{
+				*(int*)0x00227908 = 0x40820018; //MULTI JUMP
+				mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(TargetposX, TargetposY, TargetposZ); //TARGET POS
+				*(int*)0x00AEBED4 = 0xBE800000; //UNFAIR ATTACK
+				*(int*)0x00233290 = 0xFF000000; //KILL AURA
+				*(int*)0x00AEC34C = 0x40820024; //AUTO HIT
+				sleep(120);
+				*(int*)0x00227908 = 0x41820018;
+				*(int*)0x00AEBED4 = 0x3E800000;
+				*(int*)0x00233290 = 0x00000000;
+				*(int*)0x00AEC34C = 0x41820024;
+			}
+		}
+	}
 }
