@@ -2,84 +2,22 @@
 
 namespace SubMenu
 {
-	/*
+	
 	enum SubMenuPage
 	{
 		MainMenuPage,
 		HostMenuPage
 	};
 
-	void OpenSubMenuPage()
+	template<typename A, typename B>
+	void func(A args, B test)
 	{
-		switch (CurrentMenu)
-		{
-		   case MainMenuPage:
-		   {
-			   if (devmenu) { submmenuMax = 12; }
-			   else { submmenuMax = 11; }
-			   AddHud(submmenuMax);
-			   AddTitle(L"DownCraft SPRX");
-			   AddDescription(L"Main Menu");
-			   AddOption(L"Host Options");
-			   AddOption(L"Non Host Options");
-			   AddOption(L"Players Options");
-			   AddOption(L"Weather Options");
-			   AddOption(L"Vision Options");
-			   AddOption(L"Name Changer");
-			   AddOption(L"Game Editor");
-			   AddOption(L"Mini-Game Options");
-			   AddOption(L"Teleport Options");
-			   AddOption(L"Settings Menu");
-			   AddOption(L"Credits Menu");
-			   if (devmenu) { AddOption(L"Developer Menu"); }
-			   AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
-		   }
-		   break;
-		}
+		int color1[3] = { 65, 65, 65 };
+		DrawText(args, AddOptX, AddOptY + (10 * MaxOption), color(UI::Color::WHITE));
+		DrawToggleONOFF(CheckBoxX - 50 + menulenght, CheckBoxY + (10 * MaxOption), color1, UI::Color::BLACK, test);
+		MaxOption += 1;
 	}
 
-	void FunctionOptions()
-	{
-		switch (CurrentMenu)
-		{
-		    case MainMenuPage:
-			{
-				switch (CurrentOpt)
-				{
-				case(0):
-				{
-					MainMenu = false;
-					HostPage = true;
-					CurrentOpt = 0;
-				}
-				break;
-				case(1):
-				{
-					MainMenu = false;
-					NonHostPage = true;
-					CurrentOpt = 0;
-				}
-				break;
-				case(2):
-				{
-					MainMenu = false;
-					PlayersOptions = true;
-					CurrentOpt = 0;
-				}
-				break;
-				case(3):
-				{
-					MainMenu = false;
-					PlayersOptions = true;
-					CurrentOpt = 0;
-				}
-				break;
-				}
-			}
-		}
-	}
-	*/
-	
 	void MainMenu()
 	{
 		if (devmenu) 
@@ -220,13 +158,14 @@ namespace SubMenu
 
 	void HostMenu3()
 	{
-		submmenuMax = 3;
+		submmenuMax = 4;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Host Menu");
 		AddBoolOption(L"Disable Totem", !DisableTotem);
 		AddBoolOption(L"Bug Dead Entity", !GlitchDeadEntity);
 		AddBoolOption(L"Infos Players", !PlayersInfos);
+		AddBoolOption(L"TP Aura BETA", !TPAura);
 	}
 
     #pragma endregion
@@ -375,13 +314,15 @@ namespace SubMenu
 
 	void NonHostMenu5()
 	{
-		submmenuMax = 3;
+		submmenuMax = 5;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Non Host Menu");
 		AddBoolOption(L"ESP Tracer", !ESPTracer);
 		AddBoolOption(L"ESP COD", !ESPCOD);
 		AddBoolOption(L"ESP Waypoint", !ESPWaypoint);
+		AddBoolOption(L"Nuker", !Nuker);
+		AddIntOption(L"Nuker Radius", 0, sizeNuker);
 	}
 
     #pragma endregion
@@ -1000,14 +941,27 @@ namespace SubMenu
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Still in developement :("); }
 	}
 
+	void GiveItemsMenu()
+	{
+		submmenuMax = 4;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Give Items Menu");
+		//AddIntOption(L"Players");
+		//AddIntOption(L"Items");
+		//AddIntOption(L"Quantity");
+		AddOption(L"Give Items");
+	}
+
 	void DeveloperMenu()
 	{
-		submmenuMax = 2;
+		submmenuMax = 3;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Developer Menu");
 		AddBoolOption(L"Disable Dev Mode", devmenu);
 		AddOption(L"Restart Minecraft");
+		AddOption(L"Uninject SPRX");
 		AddInformation(submmenuMax, L"Dev menu still not finish yet :x");
 
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Auto Restart Minecraft"); }

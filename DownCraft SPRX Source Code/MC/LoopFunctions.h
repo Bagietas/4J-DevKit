@@ -1,6 +1,5 @@
 #pragma once
 
-
 void ModuleLoop()
 {
 	Modules::AntiVoid();
@@ -9,6 +8,7 @@ void ModuleLoop()
 	Modules::Scaffold();
 	Modules::NoFall();
 	Modules::AutoToss();
+	Modules::RainbowRenderName();
 }
 
 void ChangeValueLoop()
@@ -34,6 +34,7 @@ void LoopFunc()
 	get_temp();
 	GetGameTime();
 	TitleMenu();
+	DebugEntity();
 	DEBUG_FUNCTIONS_MESSAGES();
 	//VersionText();
 	InventoryCreativeTumble();

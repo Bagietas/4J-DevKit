@@ -8,10 +8,20 @@
 
 #define DWORD_ADDRESS(address, address_name)
 
+#include "Minecraft/client/gui/GuiComponent.h"
+#include "Minecraft/entity/player/ServerPlayer.h"
+
 GuiComponent* g_GuiComponent;
+MultiPlayerLevel* g_Level;
+MultiplayerLocalPlayer* g_Localplayer;
 
 namespace FUNCTIONS 
 {
+	MAKE_FUNCTION(0xCB9910, int, __printf, (const char* format, ...));
+	MAKE_FUNCTION(0xCB9A10, int, __snprintf, (char* s, size_t n, const char* format, ...));
+
+	MAKE_FUNCTION(0xAE1A04, uint32_t, MultiPlayerGameMode_initPlayer, (void* gameMode, void* player));
+
 	MAKE_FUNCTION(0x00A73F10, void, EnableBlend, ());
 	MAKE_FUNCTION(0x00A73ED4, void, DisableBlend, ());
 	MAKE_FUNCTION(0x00A73A30, void, DisableAlpha, ());
@@ -68,8 +78,10 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0x00A75074, void, Color2, (float colorRed, float colorGreen, float ColorBlue));
 
 	//FONT RENDER
+	MAKE_FUNCTION(0xA7DB38, int, Font_width, (uintptr_t font, uint32_t text));
 	MAKE_FUNCTION(0xA7E2E8, void, DrawText, (uint32_t font, uint32_t r4, uint32_t x, uint32_t y, uint32_t color, uint32_t r8, uint32_t r9));
 	MAKE_FUNCTION(0xA7E5DC, void, DrawTextWithShadow, (void* guiComponent, uint32_t font, uint32_t text, uint32_t x, uint32_t y, uint32_t color));
+	MAKE_FUNCTION(0xA7E520, void, DrawCenteredText, (void* guiComponent, uint32_t font, uint32_t text, uint32_t x, uint32_t y, uint32_t color));
 	MAKE_FUNCTION(0xA7CE80, void, DrawRectangleAlpha, (void* guiComponent, uint32_t x, uint32_t y, uint32_t width, uint32_t height, uint32_t color));
 	MAKE_FUNCTION(0xA75024, void, GLStateColor, (float r, float g, float b, float a));
 
@@ -83,6 +95,16 @@ namespace FUNCTIONS
 	void Tesselator_EndVertex(uint32_t pTesselator, float X, float Y, float Z, int* Color) { FUNCTIONS::Tesselator_Color(pTesselator, Color[0], Color[1], Color[2], 255); FUNCTIONS::BufferBuilder_endVertex(pTesselator, X, Y, Z, 0, 0); }
 
 	MAKE_FUNCTION(0x886798, void, ConsoleUIController_PlayUISFX, (uintptr_t consoleUIController, uintptr_t soundEvent));
+
+	//PLAYER
+	MAKE_FUNCTION(0xB0E8F4, void, MultiPlayerLevel_getEntity, (void* outEntity, void* multiPlayerLevel, int id));
+	MAKE_FUNCTION(0x85FA24, uintptr_t, CGameNetworkManager_GetPlayerByIndex, ());
+
+	MAKE_FUNCTION(0x2F93A0, void, GiveItemCommand, (void* serverPlayer, int args[]));
+	MAKE_FUNCTION(0x3A7F48, void, LivingEntity_actuallyHurt, (void* entity, void* entityDamageSource, float damage));
+	MAKE_FUNCTION(0x4A94B8, void, Player_actuallyHurt, (void* player, void* damageSource, float damage));
+	MAKE_FUNCTION(0x39F018, uint32_t, LivingEntity_onChangedBlock, (void* entity, void* pos));
+	MAKE_FUNCTION(0x2E2180, void, FrostWalkerEnchantment_onEntityMoved, (void* entity, void* multiPlayerLevel, void* blockPos, int enchantmentLevel));
 }
 
 #pragma endregion
@@ -153,6 +175,16 @@ font_t getString(const wchar_t* str)
 
 #pragma region "Game Functions"
 
+void GiveItemCommand(int args[])
+{
+	ServerPlayer* serverplayer;
+	FUNCTIONS::GiveItemCommand(serverplayer, args);
+}
+
+int Font_width(const wchar_t* text) {
+	FUNCTIONS::Font_width(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text));
+}
+
 void DrawText(const wchar_t* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color, 0, 1);
 }
@@ -163,6 +195,10 @@ void DrawTextC(char* text, float x, float y, uint32_t color) {
 
 void DrawTextWithShadow(const wchar_t* text, uint32_t x, uint32_t y, uint32_t color) {
 	FUNCTIONS::DrawTextWithShadow(g_GuiComponent, mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color);
+}
+
+void DrawCenteredText(const wchar_t* text, uint32_t x, uint32_t y, uint32_t color) {
+	FUNCTIONS::DrawCenteredText(g_GuiComponent, mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color);
 }
 
 void DrawRectangle(float x, float y, float w, float h, int* Color) {
@@ -182,10 +218,4 @@ void DrawRectangleAlpha(uint32_t x, uint32_t y, uint32_t width, uint32_t height,
 void PlayUISound(uintptr_t* SoundEvent) {
 	FUNCTIONS::ConsoleUIController_PlayUISFX(ConsoleUIController, *SoundEvent);
 }
-
-void SetPlayerGameType()
-{
-
-}
-
 #pragma endregion

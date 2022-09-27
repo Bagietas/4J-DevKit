@@ -2,6 +2,20 @@
 
 namespace Modules
 {
+	void RainbowRenderName()
+	{
+		if (RainbowNameRender)
+		{
+			RainbowNameRenderColor += 1;
+			if (RainbowNameRenderColor > 254)
+				RainbowNameRenderColor = 0;
+
+			char COLOR[] = { NyTekCFW::IntToHex(RainbowNameRenderColor) };
+			sys_dbg_write_process_memory(0x00AA5236, &COLOR, sizeof(COLOR));
+			sys_dbg_write_process_memory_ps3mapi(0x00AA5236, &COLOR, sizeof(COLOR));
+		}
+	}
+
 	void AutoToss()
 	{
 		if (AutoTossItems)
@@ -21,7 +35,7 @@ namespace Modules
 	{
 		if (Buttons::IsMCButtonPressed(Buttons::R1))
 		{
-			*(int*)(Blocks::AIR) = *(int*)(Blocks::TNT);
+			//*(int*)(pBlock::AIR) = *(int*)(pBlock::TNT);
 			*(int*)0x0051E6A0 = 0x40810034;
 		}
 	}

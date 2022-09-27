@@ -59,14 +59,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x003A3F6C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A3F6C, &HEX, sizeof(HEX));
-			SetNotify(L"Entity God Mode: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x003A3F6C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A3F6C, &HEX, sizeof(HEX));
-			SetNotify(L"Entity God Mode: OFF");
 		}
 	}
 
@@ -77,14 +75,12 @@ namespace Offsets
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x0039DE28, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0039DE28, &HEX, sizeof(HEX));
-			SetNotify(L"Infinite Oxygen: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x0039DE28, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0039DE28, &HEX, sizeof(HEX));
-			SetNotify(L"Infinite Oxygen: OFF");
 		}
 	}
 
@@ -95,14 +91,12 @@ namespace Offsets
 			char HEX[] = { 0x68, 0x63, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x002ADCE8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002ADCE8, &HEX, sizeof(HEX));
-			SetNotify(L"Regenerate Heart: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x68, 0x63, 0x00, 0x01 };
 			sys_dbg_write_process_memory(0x002ADCE8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002ADCE8, &HEX, sizeof(HEX));
-			SetNotify(L"Regenerate Heart: OFF");
 		}
 	}
 
@@ -113,14 +107,12 @@ namespace Offsets
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x002F03D0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002F03D0, &HEX, sizeof(HEX));
-			SetNotify(L"Lock Gamemode: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x002F03D0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002F03D0, &HEX, sizeof(HEX));
-			SetNotify(L"Lock Gamemode: OFF");
 		}
 	}
 
@@ -131,14 +123,12 @@ namespace Offsets
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00393E84, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00393E84, &HEX, sizeof(HEX));
-			SetNotify(L"Lock Weather: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00393E84, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00393E84, &HEX, sizeof(HEX));
-			SetNotify(L"Lock Weather: OFF");
 		}
 	}
 
@@ -149,14 +139,12 @@ namespace Offsets
 			char HEX[] = { 0xE0, 0x18, 0x18 };
 			sys_dbg_write_process_memory(0x000FB4C5, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x000FB4C5, &HEX, sizeof(HEX));
-			SetNotify(L"Fast Bow: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xE0, 0x08, 0x18 };
 			sys_dbg_write_process_memory(0x000FB4C5, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x000FB4C5, &HEX, sizeof(HEX));
-			SetNotify(L"Fast Bow: OFF");
 		}
 	}
 
@@ -167,14 +155,12 @@ namespace Offsets
 			char HEX[] = { 0x45 };
 			sys_dbg_write_process_memory(0x000FB55C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x000FB55C, &HEX, sizeof(HEX));
-			SetNotify(L"Direction Arrows: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x000FB55C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x000FB55C, &HEX, sizeof(HEX));
-			SetNotify(L"Direction Arrows: OFF");
 		}
 	}
 
@@ -185,14 +171,12 @@ namespace Offsets
 			char HEX[] = { 0x00 };
 			sys_dbg_write_process_memory(0x002F0273, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002F0273, &HEX, sizeof(HEX));
-			SetNotify(L"God Mode For Me: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x01 };
 			sys_dbg_write_process_memory(0x002F0273, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002F0273, &HEX, sizeof(HEX));
-			SetNotify(L"Gode Mode For Me: OFF");
 		}
 	}
 
@@ -203,14 +187,12 @@ namespace Offsets
 			char HEX[] = { 0x4E, 0x80, 0x00, 0x20 };
 			sys_dbg_write_process_memory(0x003A52B0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A52B0, &HEX, sizeof(HEX));
-			SetNotify(L"Totem Give Health: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0x80, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x003A52B0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A52B0, &HEX, sizeof(HEX));
-			SetNotify(L"Totem Give Health: OFF");
 		}
 	}
 
@@ -221,14 +203,12 @@ namespace Offsets
 			char HEX[] = { 0x42, 0x80, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x0051E0D0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E0D0, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Nuclear: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40, 0x80, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x0051E0D0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E0D0, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Nuclear: OFF");
 		}
 	}
 
@@ -239,14 +219,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00245E58, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00245E58, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Big Particles: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00245E58, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00245E58, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Big Particles: OFF");
 		}
 	}
 
@@ -257,14 +235,12 @@ namespace Offsets
 			char HEX[] = { 0x2F, 0xA4 };
 			sys_dbg_write_process_memory(0x0051E558, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E558, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Flying: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0xA4 };
 			sys_dbg_write_process_memory(0x0051E558, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E558, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Flying: OFF");
 		}
 	}
 
@@ -275,14 +251,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x0051E6A0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E6A0, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Instant Explode: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x0051E6A0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E6A0, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Instant Explode: OFF");
 		}
 	}
 
@@ -293,14 +267,12 @@ namespace Offsets
 			char HEX[] = { 0x4F };
 			sys_dbg_write_process_memory(0x0051E558, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E558, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt In Ground: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F };
 			sys_dbg_write_process_memory(0x0051E558, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0051E558, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt In Ground: OFF");
 		}
 	}
 
@@ -311,14 +283,12 @@ namespace Offsets
 			char HEX[] = { 0xFF, 0x60, 0x18, 0x90 };
 			sys_dbg_write_process_memory(0x00245BE4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00245BE4, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Sound Off: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xFF, 0x60, 0x08, 0x90 };
 			sys_dbg_write_process_memory(0x00245BE4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00245BE4, &HEX, sizeof(HEX));
-			SetNotify(L"Tnt Sound Off: OFF");
 		}
 	}
 
@@ -329,14 +299,12 @@ namespace Offsets
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x001CC81C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC81C, &HEX, sizeof(HEX));
-			SetNotify(L"Big Creeper: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x001CC81C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC81C, &HEX, sizeof(HEX));
-			SetNotify(L"Big Creeper: OFF");
 		}
 	}
 
@@ -347,14 +315,12 @@ namespace Offsets
 			char HEX[] = { 0x3F, 0xFF };
 			sys_dbg_write_process_memory(0x001CC7E0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC7E0, &HEX, sizeof(HEX));
-			SetNotify(L"Creeper Nuclear: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0x80 };
 			sys_dbg_write_process_memory(0x001CC7E0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC7E0, &HEX, sizeof(HEX));
-			SetNotify(L"Creeper Nuclear: OFF");
 		}
 	}
 
@@ -365,14 +331,12 @@ namespace Offsets
 			char HEX[] = { 0x39, 0x40, 0x00, 0x10 };
 			sys_dbg_write_process_memory(0x001CC894, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC894, &HEX, sizeof(HEX));
-			SetNotify(L"Creeper Fire: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x39, 0x40, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x001CC894, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x001CC894, &HEX, sizeof(HEX));
-			SetNotify(L"Creeper Fire: OFF");
 		}
 	}
 
@@ -383,14 +347,12 @@ namespace Offsets
 			char HEX[] = { 0x4E, 0x80, 0x00, 0x20 };
 			sys_dbg_write_process_memory(0x003A52B8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A52B8, &HEX, sizeof(HEX));
-			SetNotify(L"Disable Totem: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xF8, 0x21, 0xFF, 0x41 };
 			sys_dbg_write_process_memory(0x003A52B8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003A52B8, &HEX, sizeof(HEX));
-			SetNotify(L"Disable Totem: OFF");
 		}
 	}
 
@@ -401,14 +363,12 @@ namespace Offsets
 			char HEX[] = { 0x18 };
 			sys_dbg_write_process_memory(0x00EA89E2, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00EA89E2, &HEX, sizeof(HEX));
-			SetNotify(L"Glitch Dead Entity: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x08 };
 			sys_dbg_write_process_memory(0x00EA89E2, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00EA89E2, &HEX, sizeof(HEX));
-			SetNotify(L"Glitch Dead Entity: OFF");
 		}
 	}
 
@@ -419,14 +379,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x004619E4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x004619E4, &HEX, sizeof(HEX));
-			SetNotify(L"Disable Spawn Mobs: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x004619E4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x004619E4, &HEX, sizeof(HEX));
-			SetNotify(L"Disable Spawn Mobs: OFF");
 		}
 	}
 
@@ -444,14 +402,12 @@ namespace Offsets
 			char HEX[] = { 0x14 };
 			sys_dbg_write_process_memory(0x0022790B, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0022790B, &HEX, sizeof(HEX));
-			SetNotify(L"Multi Jump: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x18 };
 			sys_dbg_write_process_memory(0x0022790B, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0022790B, &HEX, sizeof(HEX));
-			SetNotify(L"Multi Jump: OFF");
 		}
 	}
 
@@ -462,14 +418,12 @@ namespace Offsets
 			char HEX[] = { 0xFC, 0x80 };
 			sys_dbg_write_process_memory(0x002271F4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002271F4, &HEX, sizeof(HEX));
-			SetNotify(L"Jump For Build: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xFC, 0x20 };
 			sys_dbg_write_process_memory(0x002271F4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002271F4, &HEX, sizeof(HEX));
-			SetNotify(L"Jump For Build: OFF");
 		}
 	}
 
@@ -480,14 +434,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00011ADC, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00011ADC, &HEX, sizeof(HEX));
-			SetNotify(L"Jump In Sky: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00011ADC, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00011ADC, &HEX, sizeof(HEX));
-			SetNotify(L"Jump In Sky: OFF");
 		}
 	}
 
@@ -498,14 +450,12 @@ namespace Offsets
 			char HEX[] = { 0x3F, 0x47, 0x7F, 0x42 };
 			sys_dbg_write_process_memory(0x003AA77C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA77C, &HEX, sizeof(HEX));
-			SetNotify(L"Super Jump: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3E, 0xD7, 0x0A, 0x3D };
 			sys_dbg_write_process_memory(0x003AA77C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA77C, &HEX, sizeof(HEX));
-			SetNotify(L"Super Jump: OFF");
 		}
 	}
 
@@ -516,14 +466,12 @@ namespace Offsets
 			char HEX[] = { 0x3F };
 			sys_dbg_write_process_memory(0x003AA77C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA77C, &HEX, sizeof(HEX));
-			SetNotify(L"Super Jump V2: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3E };
 			sys_dbg_write_process_memory(0x003AA77C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA77C, &HEX, sizeof(HEX));
-			SetNotify(L"Super Jump V2: OFF");
 		}
 	}
 
@@ -534,14 +482,12 @@ namespace Offsets
 			char HEX[] = { 0x80 };
 			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Jump Forward: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x68 };
 			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Jump Forward: OFF");
 		}
 	}
 
@@ -552,14 +498,12 @@ namespace Offsets
 			char HEX[] = { 0xF4 };
 			sys_dbg_write_process_memory(0x003ABDC9, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDC9, &HEX, sizeof(HEX));
-			SetNotify(L"Remove Jump: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xB4 };
 			sys_dbg_write_process_memory(0x003ABDC9, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDC9, &HEX, sizeof(HEX));
-			SetNotify(L"Remove Jump: OFF");
 		}
 	}
 
@@ -570,14 +514,12 @@ namespace Offsets
 			char HEX[] = { 0xA0 };
 			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Jump Speed: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x68 };
 			sys_dbg_write_process_memory(0x003AA999, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AA999, &HEX, sizeof(HEX));
-			SetNotify(L"Jump Speed: OFF");
 		}
 	}
 
@@ -592,7 +534,6 @@ namespace Offsets
 			char HEX1[] = { 0x3D };
 			sys_dbg_write_process_memory(0x003ABD44, &HEX1, sizeof(HEX1));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABD44, &HEX1, sizeof(HEX1));
-			SetNotify(L"Swim Fly: ON");
 		}
 		else
 		{
@@ -603,7 +544,6 @@ namespace Offsets
 			char HEX1[] = { 0x3C };
 			sys_dbg_write_process_memory(0x003ABD44, &HEX1, sizeof(HEX1));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABD44, &HEX1, sizeof(HEX1));
-			SetNotify(L"Swim Fly: OFF");
 		}
 	}
 
@@ -614,14 +554,12 @@ namespace Offsets
 			char HEX[] = { 0xBC };
 			sys_dbg_write_process_memory(0x003ABD44, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABD44, &HEX, sizeof(HEX));
-			SetNotify(L"Movement Swim: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3C };
 			sys_dbg_write_process_memory(0x003ABD44, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABD44, &HEX, sizeof(HEX));
-			SetNotify(L"Movement Swim: OFF");
 		}
 	}
 
@@ -632,14 +570,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00B0229C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00B0229C, &HEX, sizeof(HEX));
-			SetNotify(L"Swim Glitch: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00B0229C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00B0229C, &HEX, sizeof(HEX));
-			SetNotify(L"Swim Glitch: OFF");
 		}
 	}
 
@@ -650,14 +586,12 @@ namespace Offsets
 			char HEX[] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
 			sys_dbg_write_process_memory(0x00011230, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00011230, &HEX, sizeof(HEX));
-			SetNotify(L"No Colission: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 			sys_dbg_write_process_memory(0x00011230, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00011230, &HEX, sizeof(HEX));
-			SetNotify(L"No Colission: OFF");
 		}
 	}
 
@@ -668,14 +602,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x002271B0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002271B0, &HEX, sizeof(HEX));
-			SetNotify(L"No Colission Bypass: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x002271B0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x002271B0, &HEX, sizeof(HEX));
-			SetNotify(L"No Colission Bypass: ON");
 		}
 	}
 
@@ -686,14 +618,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00B023EC, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00B023EC, &HEX, sizeof(HEX));
-			SetNotify(L"Fly Mode X: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00B023EC, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00B023EC, &HEX, sizeof(HEX));
-			SetNotify(L"Fly Mode X: OFF");
 		}
 	}
 
@@ -708,7 +638,6 @@ namespace Offsets
 			char HEX1[] = { 0x40 };
 			sys_dbg_write_process_memory(0x003097B8, &HEX1, sizeof(HEX1));
 			sys_dbg_write_process_memory_ps3mapi(0x003097B8, &HEX1, sizeof(HEX1));
-			SetNotify(L"Items Ids: ON");
 		}
 		else
 		{
@@ -719,7 +648,6 @@ namespace Offsets
 			char HEX1[] = { 0x41 };
 			sys_dbg_write_process_memory(0x003097B8, &HEX1, sizeof(HEX1));
 			sys_dbg_write_process_memory_ps3mapi(0x003097B8, &HEX1, sizeof(HEX1));
-			SetNotify(L"Items Ids: OFF");
 		}
 	}
 
@@ -730,14 +658,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00AEE434, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEE434, &HEX, sizeof(HEX));
-			SetNotify(L"Anti Kick: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00AEE434, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEE434, &HEX, sizeof(HEX));
-			SetNotify(L"Anti Kick: OFF");
 		}
 	}
 
@@ -748,14 +674,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00389B3C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00389B3C, &HEX, sizeof(HEX));
-			SetNotify(L"Stuck In Block: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00389B3C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00389B3C, &HEX, sizeof(HEX));
-			SetNotify(L"Stuck In Block: OFF");
 		}
 	}
 
@@ -766,14 +690,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00A99420, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00A99420, &HEX, sizeof(HEX));
-			SetNotify(L"Change Position View: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00A99420, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00A99420, &HEX, sizeof(HEX));
-			SetNotify(L"Change Position View: OFF");
 		}
 	}
 
@@ -784,14 +706,12 @@ namespace Offsets
 			char HEX[] = { 0xFF };
 			sys_dbg_write_process_memory(0x00AEB090, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEB090, &HEX, sizeof(HEX));
-			SetNotify(L"Funny Sound: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F };
 			sys_dbg_write_process_memory(0x00AEB090, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEB090, &HEX, sizeof(HEX));
-			SetNotify(L"Funny Sound: OFF");
 		}
 	}
 
@@ -802,14 +722,12 @@ namespace Offsets
 			char HEX[] = { 0x3F };
 			sys_dbg_write_process_memory(0x003ABDC8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDC8, &HEX, sizeof(HEX));
-			SetNotify(L"Float UP: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xBF };
 			sys_dbg_write_process_memory(0x003ABDC8, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDC8, &HEX, sizeof(HEX));
-			SetNotify(L"Float UP: OFF");
 		}
 	}
 
@@ -820,14 +738,12 @@ namespace Offsets
 			char HEX[] = { 0x3E, 0xFF };
 			sys_dbg_write_process_memory(0x00A9C2B4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00A9C2B4, &HEX, sizeof(HEX));
-			SetNotify(L"ESP Chests: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0x80 };
 			sys_dbg_write_process_memory(0x00A9C2B4, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00A9C2B4, &HEX, sizeof(HEX));
-			SetNotify(L"ESP Chests: OFF");
 		}
 	}
 
@@ -838,14 +754,12 @@ namespace Offsets
 			char HEX[] = { 0xFC, 0x02, 0x10 };
 			sys_dbg_write_process_memory(0x004B1CE0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x004B1CE0, &HEX, sizeof(HEX));
-			SetNotify(L"Camera Down: ON");
 		}
 		else
 		{
 			char HEX[] = { 0xFC, 0x01, 0x10 };
 			sys_dbg_write_process_memory(0x004B1CE0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x004B1CE0, &HEX, sizeof(HEX));
-			SetNotify(L"Camera Down: OFF");
 		}
 	}
 
@@ -856,14 +770,12 @@ namespace Offsets
 			char HEX[] = { 0xBF };
 			sys_dbg_write_process_memory(0x00AEB090, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEB090, &HEX, sizeof(HEX));
-			SetNotify(L"Instant Mine: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F };
 			sys_dbg_write_process_memory(0x00AEB090, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEB090, &HEX, sizeof(HEX));
-			SetNotify(L"Instant Mine: OFF");
 		}
 	}
 
@@ -874,14 +786,12 @@ namespace Offsets
 			char HEX[] = { 0x01 };
 			sys_dbg_write_process_memory(0x0098871F, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0098871F, &HEX, sizeof(HEX));
-			SetNotify(L"Infinite Craft: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x00 };
 			sys_dbg_write_process_memory(0x0098871F, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x0098871F, &HEX, sizeof(HEX));
-			SetNotify(L"Infinite Craft: OFF");
 		}
 	}
 
@@ -892,14 +802,12 @@ namespace Offsets
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00AD8480, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AD8480, &HEX, sizeof(HEX));
-			SetNotify(L"HUD Mini-Game: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00AD8480, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AD8480, &HEX, sizeof(HEX));
-			SetNotify(L"HUD Mini-Game: OFF");
 		}
 	}
 
@@ -910,14 +818,12 @@ namespace Offsets
 			char HEX[] = { 0xFF, 0xFF, 0xFF, 0xFF };
 			sys_dbg_write_process_memory(0x003AFB60, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AFB60, &HEX, sizeof(HEX));
-			SetNotify(L"Anti Teleport: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0x7A, 0xE1, 0x48 };
 			sys_dbg_write_process_memory(0x003AFB60, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003AFB60, &HEX, sizeof(HEX));
-			SetNotify(L"Anti Teleport: ON");
 		}
 	}
 
@@ -928,14 +834,12 @@ namespace Offsets
 			char HEX[] = { 0x3F, 0x00, 0x7A, 0xFF };
 			sys_dbg_write_process_memory(0x003ABDD0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDD0, &HEX, sizeof(HEX));
-			SetNotify(L"UFO Mode: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x3F, 0xEF, 0x5C, 0x29 };
 			sys_dbg_write_process_memory(0x003ABDD0, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x003ABDD0, &HEX, sizeof(HEX));
-			SetNotify(L"UFO Mode: OFF");
 		}
 	}
 
@@ -1724,14 +1628,12 @@ namespace Offsets
 			char HEX[] = { 0x40 };
 			sys_dbg_write_process_memory(0x00AEC34C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEC34C, &HEX, sizeof(HEX));
-			SetNotify(L"Auto Hit: ON");
 		}
 		else
 		{
 			char HEX[] = { 0x41 };
 			sys_dbg_write_process_memory(0x00AEC34C, &HEX, sizeof(HEX));
 			sys_dbg_write_process_memory_ps3mapi(0x00AEC34C, &HEX, sizeof(HEX));
-			SetNotify(L"Auto Hit: OFF");
 		}
 	}
 

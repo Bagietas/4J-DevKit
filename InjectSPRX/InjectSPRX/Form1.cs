@@ -16,6 +16,7 @@ namespace InjectSPRX
 {
     public partial class Form1 : Form
     {
+        WebClient web = new WebClient();
         public Form1()
         {
             InitializeComponent();

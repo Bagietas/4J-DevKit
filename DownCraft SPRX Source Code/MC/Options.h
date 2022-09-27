@@ -22,6 +22,11 @@ void Options()
 		{
 			RestartGame();
 		}
+
+		if (CurrentOpt == 2)
+		{
+			InstallHooks();
+		}
 	}
 
     #pragma endregion
@@ -1127,32 +1132,32 @@ void Options()
 	{
 		if (CurrentOpt == 0)
 		{
-			changedblock = Blocks::BEDROCK;
+			//changedblock = Blocks::BEDROCK;
 		}
 
 		if (CurrentOpt == 1)
 		{
-			changedblock = Blocks::CHORUS_PLANT;
+			//changedblock = Blocks::CHORUS_PLANT;
 		}
 
 		if (CurrentOpt == 2)
 		{
-			changedblock = Blocks::CHORUS_FLOWER;
+			//changedblock = Blocks::CHORUS_FLOWER;
 		}
 
 		if (CurrentOpt == 3)
 		{
-			changedblock = Blocks::GRASS_PATH;
+			//changedblock = Blocks::GRASS_PATH;
 		}
 
 		if (CurrentOpt == 4)
 		{
-			changedblock = Blocks::ENCHANTEMENT_TABLE;
+			//changedblock = Blocks::ENCHANTEMENT_TABLE;
 		}
 
 		if (CurrentOpt == 5)
 		{
-			changedblock = Blocks::SKULL;
+			//changedblock = Blocks::SKULL;
 		}
 
 		if (CurrentOpt == 6)
@@ -1174,77 +1179,77 @@ void Options()
 	{
 		if (CurrentOpt == 0)
 		{
-			changedblock = Blocks::LADDER;
+			//changedblock = Blocks::LADDER;
 		}
 
 		if (CurrentOpt == 1)
 		{
-			changedblock = Blocks::END_PORTAL_WITH_BEACON;
+			//changedblock = Blocks::END_PORTAL_WITH_BEACON;
 		}
 
 		if (CurrentOpt == 2)
 		{
-			changedblock = Blocks::NETHER_PORTAL;
+			//changedblock = Blocks::NETHER_PORTAL;
 		}
 
 		if (CurrentOpt == 3)
 		{
-			changedblock = Blocks::TNT;
+			//changedblock = Blocks::TNT;
 		}
 
 		if (CurrentOpt == 4)
 		{
-			changedblock = Blocks::MAGMA;
+			//changedblock = Blocks::MAGMA;
 		}
 
 		if (CurrentOpt == 5)
 		{
-			changedblock = Blocks::CARPET;
+			//changedblock = Blocks::CARPET;
 		}
 
 		if (CurrentOpt == 6)
 		{
-			changedblock = Blocks::DRAGON_EGG;
+			//changedblock = Blocks::DRAGON_EGG;
 		}
 
 		if (CurrentOpt == 7)
 		{
-			changedblock = Blocks::CAKE;
+			//changedblock = Blocks::CAKE;
 		}
 
 		if (CurrentOpt == 8)
 		{
-			changedblock = Blocks::SNOW_LAYER;
+			//changedblock = Blocks::SNOW_LAYER;
 		}
 
 		if (CurrentOpt == 9)
 		{
-			changedblock = Blocks::CACTUS;
+			//changedblock = Blocks::CACTUS;
 		}
 
 		if (CurrentOpt == 10)
 		{
-			changedblock = Blocks::WALL_SIGN;
+			//changedblock = Blocks::WALL_SIGN;
 		}
 
 		if (CurrentOpt == 11)
 		{
-			changedblock = Blocks::COB_WEB;
+			//changedblock = Blocks::COB_WEB;
 		}
 
 		if (CurrentOpt == 12)
 		{
-			changedblock = Blocks::LAVA;
+			//changedblock = Blocks::LAVA;
 		}
 
 		if (CurrentOpt == 13)
 		{
-			changedblock = Blocks::WATER;
+			//changedblock = Blocks::WATER;
 		}
 
 		if (CurrentOpt == 14)
 		{
-			changedblock = Blocks::LEVER;
+			//changedblock = Blocks::LEVER;
 		}
 
 		if (CurrentOpt == 15)
@@ -1263,37 +1268,37 @@ void Options()
 	{
 		if (CurrentOpt == 0)
 		{
-			SelectedBlock = Blocks::AIR;
+			//SelectedBlock = Blocks::AIR;
 		}
 
 		if (CurrentOpt == 1)
 		{
-			SelectedBlock = Blocks::COBBLESTONE;
+			//SelectedBlock = Blocks::COBBLESTONE;
 		}
 
 		if (CurrentOpt == 2)
 		{
-			SelectedBlock = Blocks::GRASS;
+			//SelectedBlock = Blocks::GRASS;
 		}
 
 		if (CurrentOpt == 3)
 		{
-			SelectedBlock = Blocks::WATER;
+			//SelectedBlock = Blocks::WATER;
 		}
 
 		if (CurrentOpt == 4)
 		{
-			SelectedBlock = Blocks::LAVA;
+			//SelectedBlock = Blocks::LAVA;
 		}
 
 		if (CurrentOpt == 5)
 		{
-			SelectedBlock = Blocks::SAND;
+			//SelectedBlock = Blocks::SAND;
 		}
 
 		if (CurrentOpt == 6)
 		{
-			SelectedBlock = Blocks::FROSTED_ICE;
+			//SelectedBlock = Blocks::FROSTED_ICE;
 		}
 
 		if (CurrentOpt == 7)
@@ -1303,22 +1308,22 @@ void Options()
 
 		if (CurrentOpt == 8)
 		{
-			changedblock = Blocks::BARRIERE;
+			//changedblock = Blocks::BARRIERE;
 		}
 
 		if (CurrentOpt == 9)
 		{
-			changedblock = Blocks::OBSIDIAN;
+			//changedblock = Blocks::OBSIDIAN;
 		}
 
 		if (CurrentOpt == 10)
 		{
-			changedblock = Blocks::COMMAND_BLOCK;
+			//changedblock = Blocks::COMMAND_BLOCK;
 		}
 
 		if (CurrentOpt == 11)
 		{
-			changedblock = Blocks::DIAMOND;
+			//changedblock = Blocks::DIAMOND;
 		}
 
 		if (CurrentOpt == 12)
@@ -2978,6 +2983,18 @@ void Options()
 			{
 				Offsets::ESP_WAYPOINT(false);
 				ESPWaypoint = false;
+			}
+		}
+
+		if (CurrentOpt == 3)
+		{
+			if (!Nuker)
+			{
+				Nuker = true;
+			}
+			else
+			{
+				Nuker = false;
 			}
 		}
 	}
@@ -4969,12 +4986,15 @@ void Options()
 
     #pragma region "HOST MENU"
 
+	int test;
 	if (HostPage)
 	{
 		if (CurrentOpt == 0)
 		{
 			if (!GodMode)
 			{
+				int args[3] = { 0, 6, 1 };
+				GiveItemCommand(args);
 				Offsets::GOD_MODE(true);
 				GodMode = true; 
 			}

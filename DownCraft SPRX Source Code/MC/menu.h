@@ -2,8 +2,6 @@
 //X = < >
 //Y = /\ \/
 
- //MultiplayerLocalPlayer = 0x3373F5D0 / pWorld = 0x337389F0 / GetEntityWorld = 0x337389F0
-
 #pragma region "Back Sub Menu"
 
  void BackSubMenu()
@@ -400,6 +398,11 @@
 
  void RenderMenu()
  {
+	  //int x = Font_width(L"Misakiii test");
+	 //DrawRectangle(x / 2, 80, 80, 80, UI::Color::BLACK);
+	 //DrawText(L"Misakiii test", x / 2, 80, color(UI::Color::WHITE));
+	 //DrawCenteredText(L"Test 123 !!", 80, 80, color(UI::Color::WHITE));
+
 	 if (!OpenMenu)
 	 {
 		 *(int*)0x0155847C = 0x00000000;
@@ -464,6 +467,7 @@
 		 if (NonHostPage5)
 		 {
 			 SubMenu::NonHostMenu5();
+			 ChangeIntOptions(NonHostPage5, 4, 0, 40, sizeNuker);
 		 }
 
 		 if (PlayersOptions)

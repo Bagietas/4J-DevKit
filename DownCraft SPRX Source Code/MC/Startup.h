@@ -6,6 +6,7 @@ int loadtimer = 0;
 int load = 0;
 void LoadSPRX()
 {
+	/*
 	int colorbg[3] = { 36, 36, 36 };
 
 	DrawRectangle(388, 134, 193, 42, colorbg);
@@ -32,6 +33,14 @@ void LoadSPRX()
 		logs::SendMessageDebug(L"Version V4.2", UI::MCTextColors::Aqua);
 		logs::SendMessageDebug(L"Press L1 + DPAD UP for open the menu", UI::MCTextColors::LightPurple);
 	}
+	*/
+
+	InitializeSPRX = false;
+	UsableMenu = true;
+	*(int*)0x0155847C = 0x01000000; //Usable HUD
+	logs::SendMessageDebug(L"Welcome to DownCraft SPRX", UI::MCTextColors::Red);
+	logs::SendMessageDebug(L"Version V4.2", UI::MCTextColors::Aqua);
+	logs::SendMessageDebug(L"Press L1 + DPAD UP for open the menu", UI::MCTextColors::LightPurple);
 }
 
 #pragma endregion
@@ -98,7 +107,7 @@ void INITIALIZE_START()
 		SaveScrollSlide = ScrollX;
 
 		//SAVE BLOCKS
-		SAVE_BLOCK_AIR = Blocks::AIR;
+		//SAVE_BLOCK_AIR = Blocks::AIR;
 		INITIALIZE_SPRX = false;
 	}
 }

@@ -5,26 +5,28 @@ SYS_MODULE_INFO( DownCraftSPRX, 0, 1, 1);
 SYS_MODULE_START( _DownCraftSPRX_prx_entry );
 SYS_MODULE_STOP(_DownCraftSPRX_prx_stop);
 
-void gameRender_Hook(uint32_t r3, uint32_t r4) 
-{
-	INITIALIZE_START();
-	misakiii();
-	gameRender_Stub(r3, r4);
-	mc = (TheMinecraft*)(mcOfs);
-
-	if (xKzLAOD015Ax11)
-	{
-		Inject();
-	}
-}
-
-void callThreadFromEBOOT(uint64_t) 
+void callThreadFromEBOOT(uint64_t)
 {
 	__asm("lis 3, 0x14C;");//oris r2, r2, 0x14C
 	__asm("lwz 3, 0(3);");
 	__asm("cmpwi 3, 0x3618;");//ori r2, r2, 0x361B
 	__asm("beq end;");
 	__asm("end:;");
+}
+
+void gameRender_Hook(uint32_t r3, uint32_t r4) 
+{
+	INITIALIZE_START();
+	//misakiii();
+	gameRender_Stub(r3, r4);
+	mc = (TheMinecraft*)(mcOfs);
+
+	if (xKzLAOD015Ax11)
+	{
+		if (InitializeSPRX)
+			*(int*)0x0155847C = 0x00000000; //Usable HUD
+		Inject();
+	}
 }
 
 extern "C" int _DownCraftSPRX_prx_entry(void)
@@ -40,20 +42,13 @@ extern "C" int _DownCraftSPRX_prx_entry(void)
 	Dialog::End();
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));
-	HookFunctionStart(0x01084270, *(uint32_t*)(sceNpBasicSetPresenceDetails_Hook), *(uint32_t*)(asm_SetPresenceDetails_Hook));
-
-	//HookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook), *(uint32_t*)(asm_destroyBlockHook));
-	//sys_ppu_thread_t ThreadModuleID;
-	//sys_ppu_thread_create(&ThreadModuleID, callThreadFromEBOOT, 0, 0x4AA, 0x7000, 0, "Test");
+	InstallHooks();
 
 	INITIALIZE_SPRX = true;
 	return SYS_PRX_RESIDENT;
 }
 extern "C" int _DownCraftSPRX_prx_stop(void)
 {
-	*(uint32_t*)(0x0140A3B8) = (uint32_t)(0x014A1C10);
-
-	UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-	UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
+	UninstallHooks();
 	return SYS_PRX_RESIDENT;
 }

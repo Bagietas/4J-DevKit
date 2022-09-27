@@ -219,26 +219,26 @@ void AddOpacityBG()
 	if (UI::Settings::BGOpacity)
 	{
 		Color BLACK_OPACITY{ 15, 15, 15, shadowBG };
-		if (submmenuMax == 1) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 48, BLACK_OPACITY); }
-		else if (submmenuMax == 2) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 58, BLACK_OPACITY); }
-		else if (submmenuMax == 3) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 68, BLACK_OPACITY); }
-		else if (submmenuMax == 4) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 78, BLACK_OPACITY); }
-		else if (submmenuMax == 5) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 88, BLACK_OPACITY); }
-		else if (submmenuMax == 6) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 98, BLACK_OPACITY); }
-		else if (submmenuMax == 7) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 108, BLACK_OPACITY); }
-		else if (submmenuMax == 8) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 118, BLACK_OPACITY); }
-		else if (submmenuMax == 9) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 121, BLACK_OPACITY); }
-		else if (submmenuMax == 10) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 138, BLACK_OPACITY); }
-		else if (submmenuMax == 11) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 148, BLACK_OPACITY); }
-		else if (submmenuMax == 12) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 158, BLACK_OPACITY); }
-		else if (submmenuMax == 13) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 168, BLACK_OPACITY); }
-		else if (submmenuMax == 14) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 178, BLACK_OPACITY); }
-		else if (submmenuMax == 15) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 188, BLACK_OPACITY); }
-		else if (submmenuMax == 16) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 198, BLACK_OPACITY); }
-		else if (submmenuMax == 17) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 208, BLACK_OPACITY); }
-		else if (submmenuMax == 18) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 218, BLACK_OPACITY); }
-		else if (submmenuMax == 19) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 228, BLACK_OPACITY); }
-		else if (submmenuMax == 20) { DrawRectangleAlpha(bgX, bgY, bgW + 35 + menulenght, bgH + 238, BLACK_OPACITY); }
+		if (submmenuMax == 1) { DrawRectangleAlpha(603, 74, 408 + menulenght, 84, BLACK_OPACITY); }
+		else if (submmenuMax == 2) { DrawRectangleAlpha(603, 74, 408 + menulenght, 94, BLACK_OPACITY); }
+		else if (submmenuMax == 3) { DrawRectangleAlpha(603, 74, 408 + menulenght, 104, BLACK_OPACITY); }
+		else if (submmenuMax == 4) { DrawRectangleAlpha(603, 74, 408 + menulenght, 114, BLACK_OPACITY); }
+		else if (submmenuMax == 5) { DrawRectangleAlpha(603, 74, 408 + menulenght, 124, BLACK_OPACITY); }
+		else if (submmenuMax == 6) { DrawRectangleAlpha(603, 74, 408 + menulenght, 134, BLACK_OPACITY); }
+		else if (submmenuMax == 7) { DrawRectangleAlpha(603, 74, 408 + menulenght, 144, BLACK_OPACITY); }
+		else if (submmenuMax == 8) { DrawRectangleAlpha(603, 74, 408 + menulenght, 154, BLACK_OPACITY); }
+		else if (submmenuMax == 9) { DrawRectangleAlpha(603, 74, 408 + menulenght, 164, BLACK_OPACITY); }
+		else if (submmenuMax == 10) { DrawRectangleAlpha(603, 74, 408 + menulenght, 174, BLACK_OPACITY); }
+		else if (submmenuMax == 11) { DrawRectangleAlpha(603, 74, 408 + menulenght, 184, BLACK_OPACITY); }
+		else if (submmenuMax == 12) { DrawRectangleAlpha(603, 74, 408 + menulenght, 194, BLACK_OPACITY); }
+		else if (submmenuMax == 13) { DrawRectangleAlpha(603, 74, 408 + menulenght, 204, BLACK_OPACITY); }
+		else if (submmenuMax == 14) { DrawRectangleAlpha(603, 74, 408 + menulenght, 214, BLACK_OPACITY); }
+		else if (submmenuMax == 15) { DrawRectangleAlpha(603, 74, 408 + menulenght, 224, BLACK_OPACITY); }
+		else if (submmenuMax == 16) { DrawRectangleAlpha(603, 74, 408 + menulenght, 234, BLACK_OPACITY); }
+		else if (submmenuMax == 17) { DrawRectangleAlpha(603, 74, 408 + menulenght, 244, BLACK_OPACITY); }
+		else if (submmenuMax == 18) { DrawRectangleAlpha(603, 74, 408 + menulenght, 254, BLACK_OPACITY); }
+		else if (submmenuMax == 19) { DrawRectangleAlpha(603, 74, 408 + menulenght, 264, BLACK_OPACITY); }
+		else if (submmenuMax == 20) { DrawRectangleAlpha(603, 74, 408 + menulenght, 274, BLACK_OPACITY); }
 	}
 }
 
@@ -261,6 +261,8 @@ void Scrollbar()
 
 void AddTitle(const wchar_t* title)
 {
+	Scrollbar();
+
 	if (UI::Settings::Rainbow)
 	{
 		if (UI::Settings::GradientRGB)
@@ -277,7 +279,6 @@ void AddTitle(const wchar_t* title)
 		DrawRectangle(textX - 10, textY - 13, bgW + menulenght, textI + 4, GetThemeColor());
 	}
 
-	Scrollbar();
 	AddOpacityBG();
 
 	DrawTextWithShadow(title, TitleTextX + menulenght, TitleTextY, color(UI::Color::WHITE));
@@ -990,23 +991,27 @@ void DEBUG_FUNCTIONS_MESSAGES()
 {
 	if (UI::Settings::ShowPosition)
 	{
-		DEBUG_FUNCTIONS_MESSAGE = 39;
-	}
-	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING)
-	{
-		DEBUG_FUNCTIONS_MESSAGE = 49;
-	}
-	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks)
-	{
-		DEBUG_FUNCTIONS_MESSAGE = 60;
-	}
-	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks && UI::Settings::ShowResolution)
-	{
-		DEBUG_FUNCTIONS_MESSAGE = 71;
-	}
-	else if (UI::Settings::ShowPosition && UI::Settings::ShowPING && UI::Settings::ShowChunks && UI::Settings::ShowResolution && UI::Settings::ShowCPURSX)
-	{
-		DEBUG_FUNCTIONS_MESSAGE = 82;
+		DEBUG_FUNCTIONS_MESSAGE = 35;
+		if (UI::Settings::ShowPING)
+		{
+			DEBUG_FUNCTIONS_MESSAGE = 45;
+			if (UI::Settings::ShowChunks)
+			{
+				DEBUG_FUNCTIONS_MESSAGE = 55;
+				if (UI::Settings::ShowResolution)
+				{
+					DEBUG_FUNCTIONS_MESSAGE = 65;
+					if (UI::Settings::ShowCPURSX)
+					{
+						DEBUG_FUNCTIONS_MESSAGE = 75;
+						if (UI::Settings::ShowGametime)
+						{
+							DEBUG_FUNCTIONS_MESSAGE = 85;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	if (mc->theMinecraft->cMultiplayerLocalPlayer->isInWeb == true)
@@ -1049,21 +1054,32 @@ void DEBUG_FUNCTIONS_MESSAGES()
 
 void Welcome_Message()
 {
-	if (UI::Settings::ShowPING)
+	if (!UI::Settings::ShowPosition)
 	{
 		DrawText(L"Welcome: ", 20, 25, color(UI::Color::WHITE));
-		DrawTextC(PSN_NAME, 60, 25, color(UI::Color::ORANGE));
-	}
-	else
-	{
-		DrawText(L"Welcome: ", 20, 26, color(UI::Color::WHITE));
-		DrawTextC(PSN_NAME, 60, 26, color(UI::Color::ORANGE));
+		DrawTextC(PSN_NAME, 60, 25, color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE));
 	}
 }
 
 #pragma endregion
 
 #pragma region "Get function"
+
+void DebugEntity()
+{
+	if (!OpenMenu)
+	{
+		char* alive;
+		if (debug_entity_alive)
+			alive = "true   ";
+		else
+			alive = "false   ";
+
+		snprintf("Entity ID: %i", debug_entity_id, 491, 147);
+		DrawTextC("IsAlive:", 491, 157, color(UI::Color::WHITE));
+		DrawTextC(alive, 550, 157, color(UI::Color::WHITE));
+	}
+}
 
 void get_temperature(uint32_t a, uint32_t* b)
 {
@@ -1089,8 +1105,10 @@ void get_temp()
 		_sys_memset(woption, 0, 0x200);
 		_sys_snprintf(option, 0x100, "CPU :  %iC / RSX :  %iC", cpu_t, rsx_t);
 		StringToWideCharacter(woption, option, strlen(option));
-		DrawRectangle(15, 65, 100, 13, UI::Color::BLACK);
-		DrawTextWithShadow(woption, 20, 68, color(UI::MCTextColors::White));
+
+		int width = Font_width(woption);
+		DrawRectangle(15, 63, width + 5, 10, UI::Color::BLACK);
+		DrawText(woption, 18, 64, color(UI::MCTextColors::White));
 	}
 }
 
@@ -1104,92 +1122,25 @@ void GetPosition()
 		_sys_memset(woption, 0, 0x200);
 		_sys_snprintf(option, 0x100, "Position: (%i, %i, %i)", (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX - 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY + 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ);
 		StringToWideCharacter(woption, option, strlen(option));
-		DrawRectangle(15, 23, 115, 13, UI::Color::BLACK);
-		DrawTextWithShadow(woption, 20, 26, color(UI::MCTextColors::White));
+
+		int width = Font_width(woption);
+		DrawRectangle(15, 23, width + 5, 10, UI::Color::BLACK);
+		DrawText(woption, 18, 24, color(UI::MCTextColors::White));
 	}
 }
 
 void GetDebugXY()
 {
-	char option4[0x100];
-	wchar_t woption4[0x100];
-	_sys_memset(option4, 0, 0x100);
-	_sys_memset(woption4, 0, 0x200);
-	_sys_snprintf(option4, 0x100, "Text X: %i", (DebugTextX));
-	StringToWideCharacter(woption4, option4, _sys_strlen(option4));
-	DrawTextWithShadow(woption4, 130, 55, color(UI::MCTextColors::White));
-
-	char option8[0x100];
-	wchar_t woption8[0x100];
-	_sys_memset(option8, 0, 0x100);
-	_sys_memset(woption8, 0, 0x200);
-	_sys_snprintf(option8, 0x100, "Text Y: %i", (DebugTextY));
-	StringToWideCharacter(woption8, option8, _sys_strlen(option8));
-	DrawTextWithShadow(woption4, 130, 65, color(UI::MCTextColors::White));
-
-	char option16[0x100];
-	wchar_t woption16[0x100];
-	_sys_memset(option16, 0, 0x100);
-	_sys_memset(woption16, 0, 0x200);
-	_sys_snprintf(option16, 0x100, "Hud X: %i", (DebugHudX));
-	StringToWideCharacter(woption16, option16, _sys_strlen(option16));
-	DrawTextWithShadow(woption16, 130, 75, color(UI::MCTextColors::White));
-
-	char option26[0x100];
-	wchar_t woption26[0x100];
-	_sys_memset(option26, 0, 0x100);
-	_sys_memset(woption26, 0, 0x200);
-	_sys_snprintf(option26, 0x100, "Hud Y: %i", (DebugHudY));
-	StringToWideCharacter(woption26, option26, _sys_strlen(option26));
-	DrawTextWithShadow(woption26, 130, 85, color(UI::MCTextColors::White));
-
-	char option36[0x100];
-	wchar_t woption36[0x100];
-	_sys_memset(option36, 0, 0x100);
-	_sys_memset(woption36, 0, 0x200);
-	_sys_snprintf(option36, 0x100, "Hud W: %i", (DebugHudW));
-	StringToWideCharacter(woption36, option36, _sys_strlen(option36));
-	DrawTextWithShadow(woption36, 130, 95, color(UI::MCTextColors::White));
-
-	char option46[0x100];
-	wchar_t woption46[0x100];
-	_sys_memset(option46, 0, 0x100);
-	_sys_memset(woption46, 0, 0x200);
-	_sys_snprintf(option46, 0x100, "Hud H: %i", (DebugHudH));
-	StringToWideCharacter(woption46, option46, _sys_strlen(option46));
-	DrawTextWithShadow(woption46, 130, 105, color(UI::MCTextColors::White));
-
-	char option47[0x100];
-	wchar_t woption47[0x100];
-	_sys_memset(option47, 0, 0x100);
-	_sys_memset(woption47, 0, 0x200);
-	_sys_snprintf(option47, 0x100, "Line Start X: %i", (DebugLineStartX));
-	StringToWideCharacter(woption47, option47, _sys_strlen(option47));
-	DrawTextWithShadow(woption47, 130, 115, color(UI::MCTextColors::White));
-
-	char option48[0x100];
-	wchar_t woption48[0x100];
-	_sys_memset(option48, 0, 0x100);
-	_sys_memset(woption48, 0, 0x200);
-	_sys_snprintf(option48, 0x100, "Line Start Y: %i", (DebugLineStartY));
-	StringToWideCharacter(woption48, option48, _sys_strlen(option48));
-	DrawTextWithShadow(woption47, 130, 125, color(UI::MCTextColors::White));
-
-	char option49[0x100];
-	wchar_t woption49[0x100];
-	_sys_memset(option49, 0, 0x100);
-	_sys_memset(woption49, 0, 0x200);
-	_sys_snprintf(option49, 0x100, "Line End X: %i", (DebugLineEndX));
-	StringToWideCharacter(woption49, option49, _sys_strlen(option49));
-	DrawTextWithShadow(woption49, 130, 135, color(UI::MCTextColors::White));
-
-	char option50[0x100];
-	wchar_t woption50[0x100];
-	_sys_memset(option50, 0, 0x100);
-	_sys_memset(woption50, 0, 0x200);
-	_sys_snprintf(option50, 0x100, "Line End Y: %i", (DebugLineEndY));
-	StringToWideCharacter(woption50, option50, _sys_strlen(option50));
-	DrawTextWithShadow(woption49, 130, 145, color(UI::MCTextColors::White));
+	snprintf("Text X: %i", DebugTextX, 130, 55);
+	snprintf("Text Y: %i", DebugTextY, 130, 65);
+	snprintf("Hud X: %i", DebugHudX, 130, 75);
+	snprintf("Hud Y: %i", DebugHudY, 130, 85);
+	snprintf("Hud W: %i", DebugHudW, 130, 95);
+	snprintf("Hud H: %i", DebugHudH, 130, 105);
+	snprintf("Line Start X: %i", DebugLineStartX, 130, 115);
+	snprintf("Line Start Y: %i", DebugLineStartY, 130, 125);
+	snprintf("Line End X: %i", DebugLineEndX, 130, 135);
+	snprintf("Line End Y: %i", DebugLineEndY, 130, 145);
 }
 
 void GetPingz()
@@ -1208,8 +1159,9 @@ void GetPing()
 	if (UI::Settings::ShowPING)
 	{
 		GetPingz();
-		DrawRectangle(15, 34, 47, 13, UI::Color::BLACK);
-		DrawTextWithShadow(wPING, 20, 37, color(UI::MCTextColors::White));
+		int width = Font_width(wPING);
+		DrawRectangle(15, 33, width + 5, 10, UI::Color::BLACK);
+		DrawText(wPING, 18, 34, color(UI::MCTextColors::White));
 	}
 }
 
@@ -1223,8 +1175,10 @@ void GetChunks()
 		_sys_memset(woption, 0, 0x200);
 		_sys_snprintf(option, 0x100, "Chunk: (%i, %i, %i)", (int)mc->theMinecraft->cMultiplayerLocalPlayer->chunkCoordX + 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->chunkCoordY + 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->chunkCoordZ + 1);
 		StringToWideCharacter(woption, option, strlen(option));
-		DrawRectangle(15, 45, 90, 13, UI::Color::BLACK);
-		DrawTextWithShadow(woption, 20, 48, color(UI::MCTextColors::White));
+
+		int width = Font_width(woption);
+		DrawRectangle(15, 43, width + 5, 10, UI::Color::BLACK);
+		DrawText(woption, 18, 44, color(UI::MCTextColors::White));
 	}
 }
 
@@ -1238,37 +1192,49 @@ void GetResolution()
 		_sys_memset(woption, 0, 0x200);
 		_sys_snprintf(option, 0x100, "Resolution: %ix%i", mc->theMinecraft->displayWidth, mc->theMinecraft->displayHeight);
 		StringToWideCharacter(woption, option, strlen(option));
-		DrawRectangle(15, 55, 105, 13, UI::Color::BLACK);
-		DrawTextWithShadow(woption, 20, 58, color(UI::MCTextColors::White));
+
+		int width = Font_width(woption);
+		DrawRectangle(15, 53, width + 5, 10, UI::Color::BLACK);
+		DrawText(woption, 18, 54, color(UI::MCTextColors::White));
 	}
 }
 
 void GetTeleportXYZ()
 {
-	char option4[0x100];
-	wchar_t woption4[0x100];
-	_sys_memset(option4, 0, 0x100);
-	_sys_memset(woption4, 0, 0x200);
-	_sys_snprintf(option4, 0x100, "TP X: %i", (TeleportX));
-	StringToWideCharacter(woption4, option4, _sys_strlen(option4));
-	DrawTextWithShadow(woption4, 130, 55, color(UI::MCTextColors::White));
-
-	char option8[0x100];
-	wchar_t woption8[0x100];
-	_sys_memset(option8, 0, 0x100);
-	_sys_memset(woption8, 0, 0x200);
-	_sys_snprintf(option8, 0x100, "TP Y: %i", (TeleportY));
-	StringToWideCharacter(woption8, option8, _sys_strlen(option8));
-	DrawTextWithShadow(woption8, 130, 65, color(UI::MCTextColors::White));
-
-	char option16[0x100];
-	wchar_t woption16[0x100];
-	_sys_memset(option16, 0, 0x100);
-	_sys_memset(woption16, 0, 0x200);
-	_sys_snprintf(option16, 0x100, "TP Z: %i", (TeleportZ));
-	StringToWideCharacter(woption16, option16, _sys_strlen(option16));
-	DrawTextWithShadow(woption8, 130, 75, color(UI::MCTextColors::White));
+	snprintf("TP X: %i", TeleportX, 130, 55);
+	snprintf("TP Y: %i", TeleportY, 130, 65);
+	snprintf("TP Z: %i", TeleportZ, 130, 75);
 }
+
+#include "HudsFunctions.h"
+
+int milliseconds;
+int seconds;
+int minutes;
+int hours;
+void GetGameTime()
+{
+	if (UI::Settings::ShowGametime)
+	{
+		int pos[2] = { 18, 74 };
+		milliseconds = mc->gameTime;
+		seconds = (milliseconds / 60);
+		minutes = seconds / 60;
+		hours = minutes / 60;
+
+		char option4[0x100];
+		wchar_t woption4[0x100];
+		_sys_memset(option4, 0, 0x100);
+		_sys_memset(woption4, 0, 0x200);
+		_sys_snprintf(option4, 0x100, "Gametime: %ih:%imin:%isec", int(hours % 24), int(minutes % 60), int(seconds % 60));
+		StringToWideCharacter(woption4, option4, _sys_strlen(option4));
+
+		int width = Font_width(woption4);
+		DrawRectangle(15, 73, width + 5, 10, UI::Color::BLACK);
+		DrawText(woption4, pos[0], pos[1], color(UI::Color::WHITE));
+	}
+}
+
 
 #pragma endregion
 
@@ -1341,45 +1307,6 @@ void Custom_Crosshair(int value)
 
 #pragma endregion
 
-#pragma region "GET GAMETIME"
-
-#include "HudsFunctions.h"
-
-int milliseconds;
-int seconds;
-int minutes;
-int hours;
-int gametimeW = 103;
-void GetGameTime()
-{
-
-	if (UI::Settings::ShowGametime)
-	{
-		int pos[2] = { 144, 14 };
-		milliseconds = mc->gameTime;
-		seconds = (milliseconds / 60);
-		minutes = seconds / 60;
-		hours = minutes / 60;
-
-		if (seconds > 10)
-			gametimeW = 105;
-
-		if (minutes > 10 && seconds > 10) { gametimeW = 108; }
-		else { gametimeW = 105; }
-
-		char option4[0x100];
-		wchar_t woption4[0x100];
-		_sys_memset(option4, 0, 0x100);
-		_sys_memset(woption4, 0, 0x200);
-		_sys_snprintf(option4, 0x100, "Gametime: %ih:%imin:%isec", int(hours % 24), int(minutes % 60), int(seconds % 60));
-		StringToWideCharacter(woption4, option4, _sys_strlen(option4));
-		DrawRectangle(142, 13, gametimeW, 10, UI::Color::BLACK);
-		DrawText(woption4, pos[0], pos[1], color(UI::Color::WHITE));
-	}
-}
-
-#pragma endregion
-
 #pragma region "DRAWING HEAD PIXEL"
 
 int AlexColorHair[3] = { 250, 140, 17 };
@@ -1387,7 +1314,7 @@ int AlexColorSkins[3] = { 248, 197, 170 };
 int AlexColorEyesWhite[3] = { 255, 255, 255 };
 int AlexColorEyes[3] = { 11, 139, 16 };
 int AlexColorMouth[3] = { 252, 172, 197 };
-int AlexHeadpos[2] = { 98, 8 };
+int AlexHeadpos[2] = { 98, 5 };
 int AlexHeadsize[2] = { 2, 2 };
 int AlexHeadspace[7] = { 5, 10, 15, 20, 25, 30, 35 };
 
@@ -1519,7 +1446,7 @@ int SteveColorEyesWhite[3] = { 255, 255, 255 };
 int SteveColorEyes[3] = { 24, 45, 108 };
 int SteveColorNose[3] = { 83, 51, 13 };
 int SteveColorMouth[3] = { 59, 38, 11 };
-int SteveHeadpos[2] = { 98, 8 };
+int SteveHeadpos[2] = { 98, 5 };
 int SteveHeadsize[2] = { 2, 2 };
 int SteveHeadspace[7] = { 5, 10, 15, 20, 25, 30, 35 };
 
@@ -1649,7 +1576,7 @@ int EndermanColorSkins1[3] = { 1, 1, 1 };
 int EndermanColorSkins2[3] = { 22, 22, 22 };
 int EndermanColorEyes1[3] = { 224, 121, 252 };
 int EndermanColorEyes2[3] = { 205, 0, 249 };
-int EndermanHeadpos[2] = { 98, 8 };
+int EndermanHeadpos[2] = { 98, 5 };
 int EndermanHeadsize[2] = { 2, 2 };
 int EndermanHeadspace[7] = { 5, 10, 15, 20, 25, 30, 35 };
 
@@ -1797,4 +1724,3 @@ void DRAW_HEAD_PIXEL_LOGO()
 }
 
 #pragma endregion
-

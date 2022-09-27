@@ -119,6 +119,7 @@ bool CreeperFire = false;
 bool DisableTotem = false;
 bool GlitchDeadEntity = false;
 bool PlayersInfos = false;
+bool TPAura = true;
 
 //Non Host Options
 int SuperSpeed = 38;
@@ -233,6 +234,7 @@ bool ESPEntity = false;
 bool ESPTracer = false;
 bool ESPCOD = false;
 bool ESPWaypoint = false;
+bool Nuker = false;
 
 //Players Options
 bool AllPlayersFastMine = false;
@@ -502,7 +504,7 @@ int scroll = 0;
 char* PSN_NAME;
 char* PRESET_NAME;
 char * REGION;
-bool xKzLAOD015Ax11 = false; //enable SPRX
+bool xKzLAOD015Ax11 = true; //enable SPRX
 
 bool KeyboardOpen = false;
 
@@ -539,7 +541,7 @@ uint32_t rsx_t = 0;
 int RainbowSkyRGB;
 int RainbowSkyRGBSpeed = 10;
 int DEBUG_FUNCTIONS_MESSAGE = 36;
-bool devmenu = false;
+bool devmenu = true;
 bool custom_crosshair = false;
 int crosshair_value = 0;
 int getlogsvalue = 0;
@@ -557,4 +559,11 @@ int SaveScrollSlide;
 int speedSlider = 10;
 int DrawHeadPixelLogo = 1;
 
-int sizeNuker = 50;
+int sizeNuker = 0;
+
+bool RainbowNameRender = true;
+int RainbowNameRenderColor = 0;
+int getFontWidth = 0;
+
+int debug_entity_id;
+bool debug_entity_alive;

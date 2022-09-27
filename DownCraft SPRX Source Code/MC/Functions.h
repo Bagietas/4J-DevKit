@@ -495,9 +495,6 @@ void misakiii()
 
 		if (misaki4[i] == phaseend[i])
 		{
-			UnHookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Stub));
-			UnHookFunctionStart(0x01084270, *(uint32_t*)(asm_SetPresenceDetails_Hook));
-			//UnHookFunctionStart(0xB34A6C, *(uint32_t*)(MultiPlayerGameMode_destroyBlockHook));
 			*(int*)0x00785DBC = 0x40800028;
 			*(int*)0x00AD8320 = 0x408000CC;
 			*(int*)0x014CE214 = 0x01000001;
@@ -550,4 +547,21 @@ void Aimbot()
 	{
 		SetPos(20, 50, 20);
 	}
+}
+
+Entity* GetEntityById(int id)
+{
+	uintptr_t entity[2];
+	FUNCTIONS::MultiPlayerLevel_getEntity(entity, g_Level, id);
+
+	return (Entity*)entity[0];
+}
+
+bool IsEntitySelf(void* entity)
+{
+	//g_GameVariables->Entity_is(entity, g_Localplayer);
+	if (entity == g_Localplayer)
+		return true;
+
+	return false;
 }

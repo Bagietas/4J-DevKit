@@ -78,15 +78,16 @@
 #include <cstddef>
 
 #include "PS3.h"
+#include "Vector.h"
 #include "dialog.h"
 #include "Buttons.h"
 #include "UI.h"
 #include "struct.h"
 #include "var.h"
-#include "Hooking.h"
 #include "IDs.h"
 #include "GameFunctions.h"
 #include "Functions.h"
+#include "Hooking.h"
 #include "OSK.h"
 #include "Modules.h"
 #include "DrawHudsFunctions.h"
