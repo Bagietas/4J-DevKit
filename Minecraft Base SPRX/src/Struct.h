@@ -914,6 +914,76 @@ size_t WideCharacterToString(char* dest, const wchar_t* scr, size_t len)
 	return count;
 }
 
+TheMinecraft* mc;
+bool frameTime(int ms, int index, bool resetTime)
+{
+	if (resetTime)
+		gotTime[index] = false;
+	if (!gotTime[index])
+	{
+		gotTime[index] = true;
+		getTime[index] = mc->gameTime;
+	}
+	timeMath[index] = mc->gameTime - getTime[index];
+
+	if (timeMath[index] >= ms)
+	{
+		gotTime[index] = false;
+		return true;
+	}
+	else
+		return false;
+}
+
+bool scrollWait(int firstMs, int ms, int index)
+{
+	keyPressed[index] = true;
+	if (!lockFirst[index])
+	{
+		if (freeFirst[index])
+		{
+			freeFirst[index] = false;
+			return true;
+		}
+
+		if (frameTime(firstMs, 200 + index, resetWait[index]))
+		{
+			lockFirst[index] = true;
+			resetWait[index] = false;
+			return true;
+		}
+		else
+		{
+			resetWait[index] = false;
+			return false;
+		}
+	}
+	else
+	{
+		if (frameTime(ms, 200 + index, resetWait2[index]))
+		{
+			resetWait2[index] = false;
+			return true;
+		}
+		else
+		{
+			resetWait2[index] = false;
+			return false;
+		}
+	}
+}
+
+int doScroll(int _scroll, int max)
+{
+	_scroll = scroll;
+	if (_scroll == max)
+		return 0;
+	else if (_scroll == -1)
+		return max - 1;
+	else
+		return _scroll;
+}
+
 namespace MC_Colors
 {
 	int DarkRed[3] = { 170, 0, 0 };

@@ -1,28 +1,28 @@
 ﻿  Main.cpp
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Variables.h(3,17): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Variables.h(3,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Struct.h(50,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Struct.h(50,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Struct.h(105,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Struct.h(105,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Struct.h(220,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Struct.h(220,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(8,65): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(8,65): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(9): warning 942: missing return statement at end of non-void function "Font_width"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(9): warning 942: missing return statement at end of non-void function "Font_width"
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(12,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(12,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(12,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(12,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(12,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(12,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(16,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(16,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(16,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(16,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(16,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(16,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Desktop\Minecraft SPRX\src\Functions.h(20,89): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\src\Functions.h(20,89): warning 1322: taking the address of a temporary
   
-  Minecraft.vcxproj -> C:\Users\rstei\Desktop\Minecraft SPRX\bin\Debug-PS3\Minecraft.sprx
+  Minecraft.vcxproj -> C:\Users\rstei\Documents\GitHub\4J-DevKit\Minecraft Base SPRX\bin\Debug-PS3\Minecraft.sprx

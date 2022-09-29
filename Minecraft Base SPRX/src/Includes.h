@@ -34,9 +34,9 @@ GuiComponent* g_GuiComponent;
 #include "Variables.h"
 #include "PS3.h"
 #include "Struct.h"
-TheMinecraft* mc;
 #include "GamesFunctions.h"
 #include "Functions.h"
+#include "Huds.h"
+#include "SubMenu.h"
 #include "Menu.h"
 #include "Hooking.h"
-

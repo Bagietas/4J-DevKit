@@ -6,6 +6,7 @@ void RenderScreen_Stub(uint32_t r3, uint32_t r4) {
 void RenderScreen_Hook(uint32_t r3, uint32_t r4) {
 	RenderScreen_Stub(r3, r4);
 	mc = (TheMinecraft*)(0x014CF2E4);
+	MaxOption = 0;
 	Render();
 }
 

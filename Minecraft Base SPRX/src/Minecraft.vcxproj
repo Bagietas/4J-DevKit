@@ -110,6 +110,7 @@
     <ClInclude Include="Functions.h" />
     <ClInclude Include="GamesFunctions.h" />
     <ClInclude Include="Hooking.h" />
+    <ClInclude Include="Huds.h" />
     <ClInclude Include="Includes.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Minecraft\blockentity\BlockEntity.h" />
@@ -875,6 +876,7 @@
     <ClInclude Include="Memory\Pattern.hpp" />
     <ClInclude Include="PS3.h" />
     <ClInclude Include="Struct.h" />
+    <ClInclude Include="SubMenu.h" />
     <ClInclude Include="Util\Exports.hpp" />
     <ClInclude Include="Memory\Memory.hpp" />
     <ClInclude Include="Util\FileSystem.hpp" />
