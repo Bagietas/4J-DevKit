@@ -172,12 +172,6 @@ font_t getString(const wchar_t* str)
 
 #pragma region "Game Functions"
 
-void GiveItemCommand(int args[])
-{
-	ServerPlayer* serverplayer;
-	FUNCTIONS::GiveItemCommand(serverplayer, args);
-}
-
 int Font_width(const wchar_t* text) {
 	FUNCTIONS::Font_width(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text));
 }

@@ -5005,8 +5005,6 @@ void Options()
 		{
 			if (!GodMode)
 			{
-				int args[3] = { 0, 6, 1 };
-				GiveItemCommand(args);
 				Offsets::GOD_MODE(true);
 				GodMode = true; 
 			}

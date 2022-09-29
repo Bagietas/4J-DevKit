@@ -53,11 +53,11 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\UI.h(15,
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\UI.h(48,30): warning 2520: invalid narrowing conversion from "double" to "int"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(46,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(47,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(101,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(102,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(216,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\struct.h(217,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\var.h(379,24): warning 2623: conversion from a string literal to "char *" is deprecated
   
@@ -67,27 +67,25 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Minecraf
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Minecraft/entity/player/ServerPlayer.h(30,14): warning 1011: function "Player::displayClientMessage(const std::string &)" is hidden by "ServerPlayer::displayClientMessage" -- virtual function override intended?
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(181,28): warning 551: variable "serverplayer" is used before its value is set
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(176,65): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(185,65): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(177): warning 942: missing return statement at end of non-void function "Font_width"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(186): warning 942: missing return statement at end of non-void function "Font_width"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(180,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(189,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(180,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(189,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(180,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(189,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(184,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(193,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(184,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(193,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(184,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(193,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(188,89): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(197,89): warning 1322: taking the address of a temporary
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(201,87): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\GameFunctions.h(192,87): warning 1322: taking the address of a temporary
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\DownCraft SPRX Source Code\MC\Functions.h(214,8): warning 1070: returning pointer to local variable
   

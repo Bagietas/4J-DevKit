@@ -1,6 +1,8 @@
 
 #include "Minecraft/world/level/block/BlockPos.h"
 
+
+
 struct rgb{
 	int r;
 	int g;
@@ -10,6 +12,7 @@ long color(int r, int g, int b)
 {
 	return 0xFF000000 + ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
 }
+
 int _colorX[3];
 int* colorInt(int r, int g, int b)
 {
