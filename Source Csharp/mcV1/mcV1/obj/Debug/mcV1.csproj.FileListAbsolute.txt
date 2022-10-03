@@ -1,0 +1,55 @@
+C:\Users\rstei\source\repos\mcV1\mcV1\bin\Debug\mcV1.exe.config
+C:\Users\rstei\source\repos\mcV1\mcV1\bin\Debug\mcV1.exe
+C:\Users\rstei\source\repos\mcV1\mcV1\bin\Debug\mcV1.pdb
+C:\Users\rstei\source\repos\mcV1\mcV1\bin\Debug\Guna.UI.dll
+C:\Users\rstei\source\repos\mcV1\mcV1\bin\Debug\Guna.UI2.dll
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.csproj.AssemblyReference.cache
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.Form1.resources
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.Properties.Resources.resources
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.csproj.GenerateResource.cache
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.csproj.CoreCompileInputs.cache
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.csproj.CopyComplete
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.exe
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.pdb
+C:\Users\rstei\source\repos\mcV1\mcV1\obj\Debug\mcV1.Tabs.apiForm.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\mcV1.exe.config
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\mcV1.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\mcV1.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.AssemblyReference.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.apiForm.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Form1.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Properties.Resources.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.GenerateResource.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.csproj.CopyComplete
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Login.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Connect.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Inject.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Credits.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\mcV1\obj\Debug\mcV1.Tabs.Settings.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.AssemblyReference.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.apiForm.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.Connect.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.Credits.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Form1.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Properties.Resources.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.Inject.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.Login.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.Tabs.Settings.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.GenerateResource.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1.exe.config
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.CopyComplete
