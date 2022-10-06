@@ -95,7 +95,7 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Functions.h(453,34): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (3 of keyboard) of type "wchar_t *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Modules.h(13,20): warning 2520: invalid narrowing conversion from "int" to "char"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Modules.h(25,20): warning 2520: invalid narrowing conversion from "int" to "char"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Hooking.h(23): warning 942: missing return statement at end of non-void function "asm_SetPresenceDetails_Hook"
   
@@ -977,13 +977,13 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Options.h(5020,5): warning 178: variable "test" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\LoopFunctions.h(46,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(618,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(619,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\LoopFunctions.h(47,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(620,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(621,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(622,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Startup.h(41,24): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   

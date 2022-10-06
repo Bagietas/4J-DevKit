@@ -11,3 +11,16 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\UpdaterMC\obj\Debug\UpdaterMC.exe
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\UpdaterMC\obj\Debug\UpdaterMC.pdb
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\UpdaterMC\bin\Debug\Guna.UI2.dll
 C:\Users\rstei\Documents\GitHub\4J-DevKit\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.CopyComplete
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\bin\Debug\UpdaterMC.exe.config
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\bin\Debug\UpdaterMC.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\bin\Debug\UpdaterMC.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\bin\Debug\Guna.UI2.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.AssemblyReference.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.Form1.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.Properties.Resources.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.GenerateResource.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.csproj.CopyComplete
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\UpdaterMC\obj\Debug\UpdaterMC.pdb

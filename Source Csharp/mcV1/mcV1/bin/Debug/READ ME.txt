@@ -1,0 +1,24 @@
+(.NET Framework 4.8 is required on the PC)
+(webMAN MOD 1.47.42 is required for the process)
+
+(if you install the webMAN MOD 1.47.42 and you are on HEN, don't forget to re enable PS3MAPI in your WebMAN Mod settings)
+(Full Mode ONLY not Lite Mode)
+
+Welcome to DownCraft SPRX V4.2
+
+this app is a launcher / patcher for the SPRX
+
+(YOU NEED TO HAVE MINECRAFT BLES01976 FOR USE THE MENU CORRECTLY)
+(ALSO DON'T REMEMBER TO SET YOUR PS3 LANGUAGE TO "English United State" AND USE A DEFAULT "MediaPS3.arc")
+
+Open mcV1 and login with your licence key (if you don't have any licence ask Misaki on discord)
+
+when you are logged in, connect mcV1 to your console using (CCAPI, HEN, TMAPI) connection
+
+press "Inject SPRX" and wait until your game reload, when it's done and you get the SPRX notification, re connect mcV1 to your PS3
+
+Join a world and enable SPRX then enjoy !
+
+(When you inject SPRX it's auto inject the last update, so don't worry about update)
+
+By Misakiii

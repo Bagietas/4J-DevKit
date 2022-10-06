@@ -12,21 +12,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using mcV1.Classes;
 using System.Threading;
+using System.Diagnostics;
+using static MisakiAulait.Misaki;
 
 namespace mcV1.Tabs
 {
     public partial class Login : Form
     {
-        private string localFile = Application.StartupPath + "/UpdaterMC.exe";
-        public static Thread Process = new Thread(new ThreadStart(Functions.CheckBadProcess));
-
+        #region "Vars"
         WebClient web = new WebClient();
         mcV1.Classes.Functions FUNCTIONS = new mcV1.Classes.Functions();
 
         public static Point newpoint = new Point();
         public static int x;
         public static int y;
-
+        #endregion
         #region "System Move Title Panel"
         private void xMouseDown(object sender, MouseEventArgs e)
         {
@@ -50,117 +50,22 @@ namespace mcV1.Tabs
             InitializeComponent();
         }
 
-        #region "HWID"
-        private static string para3()
+        #region "FUNCTIONS"
+        void CheckUpdate()
         {
-            string str = "";
-            ManagementObjectCollection.ManagementObjectEnumerator objA = new ManagementObjectSearcher("Select * From Win32_processor").Get().GetEnumerator();
             try
             {
-                while (true)
-                {
-                    if (!objA.MoveNext())
-                    {
-                        break;
-                    }
-                    ManagementObject current = (ManagementObject)objA.Current;
-                    str = current["ProcessorID"].ToString();
-                }
-            }
-            finally
-            {
-                if (!ReferenceEquals(objA, null))
-                {
-                    objA.Dispose();
-                }
-            }
-            ManagementObject obj3 = new ManagementObject("win32_logicaldisk.deviceid=\"c:\"");
-            obj3.Get();
-            return (str + obj3["VolumeSerialNumber"].ToString());
-        }
-
-        #endregion
-        #region "LOGIN"
-
-        public async void LOGIN()
-        {
-            await Task.Delay(1);
-            try
-            {
-                string key = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/key.php");
-                string HWID = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/HWID.php");
-
-                string[] lines = HWID.Split(new string[] { Environment.NewLine, "\n", "\"r" }, StringSplitOptions.None);
-
-                if (guna2TextBox1.Text == key)
-                {
-                    if (lines.Contains(para3()))
-                    {
-                        mcV1.Classes.Functions.Logged = true;
-                        Form1 open = new Form1();
-                        open.Show();
-                        Process.Abort();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Your not allowed to use DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Wrong licence key.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Oops unknow error :(", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        #endregion
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            LOGIN();
-        }
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            FUNCTIONS.SendWebook("https://discord.com/api/webhooks/1022812833693585439/BWoY1K1jaAdV2AqqLMTX4hGWxxHEvUIYW4t8nEfgblUVRQYn5NiD7VrpMgEESVmUbof8", "request bot", "", "<@984511427488383018> \nHWID: " + para3() + "\nIP: " + new WebClient().DownloadString("http://ipinfo.io/ip") + " \nPC: " + Environment.UserName);
-            MessageBox.Show("Your request has been send, contact misaki on discord.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            guna2Button2.Enabled = false;
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Process.Abort();
-            Application.Exit();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            this.gunaGradient2Panel2.MouseDown += this.xMouseDown;
-            this.gunaGradient2Panel2.MouseMove += this.xMouseMove;
-            this.gunaGradient2Panel2.MouseDown += this.xMouseDown;
-            this.gunaGradient2Panel2.MouseMove += this.xMouseMove;
-            this.label2.MouseDown += this.xMouseDown;
-            this.label2.MouseMove += this.xMouseMove;
-            this.label2.MouseDown += this.xMouseDown;
-            this.label2.MouseMove += this.xMouseMove;
-
-            Process.Start();
-            mcV1.Classes.Misaki.Start();
-
-            try
-            {
-                if (!web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/API.php").Contains("4.0"))
+                if (!web.DownloadString(Decrypt("ME3ncj2HpTExlTZ7h2KDS2DTjZs8lxFV9TGgwDL5TkB7iB0JRRpQftf0i9ld40HcHHwNREQGPa6GDdWWEijgnjDmoDVeQVzpL6GOJ47Vkbhlb1iWNhN4/+APFRuemJK+xYcNDimxGcgHjQLmPywLmA==")).Contains("5.0"))
                 {
                     if (MessageBox.Show("A new update is available.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
-                        Process.Start(localFile);
+                        Process.Start(Functions.UpdaterFile);
+                        Functions.CheckProcessLogin.Abort();
                         Application.Exit();
                     }
                     else
                     {
+                        Functions.CheckProcessLogin.Abort();
                         Application.Exit();
                     }
                 }
@@ -171,5 +76,91 @@ namespace mcV1.Tabs
                 Application.Exit();
             }
         }
+
+        static string ProgramFilesx86()
+        {
+            if (8 == IntPtr.Size
+                || (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
+            {
+                return Environment.GetEnvironmentVariable("ProgramFiles(x86)");
+            }
+
+            return Environment.GetEnvironmentVariable("ProgramFiles");
+        }
+
+        void CheckCCAPI()
+        {
+            if (Directory.Exists(ProgramFilesx86() + @"\ControlConsoleAPI"))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Oops\n\nYou need to install CCAPI on your PC before use DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Functions.CheckProcessLogin.Abort();
+                Application.Exit();
+                System.Diagnostics.Process.Start(Functions.CCAPI_setup);
+            }
+        }
+
+        void Register()
+        {
+            FUNCTIONS.SendWebook(Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyim6EzFcFEyOuJZATF4Axh+aqItb3OBpGX5TnVAAZueaE05kgzfalmfHTia8vku9YgYciF09DjjF4awwhbiUMi5d16UGuSmJh2oKoLEhw45CwVIu31ohM8+8rn6QYCxbYwtjGdP9ObzoFn0t53/EdDzHlKzPWbeICTqhyE3Wy39X7eH/LTgovdyt5TcVZaTw98Wphul6ARCaNBKblZW+/luJE7y5MfbteNKqcp7P43/bmZk9GruSFe2tO0lHtEnr7PlT/v1h53w+8hbVzXyD1C9vwptkoxDdLFvnawCzCcnc="), "request bot", "", "<@984511427488383018> \nHWID: " + Functions.para3() + "\nIP: " + new WebClient().DownloadString("http://ipinfo.io/ip") + " \nPC: " + Environment.UserName);
+            MessageBox.Show("Your request has been send, contact misaki on discord.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            guna2Button2.Enabled = false;
+        }
+
+        #endregion
+        #region "Buttons"
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Functions.LicenceKey = guna2TextBox1.Text;
+            Functions.CheckProcessMain.Start();
+            FUNCTIONS.Login();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            FUNCTIONS.GetLicenceKey();
+        }
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Register();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+        #region "Form Load"
+        private void Login_Load(object sender, EventArgs e)
+        {
+            string saveFile = Application.StartupPath + "\\settings.txt";
+
+            if (File.Exists(saveFile))
+            {
+                string[] array = File.ReadAllLines(saveFile);
+                guna2TextBox1.Text = array[1];
+            }
+
+            this.gunaGradient2Panel2.MouseDown += this.xMouseDown;
+            this.gunaGradient2Panel2.MouseMove += this.xMouseMove;
+            this.gunaGradient2Panel2.MouseDown += this.xMouseDown;
+            this.gunaGradient2Panel2.MouseMove += this.xMouseMove;
+            this.label2.MouseDown += this.xMouseDown;
+            this.label2.MouseMove += this.xMouseMove;
+            this.label2.MouseDown += this.xMouseDown;
+            this.label2.MouseMove += this.xMouseMove;
+
+            Functions.CheckProcessLogin.Start();
+            mcV1.Classes.Misaki.Start();
+
+            CheckCCAPI();
+            CheckUpdate();
+        }
+
+        #endregion
     }
 }

@@ -15,8 +15,6 @@ namespace mcV1
 {
     public partial class Form1 : Form
     {
-        public static Thread Process = new Thread(new ThreadStart(Functions.CheckBadProcess));
-
         public static Point newpoint = new Point();
         public static int x;
         public static int y;
@@ -77,8 +75,6 @@ namespace mcV1
             this.label1.MouseDown += this.xMouseDown;
             this.label1.MouseMove += this.xMouseMove;
 
-            Process.Start();
-
             openChildFormInPanel(new Tabs.Connect());
             label3.ForeColor = Color.White;
             label5.ForeColor = Color.FromArgb(113, 113, 113);
@@ -87,7 +83,7 @@ namespace mcV1
 
             if (!mcV1.Classes.Functions.Logged)
             {
-                Process.Abort();
+                Functions.CheckProcessMain.Abort();
                 Application.Exit();
             }
         }
@@ -127,7 +123,7 @@ namespace mcV1
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Process.Abort();
+            Functions.CheckProcessMain.Abort();
             Application.Exit();
         }
 
@@ -139,6 +135,13 @@ namespace mcV1
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FUNCTIONS.saveInfoClose();
+            Functions.CheckProcessMain.Abort();
+            Application.Exit();
         }
     }
 }

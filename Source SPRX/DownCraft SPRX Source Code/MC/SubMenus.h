@@ -512,6 +512,7 @@ namespace SubMenu
 		AddBoolOption(L"Nuker", !Nuker);
 		AddIntOption(L"Nuker Radius", 0, sizeNuker);
 		AddBoolOption(L"Auto Toss", !AutoTossItems);
+		AddBoolOption(L"Anti Void", !AntiVoidtoggle);
 
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Press R3 for Zoom"); }
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"TP to target and attack him"); }
@@ -915,6 +916,8 @@ namespace SubMenu
 		AddOption(L"MayhemModding (helper)");
 		AddOption(L"NELUxP MoDz (helper)");
 		AddOption(L"d.s.j (helper)");
+		AddOption(L"silver14818 (helper)");
+		AddOption(L"gopro2027 (design idea)");
 
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#0513");}
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Discord: NyTekCFW#4315");}
@@ -922,6 +925,7 @@ namespace SubMenu
 		if (CurrentOpt == 7) { AddInformation(submmenuMax, L"Discord: VinDublin#5716");}
 		if (CurrentOpt == 8) { AddInformation(submmenuMax, L"Discord: MayhemModding#3231");}
 		if (CurrentOpt == 10) { AddInformation(submmenuMax, L"Discord: d.s.j.#0598");}
+		if (CurrentOpt == 11) { AddInformation(submmenuMax, L"Discord: Guaros#9672"); }
 	}
 
     #pragma endregion

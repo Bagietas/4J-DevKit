@@ -2,6 +2,18 @@
 
 namespace Modules
 {
+	void ModulesTextRender()
+	{
+		if (Zoom)
+			DrawText(L"Zoom Mode", 584, 15, color(UI::Color::WHITE));
+		if (TPAura)
+			DrawText(L"TP Aura", 595, 25, color(UI::Color::WHITE));
+		if (Nuker)
+			DrawText(L"Nuker", 603, 35, color(UI::Color::WHITE));
+		if (AutoTossItems)
+			DrawText(L"Auto Toss", 586, 45, color(UI::Color::WHITE));
+	}
+
 	void RainbowRenderName()
 	{
 		if (RainbowNameRender)
@@ -28,15 +40,6 @@ namespace Modules
 			{
 				*(int*)0x00AEF428 = 0x41820024;
 			}
-		}
-	}
-
-	void NukerTNT()
-	{
-		if (Buttons::IsMCButtonPressed(Buttons::R1))
-		{
-			//*(int*)(pBlock::AIR) = *(int*)(pBlock::TNT);
-			*(int*)0x0051E6A0 = 0x40810034;
 		}
 	}
 

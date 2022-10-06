@@ -2,6 +2,7 @@
 
 void ModuleLoop()
 {
+	Modules::ModulesTextRender();
 	Modules::AntiVoid();
 	Modules::BunnyJump();
 	Modules::SkyboxRGB();
