@@ -14,6 +14,7 @@ namespace MisakiAulait
 			return x.Length % 4 == 0 && Regex.IsMatch(x, "^[a-zA-Z0-9\\+/]*={0,3}$", RegexOptions.None);
 		}
 
+
 		public static string Decrypt(string data, [Optional] uint mode)
 		{
 			SymmetricAlgorithm symmetricAlgorithm = DES.Create();

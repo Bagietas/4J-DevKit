@@ -19,7 +19,7 @@ public:
 	Level *getLevel();
 	RakNetInstance *getRakNetInstance();
 	NetEventCallback *getNetEventCallback();
-	std::string getServerName();
+	char getServerName();
 	void hostMultiplayer(std::unique_ptr<Level>, std::unique_ptr<GameMode>, Player *, std::unique_ptr<NetEventCallback>, bool, int, int);
 	void initAsDedicatedServer();
 };

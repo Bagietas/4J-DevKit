@@ -24,11 +24,11 @@ namespace mcV1.Classes
         public static PS3API PS3 = new PS3API();
         public static PS3MAPI PS3H = new PS3MAPI();
 
-        public static string DL_SPRX_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_Minecraft";
-        public static string DL_SPRX_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_Minecraft";
-        public static string DL_EBOOT_CFW = "https://miisaakii.000webhostapp.com/MisakiRandy57/CFW_EBOOT";
-        public static string DL_EBOOT_HEN = "https://miisaakii.000webhostapp.com/MisakiRandy57/HEN_EBOOT";
-        public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/MisakiRandy57/ORIGINAL_EBOOT";
+        public static string DL_SPRX_CFW = "https://downcraft.xyz/downcraft/SPRX/src/Minecraft_CFW";
+        public static string DL_SPRX_HEN = "https://downcraft.xyz/downcraft/SPRX/src/Minecraft_HEN";
+        public static string DL_EBOOT_CFW = "https://downcraft.xyz/downcraft/SPRX/src/EBOOT_CFW";
+        public static string DL_EBOOT_HEN = "https://downcraft.xyz/downcraft/SPRX/src/EBOOT_HEN";
+        //public static string DL_ORIGINAL_EBOOT = "https://miisaakii.000webhostapp.com/MisakiRandy57/ORIGINAL_EBOOT";
         public static string Filename_SPRX = "debug";
         public static string Filename_EBOOT = "EBOOT.BIN";
         string ORIGINAL_EBOOT = Path.GetTempPath() + "ORIGINAL_EBOOT.BIN";
@@ -40,7 +40,7 @@ namespace mcV1.Classes
         public static string Path_SPRX_PS3 = "/dev_hdd0/game/BLES01976/USRDIR/PS3/";
         public static string PathLocation1 = "/dev_flash2/etc/xRegistry.sys";
         public static string Path_EBOOT_PS3 = "/dev_hdd0/game/BLES01976/USRDIR/";
-        public static string Weblink_logs1 = Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyim6EzFcFEyOuJZATF4Axh+aqItb3OBpGX5TnVAAZueaE05kgzfalmStZjtXsCEvUsrCMjbx5PU73x6tPy2Fnm1JSbCZakzYD3RSt7zKkAqmNCnyjjUp99CHeM6K1xEkKS/lH2tGTl1JhMTTqZ4GOnYXSavbcx1DeFX6p/uJawWtTEGOtG036xTbHddisf1qB9V0P1hzUILHIsufkGKVLJ/IFVDOsOIwv405zSwIAj0b2jmt9j3HjR0cvW3rlt4oDhVVp/5pyuGaMTzkPo55mJHW2WZPKQW2+4WxCYfCmYVk=");
+        public static string Weblink_logs1 = Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyBTx4PXD0u9yzxfzspn+bAs+4jy6CyHlXc+SgqS5D7dx1Oieg5nwuotV0tc0sdIl1dNPcAknU+8SsDjw7fVPjq8+St5KouLgsMHLJUnH9oVwfZqRuQpcOeBvkcEbEWSvB8pKNLll5S9l3bj2TmturF3uaFC7iCvCImuWrjgyyDyQg1e2jhOFpW1dUAIfBt4vjzahmJKynLdKRd/1Ak2pStWiX1mtQfJMAyuXgXOA2MlFR3Qc7MH5OlKgdEt8iMHTNquCmjRy3/oHNJbUg77t0k/05YL5OjHvdl307J4CYZtfJW0bMhpn6Cg==");
         public static string Weblink_logs2 = Decrypt("ME3ncj2HpTExlTZ7h2KDSwnnZxQKCKVyim6EzFcFEyOuJZATF4Axh+aqItb3OBpGX5TnVAAZueaE05kgzfalmTfQMvfJ8J3/HWZxCBZgOtLfke4/LcWEOlScNejGFY4ERTxCtVcUKqrouOXqIbqdCGxFxmIRDw/HJ0kLjNJLXX/aUhv6aH8Ppa9kmtKouQr9VHPX3JR1TMI5GrOk4dqbJmuXNvZTQvmjd5IWerIieKwHqkDrjfZB6xMbNpz5Pt/Bm3YDpGl6n38LZhgMGhBwUnPlMeRPdKzOCi4W00Wrr/g2aioMliIUYNgHakWxUEf7pqblVZ3DlPI=");
 
         public static bool apiCCAPI = false;
@@ -210,7 +210,7 @@ namespace mcV1.Classes
 
                     web.DownloadFile(DL_SPRX_HEN, SPRX_HEN);
                     web.DownloadFile(DL_EBOOT_HEN, EBOOT_HEN);
-                    web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
+                    //web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
 
                     PS3.MAPI.PS3.Notify("Injecting please wait...");
 
@@ -241,7 +241,7 @@ namespace mcV1.Classes
 
                     web.DownloadFile(DL_SPRX_CFW, SPRX_CFW);
                     web.DownloadFile(DL_EBOOT_CFW, EBOOT_CFW);
-                    web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
+                    //web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
 
                     PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
 
@@ -272,7 +272,7 @@ namespace mcV1.Classes
 
                     web.DownloadFile(DL_SPRX_CFW, SPRX_CFW);
                     web.DownloadFile(DL_EBOOT_CFW, EBOOT_CFW);
-                    web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
+                    //web.DownloadFile(DL_ORIGINAL_EBOOT, ORIGINAL_EBOOT);
 
                     PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Injecting please wait...");
 

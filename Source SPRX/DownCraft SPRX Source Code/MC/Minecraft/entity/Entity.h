@@ -121,7 +121,7 @@ public:
 	virtual void checkBlockCollisions();
 	virtual void moveRelative(float, float, float);
 	virtual void lerpTo(Vec3 const &, Vec2 const &, int);
-	virtual void lerpMotion(Vec3 const &);
+	virtual void lerpMotion(Vector3 const &);
 	virtual void turn(Vec2 const &);
 	virtual void interpolateTurn(Vec2 const &);
 	virtual void getAddPacket();

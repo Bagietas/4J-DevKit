@@ -22,6 +22,8 @@ namespace mcV1
         mcV1.Classes.Offsets OFFSETS = new mcV1.Classes.Offsets();
         mcV1.Classes.Functions FUNCTIONS = new mcV1.Classes.Functions();
 
+        public static Thread CheckProcess = new Thread(new ThreadStart(Functions.CheckBadProcess));
+
         #region "Open Panels In Form"
 
         private Form activeForm = null;
@@ -81,9 +83,10 @@ namespace mcV1
             label6.ForeColor = Color.FromArgb(113, 113, 113);
             label7.ForeColor = Color.FromArgb(113, 113, 113);
 
+            CheckProcess.Start();
+
             if (!mcV1.Classes.Functions.Logged)
             {
-                Functions.CheckProcessMain.Abort();
                 Application.Exit();
             }
         }
@@ -123,8 +126,7 @@ namespace mcV1
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Functions.CheckProcessMain.Abort();
-            Application.Exit();
+            System.Environment.Exit(1);
         }
 
         private void gunaGradient2Panel6_Paint(object sender, PaintEventArgs e)
@@ -140,8 +142,7 @@ namespace mcV1
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             FUNCTIONS.saveInfoClose();
-            Functions.CheckProcessMain.Abort();
-            Application.Exit();
+            System.Environment.Exit(1);
         }
     }
 }

@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "C3v6RktEjHpKcWP3fC6Z4dnkxFUsbD876K/GcqCK1FUQ+4GJ/eYeSv2MPgDVMd1xmtFvjGl+5W3xbYyook0uYw==",
+  "dgSpecHash": "CmYIu4mSjki95fic8FpFuTPuNJ+ByOX1iPTQE+OPuEzW80e9M99SjcSzaJcZnWvz4ZiD19k+cGMRTlFu3O2o9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\mcV1.csproj",
+  "projectFilePath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\mcV1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rstei\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\rstei\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512"
+    "C:\\Users\\rstei\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512"
   ],
   "logs": []
 }

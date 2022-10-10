@@ -18,7 +18,12 @@ namespace Buttons
 		L2 = 0x0, //NEED FOUND
 		L3 = 0x20000,
 		START = 0x2000,
-		SELECT = 0x1000
+		SELECT = 0x1000,
+
+		JOYSTICK_L3_UP = 0x20000000,
+		JOYSTICK_L3_DOWN = 0x10000000,
+		JOYSTICK_L3_LEFT = 0x00800000,
+		JOYSTICK_L3_RIGHT = 0x00400000
 		;
 
 	unsigned int getMCButtons()

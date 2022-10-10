@@ -1,30 +1,70 @@
 #pragma once
+/*
+* Zoom Mode
+* TP Aura
+* Nuker
+* Auto Toss
+* Anti Void
+* Set Location
+* KeyStrokes
+*/
 
 namespace Modules
 {
 	void ModulesTextRender()
 	{
 		if (Zoom)
-			DrawText(L"Zoom Mode", 584, 15, color(UI::Color::WHITE));
+			DrawTextWithShadow(L"Zoom Mode", 584, 15, color(UI::Color::WHITE));
 		if (TPAura)
-			DrawText(L"TP Aura", 595, 25, color(UI::Color::WHITE));
+			DrawTextWithShadow(L"TP Aura", 595, 25, color(UI::Color::WHITE));
 		if (Nuker)
-			DrawText(L"Nuker", 603, 35, color(UI::Color::WHITE));
+			DrawTextWithShadow(L"Nuker", 603, 35, color(UI::Color::WHITE));
 		if (AutoTossItems)
-			DrawText(L"Auto Toss", 586, 45, color(UI::Color::WHITE));
+			DrawTextWithShadow(L"Auto Toss", 586, 45, color(UI::Color::WHITE));
 	}
 
-	void RainbowRenderName()
+	void setLocation(double x, double y, double z)
 	{
-		if (RainbowNameRender)
-		{
-			RainbowNameRenderColor += 1;
-			if (RainbowNameRenderColor > 254)
-				RainbowNameRenderColor = 0;
+		mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(x + 0.5, y + 1 + 0.5, z + 0.5);
+	}
 
-			char COLOR[] = { NyTekCFW::IntToHex(RainbowNameRenderColor) };
-			sys_dbg_write_process_memory(0x00AA5236, &COLOR, sizeof(COLOR));
-			sys_dbg_write_process_memory_ps3mapi(0x00AA5236, &COLOR, sizeof(COLOR));
+	void ZoomModule()
+	{
+		if (Zoom)
+		{
+			if (Buttons::IsMCButtonPressed(Buttons::R3))
+			{
+				*(int*)0x014C670C = 0x40500000;
+			}
+			else
+			{
+				*(int*)0x014C670C = 0x3F800000;
+			}
+		}
+	}
+
+	void TP_Aura(ServerPlayer* player)
+	{
+		if (TPAura)
+		{
+			TargetposX = player->posX;
+			TargetposY = player->posY;
+			TargetposZ = player->posZ;
+
+			if (frameTime(0, 1, false))
+			{
+				*(int*)0x00AEC34C = 0x40820024;
+				setLocation(TargetposX, TargetposY + 10, TargetposZ); //TARGET POS
+				sleep(400);
+				setLocation(TargetposX, TargetposY, TargetposZ); //TARGET POS
+				sleep(400);
+				setLocation(TargetposX, TargetposY, TargetposZ); //TARGET POS
+				sleep(400);
+				setLocation(TargetposX + 5, TargetposY + 10, TargetposZ); //TARGET POS
+				sleep(400);
+				setLocation(TargetposX, TargetposY + 10, TargetposZ + 5); //TARGET POS
+				*(int*)0x00AEC34C = 0x41820024;
+			}
 		}
 	}
 
@@ -41,53 +81,6 @@ namespace Modules
 				*(int*)0x00AEF428 = 0x41820024;
 			}
 		}
-	}
-
-	void BunnyJump()
-	{
-		if (BunnyHoptoggle)
-		{
-			if (mc->theMinecraft->cMultiplayerLocalPlayer->onGround)
-			{
-				char SPEED[] = { 0x01 };
-				char SUPER_RUN[] = { 0xFF, 0xE0, 0x08, 0x90 };
-				char JUMP_FORWARD[] = { 0x68 };
-				char AUTO_JUMP[] = { 0x40 };
-				sys_dbg_write_process_memory(0x00B01EEF, &SPEED, sizeof(SPEED));
-				sys_dbg_write_process_memory_ps3mapi(0x00B01EEF, &SPEED, sizeof(SPEED));
-				sys_dbg_write_process_memory(0x00018CE4, &SUPER_RUN, sizeof(SUPER_RUN));
-				sys_dbg_write_process_memory_ps3mapi(0x00018CE4, &SUPER_RUN, sizeof(SUPER_RUN));
-				sys_dbg_write_process_memory(0x003AA999, &JUMP_FORWARD, sizeof(JUMP_FORWARD));
-				sys_dbg_write_process_memory_ps3mapi(0x003AA999, &JUMP_FORWARD, sizeof(JUMP_FORWARD));
-				sys_dbg_write_process_memory(0x00B01BAC, &AUTO_JUMP, sizeof(AUTO_JUMP));
-				sys_dbg_write_process_memory_ps3mapi(0x00B01BAC, &AUTO_JUMP, sizeof(AUTO_JUMP));
-
-				//Offsets::AUTO_SPRINT_V2(false);
-				//Offsets::ALL_PLAYERS_SUPER_RUN(false);
-				//Offsets::JUMP_FORWARD(false);
-				//Offsets::AUTO_JUMP(false);
-			}
-			else
-			{
-				char SPEED[] = { 0x00 };
-				char SUPER_RUN[] = { 0xFF, 0xE0, 0x28, 0x90 };
-				char JUMP_FORWARD[] = { 0x80 };
-				char AUTO_JUMP[] = { 0x41 };
-				sys_dbg_write_process_memory(0x00B01EEF, &SPEED, sizeof(SPEED));
-				sys_dbg_write_process_memory_ps3mapi(0x00B01EEF, &SPEED, sizeof(SPEED));
-				sys_dbg_write_process_memory(0x00018CE4, &SUPER_RUN, sizeof(SUPER_RUN));
-				sys_dbg_write_process_memory_ps3mapi(0x00018CE4, &SUPER_RUN, sizeof(SUPER_RUN));
-				sys_dbg_write_process_memory(0x003AA999, &JUMP_FORWARD, sizeof(JUMP_FORWARD));
-				sys_dbg_write_process_memory_ps3mapi(0x003AA999, &JUMP_FORWARD, sizeof(JUMP_FORWARD));
-				sys_dbg_write_process_memory(0x00B01BAC, &AUTO_JUMP, sizeof(AUTO_JUMP));
-				sys_dbg_write_process_memory_ps3mapi(0x00B01BAC, &AUTO_JUMP, sizeof(AUTO_JUMP));
-			}
-		}
-	}
-
-	void setLocation(double x, double y, double z)
-	{
-		mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(x + 0.5, y + 1 + 0.5, z + 0.5);
 	}
 
 	void AntiVoid()
@@ -118,6 +111,102 @@ namespace Modules
 					sys_dbg_write_process_memory_ps3mapi(0x003A74F3, &HEX, sizeof(HEX));
 				}
 			}
+		}
+	}
+
+	void KeyStrokes()
+	{
+		if (keystrokes)
+		{
+			int BoxPos[2] = { 25, 280 };
+			int Rainbow[3] = { UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE };
+
+			DrawText(L"          ", 69, 244, color(UI::Color::WHITE));
+
+			if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_UP))
+			{
+				drawRectBorder(BoxPos[0] + 16, BoxPos[1] - 18, 15, 15, UI::Color::BLACK1, Rainbow); //UP
+				DrawText(L"W    ", BoxPos[0] + 21, BoxPos[1] - 14, color(UI::Color::WHITE));
+			}
+			else
+			{
+				drawRectBorder(BoxPos[0] + 16, BoxPos[1] - 18, 15, 15, UI::Color::BLACK, GetThemeColor()); //UP
+				DrawText(L"W    ", BoxPos[0] + 21, BoxPos[1] - 14, color(UI::Color::WHITE));
+			}
+
+			if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_DOWN))
+			{
+				drawRectBorder(BoxPos[0] + 16, BoxPos[1], 15, 15, UI::Color::BLACK1, Rainbow); //BACK
+				DrawText(L"S    ", BoxPos[0] + 21, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+			else
+			{
+				drawRectBorder(BoxPos[0] + 16, BoxPos[1], 15, 15, UI::Color::BLACK, GetThemeColor()); //BACK
+				DrawText(L"S    ", BoxPos[0] + 21, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+
+			if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_LEFT))
+			{
+				drawRectBorder(BoxPos[0] - 2, BoxPos[1], 15, 15, UI::Color::BLACK1, Rainbow); //LEFT
+				DrawText(L"Q    ", BoxPos[0] + 3, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+			else
+			{
+				drawRectBorder(BoxPos[0] - 2, BoxPos[1], 15, 15, UI::Color::BLACK, GetThemeColor()); //LEFT
+				DrawText(L"Q    ", BoxPos[0] + 3, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+
+
+			if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_RIGHT))
+			{
+				drawRectBorder(BoxPos[0] + 34, BoxPos[1], 15, 15, UI::Color::BLACK1, Rainbow); //RIGHT
+				DrawText(L"D    ", BoxPos[0] + 39, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+			else
+			{
+				drawRectBorder(BoxPos[0] + 34, BoxPos[1], 15, 15, UI::Color::BLACK, GetThemeColor()); //RIGHT
+				DrawText(L"D    ", BoxPos[0] + 39, BoxPos[1] + 4, color(UI::Color::WHITE));
+			}
+
+			if (Buttons::IsMCButtonPressed(Buttons::X))
+			{
+				drawRectBorder(BoxPos[0] - 2, BoxPos[1] + 20, 51, 10, UI::Color::BLACK1, Rainbow); //SPACE
+				DrawRectangle(BoxPos[0] + 7, BoxPos[1] + 25, 33, 2, UI::Color::WHITE);
+			}
+			else
+			{
+				drawRectBorder(BoxPos[0] - 2, BoxPos[1] + 20, 51, 10, UI::Color::BLACK, GetThemeColor()); //SPACE
+				DrawRectangle(BoxPos[0] + 7, BoxPos[1] + 25, 33, 2, UI::Color::WHITE);
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+	void RainbowRenderName()
+	{
+		if (RainbowNameRender)
+		{
+			RainbowNameRenderColor += 1;
+			if (RainbowNameRenderColor > 254)
+				RainbowNameRenderColor = 0;
+
+			char COLOR[] = { NyTekCFW::IntToHex(RainbowNameRenderColor) };
+			sys_dbg_write_process_memory(0x00AA5236, &COLOR, sizeof(COLOR));
+			sys_dbg_write_process_memory_ps3mapi(0x00AA5236, &COLOR, sizeof(COLOR));
+		}
+	}
+
+	void BunnyJump()
+	{
+		if (BunnyHoptoggle)
+		{
+
 		}
 	}
 
@@ -196,46 +285,6 @@ namespace Modules
 				sys_dbg_write_process_memory_ps3mapi(0x00B351DC, &MA, sizeof(MA));
 				sys_dbg_write_process_memory(0x00B01BAC, &HEX, sizeof(HEX));
 				sys_dbg_write_process_memory_ps3mapi(0x00B01BAC, &HEX, sizeof(HEX));
-			}
-		}
-	}
-
-	void TP_Aura(ServerPlayer* player)
-	{
-		if (TPAura)
-		{
-			TargetposX = player->posX;
-			TargetposY = player->posY;
-			TargetposZ = player->posZ;
-
-			if (frameTime(0, 1, false))
-			{
-				*(int*)0x00AEC34C = 0x40820024;
-				setLocation(TargetposX, TargetposY + 10, TargetposZ); //TARGET POS
-				sleep(400);
-				setLocation(TargetposX, TargetposY, TargetposZ); //TARGET POS
-				sleep(400);
-				setLocation(TargetposX, TargetposY, TargetposZ); //TARGET POS
-				sleep(400);
-				setLocation(TargetposX + 5, TargetposY + 10, TargetposZ); //TARGET POS
-				sleep(400);
-				setLocation(TargetposX, TargetposY + 10, TargetposZ + 5); //TARGET POS
-				*(int*)0x00AEC34C = 0x41820024;
-			}
-		}
-	}
-
-	void ZoomModule()
-	{
-		if (Zoom)
-		{
-			if (Buttons::IsMCButtonPressed(Buttons::R3))
-			{
-				*(int*)0x014C670C = 0x40500000;
-			}
-			else
-			{
-				*(int*)0x014C670C = 0x3F800000;
 			}
 		}
 	}

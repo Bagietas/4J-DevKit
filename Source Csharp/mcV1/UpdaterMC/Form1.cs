@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Management;
 using System.Net;
 using System.Threading;
 using System.Windows.Forms;
@@ -10,7 +12,8 @@ namespace UpdaterMC
 {
     public partial class Form1 : Form
     {
-		private string serverFile = "https://miisaakii.000webhostapp.com/Misakiki57/mcV1";
+		WebClient web = new WebClient();
+		private string serverFile = "https://downcraft.xyz/downcraft/SPRX/src/app.exe";
         static string path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Application.ExecutablePath));
 		private string localFile = Application.StartupPath + "/mcV1.exe";
 		private Thread thread;
@@ -18,7 +21,7 @@ namespace UpdaterMC
 		private ProgressBar progressBarUpdate;
 		private Label labelProgress;
 
-		public Form1()
+        public Form1()
         {
             InitializeComponent();
 			Stopwatch stopwatch = new Stopwatch();
@@ -37,8 +40,8 @@ namespace UpdaterMC
 				}
 				num++;
 			}
-			this.updateTool();
-		}
+            this.updateTool();
+        }
 
 		private void updateTool()
 		{

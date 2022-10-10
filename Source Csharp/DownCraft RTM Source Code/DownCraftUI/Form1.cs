@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DownCraftUI.Classes;
+using mcV1.Classes;
 
 namespace DownCraftUI
 {
@@ -68,6 +69,7 @@ namespace DownCraftUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*
             try
             {
                 WebClient webClientUpdate = new WebClient();
@@ -90,6 +92,8 @@ namespace DownCraftUI
                 MessageBox.Show("API is offline", "SERVER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
+            */
+               
 
             Misaki.Start();
             Process.Start();

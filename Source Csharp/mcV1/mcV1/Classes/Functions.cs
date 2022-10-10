@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Flagsec;
+using static MisakiAulait.Misaki;
 
 namespace mcV1.Classes
 {
@@ -27,12 +28,8 @@ namespace mcV1.Classes
         public static string CCAPI_setup = Application.StartupPath + "/files required/CCAPI-setupV2.60.exe";
         public static string webMAN_PKG = Application.StartupPath + "/files required/webMAN_MOD_1.47.42_Installer.pkg";
         public static string UpdaterFile = Application.StartupPath + "/UpdaterMC.exe";
-
-        public static Thread CheckProcessLogin = new Thread(new ThreadStart(CheckBadProcess));
-        public static Thread CheckProcessMain = new Thread(new ThreadStart(CheckBadProcess));
-
+     
         #endregion
-
         #region "Create Settings TxT"
         public void saveInfoClose()
         {
@@ -81,9 +78,9 @@ namespace mcV1.Classes
         {
             try
             {
-                string key = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/key.php");
-                string HWID = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/HWID.php");
-
+                string key = web.DownloadString("https://downcraft.xyz/downcraft/SPRX/KEY.php");
+                string HWID = web.DownloadString("https://downcraft.xyz/downcraft/SPRX/HWID.php");
+                
                 string[] lines = HWID.Split(new string[] { Environment.NewLine, "\n", "\"r" }, StringSplitOptions.None);
 
                 if (LicenceKey == key)
@@ -116,13 +113,15 @@ namespace mcV1.Classes
         {
             try
             {
-                string key = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/key.php");
-                string HWID = web.DownloadString("https://miisaakii.000webhostapp.com/Misakiki57/HWID.php");
+                string key = web.DownloadString("https://downcraft.xyz/downcraft/SPRX/KEY.php");
+                string HWID = web.DownloadString("https://downcraft.xyz/downcraft/SPRX/HWID.php");
+
                 string[] lines = HWID.Split(new string[] { Environment.NewLine, "\n", "\"r" }, StringSplitOptions.None);
 
                 if (lines.Contains(para3()))
                 {
-                    MessageBox.Show("Your licence key is: " + key, "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Your licence key is: " + key + " \n\nYour key was copied on your clipboard, past it in the licence textbox", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clipboard.SetText(key);
                 }
                 else
                 {
@@ -139,7 +138,6 @@ namespace mcV1.Classes
         #region "Check bad program"
 
         public static bool BadProcess = true;
-
         public static void CheckBadProcess()
         {
             while (BadProcess == true)
@@ -189,14 +187,12 @@ namespace mcV1.Classes
 
                     if (process1 || process2 || process3 || process4 || process5 || process6 || process7 || process8 || process9 || process10 || process11 || process12 || process13 || process14 || process15 || process16 || process17 || process18 || process19 || process20 || process21 || process22 || process23 || process24 || process25 || process26 || process27 || process28 || process29 || process30 || process31 || process32 || process33 || process34 || process35 || process36 || process37 || process38 || process39 || process40)
                     {
-                        Application.Exit();
-                        Functions.CheckProcessLogin.Abort();
-                        Functions.CheckProcessMain.Abort();
+                        System.Environment.Exit(1);
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }

@@ -402,8 +402,6 @@
 
 #pragma region "Render Menu"
 
- //630 - taille du text
-
  void RenderMenu()
  {
 	 if (!OpenMenu)

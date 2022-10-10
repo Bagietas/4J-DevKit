@@ -35,6 +35,7 @@ namespace UI
 	{
 		int WHITE[3] = { 255, 255, 255 };
 		int BLACK[4] = { 25, 25, 25, 50 };
+		int BLACK1[4] = { 15, 15, 15, 50 };
 		int BLACK2[4] = { 10, 10, 10, 50 };
 		int PINK[3] = { 255, 137, 214 };
 		int RED[4] = { 255, 16, 63, 20 };

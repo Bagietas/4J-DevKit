@@ -51,5 +51,4 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1.exe
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\mcV1.pdb
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\mcV1\mcV1\obj\Debug\mcV1.csproj.CopyComplete

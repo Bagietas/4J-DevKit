@@ -503,7 +503,7 @@ namespace SubMenu
 
 	void ModulesOptionsMenu()
 	{
-		submmenuMax = 6;
+		submmenuMax = 7;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Modules Menu");
@@ -513,6 +513,7 @@ namespace SubMenu
 		AddIntOption(L"Nuker Radius", 0, sizeNuker);
 		AddBoolOption(L"Auto Toss", !AutoTossItems);
 		AddBoolOption(L"Anti Void", !AntiVoidtoggle);
+		AddBoolOption(L"Key Strokes", !keystrokes);
 
 		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Press R3 for Zoom"); }
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"TP to target and attack him"); }

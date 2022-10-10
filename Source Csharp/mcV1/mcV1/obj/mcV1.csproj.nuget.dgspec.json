@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\mcV1.csproj": {}
+    "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\mcV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\mcV1.csproj": {
+    "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\mcV1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\mcV1.csproj",
+        "projectUniqueName": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\mcV1.csproj",
         "projectName": "mcV1",
-        "projectPath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\mcV1.csproj",
+        "projectPath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\mcV1.csproj",
         "packagesPath": "C:\\Users\\rstei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\mcV1\\mcV1\\obj\\",
+        "outputPath": "C:\\Users\\rstei\\Documents\\GitHub\\4J-DevKit\\Source Csharp\\mcV1\\mcV1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -26,8 +26,7 @@
           "net48"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net48": {
@@ -40,11 +39,7 @@
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Portable.BouncyCastle": {
-              "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[9.0.1, )"
             }
           }
         }

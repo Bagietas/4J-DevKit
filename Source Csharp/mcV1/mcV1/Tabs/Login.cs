@@ -26,6 +26,8 @@ namespace mcV1.Tabs
         public static Point newpoint = new Point();
         public static int x;
         public static int y;
+
+        public static Thread CheckProcess = new Thread(new ThreadStart(Functions.CheckBadProcess));
         #endregion
         #region "System Move Title Panel"
         private void xMouseDown(object sender, MouseEventArgs e)
@@ -55,50 +57,41 @@ namespace mcV1.Tabs
         {
             try
             {
-                if (!web.DownloadString(Decrypt("ME3ncj2HpTExlTZ7h2KDS2DTjZs8lxFV9TGgwDL5TkB7iB0JRRpQftf0i9ld40HcHHwNREQGPa6GDdWWEijgnjDmoDVeQVzpL6GOJ47Vkbhlb1iWNhN4/+APFRuemJK+xYcNDimxGcgHjQLmPywLmA==")).Contains("5.0"))
+                if (!web.DownloadString("https://downcraft.xyz/downcraft/SPRX/API.php").Contains("1.0"))
                 {
                     if (MessageBox.Show("A new update is available.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         Process.Start(Functions.UpdaterFile);
-                        Functions.CheckProcessLogin.Abort();
-                        Application.Exit();
+                        System.Environment.Exit(1);
                     }
                     else
                     {
-                        Functions.CheckProcessLogin.Abort();
-                        Application.Exit();
+                        System.Environment.Exit(1);
                     }
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("API is offline.", "SERVER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                System.Environment.Exit(1);
             }
         }
 
         static string ProgramFilesx86()
         {
-            if (8 == IntPtr.Size
-                || (!String.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"))))
-            {
-                return Environment.GetEnvironmentVariable("ProgramFiles(x86)");
-            }
-
-            return Environment.GetEnvironmentVariable("ProgramFiles");
+            return Environment.GetEnvironmentVariable("PROGRAMFILES");
         }
 
         void CheckCCAPI()
         {
-            if (Directory.Exists(ProgramFilesx86() + @"\ControlConsoleAPI"))
+            if (Directory.Exists(Environment.GetEnvironmentVariable("PROGRAMFILES") + @"\ControlConsoleAPI"))
             {
 
             }
             else
             {
                 MessageBox.Show("Oops\n\nYou need to install CCAPI on your PC before use DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Functions.CheckProcessLogin.Abort();
-                Application.Exit();
+                System.Environment.Exit(1);
                 System.Diagnostics.Process.Start(Functions.CCAPI_setup);
             }
         }
@@ -115,7 +108,6 @@ namespace mcV1.Tabs
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             Functions.LicenceKey = guna2TextBox1.Text;
-            Functions.CheckProcessMain.Start();
             FUNCTIONS.Login();
         }
 
@@ -131,6 +123,10 @@ namespace mcV1.Tabs
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Functions.CheckProcessLogin.Abort();
         }
 
         #endregion
@@ -154,8 +150,8 @@ namespace mcV1.Tabs
             this.label2.MouseDown += this.xMouseDown;
             this.label2.MouseMove += this.xMouseMove;
 
-            Functions.CheckProcessLogin.Start();
             mcV1.Classes.Misaki.Start();
+            CheckProcess.Start();
 
             CheckCCAPI();
             CheckUpdate();

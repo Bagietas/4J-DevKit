@@ -1495,6 +1495,30 @@ void Options()
 				AutoTossItems = false;
 			}
 		}
+
+		if (CurrentOpt == 5)
+		{
+			if (!AntiVoidtoggle)
+			{
+				AntiVoidtoggle = true;
+			}
+			else
+			{
+				AntiVoidtoggle = false;
+			}
+		}
+
+		if (CurrentOpt == 6)
+		{
+			if (!keystrokes)
+			{
+				keystrokes = true;
+			}
+			else
+			{
+				keystrokes = false;
+			}
+		}
 	}
 
     #pragma endregion

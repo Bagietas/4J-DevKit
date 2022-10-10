@@ -2,15 +2,18 @@
 
 void ModuleLoop()
 {
+
 	Modules::ModulesTextRender();
+	Modules::ZoomModule();
+	Modules::AutoToss();
 	Modules::AntiVoid();
+	Modules::KeyStrokes();
+
 	Modules::BunnyJump();
 	Modules::SkyboxRGB();
 	Modules::Scaffold();
 	Modules::NoFall();
-	Modules::AutoToss();
 	Modules::RainbowRenderName();
-	Modules::ZoomModule();
 }
 
 void ChangeValueLoop()
@@ -27,6 +30,7 @@ void ChangeValueLoop()
 void LoopFunc()
 {
 	Welcome_Message();
+	ModuleLoop();
 	GetPosition();
 	GetPing();
 	GetChunks();
@@ -40,7 +44,6 @@ void LoopFunc()
 	InventoryCreativeTumble();
 
 	ChangeValueLoop();
-	ModuleLoop();
 
 	SlideOpenMenuLoop();
 	SlideCloseMenuLoop();

@@ -14,6 +14,7 @@
 GuiComponent* g_GuiComponent;
 MultiPlayerLevel* g_Level;
 MultiplayerLocalPlayer* g_Localplayer;
+ServerPlayer* g_ServerPlayer;
 
 namespace FUNCTIONS 
 {
@@ -83,6 +84,8 @@ namespace FUNCTIONS
 	MAKE_FUNCTION(0xA7CE80, void, DrawRectangleAlpha, (void* guiComponent, uint32_t x, uint32_t y, uint32_t width, uint32_t height, uint32_t color));
 	MAKE_FUNCTION(0xA7D278, void, GuiComponent_fillGradient, (void* guiComponent, uint32_t x, uint32_t y, uint32_t width, uint32_t height, uint32_t color1, uint32_t color2));
 	MAKE_FUNCTION(0xA75024, void, GLStateColor, (float r, float g, float b, float a));
+	MAKE_FUNCTION(0xC720B8, uintptr_t, Renderer_DrawVertices, (uintptr_t r3, uintptr_t r4, uintptr_t r5, uintptr_t r6, uintptr_t r7, uintptr_t r8, uintptr_t r9));
+	MAKE_FUNCTION(0xC6B6E0, int, GetFramesSinceBoot, ());
 
 	//TESSELATOR
 	MAKE_FUNCTION(0xBDCA84, uint32_t, Tesselator_GetInstance, ());
@@ -94,6 +97,12 @@ namespace FUNCTIONS
 	void Tesselator_EndVertex(uint32_t pTesselator, float X, float Y, float Z, int* Color) { FUNCTIONS::Tesselator_Color(pTesselator, Color[0], Color[1], Color[2], 255); FUNCTIONS::BufferBuilder_endVertex(pTesselator, X, Y, Z, 0, 0); }
 
 	MAKE_FUNCTION(0x886798, void, ConsoleUIController_PlayUISFX, (uintptr_t consoleUIController, uintptr_t soundEvent));
+
+	//BUTTONS
+	MAKE_FUNCTION(0xC62490, double, CInput_GetJoyStick_LX, (uintptr_t cinput, uint8_t button, bool r5));
+	MAKE_FUNCTION(0xC62500, double, CInput_GetJoyStick_LY, (uintptr_t cinput, uint8_t button, bool r5));
+	MAKE_FUNCTION(0xC62570, double, CInput_GetJoyStick_RX, (uintptr_t cinput, uint8_t button, bool r5));
+	MAKE_FUNCTION(0xC625E0, double, CInput_GetJoyStick_RY, (uintptr_t cinput, uint8_t button, bool r5));
 
 	//PLAYER
 	MAKE_FUNCTION(0xB0E8F4, void, MultiPlayerLevel_getEntity, (void* outEntity, void* multiPlayerLevel, int id));
@@ -215,4 +224,11 @@ void DrawGradient(uint32_t x, uint32_t y, uint32_t width, uint32_t height, Color
 void PlayUISound(uintptr_t* SoundEvent) {
 	FUNCTIONS::ConsoleUIController_PlayUISFX(ConsoleUIController, *SoundEvent);
 }
+
+void drawRectBorder(float x, float y, float w, float h, int* Color1, int* Color2)
+{
+	DrawRectangle(x - 1, y - 1, w + 2, h + 2, Color2);
+	DrawRectangle(x, y, w, h, Color1);
+}
+
 #pragma endregion

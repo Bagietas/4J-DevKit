@@ -332,7 +332,7 @@ int ValueFOV = 128;
 bool RainbowSky = false;
 
 //Modules Options
-bool Zoom, TPAura, Nuker;
+bool Zoom, TPAura, Nuker, keystrokes;
 
 //Egg spawner options
 bool DragonEggSpawner = false;

@@ -51,7 +51,7 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\UI.h(15,20): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\UI.h(48,30): warning 2520: invalid narrowing conversion from "double" to "int"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\UI.h(49,30): warning 2520: invalid narrowing conversion from "double" to "int"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\struct.h(49,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
   
@@ -67,25 +67,25 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Minecraft/entity/player/ServerPlayer.h(30,14): warning 1011: function "Player::displayClientMessage(const std::string &)" is hidden by "ServerPlayer::displayClientMessage" -- virtual function override intended?
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(177,65): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(186,65): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(178): warning 942: missing return statement at end of non-void function "Font_width"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(187): warning 942: missing return statement at end of non-void function "Font_width"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(181,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(190,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(181,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(190,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(181,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(190,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(185,63): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(194,63): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(185,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(194,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(185,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(194,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(189,89): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(198,89): warning 1322: taking the address of a temporary
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(193,87): warning 1322: taking the address of a temporary
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\GameFunctions.h(202,87): warning 1322: taking the address of a temporary
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Functions.h(214,8): warning 1070: returning pointer to local variable
   
@@ -95,7 +95,7 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Functions.h(453,34): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (3 of keyboard) of type "wchar_t *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Modules.h(25,20): warning 2520: invalid narrowing conversion from "int" to "char"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Modules.h(199,20): warning 2520: invalid narrowing conversion from "int" to "char"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Hooking.h(23): warning 942: missing return statement at end of non-void function "asm_SetPresenceDetails_Hook"
   
@@ -113,7 +113,7 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\DrawHudsFunctions.h(9,7): warning 178: variable "endl" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\DrawHudsFunctions.h(197,5): warning 178: variable "width" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\DrawHudsFunctions.h(191,5): warning 178: variable "width" was declared but never referenced
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(18,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
@@ -135,33 +135,33 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(178,7): warning 178: variable "modules_name" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(234,35): warning 2520: invalid narrowing conversion from "int" to "unsigned char"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(211,35): warning 2520: invalid narrowing conversion from "int" to "unsigned char"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(654,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(631,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(654,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(631,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(710,8): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(687,8): warning 178: variable "color2" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(634,5): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(611,5): warning 178: variable "color2" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(782,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(759,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(782,103): warning 175: expression has no effect
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(759,103): warning 175: expression has no effect
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(838,8): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(815,8): warning 178: variable "color2" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(762,5): warning 178: variable "color2" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(739,5): warning 178: variable "color2" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1089,8): warning 178: variable "systemperature" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1066,8): warning 178: variable "systemperature" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1244,12): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1221,12): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1245,14): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1222,14): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1251,13): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1228,13): warning 2623: conversion from a string literal to "char *" is deprecated
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1252,15): warning 2623: conversion from a string literal to "char *" is deprecated
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\HudsFunctions.h(1229,15): warning 2623: conversion from a string literal to "char *" is deprecated
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Offsets.h(50,17): warning 2520: invalid narrowing conversion from "int" to "char"
   
@@ -975,15 +975,15 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Options.h(1441,25): warning 1628: argument of type "const char *" is incompatible with parameter (1 of NAME_CHANGER) of type "char *"
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Options.h(5020,5): warning 178: variable "test" was declared but never referenced
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Options.h(5044,5): warning 178: variable "test" was declared but never referenced
   
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\LoopFunctions.h(47,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\LoopFunctions.h(50,11): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(618,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(619,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(620,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(621,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\menu.h(622,14): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\DownCraft SPRX Source Code\MC\Startup.h(41,24): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   

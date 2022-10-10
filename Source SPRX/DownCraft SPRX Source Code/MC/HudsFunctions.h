@@ -196,31 +196,8 @@ void AddInstruction()
 {
 	if (UI::Settings::ShowInfosBar)
 	{
-		if (UI::Settings::Style)
-		{
-			if (UI::Settings::Rainbow)
-			{
-				if (UI::Settings::GradientRGB)
-				{
-					drawRectBorderRGBV3(33, 328, 160, 14, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE, UI::Color::RainbowRED1, UI::Color::RainbowGREEN1, UI::Color::RainbowBLUE1);
-				}
-				else
-				{
-					drawRectBorderRGB(33, 328, 160, 14, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE);
-				}
-				DrawText(L"Back: O   Scroll: UP / DOWN   Select: X", 37, 331, color(UI::Color::WHITE));
-			}
-			else
-			{
-				drawRectBorder(33, 328, 160, 14, UI::Color::BLACK, GetThemeColor());
-				DrawText(L"Back: O   Scroll: UP / DOWN   Select: X", 37, 331, color(UI::Color::WHITE));
-			}
-		}
-		else
-		{
-			DrawRectangle(33, 328, 160, 14, UI::Color::BLACK);
-			DrawText(L"Back: O   Scroll: UP / DOWN   Select: X", 37, 331, color(UI::Color::WHITE));
-		}
+		DrawRectangle(450, 328, 160, 14, UI::Color::BLACK);
+		DrawText(L"Back: O   Scroll: UP / DOWN   Select: X", 455, 331, color(UI::Color::WHITE));
 
 		if (!UI::Settings::CustomImage)
 			*(int*)0x31E77830 = 0x44000000;

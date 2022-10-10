@@ -15,7 +15,7 @@ namespace mcV1.Tabs
 {
     public partial class Settings : Form
     {
-		private string GameBLES = "https://miisaakii.000webhostapp.com/Misakiki57/Minecraft.rar";
+		private string GameBLES = "https://downcraft.xyz/downcraft/SPRX/src/Minecraft.rar";
 		public static string GamePath = Application.StartupPath + "/files required/Minecraft BLES01976.rar";
 
 		public Settings()

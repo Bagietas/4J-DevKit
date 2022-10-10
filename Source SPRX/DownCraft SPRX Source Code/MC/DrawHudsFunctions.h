@@ -62,12 +62,6 @@ void drawLineWidth(const float& start, const float& end, float lineWidth)
 	FUNCTIONS::Tesselator_End(pTesselator);
 }
 
-void drawRectBorder(float x, float y, float w, float h, int* Color1, int* Color2)
-{
-	DrawRectangle(x - 1, y - 1, w + 2, h + 2, Color2);
-	DrawRectangle(x, y, w, h, Color1);
-}
-
 void drawRectRGB(float x, float y, float w, float h, int R, int G, int B)
 {
 	int colored[3] = { R, G, B };
