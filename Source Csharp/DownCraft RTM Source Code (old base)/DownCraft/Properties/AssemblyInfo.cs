@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DownCraft RTM Tool")]
 [assembly: AssemblyDescription("A powerful real-time modding tool for Minecraft PS3 - update 1.84")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("UltimateCraft Official & DownCraft Official")]
+[assembly: AssemblyCompany("DownCraft Official")]
 [assembly: AssemblyProduct("DownCraft RTM Tool")]
-[assembly: AssemblyCopyright("Copyright © UltimateCraft Official 2022")]
-[assembly: AssemblyTrademark("EternalModz")]
+[assembly: AssemblyCopyright("Copyright © DownCraft Official 2022")]
+[assembly: AssemblyTrademark("Misakiii")]
 [assembly: AssemblyCulture("")]
 
 // L'affectation de la valeur false à ComVisible rend les types invisibles dans cet assembly
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Vous pouvez spécifier toutes les valeurs ou indiquer les numéros de build et de révision par défaut
 // en utilisant '*', comme indiqué ci-dessous :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

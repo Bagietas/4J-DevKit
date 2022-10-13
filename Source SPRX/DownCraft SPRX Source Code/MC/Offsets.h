@@ -4890,4 +4890,7 @@ namespace Offsets
 			SetNotify(L"Phase V1 BETA: OFF");
 		}
 	}
+
+
+	//sword level = 0x321EC920
 }

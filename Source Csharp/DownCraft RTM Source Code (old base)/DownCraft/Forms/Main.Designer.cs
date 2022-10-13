@@ -1826,7 +1826,7 @@ namespace DownCraft
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(13, 9);
+            this.label29.Location = new System.Drawing.Point(246, 9);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(367, 17);
             this.label29.TabIndex = 202;
@@ -1968,7 +1968,7 @@ namespace DownCraft
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 242;
-            this.label11.Text = "Version 4.1";
+            this.label11.Text = "Version 1.0";
             // 
             // Host_Tab
             // 
@@ -5920,7 +5920,7 @@ namespace DownCraft
             this.guna2GroupBox18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.guna2GroupBox18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox18.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox18.Location = new System.Drawing.Point(18, 346);
+            this.guna2GroupBox18.Location = new System.Drawing.Point(570, 212);
             this.guna2GroupBox18.Name = "guna2GroupBox18";
             this.guna2GroupBox18.ShadowDecoration.BorderRadius = 9;
             this.guna2GroupBox18.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -5966,7 +5966,7 @@ namespace DownCraft
             this.guna2GroupBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.guna2GroupBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox5.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox5.Location = new System.Drawing.Point(18, 445);
+            this.guna2GroupBox5.Location = new System.Drawing.Point(846, 212);
             this.guna2GroupBox5.Name = "guna2GroupBox5";
             this.guna2GroupBox5.ShadowDecoration.BorderRadius = 9;
             this.guna2GroupBox5.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -6393,7 +6393,6 @@ namespace DownCraft
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(149, 25);
             this.guna2TextBox1.TabIndex = 0;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2GroupBox16
             // 

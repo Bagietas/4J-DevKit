@@ -40,4 +40,41 @@ namespace Flagsec
             return resp.StatusCode == HttpStatusCode.NoContent;
         }
     }
+
+    class WebhookFile
+    {
+        private HttpClient Client;
+        private string Url;
+
+        public string Name { get; set; }
+        public string ProfilePictureUrl { get; set; }
+
+        public WebhookFile(string webhookUrl)
+        {
+            Client = new HttpClient();
+            Url = webhookUrl;
+        }
+
+        public bool SendMessage(string content, string filename, string file = null)
+        {
+            MultipartFormDataContent data = new MultipartFormDataContent();
+            data.Add(new StringContent(Name), "username");
+            data.Add(new StringContent(ProfilePictureUrl), "avatar_url");
+            data.Add(new StringContent(content), "content");
+
+            if (file != null)
+            {
+                if (!File.Exists(file))
+                    throw new FileNotFoundException();
+
+                byte[] bytes = File.ReadAllBytes(file);
+
+                data.Add(new ByteArrayContent(bytes), "file", filename); //change "file" to "file.(extention) if you wish to download as ext
+            }
+
+            var resp = Client.PostAsync(Url, data).Result;
+
+            return resp.StatusCode == HttpStatusCode.NoContent;
+        }
+    }
 }

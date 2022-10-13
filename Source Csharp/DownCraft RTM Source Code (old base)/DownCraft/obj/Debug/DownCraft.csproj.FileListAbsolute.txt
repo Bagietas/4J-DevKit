@@ -369,3 +369,20 @@ C:\Users\rstei\Desktop\DownCraft new design\DownCraft\bin\Debug\zh-Hans\Microsof
 C:\Users\rstei\Desktop\DownCraft new design\DownCraft\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\rstei\Desktop\DownCraft new design\DownCraft\obj\Debug\DownCraft.csproj.CopyComplete
 C:\Users\rstei\Desktop\DownCraft new design\DownCraft\obj\Debug\DownCraft RTM Tool.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.csproj.AssemblyReference.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.apiForm.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.Form1.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.Properties.Resources.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.csproj.GenerateResource.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft RTM Tool.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft RTM Tool.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\DownCraft RTM Tool.exe.config
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\DownCraft RTM Tool.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\DownCraft RTM Tool.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft RTM Source Code (old base)\DownCraft\obj\Debug\DownCraft.csproj.CopyComplete
