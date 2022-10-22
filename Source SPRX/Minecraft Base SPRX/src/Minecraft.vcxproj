@@ -72,7 +72,7 @@
       <GenerateSnMapFile>FullMapFile</GenerateSnMapFile>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST "$(TargetDir)loadSprx.exe"  "$(TargetDir)loadSprx.exe"</Command>
+      <Command>IF EXIST "$(TargetDir)InjectSPRX.exe"  "$(TargetDir)InjectSPRX.exe"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
@@ -98,21 +98,19 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Memory\Detour.cpp" />
-    <ClCompile Include="Memory\Pattern.cpp" />
-    <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="Menu\Main.cpp" />
     <ClCompile Include="Util\FileSystem.cpp" />
     <ClCompile Include="Util\SystemCalls.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Buttons.h" />
-    <ClInclude Include="Functions.h" />
-    <ClInclude Include="GamesFunctions.h" />
-    <ClInclude Include="Hooking.h" />
-    <ClInclude Include="Huds.h" />
-    <ClInclude Include="Includes.h" />
-    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Games\Buttons.h" />
+    <ClInclude Include="Games\Functions.h" />
+    <ClInclude Include="Games\GamesFunctions.h" />
+    <ClInclude Include="Games\Hooking.h" />
+    <ClInclude Include="Menu\Huds.h" />
+    <ClInclude Include="Games\IDs.h" />
+    <ClInclude Include="Util\Includes.h" />
+    <ClInclude Include="Menu\Menu.h" />
     <ClInclude Include="Minecraft\blockentity\BlockEntity.h" />
     <ClInclude Include="Minecraft\blockentity\BlockEntityFactory.h" />
     <ClInclude Include="Minecraft\blockentity\BlockEntityType.h" />
@@ -872,18 +870,16 @@
     <ClInclude Include="Minecraft\world\phys\Matrix.h" />
     <ClInclude Include="Minecraft\world\phys\Vec2.h" />
     <ClInclude Include="Minecraft\world\phys\Vec3.h" />
-    <ClInclude Include="Memory\Detour.hpp" />
-    <ClInclude Include="Memory\Pattern.hpp" />
-    <ClInclude Include="PS3.h" />
-    <ClInclude Include="Struct.h" />
-    <ClInclude Include="SubMenu.h" />
+    <ClInclude Include="Games\Offsets.h" />
+    <ClInclude Include="Games\PS3.h" />
+    <ClInclude Include="Games\Struct.h" />
+    <ClInclude Include="Menu\SubMenu.h" />
     <ClInclude Include="Util\Exports.hpp" />
-    <ClInclude Include="Memory\Memory.hpp" />
     <ClInclude Include="Util\FileSystem.hpp" />
     <ClInclude Include="Util\NewDeleteOverride.hpp" />
     <ClInclude Include="Util\SystemCalls.hpp" />
     <ClInclude Include="Util\TimeHelpers.hpp" />
-    <ClInclude Include="Variables.h" />
+    <ClInclude Include="Util\Variables.h" />
   </ItemGroup>
   <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

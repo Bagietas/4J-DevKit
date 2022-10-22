@@ -63,9 +63,9 @@ namespace RPCS3_Memory_Writer.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] EBOOT {
+        internal static byte[] make {
             get {
-                object obj = ResourceManager.GetObject("EBOOT", resourceCulture);
+                object obj = ResourceManager.GetObject("make", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace RPCS3_Memory_Writer.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
-        internal static byte[] make {
+        internal static byte[] unself {
             get {
-                object obj = ResourceManager.GetObject("make", resourceCulture);
+                object obj = ResourceManager.GetObject("unself", resourceCulture);
                 return ((byte[])(obj));
             }
         }

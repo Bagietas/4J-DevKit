@@ -150,7 +150,6 @@ namespace mcV1.Tabs
             this.label2.MouseDown += this.xMouseDown;
             this.label2.MouseMove += this.xMouseMove;
 
-            mcV1.Classes.Misaki.Start();
             CheckProcess.Start();
 
             CheckCCAPI();

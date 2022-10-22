@@ -16,7 +16,7 @@ namespace mcV1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mcV1.Tabs.Login());
+            Application.Run(new Form1());
         }
     }
 }

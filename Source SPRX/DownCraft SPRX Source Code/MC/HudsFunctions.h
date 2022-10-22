@@ -1091,7 +1091,7 @@ void GetPosition()
 		wchar_t woption[0x100];
 		_sys_memset(option, 0, 0x100);
 		_sys_memset(woption, 0, 0x200);
-		_sys_snprintf(option, 0x100, "Position: (%i, %i, %i)", (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX - 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY + 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ);
+		_sys_snprintf(option, 0x100, "Position: %i, %i, %i", (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX - 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY + 1, (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ);
 		StringToWideCharacter(woption, option, strlen(option));
 
 		int width = Font_width(woption);

@@ -18,9 +18,11 @@ namespace RPCS3_Memory_Writer
     {
         #region "Variables"
 
+        string EBOOT_BIN = "//";
         string TMP = Path.GetTempPath() + "PS3";
         const string MAKE = "make.exe";
-        public static string MINECRAFT = "EBOOT.ELF";
+        const string UNSELF = "unself.exe";
+        public static string GAME = "EBOOT.ELF";
 
         #endregion
         #region "Functions"
@@ -78,18 +80,36 @@ namespace RPCS3_Memory_Writer
                 Directory.CreateDirectory(TMP);
             }
 
+            TMP += "\\";
+
             if (!File.Exists(TMP + MAKE))
             {
                 LoadFiles(TMP + MAKE, Properties.Resources.make);
             }
-            if (!File.Exists(TMP + MINECRAFT))
+            if (!File.Exists(TMP + UNSELF))
             {
-                LoadFiles(TMP + MINECRAFT, Properties.Resources.EBOOT);
+                LoadFiles(TMP + UNSELF, Properties.Resources.unself);
             }
+
+            MessageBox.Show("Before load your EBOOT, make sure that EBOOT is signed as 'DEX OFW' NON-DRM EBOOT");
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "EBOOT (*.BIN*)|*.BIN*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                EBOOT_BIN = System.IO.Path.GetDirectoryName(openFileDialog.FileName) + @"EBOOT.BIN";
+
+                string sourceFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(openFileDialog.FileName), @"EBOOT.BIN");
+                string destFile = System.IO.Path.Combine(TMP, @"EBOOT.BIN");
+                System.IO.File.Copy(sourceFile, destFile, true);
+
+                ExecCmd(TMP + UNSELF, "EBOOT.BIN" + " " + "EBOOT.ELF");
+            }
+
+            bn = new BinaryWriter(File.Open(TMP + GAME, FileMode.Open, FileAccess.Write));
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Directory.Delete(TMP, true);
+            Directory.Delete(Path.GetTempPath() + @"\PS3", true);
         }
 
         #endregion
@@ -106,22 +126,20 @@ namespace RPCS3_Memory_Writer
 
             if (sv.ShowDialog() == DialogResult.OK)
             {
-                ExecCmd(TMP + MAKE, TMP + MINECRAFT + " " + sv.FileName);
+                ExecCmd(TMP + MAKE, TMP + GAME + " " + sv.FileName);
             }
-
-            File.Delete(TMP + MINECRAFT);
-            LoadFiles(TMP + MINECRAFT, Properties.Resources.EBOOT);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            uint address = Convert.ToUInt32(textBox1.Text, 16);
+            uint address = Convert.ToUInt32(textBox1.Text, 16) - 65536;
             byte[] byteArray = StringToByteArray(textBox2.Text);
 
             try
             {
-                bn = new BinaryWriter(File.Open(TMP + MINECRAFT, FileMode.Open, FileAccess.Write));
                 PatchOffset(address, new byte[] { byteArray[0], byteArray[1], byteArray[2], byteArray[3] });
+
+                MessageBox.Show("Address: " + address.ToString() + " is now patched on EBOOT");
             }
             catch (Exception ex)
             {

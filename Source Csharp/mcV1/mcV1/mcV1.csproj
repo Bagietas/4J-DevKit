@@ -179,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\xwizard.exe" />
+    <None Include="Resources\snuvcdsm.exe" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">

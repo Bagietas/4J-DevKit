@@ -182,12 +182,6 @@ namespace Modules
 	}
 
 
-
-
-
-
-
-
 	void RainbowRenderName()
 	{
 		if (RainbowNameRender)

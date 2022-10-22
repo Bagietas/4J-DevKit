@@ -22,7 +22,7 @@ namespace mcV1.Classes
         WebClient web = new WebClient();
 
         public static string[] saveTxt = { "192.168.1.1", "Licence Key" };
-        public static bool Logged;
+        public static bool Logged = true;
         public static string LicenceKey;
         public static string SaveSettings = Application.StartupPath + "\\settings.txt";
         public static string CCAPI_setup = Application.StartupPath + "/files required/CCAPI-setupV2.60.exe";
