@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-.\Util/Variables.h(8,17): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(30,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\Games/Vector.h(24,9): warning 432: returning reference to local temporary
   
@@ -27,22 +27,48 @@
   
 .\Games\Struct.h(218,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
-.\Games/Functions.h(228,65): warning 1322: taking the address of a temporary
+.\Games/Functions.h(223,65): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(229): warning 942: missing return statement at end of non-void function "Font_width"
+.\Games\Functions.h(224): warning 942: missing return statement at end of non-void function "Font_width"
   
-.\Games\Functions.h(232,63): warning 1322: taking the address of a temporary
+.\Games\Functions.h(227,63): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(232,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\Functions.h(227,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\Functions.h(232,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\Functions.h(227,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\Functions.h(236,63): warning 1322: taking the address of a temporary
+.\Games\Functions.h(231,63): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(236,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\Functions.h(231,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\Functions.h(236,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\Functions.h(231,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\Functions.h(240,89): warning 1322: taking the address of a temporary
+.\Games\Functions.h(235,89): warning 1322: taking the address of a temporary
   
-  Minecraft.vcxproj -> C:\Users\rstei\Desktop\Minecraft Better Edition SPRX\bin\Debug-PS3\Minecraft.sprx
+.\Games\Functions.h(239,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+  
+.\Games\Functions.h(239,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+.\Games\Functions.h(239,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+.\Games\Functions.h(239,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+  
+.\Games/Options.h(17,23): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Games\Options.h(17,77): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Games\Options.h(17,131): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Games\Options.h(37,21): warning 2520: invalid narrowing conversion from "unsigned int" to "int"
+  
+.\Games\Options.h(47,31): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Options.h(47,40): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Options.h(47,49): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Options.h(47,58): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Options.h(86,4): warning 551: variable "click" is used before its value is set
+  
+  Minecraft.vcxproj -> C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin\Debug-PS3\Minecraft.sprx

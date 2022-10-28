@@ -5,25 +5,6 @@ enum eMenus
 	MainMenu, BetterMenu, MicsMenu, SettingsMenu, CreditsMenu
 };
 
-char* checkTxt = "";
-wchar_t charA2wcharA_[1000];
-
-int MenuX, MenuY;
-
-//Scroller
-bool gotTime[1000], keyPressed[100], freeFirst[100], resetWait[100], resetWait2[100], lockFirst[100];
-int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[1000], scroll = 0;
-
-//menu
-int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress;
-bool Opened, Closed;
-int MenuColorAlpha = 255, MenuColorAlphaTitle = 255, MenuColorAlphaDescription = 255;
-int SavePosition, AnimationSpeed = 10;
-int SaveMenuX, speedSlider = 10;
-bool TogglePosition, ToggleGametime;
-//Rainbow color
-int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2,  RainbowColor[3];
-
 namespace MC_Color
 {
 	int DarkRed[3] = { 170, 0, 0 };
@@ -42,4 +23,34 @@ namespace MC_Color
 	int Gray[3] = { 170, 170, 170 };
 	int DarkGray[3] = { 85, 85, 85 };
 	int Black[3] = { 0, 0, 0 };
+	int BlackTheme[3] = { 32, 32, 32 };
+	int ColorTheme[3] = { 0, 147, 255 };
 };
+
+char* checkTxt = "";
+wchar_t charA2wcharA_[1000];
+
+int MenuX = -41, MenuY = 6;
+
+//Scroller
+bool gotTime[1000], keyPressed[100], freeFirst[100], resetWait[100], resetWait2[100], lockFirst[100];
+int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[1000], scroll = 0;
+
+//menu
+int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 11;
+bool Opened, Closed;
+int MenuColorAlpha = 255, MenuColorAlphaTitle = 255, MenuColorAlphaDescription = 255;
+int SavePosition, AnimationSpeed = 10;
+int SaveMenuX, speedSlider = 10;
+bool ToggleTitleSPRX = true, TogglePosition, ToggleGametime, TogglePing, ToggleKeystrokes, ToggleCPS;
+
+//Rainbow color
+int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2,  RainbowColor[3];
+int Rainbow[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
+
+//Keystrokes
+float keystrokesBase_x = 0, keystrokesBase_y = 0;
+int keystrokes_TextX[] = { 60,60,42,78 }, keystrokes_TextY[] = { 254,272,272,272 };
+int* keystrokes_TextColor[] = { MC_Color::White, MC_Color::White, MC_Color::White, MC_Color::White };
+int keystrokesHudX[] = { 55,55,37,73,37,40 }, keystrokesHudY[] = { 250,268,268,268,288,294 }, HudW[] = { 15,15,15,15,51,45 }, HudH[] = { 15,15,15,15,10,0 };
+int* keystrokesHudColor1[] = { MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::White };

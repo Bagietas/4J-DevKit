@@ -1,6 +1,6 @@
 #pragma once
 
-int DebugX = 49, DebugY = 69, DebugW = 190, DebugH = 82;
+int DebugX = 0, DebugY = 0, DebugW = 0, DebugH = 0;
 void DebugHud()
 {
 	if (Buttons::IsMCButtonPressed(Buttons::LEFT)) { NyTekCFW::sleep(80); DebugX += 1; }
@@ -19,15 +19,13 @@ void BetterOptions()
 	*(int*)0x0090FB6C = 0x40820008; //hotbar down
 	*(int*)0x00AD5A5C = 0x6F800000; //entity more red when attacked
 	//*(int*)0x0022C370 = 0x3FC99999; //no more collission entity
-	*(int*)0x00A9A6DC = 0x3EDF6666; //better day light
-	*(int*)0x004AA398 = 0xBFE00000; //better riding Height
-	*(int*)0x002230C4 = 0xBFE00000; //see all entity
+	//*(int*)0x00A9A6DC = 0x3EDF6666; //better day light
+	//*(int*)0x004AA398 = 0xBFE00000; //better riding Height
+	//*(int*)0x002230C4 = 0xBFE00000; //see all entity
 }
 
 void Render()
 {
-	int RAINBOW1[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
-	int RAINBOW2[3] = { RainbowRED2, RainbowGREEN2, RainbowBLUE2 };
-	DrawGradientBorder(80, 80, 120, 120, RAINBOW1, RAINBOW2, MC_Color::Black, 2);
+	DebugHud();
 	RenderSubMenu();
 }
