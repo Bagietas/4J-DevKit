@@ -3,6 +3,7 @@
 #include <string>
 #include <functional>
 #include "../AppPlatformListener.h"
+#include <Minecraft/client/renderer/texture/TextureGroup.h>
 
 class Options;
 class Color;
@@ -16,7 +17,7 @@ public:
 	Font(std::string const &, TextureGroup *);
 	virtual ~Font();
 	virtual void onAppSuspended();
-	void _buildChar(std::vector<GlyphQuad> &, int, Color const &, bool, float, float, bool);
+	//void _buildChar(std::vector<GlyphQuad> &, int, Color const &, bool, float, float, bool);
 	void _containsUnicodeChar(std::string const &);
 	void _containsWideChar(std::string const &);
 	void _getCharWidth(int, bool);
@@ -25,7 +26,7 @@ public:
 	void clearCache();
 	void draw(std::string const &, float, float, Color const &);
 	void draw(std::string const &, float, float, Color const &, bool);
-	void drawCached(std::string const &, float, float, Color const &, bool, mce::MaterialPtr *);
+	//void drawCached(std::string const &, float, float, Color const &, bool, mce::MaterialPtr *);
 	void drawShadow(std::string const &, float, float, Color const &);
 	void drawTransformed(std::string const &, float, float, Color const &, float, float, bool, float);
 	void drawWordWrap(std::string const &, float, float, float, Color const &, bool, bool);
@@ -37,5 +38,5 @@ public:
 	void height(std::string const &, int);
 	void init();
 	void resetFormat(Color const &);
-	void splitLinesInBox(std::string const &, int, std::function<void (std::string const &, int)>);
+	//void splitLinesInBox(std::string const &, int, std::function<void (std::string const &, int)>);
 };

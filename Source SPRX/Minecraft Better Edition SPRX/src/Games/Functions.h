@@ -337,4 +337,15 @@ void DrawsnprintfText(const char* format, int* args, float x, float y)
 	DrawTextWithRectangle(woption, x, y, MC_Color::BlackTheme, false);
 }
 
+void SendMessageInfo(const wchar_t* title, const wchar_t* message, int style)
+{
+	if (style == 1)
+	{
+		int width = Font_width(message);
+		DrawRectangleBorder(640 - width - 3, SendMessageInfoPosX, width + 2, 22, SendMessageInfoRectColor, SendMessageInfoBorderColor, 1);
+		DrawTextWithShadow(title, 640 - width - 2, SendMessageInfoPosX + 2, color(MC_Color::White));
+		DrawTextWithShadow(message,  640 - width - 2, SendMessageInfoPosX + 13, color(MC_Color::Aqua));
+	}
+}
+
 #pragma endregion

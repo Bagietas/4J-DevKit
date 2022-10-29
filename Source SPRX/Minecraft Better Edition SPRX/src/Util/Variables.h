@@ -32,6 +32,10 @@ wchar_t charA2wcharA_[1000];
 
 int MenuX = -41, MenuY = 6;
 
+//Send Message Info
+int SendMessageInfoPosX = 467, SendMessageInfoPosY = 43;
+int SendMessageInfoRectColor[] = { 22, 8, 21 }, SendMessageInfoBorderColor[] = { 34, 8, 72 };
+
 //Scroller
 bool gotTime[1000], keyPressed[100], freeFirst[100], resetWait[100], resetWait2[100], lockFirst[100];
 int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[1000], scroll = 0;
