@@ -58,6 +58,39 @@ namespace Menu
 		MaxOption += 1;
 	}
 
+	void AddIntOption(const wchar_t* option, int currentopt, int min, int max, int& IntOption)
+	{
+		DrawText(option, MenuX + 513, MenuY + 71 + (SpaceBetweenText * MaxOption), color(MC_Color::White));
+
+		if (CurrentOpt == currentopt)
+		{
+			if (Buttons::IsMCButtonPressed(Buttons::LEFT))
+			{
+				if (frameTime(3, 1, false))
+				{
+					if (IntOption < min + 1)
+						IntOption = max;
+					else
+						IntOption = IntOption - 1;
+				}
+			}
+			if (Buttons::IsMCButtonPressed(Buttons::RIGHT))
+			{
+				if (frameTime(3, 1, false))
+				{
+					if (IntOption > max - 1)
+						IntOption = min;
+					else
+						IntOption = IntOption + 1;
+				}
+			}
+		}
+
+		int value = { IntOption };
+		DrawSnprintf("< %i >    ", value, MenuX + 620, MenuY + 71 + (SpaceBetweenText * MaxOption));
+		MaxOption += 1;
+	}
+
 	void AddBoolOption(const wchar_t* option, bool toggle)
 	{
 		int* insideColor = toggle ? MC_Color::Red : MC_Color::Green;

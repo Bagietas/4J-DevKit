@@ -15,7 +15,7 @@ namespace Options
 		if (TogglePosition)
 		{
 			int position[3] = { mc->theMinecraft->cMultiplayerLocalPlayer->LocationX, mc->theMinecraft->cMultiplayerLocalPlayer->LocationY, mc->theMinecraft->cMultiplayerLocalPlayer->LocationZ };
-			DrawsnprintfText("Position: %i, %i, %i", position, 0, 47);
+			DrawsnprintfText("Position: %i, %i, %i", position, 0, 47, true);
 		}
 	}
 
@@ -26,7 +26,7 @@ namespace Options
 			int milliseconds, seconds, minutes, hours;
 			milliseconds = mc->gameTime; seconds = (milliseconds / 60); minutes = seconds / 60; hours = minutes / 60;
 			int gametime[3] = { int(hours % 24), int(minutes % 60), int(seconds % 60) };
-			DrawsnprintfText("Gametime: %ih:%imin:%isec", gametime, 0, 36);
+			DrawsnprintfText("Gametime: %ih:%imin:%isec", gametime, 0, 36, true);
 		}
 	}
 
@@ -35,7 +35,7 @@ namespace Options
 		if (TogglePing)
 		{
 			int getPing[] = { mc->FPS };
-			DrawsnprintfText("Ping: %i ms", getPing, 0, 57);
+			DrawsnprintfText("Ping: %i ms", getPing, 0, 57, true);
 		}
 	}
 
@@ -82,11 +82,11 @@ namespace Options
 		int click;
 		if (ToggleCPS)
 		{
-			if (Buttons::IsMCButtonPressed(Buttons::X))
+			if (Buttons::IsMCButtonPressed(Buttons::R2))
 				click += 1;
 
 			int getClick[] = { click };
-			DrawsnprintfText("CPS: %i", getClick, 0, 68);
+			DrawsnprintfText("CPS: %i", getClick, 0, 68, true);
 		}
 	}
 }

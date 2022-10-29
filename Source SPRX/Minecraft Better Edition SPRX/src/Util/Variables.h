@@ -42,6 +42,7 @@ int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[10
 
 //menu
 int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 11;
+bool BtnLeftPressed, BtnRightPressed;
 bool Opened, Closed;
 int MenuColorAlpha = 255, MenuColorAlphaTitle = 255, MenuColorAlphaDescription = 255;
 int SavePosition, AnimationSpeed = 10;

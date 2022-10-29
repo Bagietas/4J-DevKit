@@ -53,10 +53,10 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .rela.plt
 00000000 00000000     1 .rela.tocbss
 00000000 00000000     1 .init
-00000000 00008c3c     4 .text
-00000000 00006a7c     4         .text
-00000000 00006a7c     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00006a48 00000034     0                         .__sti___8_Main_cpp__Znwj
+00000000 000092fc     4 .text
+00000000 0000713c     4         .text
+00000000 0000713c     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00007108 00000034     0                         .__sti___8_Main_cpp__Znwj
 00000000 0000003c     0                         operator new(unsigned int)
 0000003c 00000048     0                         operator new(unsigned int, std::nothrow_t const&)
 00000084 00000054     0                         operator new(unsigned int, unsigned int)
@@ -105,7 +105,7 @@ Address  Size     Align Out     In      File    Symbol
 00001e90 00000058     0                         SlideOpenMenuAnimation()
 00001ee8 0000005c     0                         SlideCloseMenuAnimation()
 00001f44 000002fc     0                         Controller()
-000049b0 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
+00004d98 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
 00002240 00000068     0                         PlayUISound(unsigned int*)
 000022a8 000000c8     0                         mc_printf(char const*, ...)
 00002370 00000120     0                         Font_width(wchar_t const*)
@@ -114,132 +114,134 @@ Address  Size     Align Out     In      File    Symbol
 0000284c 0000017c     0                         DrawTextWithShadow(wchar_t const*, unsigned int, unsigned int, unsigned int)
 000029c8 000001e0     0                         DrawRectangleAlpha(float, float, float, float, Color)
 00002ba8 0000020c     0                         DrawRectangle(float, float, float, float, int*)
-00005598 00000138     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
+00005980 00000138     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
 00002db4 00000188     0                         DrawRectangleBorder(float, float, float, float, int*, int*, int)
 00002f3c 000003ec     0                         DrawGradientRectangle(float, float, float, float, int*, int*, bool)
 00003328 00000160     0                         DrawGradientBorder(float, float, float, float, int*, int*, int*, int, bool)
 00003488 00000358     0                         drawLine(Vector2 const&, Vector2 const&, int*)
 000037e0 00000298     0                         DrawTextWithRectangle(wchar_t const*, float, float, int*, bool)
-00003a78 00000160     0                         DrawsnprintfText(char const*, int*, float, float)
-00003bd8 00000190     0                         SendMessageInfo(wchar_t const*, wchar_t const*, int)
-00003d68 00000034     0                         getOption()
-00003d9c 000000c8     0                         RenderClosePage()
-00003e64 00000540     0                         RenderSubMenu()
-00005a78 0000024c     0                         Menu::AddTitle(wchar_t const*)
-000057dc 000001ac     0                         Menu::Description(wchar_t const*)
-00005e24 000000dc     0                         Menu::AddOption(wchar_t const*)
-00005f00 000001b8     0                         Menu::AddBoolOption(wchar_t const*, bool)
-00005cc4 00000160     0                         Menu::AddSubOption(wchar_t const*)
-0000610c 0000002c     0                         Offsets::CLOSE_MINECRAFT()
-000043a4 00000124     0                         DebugHud()
-000044c8 00000028     0                         BetterOptions()
-000044f0 00000024     0                         Render()
-00004514 0000004c     0                         LoopOptions()
-000056d0 00000074     0                         Menu::TitleSPRX(wchar_t const*)
-00006228 000000c4     0                         Options::ShowPosition()
-000062ec 00000194     0                         Options::ShowGametime()
-00006480 0000006c     0                         Options::ShowPing()
-000064ec 000004d8     0                         Options::ShowKeystrokes()
-000069c4 00000084     0                         Options::ShowCPS()
-00004560 00000030     0                         RenderScreen_Stub(unsigned int, unsigned int)
-00004590 0000003c     0                         asm_LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
-000045cc 0000003c     0                         asm_Player_HurtHook(ServerPlayer*, DamageSource*, float)
-00004608 00000044     0                         Gui_render_Stub(GuiComponent*, double)
-0000464c 000000c4     0                         RenderScreen_Hook(unsigned int, unsigned int)
-00004710 00000068     0                         LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
-00004778 00000068     0                         Player_actuallyHurtHook(ServerPlayer*, DamageSource*, float)
-000047e0 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
-0000485c 0000008c     0                         InstallHooks()
-000048e8 0000006c     0                         UninstallHooks()
-00004954 00000028     0                         .Minecraft_Main
-0000497c 00000024     0                         .Minecraft_Stop
-000049a0 00000010     0                         Buttons::getMCButtons()
-00004a0c 00000048     0                         NyTekCFW::sleep(unsigned long long)
-00004a54 000000a0     0                         NyTekCFW::ReadBytes(int, int)
-00004af4 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
-00004b9c 000000d4     0                         NyTekCFW::WriteString(int, char*)
-00004c70 0000007c     0                         NyTekCFW::Zone(int, float*)
-00004cec 00000038     0                         NyTekCFW::FloatToHex(float)
-00004d24 00000038     0                         NyTekCFW::IntToHex(int)
-00004d5c 00000054     0                         myMath::abs(float)
-00004db0 00000044     0                         myMath::DegreesToRadians(float)
-00004df4 00000044     0                         myMath::RadiansToDegrees(float)
-00004e38 000001f4     0                         myMath::sin(float)
-0000502c 00000068     0                         myMath::cos(float)
-00005094 000003f4     0                         myMath::atan(double, int)
-00005488 00000110     0                         myMath::atan2(double, double)
-00005744 00000098     0                         Menu::Scrollbar()
-00005988 000000f0     0                         Menu::AddHuds()
-000060b8 00000054     0                         Offsets::GOD_MODE(bool)
-00006138 00000004     0                         Offsets::RESTART_MINECRAFT()
-0000613c 000000ec     0                         Offsets::TELEPORT(double, double, double)
-00006a7c 00000210     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00006a7c 0000007c     0                         GetModuleHandle(char const*)
-00006af8 00000124     0                         GetModuleInfo(int)
-00006c1c 00000070     0                         GetModuleFilePath(char const*)
-00006c8c 00000570     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-00006c8c 00000090     0                         sys_storage_ext_get_disc_type(unsigned int*, unsigned int*, unsigned int*)
-00006d1c 0000009c     0                         sys_storage_ext_fake_storage_event(unsigned long long, unsigned long long, unsigned long long)
-00006db8 0000008c     0                         cobra_send_fake_disc_eject_event()
-00006e44 00000090     0                         sys_map_path(char const*, char const*)
-00006ed4 0000004c     0                         DoesFileExist(char const*)
-00006f20 0000006c     0                         is_app_dir(char const*, char const*)
-00006f8c 00000144     0                         set_app_home(char const*)
-000070d0 0000012c     0                         do_umount()
-000071fc 000005c4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memcpy.o) (TOC#1,0)
-00007218 00000000     0                         .L310
-00007240 00000000     0                         .L301
-000072ac 00000000     0                         .L11
-00007394 00000000     0                         .L148
-000073ec 00000000     0                         .L73
-0000771c 00000000     0                         .L223
-00007770 00000000     0                         .L225
-000071fc 000005c4     0                         .memcpy
-000077c0 000012d4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memmove.o) (TOC#1,0)
-000078ec 00000000     0                         .L9
-000079c4 00000000     0                         .L80
-00007b6c 00000000     0                         .L259
-00007b78 00000000     0                         .L263
-00007c1c 00000000     0                         .L258
-00007d14 00000000     0                         .L140
-000081b4 00000000     0                         .L51
-0000837c 00000000     0                         .L55
-000077c0 000012d4     0                         .memmove
-00008a94 000000a4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(strlen.o) (TOC#1,0)
-00008ae0 00000000     0                         .LstrlenCacheLoopOuter
-00008a94 000000a4     0                         .strlen
-00008b38 00000030     4                 C:\usr\local\cell\target\ppu\lib\libc.a(wcslen.o) (TOC#1,0)
-00008b38 00000030     0                         .wcslen
-00008b68 000000d4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memset.o) (TOC#1,0)
-00008c08 00000000     0                         .L17
-00008b68 000000d4     0                         .memset
-00008b68 000000d4     0                         .memset_cs
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_printf
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_26.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsStat
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_28.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsUnlink
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_36.o) (TOC#1,0)
-00008c3c 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsChmod
-00008c3c 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_head.o) (TOC#1,0)
+00003a78 000002a8     0                         DrawsnprintfText(char const*, int*, float, float, bool)
+00003d20 00000158     0                         DrawSnprintf(char const*, int, int, int)
+00003e78 000002b8     0                         SendMessageInfo(wchar_t const*, wchar_t const*, int)
+00004130 00000034     0                         getOption()
+00004164 000000c8     0                         RenderClosePage()
+0000422c 00000560     0                         RenderSubMenu()
+00005e60 0000024c     0                         Menu::AddTitle(wchar_t const*)
+00005bc4 000001ac     0                         Menu::Description(wchar_t const*)
+0000620c 000000dc     0                         Menu::AddOption(wchar_t const*)
+000065b0 000001b8     0                         Menu::AddBoolOption(wchar_t const*, bool)
+000062e8 000002c8     0                         Menu::AddIntOption(wchar_t const*, int, int, int, int&)
+000060ac 00000160     0                         Menu::AddSubOption(wchar_t const*)
+000067bc 0000002c     0                         Offsets::CLOSE_MINECRAFT()
+0000478c 00000124     0                         DebugHud()
+000048b0 00000028     0                         BetterOptions()
+000048d8 00000024     0                         Render()
+000048fc 0000004c     0                         LoopOptions()
+00005ab8 00000074     0                         Menu::TitleSPRX(wchar_t const*)
+000068d8 000000c8     0                         Options::ShowPosition()
+000069a0 00000198     0                         Options::ShowGametime()
+00006b38 00000070     0                         Options::ShowPing()
+00006ba8 000004d8     0                         Options::ShowKeystrokes()
+00007080 00000088     0                         Options::ShowCPS()
+00004948 00000030     0                         RenderScreen_Stub(unsigned int, unsigned int)
+00004978 0000003c     0                         asm_LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
+000049b4 0000003c     0                         asm_Player_HurtHook(ServerPlayer*, DamageSource*, float)
+000049f0 00000044     0                         Gui_render_Stub(GuiComponent*, double)
+00004a34 000000c4     0                         RenderScreen_Hook(unsigned int, unsigned int)
+00004af8 00000068     0                         LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
+00004b60 00000068     0                         Player_actuallyHurtHook(ServerPlayer*, DamageSource*, float)
+00004bc8 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
+00004c44 0000008c     0                         InstallHooks()
+00004cd0 0000006c     0                         UninstallHooks()
+00004d3c 00000028     0                         .Minecraft_Main
+00004d64 00000024     0                         .Minecraft_Stop
+00004d88 00000010     0                         Buttons::getMCButtons()
+00004df4 00000048     0                         NyTekCFW::sleep(unsigned long long)
+00004e3c 000000a0     0                         NyTekCFW::ReadBytes(int, int)
+00004edc 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
+00004f84 000000d4     0                         NyTekCFW::WriteString(int, char*)
+00005058 0000007c     0                         NyTekCFW::Zone(int, float*)
+000050d4 00000038     0                         NyTekCFW::FloatToHex(float)
+0000510c 00000038     0                         NyTekCFW::IntToHex(int)
+00005144 00000054     0                         myMath::abs(float)
+00005198 00000044     0                         myMath::DegreesToRadians(float)
+000051dc 00000044     0                         myMath::RadiansToDegrees(float)
+00005220 000001f4     0                         myMath::sin(float)
+00005414 00000068     0                         myMath::cos(float)
+0000547c 000003f4     0                         myMath::atan(double, int)
+00005870 00000110     0                         myMath::atan2(double, double)
+00005b2c 00000098     0                         Menu::Scrollbar()
+00005d70 000000f0     0                         Menu::AddHuds()
+00006768 00000054     0                         Offsets::GOD_MODE(bool)
+000067e8 00000004     0                         Offsets::RESTART_MINECRAFT()
+000067ec 000000ec     0                         Offsets::TELEPORT(double, double, double)
+0000713c 00000210     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+0000713c 0000007c     0                         GetModuleHandle(char const*)
+000071b8 00000124     0                         GetModuleInfo(int)
+000072dc 00000070     0                         GetModuleFilePath(char const*)
+0000734c 00000570     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+0000734c 00000090     0                         sys_storage_ext_get_disc_type(unsigned int*, unsigned int*, unsigned int*)
+000073dc 0000009c     0                         sys_storage_ext_fake_storage_event(unsigned long long, unsigned long long, unsigned long long)
+00007478 0000008c     0                         cobra_send_fake_disc_eject_event()
+00007504 00000090     0                         sys_map_path(char const*, char const*)
+00007594 0000004c     0                         DoesFileExist(char const*)
+000075e0 0000006c     0                         is_app_dir(char const*, char const*)
+0000764c 00000144     0                         set_app_home(char const*)
+00007790 0000012c     0                         do_umount()
+000078bc 000005c4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memcpy.o) (TOC#1,0)
+000078d8 00000000     0                         .L310
+00007900 00000000     0                         .L301
+0000796c 00000000     0                         .L11
+00007a54 00000000     0                         .L148
+00007aac 00000000     0                         .L73
+00007ddc 00000000     0                         .L223
+00007e30 00000000     0                         .L225
+000078bc 000005c4     0                         .memcpy
+00007e80 000012d4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memmove.o) (TOC#1,0)
+00007fac 00000000     0                         .L9
+00008084 00000000     0                         .L80
+0000822c 00000000     0                         .L259
+00008238 00000000     0                         .L263
+000082dc 00000000     0                         .L258
+000083d4 00000000     0                         .L140
+00008874 00000000     0                         .L51
+00008a3c 00000000     0                         .L55
+00007e80 000012d4     0                         .memmove
+00009154 000000a4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(strlen.o) (TOC#1,0)
+000091a0 00000000     0                         .LstrlenCacheLoopOuter
+00009154 000000a4     0                         .strlen
+000091f8 00000030     4                 C:\usr\local\cell\target\ppu\lib\libc.a(wcslen.o) (TOC#1,0)
+000091f8 00000030     0                         .wcslen
+00009228 000000d4     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memset.o) (TOC#1,0)
+000092c8 00000000     0                         .L17
+00009228 000000d4     0                         .memset
+00009228 000000d4     0                         .memset_cs
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_printf
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_26.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsStat
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_28.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsUnlink
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_36.o) (TOC#1,0)
+000092fc 00000000     0                         _.prx.link.border.mark.sys_fs.cellFsChmod
+000092fc 00000000     1                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_head.o) (TOC#1,0)
 00000000 00000000     1 .fini
 00000000 000002a0     4 .sceStub.text
 00000000 00000038     4         .sceStub.text
@@ -267,9 +269,9 @@ Address  Size     Align Out     In      File    Symbol
 00000230 00000020     0                         .cellFsUnlink
 00000268 00000038     4                 C:\usr\local\cell\target\ppu\lib\libfs_stub.a(_sys_fs_0001_36.o) (TOC#1,0)
 00000268 00000020     0                         .cellFsChmod
-00000000 0000068c     4 .rodata
-00000000 00000544     4         .rodata
-00000000 00000544     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000006b4     4 .rodata
+00000000 0000056c     4         .rodata
+00000000 0000056c     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 00000004     0                         ..Lfi0._Z9getStringPKw
 00000004 00000004     0                         ..Lfi1._Z9getStringPKw
 00000008 00000004     0                         ..Lfi2._Z9getStringPKw
@@ -329,34 +331,35 @@ Address  Size     Align Out     In      File    Symbol
 00000140 00000004     0                         ..Lfi56._Z21DrawTextWithRectanglePKwffPib
 00000144 00000004     0                         ..Lfi57._Z21DrawTextWithRectanglePKwffPib
 00000148 00000004     0                         ..Lfi58._Z15SendMessageInfoPKwS0_i
-000002ec 0000001e     0                         ..LNst._Z13RenderSubMenuv.0
-00000370 0000001a     0                         ..LNst._Z13RenderSubMenuv.5
-00000484 00000014     0                         ..LNst._Z13RenderSubMenuv.17
-00000354 0000001c     0                         ..LNst._Z13RenderSubMenuv.4
-00000444 00000010     0                         ..LNst._Z13RenderSubMenuv.13
-00000454 00000010     0                         ..LNst._Z13RenderSubMenuv.14
-00000464 00000010     0                         ..LNst._Z13RenderSubMenuv.15
-00000474 00000010     0                         ..LNst._Z13RenderSubMenuv.16
-00000340 00000014     0                         ..LNst._Z13RenderSubMenuv.3
-0000040c 00000016     0                         ..LNst._Z13RenderSubMenuv.11
-00000424 00000020     0                         ..LNst._Z13RenderSubMenuv.12
-00000320 0000001e     0                         ..LNst._Z13RenderSubMenuv.2
-0000038c 0000001c     0                         ..LNst._Z13RenderSubMenuv.6
-000003a8 0000001c     0                         ..LNst._Z13RenderSubMenuv.7
-000003c4 00000014     0                         ..LNst._Z13RenderSubMenuv.8
-000003d8 00000020     0                         ..LNst._Z13RenderSubMenuv.9
-000003f8 00000012     0                         ..LNst._Z13RenderSubMenuv.10
-0000030c 00000014     0                         ..LNst._Z13RenderSubMenuv.1
-00000498 00000016     0                         ..LNst._Z8DebugHudv.0
-0000014c 00000004     0                         ..Lfi59._Z17RenderScreen_Hookjj
+0000014c 00000004     0                         ..Lfi59._Z15SendMessageInfoPKwS0_i
+000002f0 0000001e     0                         ..LNst._Z13RenderSubMenuv.0
+00000374 0000001a     0                         ..LNst._Z13RenderSubMenuv.5
+000004a0 00000014     0                         ..LNst._Z13RenderSubMenuv.18
+00000358 0000001c     0                         ..LNst._Z13RenderSubMenuv.4
+00000460 00000010     0                         ..LNst._Z13RenderSubMenuv.14
+00000470 00000010     0                         ..LNst._Z13RenderSubMenuv.15
+00000480 00000010     0                         ..LNst._Z13RenderSubMenuv.16
+00000490 00000010     0                         ..LNst._Z13RenderSubMenuv.17
+00000344 00000014     0                         ..LNst._Z13RenderSubMenuv.3
+00000410 00000016     0                         ..LNst._Z13RenderSubMenuv.11
+00000428 00000020     0                         ..LNst._Z13RenderSubMenuv.12
+00000448 00000018     0                         ..LNst._Z13RenderSubMenuv.13
+00000324 0000001e     0                         ..LNst._Z13RenderSubMenuv.2
+00000390 0000001c     0                         ..LNst._Z13RenderSubMenuv.6
+000003ac 0000001c     0                         ..LNst._Z13RenderSubMenuv.7
+000003c8 00000014     0                         ..LNst._Z13RenderSubMenuv.8
+000003dc 00000020     0                         ..LNst._Z13RenderSubMenuv.9
+000003fc 00000012     0                         ..LNst._Z13RenderSubMenuv.10
+00000310 00000014     0                         ..LNst._Z13RenderSubMenuv.1
+000004b4 00000016     0                         ..LNst._Z8DebugHudv.0
 00000150 00000004     0                         ..Lfi60._Z17RenderScreen_Hookjj
-000004b0 00000010     0                         ..LNst._Z17RenderScreen_Hookjj.0
-00000154 00000004     0                         ..Lfi61._ZN6myMath3absEf
-00000158 00000008     0                         ..Lfi62._ZN6myMath16DegreesToRadiansEf
-00000160 00000008     0                         ..Lfi63._ZN6myMath16DegreesToRadiansEf
-00000168 00000004     0                         ..Lfi64._ZN6myMath16RadiansToDegreesEf
-0000016c 00000008     0                         ..Lfi65._ZN6myMath16RadiansToDegreesEf
-00000174 00000004     0                         ..Lfi66._ZN6myMath3sinEf
+00000154 00000004     0                         ..Lfi61._Z17RenderScreen_Hookjj
+000004cc 00000010     0                         ..LNst._Z17RenderScreen_Hookjj.0
+00000158 00000004     0                         ..Lfi62._ZN6myMath3absEf
+0000015c 00000008     0                         ..Lfi63._ZN6myMath16DegreesToRadiansEf
+00000164 00000008     0                         ..Lfi64._ZN6myMath16DegreesToRadiansEf
+0000016c 00000004     0                         ..Lfi65._ZN6myMath16RadiansToDegreesEf
+00000170 00000008     0                         ..Lfi66._ZN6myMath16RadiansToDegreesEf
 00000178 00000004     0                         ..Lfi67._ZN6myMath3sinEf
 0000017c 00000004     0                         ..Lfi68._ZN6myMath3sinEf
 00000180 00000004     0                         ..Lfi69._ZN6myMath3sinEf
@@ -368,45 +371,45 @@ Address  Size     Align Out     In      File    Symbol
 00000198 00000004     0                         ..Lfi75._ZN6myMath3sinEf
 0000019c 00000004     0                         ..Lfi76._ZN6myMath3sinEf
 000001a0 00000004     0                         ..Lfi77._ZN6myMath3sinEf
-000001a4 00000004     0                         ..Lfi78._ZN6myMath3cosEf
-000001a8 00000008     0                         ..Lfi79._ZN6myMath4atanEdi
-000001b0 00000008     0                         ..Lfi80._ZN6myMath4atanEdi
-000001b8 00000008     0                         ..Lfi81._ZN6myMath4atanEdi
-000001c0 00000008     0                         ..Lfi82._ZN6myMath4atanEdi
-000001c8 00000008     0                         ..Lfi83._ZN6myMath4atanEdi
-000001d0 00000008     0                         ..Lfi84._ZN6myMath4atanEdi
-000001d8 00000008     0                         ..Lfi85._ZN6myMath4atanEdi
-000001e0 00000008     0                         ..Lfi86._ZN6myMath4atanEdi
-000001e8 00000008     0                         ..Lfi87._ZN6myMath4atanEdi
-000001f0 00000008     0                         ..Lfi88._ZN6myMath4atanEdi
-000001f8 00000008     0                         ..Lfi89._ZN6myMath4atanEdi
-00000200 00000008     0                         ..Lfi90._ZN6myMath4atanEdi
-00000208 00000008     0                         ..Lfi91._ZN6myMath4atanEdi
-00000210 00000008     0                         ..Lfi92._ZN6myMath4atanEdi
-00000218 00000008     0                         ..Lfi93._ZN6myMath4atanEdi
-00000220 00000008     0                         ..Lfi94._ZN6myMath4atanEdi
-00000228 00000008     0                         ..Lfi95._ZN6myMath4atanEdi
-00000230 00000008     0                         ..Lfi96._ZN6myMath4atanEdi
-00000238 00000008     0                         ..Lfi97._ZN6myMath4atanEdi
-00000240 00000008     0                         ..Lfi98._ZN6myMath4atanEdi
-00000248 00000008     0                         ..Lfi99._ZN6myMath4atanEdi
-00000250 00000008     0                         ..Lfi100._ZN6myMath5atan2Edd
-00000258 00000008     0                         ..Lfi101._ZN6myMath5atan2Edd
-00000260 00000008     0                         ..Lfi102._ZN6myMath5atan2Edd
-00000268 00000008     0                         ..Lfi103._ZN6myMath5atan2Edd
-00000270 00000008     0                         ..Lfi104._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
-00000278 00000004     0                         ..Lfi105._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
+000001a4 00000004     0                         ..Lfi78._ZN6myMath3sinEf
+000001a8 00000004     0                         ..Lfi79._ZN6myMath3cosEf
+000001ac 00000008     0                         ..Lfi80._ZN6myMath4atanEdi
+000001b4 00000008     0                         ..Lfi81._ZN6myMath4atanEdi
+000001bc 00000008     0                         ..Lfi82._ZN6myMath4atanEdi
+000001c4 00000008     0                         ..Lfi83._ZN6myMath4atanEdi
+000001cc 00000008     0                         ..Lfi84._ZN6myMath4atanEdi
+000001d4 00000008     0                         ..Lfi85._ZN6myMath4atanEdi
+000001dc 00000008     0                         ..Lfi86._ZN6myMath4atanEdi
+000001e4 00000008     0                         ..Lfi87._ZN6myMath4atanEdi
+000001ec 00000008     0                         ..Lfi88._ZN6myMath4atanEdi
+000001f4 00000008     0                         ..Lfi89._ZN6myMath4atanEdi
+000001fc 00000008     0                         ..Lfi90._ZN6myMath4atanEdi
+00000204 00000008     0                         ..Lfi91._ZN6myMath4atanEdi
+0000020c 00000008     0                         ..Lfi92._ZN6myMath4atanEdi
+00000214 00000008     0                         ..Lfi93._ZN6myMath4atanEdi
+0000021c 00000008     0                         ..Lfi94._ZN6myMath4atanEdi
+00000224 00000008     0                         ..Lfi95._ZN6myMath4atanEdi
+0000022c 00000008     0                         ..Lfi96._ZN6myMath4atanEdi
+00000234 00000008     0                         ..Lfi97._ZN6myMath4atanEdi
+0000023c 00000008     0                         ..Lfi98._ZN6myMath4atanEdi
+00000244 00000008     0                         ..Lfi99._ZN6myMath4atanEdi
+0000024c 00000008     0                         ..Lfi100._ZN6myMath4atanEdi
+00000254 00000008     0                         ..Lfi101._ZN6myMath5atan2Edd
+0000025c 00000008     0                         ..Lfi102._ZN6myMath5atan2Edd
+00000264 00000008     0                         ..Lfi103._ZN6myMath5atan2Edd
+0000026c 00000008     0                         ..Lfi104._ZN6myMath5atan2Edd
+00000274 00000008     0                         ..Lfi105._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
 0000027c 00000004     0                         ..Lfi106._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
-00000280 00000004     0                         ..Lfi107._ZN4Menu9TitleSPRXEPKw
+00000280 00000004     0                         ..Lfi107._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
 00000284 00000004     0                         ..Lfi108._ZN4Menu9TitleSPRXEPKw
-00000288 00000004     0                         ..Lfi109._ZN4Menu9ScrollbarEv
+00000288 00000004     0                         ..Lfi109._ZN4Menu9TitleSPRXEPKw
 0000028c 00000004     0                         ..Lfi110._ZN4Menu9ScrollbarEv
-000004c0 0000000b     0                         ..LNst._ZN4Menu11DescriptionEPKw.0
-00000290 00000004     0                         ..Lfi111._ZN4Menu7AddHudsEv
+00000290 00000004     0                         ..Lfi111._ZN4Menu9ScrollbarEv
+000004dc 0000000b     0                         ..LNst._ZN4Menu11DescriptionEPKw.0
 00000294 00000004     0                         ..Lfi112._ZN4Menu7AddHudsEv
 00000298 00000004     0                         ..Lfi113._ZN4Menu7AddHudsEv
 0000029c 00000004     0                         ..Lfi114._ZN4Menu7AddHudsEv
-000002a0 00000004     0                         ..Lfi115._ZN4Menu8AddTitleEPKw
+000002a0 00000004     0                         ..Lfi115._ZN4Menu7AddHudsEv
 000002a4 00000004     0                         ..Lfi116._ZN4Menu8AddTitleEPKw
 000002a8 00000004     0                         ..Lfi117._ZN4Menu8AddTitleEPKw
 000002ac 00000004     0                         ..Lfi118._ZN4Menu8AddTitleEPKw
@@ -414,44 +417,46 @@ Address  Size     Align Out     In      File    Symbol
 000002b4 00000004     0                         ..Lfi120._ZN4Menu8AddTitleEPKw
 000002b8 00000004     0                         ..Lfi121._ZN4Menu8AddTitleEPKw
 000002bc 00000004     0                         ..Lfi122._ZN4Menu8AddTitleEPKw
-000004cc 0000000e     0                         ..LNst._ZN4Menu12AddSubOptionEPKw.0
-000002c0 00000004     0                         ..Lfi123._ZN4Menu13AddBoolOptionEPKwb
+000002c0 00000004     0                         ..Lfi123._ZN4Menu8AddTitleEPKw
+000004e8 0000000e     0                         ..LNst._ZN4Menu12AddSubOptionEPKw.0
+000004f8 0000000b     0                         ..LNst._ZN4Menu12AddIntOptionEPKwiiiRi.0
 000002c4 00000004     0                         ..Lfi124._ZN4Menu13AddBoolOptionEPKwb
-000002c8 00000004     0                         ..Lfi125._ZN7Options12ShowPositionEv
+000002c8 00000004     0                         ..Lfi125._ZN4Menu13AddBoolOptionEPKwb
 000002cc 00000004     0                         ..Lfi126._ZN7Options12ShowPositionEv
-000004dc 00000015     0                         ..LNst._ZN7Options12ShowPositionEv.0
-000002d0 00000004     0                         ..Lfi127._ZN7Options12ShowGametimeEv
+000002d0 00000004     0                         ..Lfi127._ZN7Options12ShowPositionEv
+00000504 00000015     0                         ..LNst._ZN7Options12ShowPositionEv.0
 000002d4 00000004     0                         ..Lfi128._ZN7Options12ShowGametimeEv
-000004f4 0000001a     0                         ..LNst._ZN7Options12ShowGametimeEv.0
-000002d8 00000004     0                         ..Lfi129._ZN7Options8ShowPingEv
+000002d8 00000004     0                         ..Lfi129._ZN7Options12ShowGametimeEv
+0000051c 0000001a     0                         ..LNst._ZN7Options12ShowGametimeEv.0
 000002dc 00000004     0                         ..Lfi130._ZN7Options8ShowPingEv
-00000510 0000000c     0                         ..LNst._ZN7Options8ShowPingEv.0
-0000051c 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.0
-00000524 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.1
-0000052c 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.2
-00000534 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.3
-000002e0 00000004     0                         ..Lfi131._ZN7Options7ShowCPSEv
+000002e0 00000004     0                         ..Lfi131._ZN7Options8ShowPingEv
+00000538 0000000c     0                         ..LNst._ZN7Options8ShowPingEv.0
+00000544 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.0
+0000054c 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.1
+00000554 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.2
+0000055c 00000006     0                         ..LNst._ZN7Options14ShowKeystrokesEv.3
 000002e4 00000004     0                         ..Lfi132._ZN7Options7ShowCPSEv
-0000053c 00000008     0                         ..LNst._ZN7Options7ShowCPSEv.0
-000002e8 00000001     0                         ..LNst.checkTxt.0
-00000544 00000148     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-00000544 00000008     0                         ..Llli0._Z32cobra_send_fake_disc_eject_eventv
-0000054c 00000008     0                         ..Llli1._Z32cobra_send_fake_disc_eject_eventv
-00000554 00000017     0                         ..LNst._Z10is_app_dirPKcS0_.0
-0000056c 0000000a     0                         ..LNst._Z12set_app_homePKc.0
-00000578 00000013     0                         ..LNst._Z12set_app_homePKc.1
-0000058c 00000011     0                         ..LNst._Z12set_app_homePKc.2
-000005a0 00000002     0                         ..LNst._Z12set_app_homePKc.3
-000005a4 0000000a     0                         ..LNst._Z12set_app_homePKc.4
-000005b0 0000001d     0                         ..LNst._Z9do_umountv.0
-000005d0 0000001c     0                         ..LNst._Z9do_umountv.1
-000005ec 00000015     0                         ..LNst._Z9do_umountv.2
-00000604 0000001a     0                         ..LNst._Z9do_umountv.3
-00000620 00000020     0                         ..LNst._Z9do_umountv.4
-00000640 00000020     0                         ..LNst._Z9do_umountv.5
-00000660 00000013     0                         ..LNst._Z9do_umountv.6
-00000674 0000000a     0                         ..LNst._Z9do_umountv.7
-00000680 0000000b     0                         ..LNst._Z9do_umountv.8
+000002e8 00000004     0                         ..Lfi133._ZN7Options7ShowCPSEv
+00000564 00000008     0                         ..LNst._ZN7Options7ShowCPSEv.0
+000002ec 00000001     0                         ..LNst.checkTxt.0
+0000056c 00000148     4                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+0000056c 00000008     0                         ..Llli0._Z32cobra_send_fake_disc_eject_eventv
+00000574 00000008     0                         ..Llli1._Z32cobra_send_fake_disc_eject_eventv
+0000057c 00000017     0                         ..LNst._Z10is_app_dirPKcS0_.0
+00000594 0000000a     0                         ..LNst._Z12set_app_homePKc.0
+000005a0 00000013     0                         ..LNst._Z12set_app_homePKc.1
+000005b4 00000011     0                         ..LNst._Z12set_app_homePKc.2
+000005c8 00000002     0                         ..LNst._Z12set_app_homePKc.3
+000005cc 0000000a     0                         ..LNst._Z12set_app_homePKc.4
+000005d8 0000001d     0                         ..LNst._Z9do_umountv.0
+000005f8 0000001c     0                         ..LNst._Z9do_umountv.1
+00000614 00000015     0                         ..LNst._Z9do_umountv.2
+0000062c 0000001a     0                         ..LNst._Z9do_umountv.3
+00000648 00000020     0                         ..LNst._Z9do_umountv.4
+00000668 00000020     0                         ..LNst._Z9do_umountv.5
+00000688 00000013     0                         ..LNst._Z9do_umountv.6
+0000069c 0000000a     0                         ..LNst._Z9do_umountv.7
+000006a8 0000000b     0                         ..LNst._Z9do_umountv.8
 00000000 00000000     1 .PpuGUID
 00000000 00000000     1 .rodata1
 00000000 00000000     1 .spu_image
@@ -557,15 +562,15 @@ Address  Size     Align Out     In      File    Symbol
 00000114 00000004     0                         Buttons::X
 00000118 00000004     0                         Buttons::O
 00000690 00000004     0                         FUNCTIONS::ConsoleUIController_PlayUISFX
-00000654 00000004     0                         FUNCTIONS::__printf
-00000660 00000004     0                         FUNCTIONS::Font_width
-0000066c 00000004     0                         FUNCTIONS::DrawText
-00000678 00000004     0                         FUNCTIONS::DrawTextWithShadow
-00000684 00000004     0                         FUNCTIONS::DrawRectangleAlpha
-0000060c 00000004     0                         FUNCTIONS::Tesselator_GetInstance
-00000618 00000004     0                         FUNCTIONS::ReadTesselatorInstance
-0000063c 00000004     0                         FUNCTIONS::Tesselator_End
-00000624 00000004     0                         FUNCTIONS::Tesselator_Begin
+0000060c 00000004     0                         FUNCTIONS::__printf
+00000618 00000004     0                         FUNCTIONS::Font_width
+00000624 00000004     0                         FUNCTIONS::DrawText
+00000630 00000004     0                         FUNCTIONS::DrawTextWithShadow
+0000063c 00000004     0                         FUNCTIONS::DrawRectangleAlpha
+00000648 00000004     0                         FUNCTIONS::Tesselator_GetInstance
+00000654 00000004     0                         FUNCTIONS::ReadTesselatorInstance
+00000678 00000004     0                         FUNCTIONS::Tesselator_End
+00000660 00000004     0                         FUNCTIONS::Tesselator_Begin
 000001ec 0000000c     0                         MC_Color::White
 00000210 0000000c     0                         MC_Color::BlackTheme
 0000000c 00000004     0                         SendMessageInfoPosX
@@ -700,19 +705,19 @@ Address  Size     Align Out     In      File    Symbol
 000005f4 00000004     0                         FUNCTIONS::Color1
 000005f8 00000008     0                         FUNCTIONS::Color2opd
 00000600 00000004     0                         FUNCTIONS::Color2
-00000604 00000008     0                         FUNCTIONS::Tesselator_GetInstanceopd
-00000610 00000008     0                         FUNCTIONS::ReadTesselatorInstanceopd
-0000061c 00000008     0                         FUNCTIONS::Tesselator_Beginopd
-00000628 00000008     0                         FUNCTIONS::Tesselator_Coloropd
-00000630 00000004     0                         FUNCTIONS::Tesselator_Color
-00000634 00000008     0                         FUNCTIONS::Tesselator_Endopd
-00000640 00000008     0                         FUNCTIONS::BufferBuilder_endVertexopd
-00000648 00000004     0                         FUNCTIONS::BufferBuilder_endVertex
-0000064c 00000008     0                         FUNCTIONS::__printfopd
-00000658 00000008     0                         FUNCTIONS::Font_widthopd
-00000664 00000008     0                         FUNCTIONS::DrawTextopd
-00000670 00000008     0                         FUNCTIONS::DrawTextWithShadowopd
-0000067c 00000008     0                         FUNCTIONS::DrawRectangleAlphaopd
+00000604 00000008     0                         FUNCTIONS::__printfopd
+00000610 00000008     0                         FUNCTIONS::Font_widthopd
+0000061c 00000008     0                         FUNCTIONS::DrawTextopd
+00000628 00000008     0                         FUNCTIONS::DrawTextWithShadowopd
+00000634 00000008     0                         FUNCTIONS::DrawRectangleAlphaopd
+00000640 00000008     0                         FUNCTIONS::Tesselator_GetInstanceopd
+0000064c 00000008     0                         FUNCTIONS::ReadTesselatorInstanceopd
+00000658 00000008     0                         FUNCTIONS::Tesselator_Beginopd
+00000664 00000008     0                         FUNCTIONS::Tesselator_Coloropd
+0000066c 00000004     0                         FUNCTIONS::Tesselator_Color
+00000670 00000008     0                         FUNCTIONS::Tesselator_Endopd
+0000067c 00000008     0                         FUNCTIONS::BufferBuilder_endVertexopd
+00000684 00000004     0                         FUNCTIONS::BufferBuilder_endVertex
 00000688 00000008     0                         FUNCTIONS::ConsoleUIController_PlayUISFXopd
 00000034 00000004     0                         SpaceBetweenText
 0000021c 0000000c     0                         MC_Color::ColorTheme
@@ -852,10 +857,10 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .eh_frame
 00000000 00000000     1 .gcc_except_table
 00000000 00000000     1 .toc1
-00000000 00000520     8 .opd
-00000000 000003c8     8         .opd
-00000000 000003c8     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000003c0 00000008     0                         __sti___8_Main_cpp__Znwj
+00000000 00000530     8 .opd
+00000000 000003d8     8         .opd
+00000000 000003d8     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+000003d0 00000008     0                         __sti___8_Main_cpp__Znwj
 00000000 00000008     0                         operator new(unsigned int)
 00000008 00000008     0                         operator new(unsigned int, std::nothrow_t const&)
 00000010 00000008     0                         operator new(unsigned int, unsigned int)
@@ -920,113 +925,115 @@ Address  Size     Align Out     In      File    Symbol
 000001e8 00000008     0                         f_sqrtf
 000001f0 00000008     0                         drawLine(Vector2 const&, Vector2 const&, int*)
 000001f8 00000008     0                         DrawTextWithRectangle(wchar_t const*, float, float, int*, bool)
-00000200 00000008     0                         DrawsnprintfText(char const*, int*, float, float)
-00000208 00000008     0                         SendMessageInfo(wchar_t const*, wchar_t const*, int)
-00000210 00000008     0                         getOption()
-00000218 00000008     0                         RenderClosePage()
-00000220 00000008     0                         RenderSubMenu()
-00000228 00000008     0                         DebugHud()
-00000230 00000008     0                         BetterOptions()
-00000238 00000008     0                         Render()
-00000240 00000008     0                         LoopOptions()
-00000248 00000008     0                         RenderScreen_Stub(unsigned int, unsigned int)
-00000250 00000008     0                         asm_LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
-00000258 00000008     0                         asm_Player_HurtHook(ServerPlayer*, DamageSource*, float)
-00000260 00000008     0                         Gui_render_Stub(GuiComponent*, double)
-00000268 00000008     0                         RenderScreen_Hook(unsigned int, unsigned int)
-00000270 00000008     0                         LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
-00000278 00000008     0                         Player_actuallyHurtHook(ServerPlayer*, DamageSource*, float)
-00000280 00000008     0                         Gui_render_Hook(GuiComponent*, double)
-00000288 00000008     0                         InstallHooks()
-00000290 00000008     0                         UninstallHooks()
-00000298 00000008     0                         Minecraft_Main
-000002a0 00000008     0                         Minecraft_Stop
-000002a8 00000008     0                         Buttons::getMCButtons()
-000002b0 00000008     0                         Buttons::IsMCButtonPressed(unsigned int)
-000002b8 00000008     0                         NyTekCFW::sleep(unsigned long long)
-000002c0 00000008     0                         NyTekCFW::ReadBytes(int, int)
-000002c8 00000008     0                         NyTekCFW::WriteBytes(int, char*, int)
-000002d0 00000008     0                         NyTekCFW::WriteString(int, char*)
-000002d8 00000008     0                         NyTekCFW::Zone(int, float*)
-000002e0 00000008     0                         NyTekCFW::FloatToHex(float)
-000002e8 00000008     0                         NyTekCFW::IntToHex(int)
-000002f0 00000008     0                         myMath::abs(float)
-000002f8 00000008     0                         myMath::DegreesToRadians(float)
-00000300 00000008     0                         myMath::RadiansToDegrees(float)
-00000308 00000008     0                         myMath::sin(float)
-00000310 00000008     0                         myMath::cos(float)
-00000318 00000008     0                         myMath::atan(double, int)
-00000320 00000008     0                         myMath::atan2(double, double)
-00000328 00000008     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
-00000330 00000008     0                         Menu::TitleSPRX(wchar_t const*)
-00000338 00000008     0                         Menu::Scrollbar()
-00000340 00000008     0                         Menu::Description(wchar_t const*)
-00000348 00000008     0                         Menu::AddHuds()
-00000350 00000008     0                         Menu::AddTitle(wchar_t const*)
-00000358 00000008     0                         Menu::AddSubOption(wchar_t const*)
-00000360 00000008     0                         Menu::AddOption(wchar_t const*)
-00000368 00000008     0                         Menu::AddBoolOption(wchar_t const*, bool)
-00000370 00000008     0                         Offsets::GOD_MODE(bool)
-00000378 00000008     0                         Offsets::CLOSE_MINECRAFT()
-00000380 00000008     0                         Offsets::RESTART_MINECRAFT()
-00000388 00000008     0                         Offsets::TELEPORT(double, double, double)
-00000390 00000008     0                         Options::ShowPosition()
-00000398 00000008     0                         Options::ShowGametime()
-000003a0 00000008     0                         Options::ShowPing()
-000003a8 00000008     0                         Options::ShowKeystrokes()
-000003b0 00000008     0                         Options::ShowCPS()
-000003b8 00000008     0                         Color::ToHex()
-000003c8 000000e8     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-000003c8 00000008     0                         GetModuleHandle(char const*)
-000003d0 00000008     0                         GetModuleInfo(int)
-000003d8 00000008     0                         GetModuleFilePath(char const*)
-000003e0 00000008     0                         std::char_traits<char>::assign(char&, char const&)
-000003e8 00000008     0                         std::char_traits<char>::length(char const*)
-000003f0 00000008     0                         std::char_traits<char>::copy(char*, char const*, unsigned int)
-000003f8 00000008     0                         std::char_traits<char>::move(char*, char const*, unsigned int)
-00000400 00000008     0                         std::_String_base::_Xlen() const
-00000408 00000008     0                         std::_String_base::_Xran() const
-00000410 00000008     0                         std::allocator<char>::deallocate(char*, unsigned int)
-00000418 00000008     0                         char* std::_Allocate<char>(unsigned int, char*)
-00000420 00000008     0                         std::allocator<char>::allocate(unsigned int)
-00000428 00000008     0                         std::allocator<char>::max_size() const
-00000430 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
-00000438 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
-00000440 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr()
-00000448 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Eos(unsigned int)
-00000450 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(bool, unsigned int)
-00000458 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Inside(char const*)
-00000460 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size() const
-00000468 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::erase(unsigned int, unsigned int)
-00000470 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::max_size() const
-00000478 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(unsigned int, unsigned int)
-00000480 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Grow(unsigned int, bool)
-00000488 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr() const
-00000490 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int, unsigned int)
-00000498 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*, unsigned int)
-000004a0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*)
-000004a8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*)
-000004b0 00000048     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-000004b0 00000008     0                         sys_storage_ext_get_disc_type(unsigned int*, unsigned int*, unsigned int*)
-000004b8 00000008     0                         sys_storage_ext_fake_storage_event(unsigned long long, unsigned long long, unsigned long long)
-000004c0 00000008     0                         cobra_send_fake_disc_eject_event()
-000004c8 00000008     0                         sys_map_path(char const*, char const*)
-000004d0 00000008     0                         DoesFileExist(char const*)
-000004d8 00000008     0                         is_app_dir(char const*, char const*)
-000004e0 00000008     0                         set_app_home(char const*)
-000004e8 00000008     0                         sys_timer_usleep
-000004f0 00000008     0                         do_umount()
-000004f8 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memcpy.o) (TOC#1,0)
-000004f8 00000008     0                         memcpy
-00000500 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memmove.o) (TOC#1,0)
-00000500 00000008     0                         memmove
-00000508 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(strlen.o) (TOC#1,0)
-00000508 00000008     0                         strlen
-00000510 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(wcslen.o) (TOC#1,0)
-00000510 00000008     0                         wcslen
-00000518 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memset.o) (TOC#1,0)
-00000518 00000008     0                         memset
-00000518 00000008     0                         memset_cs
+00000200 00000008     0                         DrawsnprintfText(char const*, int*, float, float, bool)
+00000208 00000008     0                         DrawSnprintf(char const*, int, int, int)
+00000210 00000008     0                         SendMessageInfo(wchar_t const*, wchar_t const*, int)
+00000218 00000008     0                         getOption()
+00000220 00000008     0                         RenderClosePage()
+00000228 00000008     0                         RenderSubMenu()
+00000230 00000008     0                         DebugHud()
+00000238 00000008     0                         BetterOptions()
+00000240 00000008     0                         Render()
+00000248 00000008     0                         LoopOptions()
+00000250 00000008     0                         RenderScreen_Stub(unsigned int, unsigned int)
+00000258 00000008     0                         asm_LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
+00000260 00000008     0                         asm_Player_HurtHook(ServerPlayer*, DamageSource*, float)
+00000268 00000008     0                         Gui_render_Stub(GuiComponent*, double)
+00000270 00000008     0                         RenderScreen_Hook(unsigned int, unsigned int)
+00000278 00000008     0                         LivingEntity_HurtHook(Entity*, EntityDamageSource*, float)
+00000280 00000008     0                         Player_actuallyHurtHook(ServerPlayer*, DamageSource*, float)
+00000288 00000008     0                         Gui_render_Hook(GuiComponent*, double)
+00000290 00000008     0                         InstallHooks()
+00000298 00000008     0                         UninstallHooks()
+000002a0 00000008     0                         Minecraft_Main
+000002a8 00000008     0                         Minecraft_Stop
+000002b0 00000008     0                         Buttons::getMCButtons()
+000002b8 00000008     0                         Buttons::IsMCButtonPressed(unsigned int)
+000002c0 00000008     0                         NyTekCFW::sleep(unsigned long long)
+000002c8 00000008     0                         NyTekCFW::ReadBytes(int, int)
+000002d0 00000008     0                         NyTekCFW::WriteBytes(int, char*, int)
+000002d8 00000008     0                         NyTekCFW::WriteString(int, char*)
+000002e0 00000008     0                         NyTekCFW::Zone(int, float*)
+000002e8 00000008     0                         NyTekCFW::FloatToHex(float)
+000002f0 00000008     0                         NyTekCFW::IntToHex(int)
+000002f8 00000008     0                         myMath::abs(float)
+00000300 00000008     0                         myMath::DegreesToRadians(float)
+00000308 00000008     0                         myMath::RadiansToDegrees(float)
+00000310 00000008     0                         myMath::sin(float)
+00000318 00000008     0                         myMath::cos(float)
+00000320 00000008     0                         myMath::atan(double, int)
+00000328 00000008     0                         myMath::atan2(double, double)
+00000330 00000008     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
+00000338 00000008     0                         Menu::TitleSPRX(wchar_t const*)
+00000340 00000008     0                         Menu::Scrollbar()
+00000348 00000008     0                         Menu::Description(wchar_t const*)
+00000350 00000008     0                         Menu::AddHuds()
+00000358 00000008     0                         Menu::AddTitle(wchar_t const*)
+00000360 00000008     0                         Menu::AddSubOption(wchar_t const*)
+00000368 00000008     0                         Menu::AddOption(wchar_t const*)
+00000370 00000008     0                         Menu::AddIntOption(wchar_t const*, int, int, int, int&)
+00000378 00000008     0                         Menu::AddBoolOption(wchar_t const*, bool)
+00000380 00000008     0                         Offsets::GOD_MODE(bool)
+00000388 00000008     0                         Offsets::CLOSE_MINECRAFT()
+00000390 00000008     0                         Offsets::RESTART_MINECRAFT()
+00000398 00000008     0                         Offsets::TELEPORT(double, double, double)
+000003a0 00000008     0                         Options::ShowPosition()
+000003a8 00000008     0                         Options::ShowGametime()
+000003b0 00000008     0                         Options::ShowPing()
+000003b8 00000008     0                         Options::ShowKeystrokes()
+000003c0 00000008     0                         Options::ShowCPS()
+000003c8 00000008     0                         Color::ToHex()
+000003d8 000000e8     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+000003d8 00000008     0                         GetModuleHandle(char const*)
+000003e0 00000008     0                         GetModuleInfo(int)
+000003e8 00000008     0                         GetModuleFilePath(char const*)
+000003f0 00000008     0                         std::char_traits<char>::assign(char&, char const&)
+000003f8 00000008     0                         std::char_traits<char>::length(char const*)
+00000400 00000008     0                         std::char_traits<char>::copy(char*, char const*, unsigned int)
+00000408 00000008     0                         std::char_traits<char>::move(char*, char const*, unsigned int)
+00000410 00000008     0                         std::_String_base::_Xlen() const
+00000418 00000008     0                         std::_String_base::_Xran() const
+00000420 00000008     0                         std::allocator<char>::deallocate(char*, unsigned int)
+00000428 00000008     0                         char* std::_Allocate<char>(unsigned int, char*)
+00000430 00000008     0                         std::allocator<char>::allocate(unsigned int)
+00000438 00000008     0                         std::allocator<char>::max_size() const
+00000440 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
+00000448 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
+00000450 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr()
+00000458 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Eos(unsigned int)
+00000460 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(bool, unsigned int)
+00000468 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Inside(char const*)
+00000470 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size() const
+00000478 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::erase(unsigned int, unsigned int)
+00000480 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::max_size() const
+00000488 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(unsigned int, unsigned int)
+00000490 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Grow(unsigned int, bool)
+00000498 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr() const
+000004a0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int, unsigned int)
+000004a8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*, unsigned int)
+000004b0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*)
+000004b8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*)
+000004c0 00000048     8                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+000004c0 00000008     0                         sys_storage_ext_get_disc_type(unsigned int*, unsigned int*, unsigned int*)
+000004c8 00000008     0                         sys_storage_ext_fake_storage_event(unsigned long long, unsigned long long, unsigned long long)
+000004d0 00000008     0                         cobra_send_fake_disc_eject_event()
+000004d8 00000008     0                         sys_map_path(char const*, char const*)
+000004e0 00000008     0                         DoesFileExist(char const*)
+000004e8 00000008     0                         is_app_dir(char const*, char const*)
+000004f0 00000008     0                         set_app_home(char const*)
+000004f8 00000008     0                         sys_timer_usleep
+00000500 00000008     0                         do_umount()
+00000508 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memcpy.o) (TOC#1,0)
+00000508 00000008     0                         memcpy
+00000510 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memmove.o) (TOC#1,0)
+00000510 00000008     0                         memmove
+00000518 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(strlen.o) (TOC#1,0)
+00000518 00000008     0                         strlen
+00000520 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(wcslen.o) (TOC#1,0)
+00000520 00000008     0                         wcslen
+00000528 00000008     4                 C:\usr\local\cell\target\ppu\lib\libc.a(memset.o) (TOC#1,0)
+00000528 00000008     0                         memset
+00000528 00000008     0                         memset_cs
 00000000 00000000     1 .dynamic
 00000000 00000004     1 .ctors
 00000000 00000004     1         .ctors
@@ -1076,8 +1083,8 @@ Address  Size     Align Out     In      File    Symbol
 00002d4c 00000004     0                         RainbowRED2
 00002d50 00000004     0                         RainbowGREEN2
 00002d54 00000004     0                         RainbowBLUE2
-00002d24 00000001     0                         Opened
-00002d25 00000001     0                         Closed
+00002d26 00000001     0                         Opened
+00002d27 00000001     0                         Closed
 00002d0c 00000004     0                         CurrentMenu
 00002d10 00000004     0                         CurrentOpt
 00002d18 00000004     0                         MaxSubOptions
@@ -1106,6 +1113,8 @@ Address  Size     Align Out     In      File    Symbol
 0000000c 00000004     0                         g_Gamemode
 00000014 00000004     0                         g_Level2
 00001d64 00000004     0                         scrollTick
+00002d24 00000001     0                         BtnLeftPressed
+00002d25 00000001     0                         BtnRightPressed
 00002d28 00000004     0                         SavePosition
 00002d2c 00000004     0                         SaveMenuX
 00002d58 0000000c     0                         RainbowColor
@@ -1142,35 +1151,35 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .line
 00000000 00000000     1 .debug_srcinfo
 00000000 00000000     1 .debug_sfnames
-00000000 00000530     1 .debug_aranges
-00000000 000003d8     1         .debug_aranges
-00000000 000003d8     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000003d8 000000f8     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-000004d0 00000060     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-00000000 000022be     1 .debug_pubnames
-00000000 00001e96     1         .debug_pubnames
-00000000 00001e96     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00001e96 00000342     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-000021d8 000000e6     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-00000000 0000923a     1 .debug_info
-00000000 00006e84     1         .debug_info
-00000000 00006e84     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00006e84 00001ef0     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00008d74 000004c6     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+00000000 00000540     1 .debug_aranges
+00000000 000003e8     1         .debug_aranges
+00000000 000003e8     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+000003e8 000000f8     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+000004e0 00000060     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+00000000 00002307     1 .debug_pubnames
+00000000 00001edf     1         .debug_pubnames
+00000000 00001edf     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00001edf 00000342     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00002221 000000e6     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+00000000 0000942e     1 .debug_info
+00000000 00007078     1         .debug_info
+00000000 00007078     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00007078 00001ef0     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00008f68 000004c6     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
 00000000 0000054f     1 .debug_abbrev
 00000000 00000248     1         .debug_abbrev
 00000000 00000248     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000248 00000222     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
 0000046a 000000e5     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
-00000000 00001010     1 .debug_line
-00000000 000009ab     1         .debug_line
-00000000 000009ab     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000009ab 000004c2     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000e6d 000001a3     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
+00000000 0000104b     1 .debug_line
+00000000 000009e6     1         .debug_line
+00000000 000009e6     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+000009e6 000004c2     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000ea8 000001a3     1                 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft Better Edition SPRX\bin-int\Debug-PS3\Minecraft\SystemCalls.o (TOC#1,0)
 00000000 00000000     1 .debug_frame
-00000000 00003e98     1 .debug_str
-00000000 00003e98     1         .debug_str
-00000000 00003e98     1                 Dwarf1 (TOC#1,0)
+00000000 00003f32     1 .debug_str
+00000000 00003f32     1         .debug_str
+00000000 00003f32     1                 Dwarf1 (TOC#1,0)
 00000000 00000000     1 .debug_loc
 00000000 00000000     1 .debug_macinfo
 00000000 00000000     1 .debug_weaknames

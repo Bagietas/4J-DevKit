@@ -73,11 +73,12 @@ void RenderSubMenu()
 			break;
 
 		case(MicsMenu):
-			MaxSubOptions = 2;
+			MaxSubOptions = 3;
 			Menu::AddTitle(L"DownCraft SPRX");
 			Menu::Description(L"Mics Menu");
 			Menu::AddBoolOption(L"Show Title", !ToggleTitleSPRX);
 			Menu::AddOption(L"Close Minecraft");
+			Menu::AddIntOption(L"Valeur test", 2, 0, 100, MenuY);
 			switch (getOption()) {
 			case(0): ToggleTitleSPRX = !ToggleTitleSPRX; break;
 			case(1): Offsets::CLOSE_MINECRAFT(); break;

@@ -325,21 +325,51 @@ void DrawTextWithRectangle(const wchar_t* text, float x, float y, int* color1, b
 	}
 }
 
-void DrawsnprintfText(const char* format, int* args, float x, float y)
+void DrawsnprintfText(const char* format, int* args, float x, float y, bool WithRect)
 {
-	char option[0x100];
-	wchar_t woption[0x100];
-	_sys_memset(option, 0, 0x100);
-	_sys_memset(woption, 0, 0x200);
-	_sys_snprintf(option, 0x100, format, args[0], args[1], args[2], args[3], args[4]);
-	StringToWideCharacter(woption, option, strlen(option));
+	if (WithRect)
+	{
+		char option[0x100];
+		wchar_t woption[0x100];
+		_sys_memset(option, 0, 0x100);
+		_sys_memset(woption, 0, 0x200);
+		_sys_snprintf(option, 0x100, format, args[0], args[1], args[2], args[3], args[4]);
+		StringToWideCharacter(woption, option, strlen(option));
+		DrawTextWithRectangle(woption, x, y, MC_Color::BlackTheme, false);
+	}
+	else
+	{
+		char option[0x100];
+		wchar_t woption[0x100];
+		_sys_memset(option, 0, 0x100);
+		_sys_memset(woption, 0, 0x200);
+		_sys_snprintf(option, 0x100, format, args[0], args[1], args[2], args[3], args[4]);
+		StringToWideCharacter(woption, option, strlen(option));
+		DrawText(woption, x, y, color(MC_Color::White));
+	}
+}
 
-	DrawTextWithRectangle(woption, x, y, MC_Color::BlackTheme, false);
+void DrawSnprintf(const char* text, int valeur, int X, int Y)
+{
+	char option4[0x100];
+	wchar_t woption4[0x100];
+	_sys_memset(option4, 0, 0x100);
+	_sys_memset(woption4, 0, 0x200);
+	_sys_snprintf(option4, 0x100, text, (valeur));
+	StringToWideCharacter(woption4, option4, strlen(option4));
+	DrawText(woption4, X, Y, color(MC_Color::White));
 }
 
 void SendMessageInfo(const wchar_t* title, const wchar_t* message, int style)
 {
 	if (style == 1)
+	{
+		int width = Font_width(message);
+		DrawRectangleBorder(640 - width - 3, SendMessageInfoPosX, width + 2, 22, SendMessageInfoRectColor, SendMessageInfoBorderColor, 1);
+		DrawTextWithShadow(title, 640 - width - 2, SendMessageInfoPosX + 2, color(MC_Color::White));
+		DrawTextWithShadow(message,  640 - width - 2, SendMessageInfoPosX + 13, color(MC_Color::Aqua));
+	}
+	else
 	{
 		int width = Font_width(message);
 		DrawRectangleBorder(640 - width - 3, SendMessageInfoPosX, width + 2, 22, SendMessageInfoRectColor, SendMessageInfoBorderColor, 1);
