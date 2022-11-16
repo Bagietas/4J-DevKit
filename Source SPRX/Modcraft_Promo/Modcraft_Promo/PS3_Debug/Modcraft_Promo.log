@@ -1,0 +1,57 @@
+﻿Build started 1/7/2022 6:48:51 AM.
+     1>Project "C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\Modcraft_Promo.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         prx.cpp
+         ps3ppusnc.exe -D_DEBUG -D__CELL_ASSERT__ -D__PS3__ -DLIBNAME=cellPrx_Modcraft_Promo -DSTUBNAME=cellPrx_Modcraft_Promo_stub -o PS3_Debug\prx.o -c -Xdepmode=1 -MD -Xmserrors -I. -IC:/usr/local/cell\target\ppu\include -IC:/usr/local/cell\target\common\include -I"C:/usr/local/cell\host-win32\sn\ppu\include" -g -O0 -Xc-=rtti C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\prx.cpp
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\dialog.h(69,6): warning 178: variable "ret" was declared but never referenced
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\dialog.h(189,6): warning 178: variable "ret" was declared but never referenced
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\dialog.h(231,6): warning 552: variable "ret" was set but never used
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(22,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(26,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(65,7): warning 429: qualified name is not allowed in member declaration
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(42,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(51,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(54,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(57,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(60,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(91,9): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(95,10): warning 432: returning reference to local temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(237,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(307,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\struct.h(422,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\huds.h(39,58): warning 1322: taking the address of a temporary
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\huds.h(39,82): warning 1772: argument of type "float" is implicitly converted to parameter (3 of drawShadowText) of type "std::uint32_t"
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\huds.h(39,85): warning 1772: argument of type "float" is implicitly converted to parameter (4 of drawShadowText) of type "std::uint32_t"
+         
+     1>C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\menuFunc.h(251,6): warning 178: variable "txtI" was declared but never referenced
+         
+       Link:
+         C:\usr\local\cell\host-win32\sn\bin\ps3ppuld64.exe -oformat=fsprx -o "C:\Users\Misaki\Desktop\Source\Modcraft_Promo\PS3_Debug\Modcraft_Promo.sprx" -L"C:/usr/local/cell\host-win32\lib\prx\ldscripts" --start-group PS3_Debug\prx.o libsn.a libm.a libio_stub.a libfs_stub.a --end-group
+         Modcraft_Promo.vcxproj -> C:\Users\Misaki\Desktop\Source\Modcraft_Promo\PS3_Debug\Modcraft_Promo.sprx
+         Cannot find the expected PRX Stub Library file: cellPrx_Modcraft_Promo_stub.a
+       PostBuildEvent:
+         "C:\Users\Misaki\Desktop\Source\Modcraft_Promo\PS3_Debug\loadSprx.exe"
+         :VCEnd
+     1>Done Building Project "C:\Users\Misaki\Desktop\Source\Modcraft_Promo\Modcraft_Promo\Modcraft_Promo.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.84

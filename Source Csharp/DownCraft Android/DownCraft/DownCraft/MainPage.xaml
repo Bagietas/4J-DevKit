@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="DownCraft.MainPage">
+
+    <ScrollView HeightRequest="3000">
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="5" CornerRadius="0">
+                <Label Text="DownCraft RTM" HorizontalTextAlignment="Center" TextColor="White" FontSize="40"/>
+            </Frame>
+            <Image Source="downcraft.png" HeightRequest="100" WidthRequest="100" ></Image>
+            <Label Text="DownCraft RTM Android" HorizontalTextAlignment="Center" FontSize="16" Padding="30,0,30,0"/>
+            <Entry x:Name="PS3IP" Text="PS3 IP" IsReadOnly="False" ScaleX="0.9" ScaleY="1.0" FontSize="Medium" HorizontalTextAlignment="Center"></Entry>
+            <Button x:Name="BtnConnect" Text="Connect" CornerRadius="20" ScaleX="0.9" ScaleY="1.0" FontSize="Medium" Clicked="Button_Clicked"></Button>
+
+            <Label Text=""/>
+            <Label Text="Host Options" FontSize="16" Padding="10,0,30,0"/>
+            <input:CheckBox x:Name="God_Mode" Text="God Mode" CheckChanged="God_Mode_Clicked" Type="Check" TextFontSize="16" IsChecked="False"/>
+            <input:CheckBox x:Name="Instant_Damage" Text="Instant Damage" CheckChanged="Instant_Damage_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="KnockBack" Text="KnockBack" CheckChanged="KnockBack_Clicked" Type="Check" TextFontSize="16" IsChecked="False"/>
+            <input:CheckBox x:Name="Infinite_Pickup" Text="Infinite Pickup" CheckChanged="Infinite_Pickup_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Fast_Bow" Text="Fast Bow" CheckChanged="Fast_Bow_Clicked" Type="Check" TextFontSize="16" IsChecked="False"/>
+
+            <Label Text=""/>
+            <Label Text="Non Host Options" FontSize="16" Padding="10,0,30,0"/>
+            <input:CheckBox x:Name="Super_Speed" Text="Super Speed" CheckChanged="Super_Speed_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Super_Jump" Text="Super Jump" CheckChanged="Super_Jump_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Night_Vision" Text="Night Vision" CheckChanged="Night_Vision_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="No_Colission" Text="No Colission" CheckChanged="No_Colission_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Small_Velocity" Text="Small Velocity" CheckChanged="Small_Velocity_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Swim_Fly" Text="Swim Fly" CheckChanged="Swim_Fly_Clicked" Type="Check" TextFontSize="16" Padding="10, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Can_Fly" Text="Can Fly" CheckChanged="Can_Fly_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Kill_Aura" Text="Kill Aura" CheckChanged="Kill_Aura_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Infinite_Craft" Text="Infinite Craft" CheckChanged="Infinite_Craft_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+            <input:CheckBox x:Name="Special_Items" Text="Special Items" CheckChanged="Special_Items_Clicked" Type="Check" TextFontSize="16" Padding="20, 0, 30, 0" IsChecked="False"/>
+
+            <Label Text=""/>
+            <Label Text="Name Changer Options" FontSize="16" Padding="10,0,30,0"/>
+            <Entry x:Name="NameChanger" Text="Name Changer" IsReadOnly="False" ScaleX="0.9" ScaleY="1.0" FontSize="Medium" HorizontalTextAlignment="Center"></Entry>
+            <Button Text="Set Name" CornerRadius="20" Clicked="SetNameChanger_Clicked"></Button>
+            
+            <Label Text=""/>
+            <Label Text="DownCraft © By Misaki" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="16" Padding="40,0,30,0"/>
+            <Label Text=""/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

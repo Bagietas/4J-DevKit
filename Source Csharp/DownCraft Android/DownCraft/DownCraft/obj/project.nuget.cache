@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pcPO26b/EvW4ouhGuOTcQbaODNP09ML5044t+H1U3MS/gcuSEA7YFc8Ky1l1aQ0QWwnxwsIVikHLQfgQKjPJlQ==",
+  "success": true,
+  "projectFilePath": "G:\\My Drive\\PS3\\Source\\DownCraft Source\\RTM Source\\DownCraft Android\\DownCraft\\DownCraft\\DownCraft.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Misaki\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Misaki\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Misaki\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Misaki\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Misaki\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Misaki\\.nuget\\packages\\xamarin.forms.inputkit\\3.7.2\\xamarin.forms.inputkit.3.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
