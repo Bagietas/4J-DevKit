@@ -1,0 +1,20 @@
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.exe.config
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.exe
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.pdb
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\Guna.UI.dll
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\Guna.UI2.dll
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.AssemblyReference.cache
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft_Center.Form1.resources
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft_Center.Properties.Resources.resources
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.GenerateResource.cache
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.CoreCompileInputs.cache
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.CopyComplete
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.exe
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.pdb
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rstei\source\repos\DownCraft Center\DownCraft Center\bin\Debug\System.Security.Cryptography.ProtectedData.xml

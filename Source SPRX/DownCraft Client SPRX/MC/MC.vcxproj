@@ -44,7 +44,7 @@
       <CppLanguageStd>Cpp11</CppLanguageStd>
     </ClCompile>
     <PostBuildEvent>
-      <Command>"$(TargetDir)loadSprx.exe"</Command>
+      <Command>"$(TargetDir)InjectSPRX.exe"</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>

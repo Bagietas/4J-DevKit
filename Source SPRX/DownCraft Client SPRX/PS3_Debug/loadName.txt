@@ -1,2 +1,0 @@
-Modcraft_Promo.sprx
-useLoader=true

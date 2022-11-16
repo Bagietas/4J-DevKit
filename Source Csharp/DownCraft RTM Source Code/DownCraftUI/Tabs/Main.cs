@@ -257,5 +257,10 @@ namespace DownCraftUI.Tabs
             Functions.x = this.Location.X + this.Size.Width - 1;
             Functions.y = this.Location.Y;
         }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

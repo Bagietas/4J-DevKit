@@ -25,6 +25,7 @@ namespace MC_Color
 	int Black[3] = { 0, 0, 0 };
 	int BlackTheme[3] = { 32, 32, 32 };
 	int ColorTheme[3] = { 0, 147, 255 };
+	int DescColor[4] = { 10, 10, 10, 50 };
 };
 
 char* checkTxt = "";
@@ -59,3 +60,6 @@ int keystrokes_TextX[] = { 60,60,42,78 }, keystrokes_TextY[] = { 254,272,272,272
 int* keystrokes_TextColor[] = { MC_Color::White, MC_Color::White, MC_Color::White, MC_Color::White };
 int keystrokesHudX[] = { 55,55,37,73,37,40 }, keystrokesHudY[] = { 250,268,268,268,288,294 }, HudW[] = { 15,15,15,15,51,45 }, HudH[] = { 15,15,15,15,10,0 };
 int* keystrokesHudColor1[] = { MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::BlackTheme, MC_Color::White };
+
+int lastMenus[20];
+int lastMenuCount = 0;

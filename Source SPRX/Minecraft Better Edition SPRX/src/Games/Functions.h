@@ -109,28 +109,38 @@ void DoRainbowColor()
 	}
 }
 
-void SlideOpenMenuAnimation()
+int getOption()
 {
-	if (Opened && !Closed)
+	if (optionPress)
 	{
-		if (MenuX > -41)
-		{
-			MenuX -= speedSlider;
-		}
+		optionPress = false;
+		return CurrentOpt;
 	}
+	else return -1;
 }
 
-void SlideCloseMenuAnimation()
+void openSubmenu(int menu)
 {
-	if (Closed)
-	{
-		MenuX += speedSlider;
+	lastMenus[lastMenuCount] = CurrentMenu;
+	lastMenuCount++;
+	CurrentOpt = 0;
+	CurrentMenu = menu;
+}
 
-		if (MenuX > 200)
-		{
-			Opened = false;
-			Closed = false;
-		}
+void closeMenu() {
+	lastMenuCount = 0;
+	CurrentOpt = 0;
+	Opened = false;
+}
+
+void goBack() {
+	if (lastMenuCount == 0) {
+		closeMenu();
+	}
+	else {
+		lastMenuCount--;
+		CurrentMenu = lastMenus[lastMenuCount];
+		CurrentOpt = 0;
 	}
 }
 
@@ -145,7 +155,8 @@ void Controller()
 		{
 			Opened = true;
 			CurrentMenu = MainMenu;
-			MenuX = 200;
+			lastMenuCount = 0;
+			CurrentOpt = 0;
 		}
 	}
 
@@ -191,7 +202,7 @@ void Controller()
 		{
 			if (scrollWait(firstWaitTime, waitTime, wI))
 			{
-				returnPress = true;
+				goBack();
 				return;
 			}
 		}
@@ -358,24 +369,6 @@ void DrawSnprintf(const char* text, int valeur, int X, int Y)
 	_sys_snprintf(option4, 0x100, text, (valeur));
 	StringToWideCharacter(woption4, option4, strlen(option4));
 	DrawText(woption4, X, Y, color(MC_Color::White));
-}
-
-void SendMessageInfo(const wchar_t* title, const wchar_t* message, int style)
-{
-	if (style == 1)
-	{
-		int width = Font_width(message);
-		DrawRectangleBorder(640 - width - 3, SendMessageInfoPosX, width + 2, 22, SendMessageInfoRectColor, SendMessageInfoBorderColor, 1);
-		DrawTextWithShadow(title, 640 - width - 2, SendMessageInfoPosX + 2, color(MC_Color::White));
-		DrawTextWithShadow(message,  640 - width - 2, SendMessageInfoPosX + 13, color(MC_Color::Aqua));
-	}
-	else
-	{
-		int width = Font_width(message);
-		DrawRectangleBorder(640 - width - 3, SendMessageInfoPosX, width + 2, 22, SendMessageInfoRectColor, SendMessageInfoBorderColor, 1);
-		DrawTextWithShadow(title, 640 - width - 2, SendMessageInfoPosX + 2, color(MC_Color::White));
-		DrawTextWithShadow(message,  640 - width - 2, SendMessageInfoPosX + 13, color(MC_Color::Aqua));
-	}
 }
 
 #pragma endregion

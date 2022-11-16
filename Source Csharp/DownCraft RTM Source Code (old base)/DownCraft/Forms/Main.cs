@@ -93,7 +93,7 @@ namespace DownCraft
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://downcraft.xyz/downcraft/RTM/API.php").Contains("1.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("1.0"))
                 {
                     if (MessageBox.Show("A new update is available !", "DownCraft RTM", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -115,7 +115,6 @@ namespace DownCraft
         }
 
         #endregion
-
         #region "Connect + change api Code"
 
         void ChangeAPI()
@@ -301,7 +300,6 @@ namespace DownCraft
         }
 
         #endregion
-
         #region "Options + Mods"
 
         private void guna2Button27_Click(object sender, EventArgs e)
@@ -6155,7 +6153,6 @@ namespace DownCraft
         }
 
         #endregion
-
         #region "SPRX Premium Function"
 
         private void guna2Button23_Click(object sender, EventArgs e)
@@ -6169,7 +6166,6 @@ namespace DownCraft
         }
 
         #endregion
-
         #region "Some shit"
 
         private void guna2Button24_Click_1(object sender, EventArgs e)

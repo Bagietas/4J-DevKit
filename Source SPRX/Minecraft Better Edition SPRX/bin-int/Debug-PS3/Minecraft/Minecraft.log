@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-.\Util/Variables.h(30,17): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(31,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\Games/Vector.h(24,9): warning 432: returning reference to local temporary
   
@@ -27,31 +27,35 @@
   
 .\Games\Struct.h(218,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
   
-.\Games/Functions.h(223,65): warning 1322: taking the address of a temporary
+.\Games/Functions.h(235,65): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(224): warning 942: missing return statement at end of non-void function "Font_width"
+.\Games\Functions.h(236): warning 942: missing return statement at end of non-void function "Font_width"
   
-.\Games\Functions.h(227,63): warning 1322: taking the address of a temporary
+.\Games\Functions.h(239,63): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(227,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\Functions.h(239,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\Functions.h(227,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\Functions.h(239,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\Functions.h(231,63): warning 1322: taking the address of a temporary
+.\Games\Functions.h(243,63): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(231,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\Functions.h(243,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\Functions.h(231,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\Functions.h(243,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\Functions.h(235,89): warning 1322: taking the address of a temporary
+.\Games\Functions.h(247,89): warning 1322: taking the address of a temporary
   
-.\Games\Functions.h(239,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+.\Games\Functions.h(251,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
   
-.\Games\Functions.h(239,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\Functions.h(251,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\Functions.h(239,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\Functions.h(251,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\Functions.h(239,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+.\Games\Functions.h(251,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+  
+.\Menu/Huds.h(110,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+.\Menu\Huds.h(116,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 .\Games/Options.h(17,23): warning 2520: invalid narrowing conversion from "double" to "int"
   

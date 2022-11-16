@@ -69,12 +69,11 @@ namespace DownCraftUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*
             try
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://miisaakii.github.io/downcraft.website.io/download/api.html").Contains("2.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("1.0"))
                 {
                     if (MessageBox.Show("DownCraft have a new update available.\n\nplease re-download the new update on the official website DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -91,9 +90,7 @@ namespace DownCraftUI
             {
                 MessageBox.Show("API is offline", "SERVER ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
-            }
-            */
-               
+            }      
 
             Misaki.Start();
             Process.Start();

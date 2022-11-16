@@ -6,7 +6,7 @@ ___  ____                            __ _     ___________________   __
 | |  | | | | | |  __/ (__| | | (_| | | | |_  /\__/ / |   | |\ \/ /^\ \
 \_|  |_/_|_| |_|\___|\___|_|  \__,_|_|  \__| \____/\_|   \_| \_\/   \/
 
-               Made by Misaki & Dublin Modz
+                          Made by Misaki
 */
 
 #include "Util/Includes.h"
@@ -18,7 +18,6 @@ SYS_MODULE_STOP(Minecraft_Stop);
 extern "C" int Minecraft_Main(void)
 {
 	InstallHooks();
-	BetterOptions();
 	return SYS_PRX_RESIDENT;
 }
 extern "C" int Minecraft_Stop(void)

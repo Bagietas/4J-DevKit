@@ -1968,7 +1968,7 @@ namespace DownCraft
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 242;
-            this.label11.Text = "Version 1.0";
+            this.label11.Text = "Version 4.0";
             // 
             // Host_Tab
             // 

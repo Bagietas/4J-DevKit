@@ -9,8 +9,6 @@ void LoopOptions()
 	Options::ShowKeystrokes();
 	Options::ShowCPS();
 	DoRainbowColor();
-	SlideOpenMenuAnimation();
-	SlideCloseMenuAnimation();
 	Render();
 }
 
