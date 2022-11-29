@@ -38,6 +38,7 @@
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2GradientButton9 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -63,6 +64,7 @@
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gunaGradient2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -81,11 +83,12 @@
             this.gunaGradient2Panel1.Controls.Add(this.guna2ImageButton1);
             this.gunaGradient2Panel1.Controls.Add(this.pictureBox1);
             this.gunaGradient2Panel1.Controls.Add(this.gunaLabel1);
-            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.Indigo;
-            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.LightCoral;
+            this.gunaGradient2Panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.Aqua;
+            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.Purple;
             this.gunaGradient2Panel1.Location = new System.Drawing.Point(-4, -1);
             this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(457, 42);
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(654, 42);
             this.gunaGradient2Panel1.TabIndex = 0;
             // 
             // guna2ImageButton1
@@ -94,7 +97,7 @@
             this.guna2ImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(402, 1);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(487, 1);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
@@ -146,6 +149,7 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.guna2GroupBox1.Controls.Add(this.guna2GradientButton9);
             this.guna2GroupBox1.Controls.Add(this.guna2GradientButton6);
             this.guna2GroupBox1.Controls.Add(this.guna2GradientButton5);
             this.guna2GroupBox1.Controls.Add(this.guna2GradientButton2);
@@ -155,12 +159,29 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(43, 89);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(83, 89);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(179, 199);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(179, 237);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "guna2GroupBox1";
+            // 
+            // guna2GradientButton9
+            // 
+            this.guna2GradientButton9.CheckedState.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.CustomImages.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.guna2GradientButton9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.guna2GradientButton9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton9.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton9.HoverState.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.Location = new System.Drawing.Point(13, 194);
+            this.guna2GradientButton9.Name = "guna2GradientButton9";
+            this.guna2GradientButton9.ShadowDecoration.Parent = this.guna2GradientButton9;
+            this.guna2GradientButton9.Size = new System.Drawing.Size(151, 30);
+            this.guna2GradientButton9.TabIndex = 6;
+            this.guna2GradientButton9.Text = "Game BLES01976";
+            this.guna2GradientButton9.Click += new System.EventHandler(this.guna2GradientButton9_Click);
             // 
             // guna2GradientButton6
             // 
@@ -257,7 +278,7 @@
             this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(228, 89);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(268, 89);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
             this.guna2GroupBox2.Size = new System.Drawing.Size(179, 128);
@@ -323,6 +344,7 @@
             // guna2TextBox1
             // 
             this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.guna2TextBox1.BorderThickness = 2;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -335,13 +357,13 @@
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(18, 47);
+            this.guna2TextBox1.Location = new System.Drawing.Point(24, 47);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "PS3 IP";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(107, 24);
+            this.guna2TextBox1.Size = new System.Drawing.Size(174, 24);
             this.guna2TextBox1.TabIndex = 7;
             // 
             // guna2GradientButton3
@@ -353,7 +375,7 @@
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(249, 47);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(322, 47);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.Size = new System.Drawing.Size(75, 24);
@@ -364,11 +386,11 @@
             // gunaGradient2Panel4
             // 
             this.gunaGradient2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel4.GradientColor1 = System.Drawing.Color.Indigo;
-            this.gunaGradient2Panel4.GradientColor2 = System.Drawing.Color.LightCoral;
+            this.gunaGradient2Panel4.GradientColor1 = System.Drawing.Color.Aqua;
+            this.gunaGradient2Panel4.GradientColor2 = System.Drawing.Color.Purple;
             this.gunaGradient2Panel4.Location = new System.Drawing.Point(-1, 77);
             this.gunaGradient2Panel4.Name = "gunaGradient2Panel4";
-            this.gunaGradient2Panel4.Size = new System.Drawing.Size(704, 5);
+            this.gunaGradient2Panel4.Size = new System.Drawing.Size(663, 5);
             this.gunaGradient2Panel4.TabIndex = 2;
             // 
             // guna2RadioButton1
@@ -381,7 +403,7 @@
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
             this.guna2RadioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(133, 49);
+            this.guna2RadioButton1.Location = new System.Drawing.Point(206, 49);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.Size = new System.Drawing.Size(54, 21);
             this.guna2RadioButton1.TabIndex = 9;
@@ -403,7 +425,7 @@
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
             this.guna2RadioButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2RadioButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(193, 49);
+            this.guna2RadioButton2.Location = new System.Drawing.Point(266, 49);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.Size = new System.Drawing.Size(53, 21);
             this.guna2RadioButton2.TabIndex = 10;
@@ -440,7 +462,7 @@
             this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(330, 47);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(403, 47);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
             this.guna2GradientButton4.Size = new System.Drawing.Size(103, 24);
@@ -453,18 +475,22 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(375, 294);
+            this.gunaLabel4.Location = new System.Drawing.Point(455, 329);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(63, 15);
             this.gunaLabel4.TabIndex = 2;
-            this.gunaLabel4.Text = "Version 1.0";
+            this.gunaLabel4.Text = "Version 3.0";
+            // 
+            // guna2Elipse11
+            // 
+            this.guna2Elipse11.TargetControl = this.guna2GradientButton9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(450, 318);
+            this.ClientSize = new System.Drawing.Size(530, 353);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.guna2GradientButton4);
             this.Controls.Add(this.guna2RadioButton2);
@@ -531,6 +557,8 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton9;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse11;
     }
 }
 

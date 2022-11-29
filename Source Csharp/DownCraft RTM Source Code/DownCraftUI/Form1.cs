@@ -11,7 +11,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DownCraftUI.Classes;
-using mcV1.Classes;
 
 namespace DownCraftUI
 {
@@ -73,7 +72,7 @@ namespace DownCraftUI
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("1.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("3.0"))
                 {
                     if (MessageBox.Show("DownCraft have a new update available.\n\nplease re-download the new update on the official website DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -92,7 +91,6 @@ namespace DownCraftUI
                 Application.Exit();
             }      
 
-            Misaki.Start();
             Process.Start();
 
             this.guna2GradientPanel1.MouseDown += this.xMouseDown;
