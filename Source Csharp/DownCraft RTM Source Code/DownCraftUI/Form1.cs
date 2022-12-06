@@ -72,7 +72,7 @@ namespace DownCraftUI
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("3.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("5.0"))
                 {
                     if (MessageBox.Show("DownCraft have a new update available.\n\nplease re-download the new update on the official website DownCraft.", "DownCraft", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {

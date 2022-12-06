@@ -95,7 +95,7 @@ namespace DownCraft
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("3.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("5.0"))
                 {
                     if (MessageBox.Show("A new update is available !", "DownCraft RTM", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
