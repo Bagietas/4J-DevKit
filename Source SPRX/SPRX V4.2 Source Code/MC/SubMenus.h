@@ -4,48 +4,26 @@ namespace SubMenu
 {
 	void MainMenu()
 	{
-		if (devmenu) 
-		{ 
-			submmenuMax = 14; 
-			AddHud(submmenuMax);
-			AddTitle(L"DownCraft SPRX");
-			AddDescription(L"Main Menu");
-			AddOption(L"Host Options");
-			AddOption(L"Non Host Options");
-			AddOption(L"Players Options");
-			AddOption(L"Weather Options");
-			AddOption(L"Vision Options");
-			AddOption(L"Modules Options");
-			AddOption(L"Name Changer");
-			AddOption(L"Game Editor");
-			AddOption(L"Mini-Game Options");
-			AddOption(L"Teleport Options");
-			AddOption(L"Players Options");
-			AddOption(L"Settings Menu");
-			AddOption(L"Credits Menu");
-			AddOption(L"Developer Menu");
-			AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
-		} 
-		else 
-		{ 
-			submmenuMax = 12;
-			AddHud(submmenuMax);
-			AddTitle(L"DownCraft SPRX");
-			AddDescription(L"Main Menu");
-			AddOption(L"Host Options");
-			AddOption(L"Non Host Options");
-			AddOption(L"Players Options");
-			AddOption(L"Weather Options");
-			AddOption(L"Vision Options");
-			AddOption(L"Name Changer");
-			AddOption(L"Game Editor");
-			AddOption(L"Mini-Game Options");
-			AddOption(L"Teleport Options");
-			AddOption(L"Players Options");
-			AddOption(L"Settings Menu");
-			AddOption(L"Credits Menu");
-			AddInformation(submmenuMax, L"By Misakiii                                         V4.2");
-		}
+		submmenuMax = 15;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Main Menu");
+		AddOption(L"Host Options");
+		AddOption(L"Non Host Options");
+		AddOption(L"Players Options");
+		AddOption(L"Weather Options");
+		AddOption(L"Vision Options");
+		AddOption(L"Modules Options");
+		AddOption(L"Name Changer");
+		AddOption(L"Game Editor");
+		AddOption(L"Mini-Game Options");
+		AddOption(L"Teleport Options");
+		AddOption(L"Players Options");
+		AddOption(L"Settings Menu");
+		AddOption(L"Credits Menu");
+		AddOption(L"Config Options");
+		AddOption(L"Developer Menu");
+		AddInformation(submmenuMax, L"By Misakiii                                         V4.5");
 	}
 
     #pragma region "Host Pages"
@@ -143,7 +121,7 @@ namespace SubMenu
 
 	void HostMenu3()
 	{
-		submmenuMax = 4;
+		submmenuMax = 3;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Host Menu");
@@ -902,7 +880,7 @@ namespace SubMenu
 
 	void CreditsMenu()
 	{
-		submmenuMax = 11;
+		submmenuMax = 13;
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Credits Menu");
@@ -920,13 +898,27 @@ namespace SubMenu
 		AddOption(L"silver14818 (helper)");
 		AddOption(L"gopro2027 (design idea)");
 
-		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#0513");}
+		if (CurrentOpt == 0) { AddInformation(submmenuMax, L"Discord: Misaki#9446");}
 		if (CurrentOpt == 1) { AddInformation(submmenuMax, L"Discord: NyTekCFW#4315");}
 		if (CurrentOpt == 4) { AddInformation(submmenuMax, L"Discord: mizdx#5066");}
 		if (CurrentOpt == 7) { AddInformation(submmenuMax, L"Discord: VinDublin#5716");}
 		if (CurrentOpt == 8) { AddInformation(submmenuMax, L"Discord: MayhemModding#3231");}
 		if (CurrentOpt == 10) { AddInformation(submmenuMax, L"Discord: d.s.j.#0598");}
 		if (CurrentOpt == 11) { AddInformation(submmenuMax, L"Discord: Guaros#9672"); }
+	}
+
+    #pragma endregion
+
+    #pragma region "Config Menu Pages"
+
+	void ConfigMenu()
+	{
+		submmenuMax = 2;
+		AddHud(submmenuMax);
+		AddTitle(L"DownCraft SPRX");
+		AddDescription(L"Config Menu");
+		AddBoolOption(L"PvP Config", PvPConfig);
+		AddBoolOption(L"Labymod Config", Labymode);
 	}
 
     #pragma endregion

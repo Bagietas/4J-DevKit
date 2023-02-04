@@ -5416,14 +5416,18 @@ void Options()
 			CurrentOpt = 0;
 		}
 
-		if (devmenu)
+		if (CurrentOpt == 13)
 		{
-			if (CurrentOpt == 13)
-			{
-				MainMenu = false;
-				DeveloperMenu = true;
-				CurrentOpt = 0;
-			}
+			MainMenu = false;
+			ConfigMenu = true;
+			CurrentOpt = 0;
+		}
+
+		if (CurrentOpt == 14)
+		{
+			MainMenu = false;
+			DeveloperMenu = true;
+			CurrentOpt = 0;
 		}
 	}
 

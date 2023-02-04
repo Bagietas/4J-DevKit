@@ -34,6 +34,7 @@ bool MiniGamePage = false;
 bool TPMiniGame = false;
 bool TeleportMenu = false;
 bool SettingsMenu = false;
+bool ConfigMenu = false;
 bool ThemeColors = false;
 bool EditMenu = false;
 bool CustomImageMenu = false;
@@ -352,6 +353,10 @@ bool GameModeToSurvival = false;
 bool InventoryCreaTumble = false;
 bool InventoryCreaTumbleActive = false;
 bool CreaTumbleToggle = false;
+
+//Config Menu Options
+bool PvPConfig = false;
+bool Labymode = false;
 
 //Debug Text Menu
 bool DebugText = false;

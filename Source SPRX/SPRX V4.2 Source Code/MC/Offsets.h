@@ -44,124 +44,19 @@ namespace Offsets
 	void ITEMS_ON_HEAD(bool toggle) { if (toggle) { *(int*)0x428704 = 0x4082001C; } else { *(int*)0x428704 = 0x4182001C; }}
 	void STOP_BOAT(bool toggle) { if (toggle) { *(int*)0xE0F90 = 0x41800034; } else { *(int*)0xE0F90 = 0x40800034; }}
 	void NO_WEB(bool toggle) { if (toggle) { *(int*)0x234F9C = 0x38800000; } else { *(int*)0x234F9C = 0x38800001; }}
+	void ENTITY_GOD_MODE(bool toggle) { if (toggle) { *(int*)0x003A3F6C = 0x4082004C; } else { *(int*)0x003A3F6C = 0x4182004C; }}
+	void INFINITE_OXYGEN(bool toggle) { if (toggle) { *(int*)0x0039DE28 = 0x4182002C; } else { *(int*)0x0039DE28 = 0x4082002C; }}
+	void REGENERATE_HEART(bool toggle) { if (toggle) { *(int*)0x002ADCE8 = 0x68630000; } else { *(int*)0x002ADCE8 = 0x68630001; }}
+	void LOCK_GAMEMODE(bool toggle) { if (toggle) { *(int*)0x002F03D0 = 0x4182000C; } else { *(int*)0x002F03D0 = 0x4082000C; }}
+	void LOCK_WEATHER(bool toggle) { if (toggle) { *(int*)0x00393E84 = 0x4182048C; } else { *(int*)0x00393E84 = 0x4082048C; }}
+	void FAST_BOW(bool toggle) { if (toggle) { *(int*)0x000FB4C4 = 0xFFE01818; } else { *(int*)0x000FB4C4 = 0xFFE00818; }}
+	void DIRECTION_ARROWS(bool toggle) { if (toggle) { *(int*)0x000FB55C = 0x45400000; } else { *(int*)0x000FB55C = 0x40400000; }}
 
 	void INSTANT_DAMAGE(int value)
 	{
 		char HEX[] = { NyTekCFW::IntToHex(value) };
 		sys_dbg_write_process_memory(0x003A3FF0, &HEX, sizeof(HEX));
 		sys_dbg_write_process_memory_ps3mapi(0x003A3FF0, &HEX, sizeof(HEX));
-	}
-
-	void ENTITY_GOD_MODE(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x40 };
-			sys_dbg_write_process_memory(0x003A3F6C, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003A3F6C, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x41 };
-			sys_dbg_write_process_memory(0x003A3F6C, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x003A3F6C, &HEX, sizeof(HEX));
-		}
-	}
-
-	void INFINITE_OXYGEN(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x41 };
-			sys_dbg_write_process_memory(0x0039DE28, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x0039DE28, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x40 };
-			sys_dbg_write_process_memory(0x0039DE28, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x0039DE28, &HEX, sizeof(HEX));
-		}
-	}
-
-	void REGENERATE_HEART(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x68, 0x63, 0x00, 0x00 };
-			sys_dbg_write_process_memory(0x002ADCE8, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x002ADCE8, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x68, 0x63, 0x00, 0x01 };
-			sys_dbg_write_process_memory(0x002ADCE8, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x002ADCE8, &HEX, sizeof(HEX));
-		}
-	}
-
-	void LOCK_GAMEMODE(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x41 };
-			sys_dbg_write_process_memory(0x002F03D0, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x002F03D0, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x40 };
-			sys_dbg_write_process_memory(0x002F03D0, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x002F03D0, &HEX, sizeof(HEX));
-		}
-	}
-
-	void LOCK_WEATHER(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x41 };
-			sys_dbg_write_process_memory(0x00393E84, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x00393E84, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x40 };
-			sys_dbg_write_process_memory(0x00393E84, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x00393E84, &HEX, sizeof(HEX));
-		}
-	}
-
-	void FAST_BOW(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0xE0, 0x18, 0x18 };
-			sys_dbg_write_process_memory(0x000FB4C5, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x000FB4C5, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0xE0, 0x08, 0x18 };
-			sys_dbg_write_process_memory(0x000FB4C5, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x000FB4C5, &HEX, sizeof(HEX));
-		}
-	}
-
-	void DIRECTION_ARROWS(bool toggle)
-	{
-		if (toggle)
-		{
-			char HEX[] = { 0x45 };
-			sys_dbg_write_process_memory(0x000FB55C, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x000FB55C, &HEX, sizeof(HEX));
-		}
-		else
-		{
-			char HEX[] = { 0x40 };
-			sys_dbg_write_process_memory(0x000FB55C, &HEX, sizeof(HEX));
-			sys_dbg_write_process_memory_ps3mapi(0x000FB55C, &HEX, sizeof(HEX));
-		}
 	}
 
 	void GOD_MODE_FOR_ME(bool toggle)

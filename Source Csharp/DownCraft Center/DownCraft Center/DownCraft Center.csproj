@@ -111,12 +111,12 @@
     <None Include="Resources\HEN_V2.1.sprx" />
     <None Include="Resources\HEN_V2.2.sprx" />
     <None Include="Resources\HEN_V3.sprx" />
-    <None Include="Resources\HEN_V4.sprx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\HEN_V4.sprx" />
     <None Include="Resources\snuvcdsm.exe" />
   </ItemGroup>
   <ItemGroup>

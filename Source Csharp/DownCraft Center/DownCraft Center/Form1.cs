@@ -91,7 +91,7 @@ namespace DownCraft_Center
             MessageBox.Show("DownCraft Center is loading please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                if (!web.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("5.0"))
+                if (!web.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("7.0"))
                 {
                     if (MessageBox.Show("A new update is available.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {

@@ -63,7 +63,6 @@ InjectSPRX.exe</Command>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Detour.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Memory.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Pattern.cpp" />
     <ClCompile Include="prx.cpp" />
@@ -504,7 +503,6 @@ InjectSPRX.exe</Command>
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Engine\world\phys\Matrix.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Engine\world\phys\Vec2.h" />
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Engine\world\phys\Vec3.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Detour.hpp" />
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Memory.hpp" />
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Pattern.hpp" />
     <ClInclude Include="Buttons.h" />

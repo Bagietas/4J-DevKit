@@ -2,9 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="prx.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Detour.cpp">
-      <Filter>Memory</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Memory.cpp">
       <Filter>Memory</Filter>
     </ClCompile>
@@ -1380,9 +1377,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Engine\world\Minecraft.h">
       <Filter>Minecraft\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Detour.hpp">
-      <Filter>Memory</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Desktop\Minecraft-main\src\Memory\Memory.hpp">
       <Filter>Memory</Filter>

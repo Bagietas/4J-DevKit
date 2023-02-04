@@ -31,14 +31,8 @@ void gameRender_Hook(uint32_t r3, uint32_t r4)
 
 extern "C" int _DownCraftSPRX_prx_entry(void)
 {	
-	const char* message;
-	if (devmenu)
-		message = "DownCraft SPRX Developer Version :)\nOpen menu press  + \nMenu made by Misakiii !";
-	else
-		message = "DownCraft SPRX Public Version\nOpen menu press  + \nMenu made by Misakiii !";
-
 	Dialog::msgdialog_mode = Dialog::MODE_RUNNING;
-	Dialog::ProgressBar(message, "Loading...", 20);
+	Dialog::ProgressBar("DownCraft SPRX V4.5\nOpen menu press  + \nMenu made by Misakiii !", "Loading...", 20);
 	Dialog::End();
 
 	HookFunctionStart(gameRenderHook, *(uint32_t*)(gameRender_Hook), *(uint32_t*)(gameRender_Stub));

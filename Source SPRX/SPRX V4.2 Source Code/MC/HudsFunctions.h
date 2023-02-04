@@ -77,18 +77,21 @@ void GetNotify()
 			{
 				if (UI::Settings::GradientRGB)
 				{
-					drawRectBorderRGBV3(284, 21, 143, 15, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE, UI::Color::RainbowRED1, UI::Color::RainbowGREEN1, UI::Color::RainbowBLUE1);
-					DrawText(NotifMsg, 289, 25, color(UI::Color::WHITE));
+					int width = Font_width(NotifMsg);
+					drawRectBorderRGBV3(284, 21, width + 5, 15, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE, UI::Color::RainbowRED1, UI::Color::RainbowGREEN1, UI::Color::RainbowBLUE1);
+					DrawText(NotifMsg, 18, 64, color(UI::MCTextColors::White));
 				}
 				else
 				{
-					drawRectBorderRGB(284, 21, 143, 15, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE);
+					int width = Font_width(NotifMsg);
+					drawRectBorderRGB(284, 21, width, 15, UI::Color::BLACK, UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE);
 					DrawText(NotifMsg, 289, 25, color(UI::Color::WHITE));
 				}
 			}
 			else
 			{
-				drawRectBorder(284, 21, 143, 15, UI::Color::BLACK, GetThemeColor());
+				int width = Font_width(NotifMsg);
+				drawRectBorder(284, 21, width, 15, UI::Color::BLACK, GetThemeColor());
 				DrawText(NotifMsg, 289, 25, color(UI::Color::WHITE));
 			}
 
@@ -1045,7 +1048,8 @@ void DEBUG_FUNCTIONS_MESSAGES()
 void Welcome_Message()
 {
 	DrawText(L"Welcome: ", 20, 25, color(UI::Color::WHITE));
-	DrawTextC(PSN_NAME, 60, 25, color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE));
+	if (!UI::Settings::ShowPosition)
+		DrawTextC(PSN_NAME, 60, 25, color(UI::Color::RainbowRED, UI::Color::RainbowGREEN, UI::Color::RainbowBLUE));
 }
 
 #pragma endregion

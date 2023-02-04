@@ -232,4 +232,11 @@ void drawLineTest(const Vector2& start, const Vector2& end, int* color, float li
 	FUNCTIONS::Tesselator_End(pTesselator);
 }
 
+void DrawTextWithRect(const wchar_t* text, float x, float y, uint32_t color)
+{
+	int width = Font_width(text);
+	DrawRectangle(x - 3, y - 1, width + 5, 10, UI::Color::BLACK);
+	DrawText(text, x, y, color);
+}
+
 #pragma endregion

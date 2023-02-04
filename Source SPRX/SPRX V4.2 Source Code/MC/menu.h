@@ -282,6 +282,12 @@
 		 MainMenu = true;
 	 }
 
+	 if (ConfigMenu)
+	 {
+		 ConfigMenu = false;
+		 MainMenu = true;
+	 }
+
 	 if (DeveloperMenu)
 	 {
 		 DeveloperMenu = false;
@@ -614,10 +620,9 @@
 
 		 if (CustomImageMenu)
 		 {
-			 DrawRectangle(127, 108, 218, 32, UI::Color::BLACK);
-			 DrawTextC("Before using this read this!", 129, 110, color(UI::Color::WHITE));
-			 DrawTextC("You need add a custom image in the MediaPS3.arc", 129, 120, color(UI::Color::WHITE));
-			 DrawTextC("Set your PS3 language to English (United State)", 129, 130, color(UI::Color::WHITE));
+			 DrawTextWithRect(L"Before using this read this!", 80, 40, color(UI::Color::WHITE));
+			 DrawTextWithRect(L"You need add a custom image in the MediaPS3.arc", 80, 50, color(UI::Color::WHITE));
+			 DrawTextWithRect(L"Set your PS3 language to English (United State)", 80, 60, color(UI::Color::WHITE));
 			 SubMenu::CustomImageMenu();
 		 }
 
@@ -660,12 +665,14 @@
 			 SubMenu::CreditsMenu();
 		 }
 
+		 if (ConfigMenu)
+		 {
+			 SubMenu::ConfigMenu();
+		 }
+
 		 if (DeveloperMenu)
 		 {
-			 if (devmenu)
-			 {
-				 SubMenu::DeveloperMenu();
-			 }
+			 SubMenu::DeveloperMenu();
 		 }
 	 }
  }

