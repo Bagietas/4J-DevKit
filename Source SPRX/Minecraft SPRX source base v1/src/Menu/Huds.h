@@ -4,10 +4,13 @@ namespace Menu
 {
 	void AddHuds(int sub)
 	{
+		int Gradient1[3] = { MenuGradient1R, MenuGradient1G, MenuGradient1B };
+		int Gradient2[3] = { MenuGradient2R, MenuGradient2G, MenuGradient2B };
+
 		for (byte a = 0; a < sub + 1; a++)
 		{
 			if (GradientMenu)
-				DrawGradientBorder(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15 + (11 * sub), MC_Color::Red, MC_Color::Blue, MC_Color::BlackTheme, MenuBorderSize, true);
+				DrawGradientBorder(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15 + (11 * sub), Gradient1, Gradient2, MC_Color::BlackTheme, MenuBorderSize, true);
 			else
 				DrawRectangleBorder(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15 + (11 * sub), MC_Color::BlackTheme, GetThemeColor(), MenuBorderSize);
 		}
@@ -15,8 +18,11 @@ namespace Menu
 
 	void Scrollbar()
 	{
+		int Gradient1[3] = { MenuGradient1R, MenuGradient1G, MenuGradient1B };
+		int Gradient2[3] = { MenuGradient2R, MenuGradient2G, MenuGradient2B };
+
 		if (GradientMenu)
-			DrawGradientRectangle(60 + MenuX, 55 + MenuY + (SpaceBetweenText * CurrentOpt), 110 + menuLenght, 11, MC_Color::Red, MC_Color::Blue, true);
+			DrawGradientRectangle(60 + MenuX, 55 + MenuY + (SpaceBetweenText * CurrentOpt), 110 + menuLenght, 11, Gradient1, Gradient2, true);
 		else
 			DrawRectangle(60 + MenuX, 55 + MenuY + (SpaceBetweenText * CurrentOpt), 110 + menuLenght, 11, GetThemeColor());
 	}
@@ -25,8 +31,11 @@ namespace Menu
 	{
 		Scrollbar();
 
+		int Gradient1[3] = { MenuGradient1R, MenuGradient1G, MenuGradient1B };
+		int Gradient2[3] = { MenuGradient2R, MenuGradient2G, MenuGradient2B };
+
 		if (GradientMenu)
-			DrawGradientRectangle(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15, MC_Color::Red, MC_Color::Blue, true);
+			DrawGradientRectangle(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15, Gradient1, Gradient2, true);
 		else
 			DrawRectangle(60 + MenuX, 40 + MenuY, 110 + menuLenght, 15, GetThemeColor());
 

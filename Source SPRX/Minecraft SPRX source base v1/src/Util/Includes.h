@@ -101,6 +101,7 @@ Level* g_Level2;
 //INCLUDES SOURCE
 #include "Games/Buttons.h"
 #include "Util/Variables.h"
+#include "Games/Colors.h"
 #include "Games/PS3.h"
 #include "Games/Dialog.h"
 #include "Games/Vector.h"

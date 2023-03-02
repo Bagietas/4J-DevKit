@@ -18,4 +18,16 @@ namespace Options
 		NyTekCFW::WriteString(0x3000ABE4, name);
 		NyTekCFW::WriteString(0x3000ABA4, name);
 	}
+
+	void getTeleport()
+	{
+		CoordX = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX;
+		CoordY = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY;
+		CoordZ = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ;
+	}
+
+	void setTeleport(double X, double Y, double Z)
+	{
+		mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(X + 0.5, Y + 1 + 0.5, Z + 0.5);
+	}
 }

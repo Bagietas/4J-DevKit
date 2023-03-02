@@ -109,17 +109,12 @@ void DoRainbowColor()
 	}
 }
 
-int* GetThemeRainbow()
-{
-	int RAINBOW[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
-	return RAINBOW;
-}
-
 int* GetThemeColor()
 {
+	int RAINBOW[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
 	int RGB[] = { MenuR, MenuG, MenuB };
 	int* THEME[3];
-	if (ThemeColors == "RAINBOW") { THEME[3] = GetThemeRainbow(); }
+	if (ThemeColors == "RAINBOW") { THEME[3] = RAINBOW; }
 	else if (ThemeColors == "RGB") { THEME[3] = { RGB }; }
 	return THEME[3];
 }

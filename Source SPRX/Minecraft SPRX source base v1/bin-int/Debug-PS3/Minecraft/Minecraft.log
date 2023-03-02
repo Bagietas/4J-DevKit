@@ -1,7 +1,7 @@
 ﻿  Main.cpp
-.\Util/Variables.h(42,17): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(14,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Util\Variables.h(59,20): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util\Variables.h(31,20): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\Games/Dialog.h(196,6): warning 178: variable "ret" was declared but never referenced
   
@@ -63,16 +63,14 @@
   
 .\Games\GamesFunctions.h(65,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
   
-.\Games/Functions.h(115,8): warning 1070: returning pointer to local variable
+.\Games/Functions.h(117,33): warning 176: subscript out of range
   
-.\Games\Functions.h(122,33): warning 176: subscript out of range
+.\Games\Functions.h(118,34): warning 176: subscript out of range
   
-.\Games\Functions.h(123,34): warning 176: subscript out of range
+.\Games\Functions.h(119,8): warning 176: subscript out of range
   
-.\Games\Functions.h(124,8): warning 176: subscript out of range
+.\Menu/Huds.h(63,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-.\Menu/Huds.h(54,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Menu\Huds.h(65,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-.\Menu\Huds.h(56,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-  Minecraft.vcxproj -> C:\Users\rstei\Desktop\PC\source\Minecraft SPRX source base\bin\Debug-PS3\Minecraft.sprx
+  Minecraft.vcxproj -> C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX source base v1\bin\Debug-PS3\Minecraft.sprx

@@ -2,40 +2,12 @@
 
 enum eMenus
 {
-	MainMenu, MainOptions, SettingsMenu, CreditsMenu
-};
-
-enum eColors
-{
-	DarkRed, Red, Gold, Yellow, DarkGreen, Green, Aqua, DarkAqua, DarkBlue, Blue, LightPurple, DarkPurple, White, Gray, DarkGray, Black
-};
-
-namespace MC_Color
-{
-	int DarkRed[3] = { 170, 0, 0 };
-	int Red[3] = { 255, 85, 85 };
-	int Gold[3] = { 255, 170, 0 };
-	int Orange[3] = { 255, 143, 16 };
-	int Yellow[3] = { 255, 255, 85 };
-	int DarkGreen[3] = { 0, 170, 0 };
-	int Green[3] = { 85, 255, 85 };
-	int Aqua[3] = { 85, 255, 255 };
-	int DarkAqua[3] = { 0, 170, 170 };
-	int DarkBlue[3] = { 0, 0, 170 };
-	int Blue[3] = { 85, 85, 255 };
-	int LightPurple[3] = { 255, 85, 255 };
-	int DarkPurple[3] = { 170, 0, 170 };
-	int White[3] = { 255, 255, 255 };
-	int Gray[3] = { 170, 170, 170 };
-	int DarkGray[3] = { 85, 85, 85 };
-	int Black[3] = { 0, 0, 0 };
-	int BlackTheme[3] = { 32, 32, 32 };
-	int TitleColor[3] = { 10, 253, 240 };
+	MainMenu, MainOptions, TeleportMenu, SettingsMenu, ColorMenu, CreditsMenu
 };
 
 //Initial Vars
 const wchar_t* titleSPRX = L"Minecraft SPRX";
-int MenuR = 0, MenuG = 147, MenuB = 255;
+int MenuR = 0, MenuG = 147, MenuB = 255, MenuGradient1R = 0, MenuGradient1G = 0, MenuGradient1B = 255, MenuGradient2R = 0, MenuGradient2G = 255, MenuGradient2B = 0;
 int MenuX, MenuY;
 
 //Others vars
@@ -55,8 +27,11 @@ bool BtnLeftPressed, BtnRightPressed;
 bool Opened, Closed, FirstOpen, GradientMenu;
 int MenuColorAlpha = 255, MenuColorAlphaTitle = 255, MenuColorAlphaDescription = 255;
 int SavePosition, AnimationSpeed = 10;
-int SaveMenuX, speedSlider = 10, menuLenght, MenuBorderSize;
+int SaveMenuX, speedSlider = 10, menuLenght = 5, MenuBorderSize;
 char* ThemeColors = "RGB";
+
+//Teleport options
+int CoordX, CoordY, CoordZ;
 
 //Main Options
 bool GodMode, SuperSpeed;

@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Games\Buttons.h" />
+    <ClInclude Include="Games\Colors.h" />
     <ClInclude Include="Games\Dialog.h" />
     <ClInclude Include="Games\Functions.h" />
     <ClInclude Include="Games\GamesFunctions.h" />

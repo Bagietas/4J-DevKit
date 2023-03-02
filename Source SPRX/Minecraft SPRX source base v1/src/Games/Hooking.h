@@ -2,6 +2,11 @@
 
 void LoopOptions()
 {
+	if (Opened)
+		*(int*)0x0155847C = 0x01000000;
+	else
+		*(int*)0x0155847C = 0x00000000;
+
 	Options::GOD_MODE();
 	Options::SUPER_SPEED();
 
