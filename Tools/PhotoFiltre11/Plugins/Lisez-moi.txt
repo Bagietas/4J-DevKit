@@ -1,0 +1,8 @@
+Ce dossier est destiné à contenir les modules externes (plugins) pour PhotoFiltre.
+Vous devez y placer les fichiers avec les extensions '.pfl' (PhotoFiltre Library)
+disponibles sur mon site. 
+
+Uniquement les plugins 32-bits !
+
+
+
