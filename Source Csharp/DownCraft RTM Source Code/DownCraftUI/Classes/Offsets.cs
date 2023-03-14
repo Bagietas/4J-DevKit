@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PS3Lib;
 using DownCraftUI.Tabs;
+using System.Runtime.Remoting.Contexts;
 
 namespace DownCraftUI.Classes
 {
@@ -67,7 +68,6 @@ namespace DownCraftUI.Classes
         //Default Swap Blocks
         public uint Offset_Default_Blocks = 0x0000000; //used for get the swapper blocks
         public byte[] Blocks_Default_Blocks = { 0x00 }; //used for get the swapper blocks
-
 
         #endregion
         #region "Connection Part"
@@ -7720,7 +7720,42 @@ namespace DownCraftUI.Classes
 
         #endregion
 
+        public void setRegen(bool tog)
+        {
+            byte[] buffer;
+            if (tog)
+                buffer = new byte[] { 0xFC, 0x80 };
+            else
+                buffer = new byte[] { 0xFC, 0x20 };
+            PS3.SetMemory(10370317, buffer);
+        }
+
+        public void takeDamage()
+        {
+            int getY = (int)playerPos()[1];
+
+            bool checkOfs = false;
+            uint ofs = 0x00227908;
+            if (PS3.Extension.ReadUInt32(ofs) == 0x41820028)
+            {
+                checkOfs = true;
+                PS3.Extension.WriteUInt32(ofs, 0x41820018);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                setLocation((int)playerPos()[0], 500, (int)playerPos()[2], true);
+                Task.Delay(100).Wait();
+                setLocation((int)playerPos()[0], getY, (int)playerPos()[2], true);
+                Task.Delay(100).Wait();
+                getY = (int)playerPos()[1];
+                Task.Delay(100).Wait();
+            }
+            if (checkOfs)
+            {
+                Task.Delay(500).Wait();
+                PS3.Extension.WriteUInt32(ofs, 0x41820028);
+            }
+        }
     }
 }
-
-//Jumping entity = 0x003ABE20

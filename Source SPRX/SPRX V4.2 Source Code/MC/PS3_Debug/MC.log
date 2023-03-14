@@ -1,2 +1,4 @@
-﻿  MC.vcxproj -> C:\Users\rstei\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V4.2 Source Code\PS3_Debug\MC.sprx
-  Cannot find the expected PRX Stub Library file: cellPrx_DownCraftSPRX_stub.a
+﻿  Memory.cpp
+SNCCL : error 1852: cannot open source file "C:\Users\rstei\Documents\Desktop\Minecraft-main\src\Memory\Memory.cpp"
+  
+  Compilation terminated.

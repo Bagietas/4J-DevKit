@@ -1,0 +1,10 @@
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\bin\Debug\injectSPRX.exe.config
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\bin\Debug\injectSPRX.exe
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\bin\Debug\injectSPRX.pdb
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\bin\Debug\Colorful.Console.dll
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.csproj.AssemblyReference.cache
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.csproj.CoreCompileInputs.cache
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.csproj.CopyComplete
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.exe
+C:\Users\rstei\source\repos\injectSPRX\injectSPRX\obj\Debug\injectSPRX.pdb

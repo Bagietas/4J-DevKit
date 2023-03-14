@@ -1,0 +1,53 @@
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe.config
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.pdb
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.AssemblyReference.cache
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.SuggestedBindingRedirects.cache
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Form1.resources
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Properties.Resources.resources
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.GenerateResource.cache
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CoreCompileInputs.cache
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.exe
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.pdb
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\bin\Debug\Guna.UI.dll
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CopyComplete
+C:\Users\magey\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Dashboard.resources
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe.config
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.pdb
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.AssemblyReference.cache
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Dashboard.resources
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Form1.resources
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Properties.Resources.resources
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.GenerateResource.cache
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CopyComplete
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.exe
+C:\Users\rstei\Desktop\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.pdb
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe.config
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.exe
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\bin\Debug\MageyTool.pdb
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.AssemblyReference.cache
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.SuggestedBindingRedirects.cache
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Dashboard.resources
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Form1.resources
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.Properties.Resources.resources
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.GenerateResource.cache
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CoreCompileInputs.cache
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CopyComplete
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.exe
+C:\Users\magey\Desktop\Magey (3)\Magey\MageyTool\MageyTool\obj\Debug\MageyTool.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\bin\Debug\MageyTool.exe.config
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\bin\Debug\MageyTool.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\bin\Debug\MageyTool.pdb
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.AssemblyReference.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.SuggestedBindingRedirects.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.Dashboard.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.Form1.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.Properties.Resources.resources
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.GenerateResource.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CoreCompileInputs.cache
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.csproj.CopyComplete
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.exe
+C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\Magey Source\MageyTool\MageyTool\obj\Debug\MageyTool.pdb

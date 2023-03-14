@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MageyTool", "MageyTool\MageyTool.csproj", "{70B66DF4-610C-45EC-850F-7DE65BCC19CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70B66DF4-610C-45EC-850F-7DE65BCC19CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B66DF4-610C-45EC-850F-7DE65BCC19CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B66DF4-610C-45EC-850F-7DE65BCC19CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B66DF4-610C-45EC-850F-7DE65BCC19CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CF6AE0F-B1DC-4B00-B969-31BD109D8246}
+	EndGlobalSection
+EndGlobal

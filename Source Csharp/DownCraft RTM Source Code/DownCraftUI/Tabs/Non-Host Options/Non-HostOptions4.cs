@@ -514,5 +514,14 @@ namespace DownCraftUI.Tabs.Non_Host_Options
                 FUNCS.SetDiscordRPC("1004653026486792262", "Navigate In Non-Host Options Page 5", "Made by Misakiii", OFFSETS.status);
             }
         }
+
+        private void gunaCheckBox18_CheckedChanged(object sender, EventArgs e)
+        {
+            OFFSETS.setRegen(true);
+            Task.Delay(1000).Wait();
+            OFFSETS.takeDamage();
+            Task.Delay(1000).Wait();
+            OFFSETS.setRegen(false);
+        }
     }
 }

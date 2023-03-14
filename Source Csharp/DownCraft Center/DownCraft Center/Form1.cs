@@ -17,6 +17,8 @@ namespace DownCraft_Center
 {
     public partial class Form1 : Form
     {
+        #region "Variables"
+
         public static Thread CheckProcess = new Thread(new ThreadStart(MisakiV8.Start));
         WebClient web = new WebClient();
         string tmp = Path.GetTempPath();
@@ -42,6 +44,14 @@ namespace DownCraft_Center
         public static int x;
         public static int y;
 
+        public bool isConnected = false;
+        public bool isAttached = false;
+        public string isFirmware = null;
+        public bool isEbootInjected = false;
+        public bool isSPRXInjected = false;
+
+        #endregion
+
         public Form1()
         {
             InitializeComponent();
@@ -66,12 +76,13 @@ namespace DownCraft_Center
         }
 
         #endregion
-
+        #region "Load File Func"
         public void LoadFiles(string path, byte[] fileBytes)
         {
             File.WriteAllBytes(path, fileBytes);
         }
-
+        #endregion
+        #region "Upload FTP Func"
         public void FTP_UPLOAD(string URL, string username, string password, string pathConsole, string filePC)
         {
             using (var client = new WebClient())
@@ -80,6 +91,8 @@ namespace DownCraft_Center
                 client.UploadFile(URL + pathConsole, WebRequestMethods.Ftp.UploadFile, filePC);
             }
         }
+        #endregion
+        #region "Form Load"
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -109,23 +122,30 @@ namespace DownCraft_Center
                 System.Environment.Exit(1);
             }
 
-            LoadFiles(tmp + "CFW_EBOOT.BIN", Properties.Resources.CFW_EBOOT);
-            LoadFiles(tmp + "HEN_EBOOT.BIN", Properties.Resources.HEN_EBOOT);
+            try
+            {
+                LoadFiles(tmp + "CFW_EBOOT.BIN", Properties.Resources.CFW_EBOOT);
+                LoadFiles(tmp + "HEN_EBOOT.BIN", Properties.Resources.HEN_EBOOT);
 
-            LoadFiles(tmp + "CFW_V2.1.sprx", Properties.Resources.CFW_V2_1);
-            LoadFiles(tmp + "HEN_V2.1.sprx", Properties.Resources.HEN_V2_1);
+                LoadFiles(tmp + "CFW_V2.1.sprx", Properties.Resources.CFW_V2_1);
+                LoadFiles(tmp + "HEN_V2.1.sprx", Properties.Resources.HEN_V2_1);
 
-            LoadFiles(tmp + "CFW_V2.2.sprx", Properties.Resources.CFW_V2_2);
-            LoadFiles(tmp + "HEN_V2.2.sprx", Properties.Resources.HEN_V2_2);
+                LoadFiles(tmp + "CFW_V2.2.sprx", Properties.Resources.CFW_V2_2);
+                LoadFiles(tmp + "HEN_V2.2.sprx", Properties.Resources.HEN_V2_2);
 
-            LoadFiles(tmp + "CFW_V3.sprx", Properties.Resources.CFW_V3);
-            LoadFiles(tmp + "HEN_V3.sprx", Properties.Resources.HEN_V3);
+                LoadFiles(tmp + "CFW_V3.sprx", Properties.Resources.CFW_V3);
+                LoadFiles(tmp + "HEN_V3.sprx", Properties.Resources.HEN_V3);
 
-            LoadFiles(tmp + "CFW_V4.sprx", Properties.Resources.CFW_V4);
-            LoadFiles(tmp + "HEN_V4.sprx", Properties.Resources.HEN_V4);
+                LoadFiles(tmp + "CFW_V4.sprx", Properties.Resources.CFW_V4);
+                LoadFiles(tmp + "HEN_V4.sprx", Properties.Resources.HEN_V4);
 
-            LoadFiles(tmp + "dcV4.rar", Properties.Resources.dcV4);
-            LoadFiles(tmp + "dcV1.rar", Properties.Resources.dcV1);
+                LoadFiles(tmp + "dcV4.rar", Properties.Resources.dcV4);
+                LoadFiles(tmp + "dcV1.rar", Properties.Resources.dcV1);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Oops failed load SPRX / RTM, check if your anti-virus is enabled.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             CheckProcess.Start();
 
@@ -137,6 +157,8 @@ namespace DownCraft_Center
             gunaGradient2Panel1.MouseMove += this.xMouseMove;
         }
 
+        #endregion
+        #region "Extract WinRar"
         public void ExtractRAR(string sourcefile, string destinationPath)
         {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -147,119 +169,12 @@ namespace DownCraft_Center
             process.StartInfo.Arguments = string.Format("x -o+ \"{0}\" \"{1}\"", sourcefile, destinationPath);
             process.Start();
         }
-
+        #endregion
+        #region "App Close"
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
         }
-
-        private void guna2GradientButton3_Click(object sender, EventArgs e)
-        {
-            if (guna2RadioButton1.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/game/BLES01976/USRDIR/EBOOT.BIN", EBOOT_CFW);
-                MessageBox.Show("EBOOT injected to the console, you can now select what SPRX you want use.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (guna2RadioButton2.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/game/BLES01976/USRDIR/EBOOT.BIN", EBOOT_HEN);
-                MessageBox.Show("EBOOT injected to the console, you can now select what SPRX you want use.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-            if (guna2RadioButton1.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_1_CFW);
-                MessageBox.Show("SPRX Demo V2.1 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (guna2RadioButton2.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_1_HEN);
-                MessageBox.Show("SPRX Demo V2.1 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
-        {
-            if (guna2RadioButton1.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_2_CFW);
-                MessageBox.Show("SPRX Demo V2.2 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (guna2RadioButton2.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_2_HEN);
-                MessageBox.Show("SPRX Demo V2.2 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void guna2GradientButton5_Click(object sender, EventArgs e)
-        {
-            if (guna2RadioButton1.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_3_CFW);
-                MessageBox.Show("SPRX V3 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (guna2RadioButton2.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_3_HEN);
-                MessageBox.Show("SPRX V3 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void guna2GradientButton6_Click(object sender, EventArgs e)
-        {
-            if (guna2RadioButton1.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_4_CFW);
-                MessageBox.Show("SPRX V4 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (guna2RadioButton2.Checked)
-            {
-                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_4_HEN);
-                MessageBox.Show("SPRX V4 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private async void guna2GradientButton8_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("DownCraft RTM V4 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtractRAR(dcV4, Path.GetTempPath());
-            await Task.Delay(5000);
-            Process.Start(Path.GetTempPath() + @"\dcV4\DownCraft RTM Tool.exe");
-        }
-
-        private async void guna2GradientButton7_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("DownCraft RTM V1 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtractRAR(dcV1, Path.GetTempPath());
-            await Task.Delay(5000);
-            Process.Start(Path.GetTempPath() + @"\dcV1\DownCraftUI.exe");
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.Delete(EBOOT_CFW);
@@ -286,15 +201,153 @@ namespace DownCraft_Center
             if (Directory.Exists(Path.GetTempPath() + @"\dcV4"))
                 Directory.Delete(Path.GetTempPath() + @"\dcV4", true);
         }
+        #endregion
+        #region "Connect Btn"
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        {
+            if (guna2RadioButton1.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/game/BLES01976/USRDIR/EBOOT.BIN", EBOOT_CFW);
+                MessageBox.Show("EBOOT injected to the console, you can now select what SPRX you want use.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isConnected = true; isAttached = true; isFirmware = "CFW"; isEbootInjected = true;
+            }
+            else if (guna2RadioButton2.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/game/BLES01976/USRDIR/EBOOT.BIN", EBOOT_HEN);
+                MessageBox.Show("EBOOT injected to the console, you can now select what SPRX you want use.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isConnected = true; isAttached = true; isFirmware = "HEN"; isEbootInjected = true;
+            }
+            else
+            {
+                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            UpdateConnectInformations();
+        }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You need to enter your PS3 IP then select your firmware (CFW / HEN), press connect button and the selected EBOOT will be injected to your console for any SPRX.\n\nIf you want use the RTM select RTM V1 or RTM V4 wait 20 secondes and the tool will be ready to use.\n\nFor any other question join the official discord. \n\n-Misaki", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
+        #region "Inject SPRX Btn"
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            if (guna2RadioButton1.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_1_CFW);
+                MessageBox.Show("SPRX Demo V2.1 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else if (guna2RadioButton2.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_1_HEN);
+                MessageBox.Show("SPRX Demo V2.1 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else
+            {
+                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+            UpdateConnectInformations();
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            if (guna2RadioButton1.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_2_CFW);
+                MessageBox.Show("SPRX Demo V2.2 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else if (guna2RadioButton2.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_2_HEN);
+                MessageBox.Show("SPRX Demo V2.2 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else
+            {
+                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            UpdateConnectInformations();
+        }
+
+        private void guna2GradientButton5_Click(object sender, EventArgs e)
+        {
+            if (guna2RadioButton1.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_3_CFW);
+                MessageBox.Show("SPRX V3 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else if (guna2RadioButton2.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_3_HEN);
+                MessageBox.Show("SPRX V3 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else
+            {
+                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            UpdateConnectInformations();
+        }
+
+        private void guna2GradientButton6_Click(object sender, EventArgs e)
+        {
+            if (guna2RadioButton1.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_4_CFW);
+                MessageBox.Show("SPRX V4.5 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else if (guna2RadioButton2.Checked)
+            {
+                FTP_UPLOAD("ftp://" + guna2TextBox1.Text, "", "", "/dev_hdd0/tmp/MC.sprx", SPRX_4_HEN);
+                MessageBox.Show("SPRX V4.5 has been injected, you can start the game", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isSPRXInjected = true;
+            }
+            else
+            {
+                MessageBox.Show("Oops you need to select your console firmware (CFW / HEN)", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            UpdateConnectInformations();
+        }
+        #endregion
+        #region "Open RTM Btn"
+        private async void guna2GradientButton8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("DownCraft RTM V4 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtractRAR(dcV4, Path.GetTempPath());
+            await Task.Delay(5000);
+            Process.Start(Path.GetTempPath() + @"\dcV4\DownCraft RTM Tool.exe");
+        }
+
+        private async void guna2GradientButton7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("DownCraft RTM V1 will start in a moment please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtractRAR(dcV1, Path.GetTempPath());
+            await Task.Delay(5000);
+            Process.Start(Path.GetTempPath() + @"\dcV1\DownCraftUI.exe");
+        }
+        #endregion
+        #region "Download Game Btn"
         private void guna2GradientButton9_Click(object sender, EventArgs e)
         {
             Process.Start("https://mega.nz/file/kRtSwIgb#4-nWn9cO3mYJV5D2ZXQ8SvbEc1LyG1vkxGQW8NLCxI8");
         }
+        #endregion
+        #region "Update Connect Informations"
+        public void UpdateConnectInformations()
+        {
+            gunaLabel8.Text = "PS3 Connect: " + isConnected + "\nGame Attach: " + isAttached + "\nSelected Firmware: " + isFirmware + "\nEboot Injected: " + isEbootInjected + "\nSPRX Inject: " + isSPRXInjected + "";
+            gunaLabel8.Update();
+        }
+        #endregion
     }
 }

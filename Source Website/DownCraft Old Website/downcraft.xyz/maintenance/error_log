@@ -1,0 +1,22 @@
+[10-Dec-2019 09:27:04 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[10-Dec-2019 09:27:04 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[10-Dec-2019 10:05:02 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[10-Dec-2019 10:05:02 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[04-Jan-2020 22:50:25 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[04-Jan-2020 22:50:25 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[04-Jan-2020 22:52:17 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[04-Jan-2020 22:52:17 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[21-Jan-2020 03:28:55 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[21-Jan-2020 03:28:55 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[27-Jan-2020 18:31:18 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[27-Jan-2020 18:31:18 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[14-Feb-2020 04:08:49 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[14-Feb-2020 04:08:49 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:21:38 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:21:38 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:23:47 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:23:47 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:23:48 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[02-May-2020 04:23:48 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1
+[30-Jun-2020 13:56:49 America/New_York] PHP Warning:  require(global.php): failed to open stream: No such file or directory in /home/downwuon/public_html/maintenance/index.php on line 1
+[30-Jun-2020 13:56:49 America/New_York] PHP Fatal error:  require(): Failed opening required 'global.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/downwuon/public_html/maintenance/index.php on line 1

@@ -53,6 +53,7 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.gunaCheckBox18 = new Guna.UI.WinForms.GunaCheckBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,7 +180,7 @@
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(5, 0);
             this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 208);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 226);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
@@ -196,7 +197,7 @@
             this.gunaCheckBox7.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox7.Location = new System.Drawing.Point(12, 243);
+            this.gunaCheckBox7.Location = new System.Drawing.Point(12, 261);
             this.gunaCheckBox7.Name = "gunaCheckBox7";
             this.gunaCheckBox7.Size = new System.Drawing.Size(94, 20);
             this.gunaCheckBox7.TabIndex = 225;
@@ -211,7 +212,7 @@
             this.gunaCheckBox8.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox8.Location = new System.Drawing.Point(12, 269);
+            this.gunaCheckBox8.Location = new System.Drawing.Point(12, 287);
             this.gunaCheckBox8.Name = "gunaCheckBox8";
             this.gunaCheckBox8.Size = new System.Drawing.Size(137, 20);
             this.gunaCheckBox8.TabIndex = 226;
@@ -226,7 +227,7 @@
             this.gunaCheckBox9.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox9.Location = new System.Drawing.Point(12, 295);
+            this.gunaCheckBox9.Location = new System.Drawing.Point(12, 313);
             this.gunaCheckBox9.Name = "gunaCheckBox9";
             this.gunaCheckBox9.Size = new System.Drawing.Size(103, 20);
             this.gunaCheckBox9.TabIndex = 227;
@@ -241,7 +242,7 @@
             this.gunaCheckBox10.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox10.Location = new System.Drawing.Point(12, 321);
+            this.gunaCheckBox10.Location = new System.Drawing.Point(12, 339);
             this.gunaCheckBox10.Name = "gunaCheckBox10";
             this.gunaCheckBox10.Size = new System.Drawing.Size(91, 20);
             this.gunaCheckBox10.TabIndex = 228;
@@ -256,7 +257,7 @@
             this.gunaCheckBox11.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox11.Location = new System.Drawing.Point(12, 347);
+            this.gunaCheckBox11.Location = new System.Drawing.Point(12, 351);
             this.gunaCheckBox11.Name = "gunaCheckBox11";
             this.gunaCheckBox11.Size = new System.Drawing.Size(80, 20);
             this.gunaCheckBox11.TabIndex = 229;
@@ -271,7 +272,7 @@
             this.gunaCheckBox12.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox12.Location = new System.Drawing.Point(12, 373);
+            this.gunaCheckBox12.Location = new System.Drawing.Point(12, 391);
             this.gunaCheckBox12.Name = "gunaCheckBox12";
             this.gunaCheckBox12.Size = new System.Drawing.Size(123, 20);
             this.gunaCheckBox12.TabIndex = 230;
@@ -286,7 +287,7 @@
             this.gunaCheckBox13.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox13.Location = new System.Drawing.Point(12, 399);
+            this.gunaCheckBox13.Location = new System.Drawing.Point(12, 417);
             this.gunaCheckBox13.Name = "gunaCheckBox13";
             this.gunaCheckBox13.Size = new System.Drawing.Size(151, 20);
             this.gunaCheckBox13.TabIndex = 231;
@@ -305,7 +306,7 @@
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(5, 0);
             this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 425);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 443);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -322,7 +323,7 @@
             this.gunaCheckBox14.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox14.Location = new System.Drawing.Point(12, 461);
+            this.gunaCheckBox14.Location = new System.Drawing.Point(12, 479);
             this.gunaCheckBox14.Name = "gunaCheckBox14";
             this.gunaCheckBox14.Size = new System.Drawing.Size(171, 20);
             this.gunaCheckBox14.TabIndex = 233;
@@ -337,7 +338,7 @@
             this.gunaCheckBox15.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox15.Location = new System.Drawing.Point(12, 487);
+            this.gunaCheckBox15.Location = new System.Drawing.Point(12, 505);
             this.gunaCheckBox15.Name = "gunaCheckBox15";
             this.gunaCheckBox15.Size = new System.Drawing.Size(212, 20);
             this.gunaCheckBox15.TabIndex = 234;
@@ -352,7 +353,7 @@
             this.gunaCheckBox16.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox16.Location = new System.Drawing.Point(12, 513);
+            this.gunaCheckBox16.Location = new System.Drawing.Point(12, 531);
             this.gunaCheckBox16.Name = "gunaCheckBox16";
             this.gunaCheckBox16.Size = new System.Drawing.Size(185, 20);
             this.gunaCheckBox16.TabIndex = 235;
@@ -367,7 +368,7 @@
             this.gunaCheckBox17.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gunaCheckBox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
-            this.gunaCheckBox17.Location = new System.Drawing.Point(12, 539);
+            this.gunaCheckBox17.Location = new System.Drawing.Point(12, 557);
             this.gunaCheckBox17.Name = "gunaCheckBox17";
             this.gunaCheckBox17.Size = new System.Drawing.Size(210, 20);
             this.gunaCheckBox17.TabIndex = 236;
@@ -419,7 +420,7 @@
             "Armor Stand Spawn Eggs",
             "Bunny Killer Spawn Eggs"});
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(16, 574);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(16, 592);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(189, 26);
@@ -430,12 +431,28 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // gunaCheckBox18
+            // 
+            this.gunaCheckBox18.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox18.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox18.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCheckBox18.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.gunaCheckBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
+            this.gunaCheckBox18.Location = new System.Drawing.Point(12, 208);
+            this.gunaCheckBox18.Name = "gunaCheckBox18";
+            this.gunaCheckBox18.Size = new System.Drawing.Size(150, 20);
+            this.gunaCheckBox18.TabIndex = 239;
+            this.gunaCheckBox18.Text = "God Mode Non Host";
+            this.gunaCheckBox18.CheckedChanged += new System.EventHandler(this.gunaCheckBox18_CheckedChanged);
+            // 
             // Non_HostOptions4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(220, 650);
+            this.Controls.Add(this.gunaCheckBox18);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.gunaCheckBox17);
@@ -495,5 +512,6 @@
         public Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox18;
     }
 }
