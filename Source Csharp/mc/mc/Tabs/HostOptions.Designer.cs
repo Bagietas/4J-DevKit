@@ -34,7 +34,10 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.guna2ToggleSwitch2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +67,7 @@
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(12, 37);
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(12, 6);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(33, 18);
@@ -81,7 +84,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(51, 39);
+            this.gunaLabel1.Location = new System.Drawing.Point(51, 8);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(63, 15);
             this.gunaLabel1.TabIndex = 6;
@@ -92,7 +95,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(51, 63);
+            this.gunaLabel2.Location = new System.Drawing.Point(51, 32);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(94, 15);
             this.gunaLabel2.TabIndex = 8;
@@ -105,7 +108,7 @@
             this.guna2ToggleSwitch2.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch2.CheckedState.Parent = this.guna2ToggleSwitch2;
-            this.guna2ToggleSwitch2.Location = new System.Drawing.Point(12, 61);
+            this.guna2ToggleSwitch2.Location = new System.Drawing.Point(12, 30);
             this.guna2ToggleSwitch2.Name = "guna2ToggleSwitch2";
             this.guna2ToggleSwitch2.ShadowDecoration.Parent = this.guna2ToggleSwitch2;
             this.guna2ToggleSwitch2.Size = new System.Drawing.Size(33, 18);
@@ -116,24 +119,42 @@
             this.guna2ToggleSwitch2.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch2.UncheckedState.Parent = this.guna2ToggleSwitch2;
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(343, 8);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(18, 619);
+            this.vScrollBar1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel2.Controls.Add(this.guna2ToggleSwitch1);
+            this.panel2.Controls.Add(this.vScrollBar1);
+            this.panel2.Controls.Add(this.gunaLabel1);
+            this.panel2.Controls.Add(this.gunaLabel2);
+            this.panel2.Controls.Add(this.guna2ToggleSwitch2);
+            this.panel2.Location = new System.Drawing.Point(0, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(370, 635);
+            this.panel2.TabIndex = 5;
+            // 
             // HostOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(370, 356);
-            this.Controls.Add(this.gunaLabel2);
-            this.Controls.Add(this.guna2ToggleSwitch2);
-            this.Controls.Add(this.gunaLabel1);
-            this.Controls.Add(this.guna2ToggleSwitch1);
+            this.ClientSize = new System.Drawing.Size(370, 667);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HostOptions";
             this.Text = "HostOptions";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,5 +166,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch2;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
