@@ -1,3 +1,0 @@
-Ce dossier est destiné à contenir les filtre 8BF en 32-bits uniquement.
-
-
