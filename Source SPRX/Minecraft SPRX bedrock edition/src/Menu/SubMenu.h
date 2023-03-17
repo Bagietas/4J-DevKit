@@ -42,7 +42,7 @@ void RenderSubMenu()
 			Menu::Description(L"Mics Menu");
 			Menu::AddOption(L"No Clip");
 			switch (getOption()) {
-			case(0): mc->theMinecraft->cMultiplayerLocalPlayer->noClip = true; break;
+			case(0):  break;
 			}
 			break;
 

@@ -112,6 +112,7 @@
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "apiForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "apiForm";
             this.Load += new System.EventHandler(this.apiForm_Load);
             this.ResumeLayout(false);

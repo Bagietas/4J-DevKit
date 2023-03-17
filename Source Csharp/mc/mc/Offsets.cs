@@ -16,7 +16,6 @@ namespace mc
     {
         #region "Variables"
 
-        public string logs_downcraft = "https://discord.com/api/webhooks/" + new WebClient().DownloadString("https://pastebin.com/raw/5YYpEVRz"); //ʟᴏɢꜱ-ᴅᴏᴡɴᴄʀᴀꜰᴛ
         public static Color saveThemeColor = Color.FromArgb(70, 70, 245);
         public static Color saveTextColor = Color.FromArgb(200, 200, 200);
         public static Color saveBackColor = Color.FromArgb(40, 40, 40);
@@ -41,21 +40,10 @@ namespace mc
         public string LastPlayersJoinedPSN = ""; //Get the last PSN name joined your world
         public string LastPlayersRegion = ""; //Get the region of the last players joined your world
         public string LastPlayersAvatar = ""; //Get avatar of the last players joined your world
-        public string GetPingz = "-1"; //Get ping
 
         public static bool ConnectStatus = false;
         public string API;
         public string status = "not connected";
-        public string PSN_NAME;
-        public static string PSN;
-        public static bool StatusSPRX = false;
-
-        public static string CPU;
-        public static string RSX;
-        public static string FIRMWARE;
-
-        string IDPS;
-        string PSID;
 
         //Default Swap Items
         public uint Offset_Default_Items = 0x0000000; //used for get the swapper items
@@ -137,26 +125,6 @@ namespace mc
                         {
                             status = "connected";
                             ConnectStatus = true;
-
-                            PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
-
-                            if (PSN_NAME == "") 
-                            { 
-                                PSN_NAME = PS3.Extension.ReadString(0x3000ABA4); 
-                            }
-
-                            PSN = PSN_NAME;
-
-                            RSX = PS3.CCAPI.GetTemperatureRSX();
-                            CPU = PS3.CCAPI.GetTemperatureCELL();
-                            FIRMWARE = PS3.CCAPI.GetFirmwareType();
-
-                            if (API == "HEN") 
-                            { 
-                                IDPS = PS3H.PS3.GetIDPS(); 
-                                PSID = PS3H.PS3.GetPSID(); 
-                            }
-
                             PS3.CCAPI.Notify(CCAPI.NotifyIcon.INFO, "Connect to DownCraft RTM");
                         }
                         else
@@ -7098,22 +7066,6 @@ namespace mc
             }
         }
 
-        //Need fix it
-        public void GET_YOUR_PING(bool toogle)
-        {
-            if (toogle)
-            {
-                byte[] data = PS3.Extension.ReadBytes(0x014CF38F, 1);
-                string VALUES = BitConverter.ToString(data); //get the hex
-                GetPingz = VALUES;
-
-            }
-            else if (!toogle)
-            {
-
-            }
-        }
-
         public void START_SPRX(bool toogle)
         {
             if (toogle)
@@ -7159,25 +7111,6 @@ namespace mc
         public void PATCH_ITEMS_SWAPPER()
         {
             PS3.SetMemory(Offset_Default_Items, Items_Default_Items);
-        }
-
-        public void ENABLE_SPRX()
-        {
-            PSN_NAME = PS3.Extension.ReadString(0x3000AD34);
-            if (PSN_NAME == "") { PSN_NAME = PS3.Extension.ReadString(0x3000ABA4); }
-
-            if (PS3.Extension.ReadString(0x3000AE92) == "DownCraft SPRX V4") //check if the ID is DownCraft SPRX
-            {
-                PS3.SetMemory(0x3000AF0F, new byte[] { 0xFF, 0x08, 0xAF, 0x25 });
-                PS3.SetMemory(0x3000AF13, new byte[] { 0xC9, 0xBF, 0xA1, 0x10 });
-                PS3.SetMemory(0x3000AF17, new byte[] { 0x85, 0xF8, 0x05, 0xB4 });
-                PS3.SetMemory(0x3000AF1B, new byte[] { 0x18, 0x55, 0xA8, 0x5D });
-                StatusSPRX = true;
-            }
-            else
-            {
-                MessageBox.Show("Sorry, the SPRX is not installed on your Minecraft", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         #endregion

@@ -1,1 +1,98 @@
-﻿  Minecraft.vcxproj -> C:\Users\rstei\Desktop\Minecraft SPRX bedrock edition\bin\Debug-PS3\Minecraft.sprx
+﻿  Main.cpp
+.\Util/Variables.h(41,17): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Util/Dialog.h(196,6): warning 178: variable "ret" was declared but never referenced
+  
+.\Util\Dialog.h(238,6): warning 552: variable "ret" was set but never used
+  
+.\Util/Vector.h(23,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(27,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(66,7): warning 429: qualified name is not allowed in member declaration
+  
+.\Util\Vector.h(43,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(52,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(55,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(58,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(61,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(92,9): warning 432: returning reference to local temporary
+  
+.\Util\Vector.h(96,9): warning 432: returning reference to local temporary
+  
+.\Util/Struct.h(50,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+  
+.\Util\Struct.h(103,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+  
+.\Util\Struct.h(218,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+  
+.\Games/GameFunction.h(13,65): warning 1322: taking the address of a temporary
+  
+.\Games\GameFunction.h(14): warning 942: missing return statement at end of non-void function "Font_width"
+  
+.\Games\GameFunction.h(17,65): warning 1322: taking the address of a temporary
+  
+.\Games\GameFunction.h(18): warning 942: missing return statement at end of non-void function "Font_width_char"
+  
+.\Games\GameFunction.h(21,63): warning 1322: taking the address of a temporary
+  
+.\Games\GameFunction.h(21,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(21,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(25,63): warning 1322: taking the address of a temporary
+  
+.\Games\GameFunction.h(25,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(25,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(29,89): warning 1322: taking the address of a temporary
+  
+.\Games\GameFunction.h(33,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(33,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(33,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(33,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(125,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(125,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(142,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(142,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(206,31): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(206,34): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games/Functions.h(22,38): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+  
+.\Games\Functions.h(30,3): warning 176: subscript out of range
+  
+.\Games\Functions.h(61,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+  
+.\Menu/Huds.h(104,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+.\Menu\Huds.h(110,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+.\Games/Options.h(26,23): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Games\Options.h(26,77): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Games\Options.h(26,131): warning 2520: invalid narrowing conversion from "double" to "int"
+  
+.\Menu/SubMenu.h(35): warning 1635: switch statement is missing case and default labels
+  
+.\Menu\SubMenu.h(55): warning 1635: switch statement is missing case and default labels
+  
+.\Menu\SubMenu.h(64): warning 1635: switch statement is missing case and default labels
+  
+  Minecraft.vcxproj -> C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin\Debug-PS3\Minecraft.sprx

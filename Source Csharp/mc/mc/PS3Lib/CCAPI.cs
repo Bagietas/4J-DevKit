@@ -87,6 +87,7 @@ namespace PS3Lib
 					else
 					{
 						MessageBox.Show("You need to install CCAPI 2.60+ to use this library.", "CCAPI.dll not found", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						Application.Exit();
 					}
 				}
 				else
@@ -97,7 +98,8 @@ namespace PS3Lib
 			else
 			{
 				MessageBox.Show("You need to install CCAPI 2.60+ to use this library.", "CCAPI not installed", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-			}
+                Application.Exit();
+            }
 		}
 
 		private IntPtr ReadDataFromUnBufPtr<T>(IntPtr unBuf, ref T storage)

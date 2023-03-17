@@ -77,6 +77,8 @@
 #pragma comment(lib, "net_stub")
 #include <cstddef>
 
+#include <libpsutil.h>
+
 //INCLUDES MINECRAFT
 #include "Mojang/gamemode/GameMode.h"
 #include "Mojang/client/Minecraft.h"
