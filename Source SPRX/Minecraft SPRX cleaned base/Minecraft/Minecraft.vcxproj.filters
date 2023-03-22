@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="prx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Struct.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="PS3.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Variables.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Huds.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{a9e7537a-210e-4456-8d00-74f6f3a68e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{77f94772-13b1-43c9-b3e1-127d4aeb3e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{8c8f5ca8-21df-4311-a59f-f19e66a871c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

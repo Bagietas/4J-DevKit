@@ -100,7 +100,6 @@
   <ItemGroup>
     <ClCompile Include="Menu\Main.cpp" />
     <ClCompile Include="Util\FileSystem.cpp" />
-    <ClCompile Include="Util\SystemCalls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Games\Buttons.h" />
@@ -110,6 +109,9 @@
     <ClInclude Include="Games\GameFunction.h" />
     <ClInclude Include="Games\Hooking.h" />
     <ClInclude Include="Games\Options.h" />
+    <ClInclude Include="Util\Exports.hpp" />
+    <ClInclude Include="Util\FileSystem.hpp" />
+    <ClInclude Include="Util\NewDeleteOverride.hpp" />
     <ClInclude Include="Util\Vector.h" />
     <ClInclude Include="Menu\Huds.h" />
     <ClInclude Include="Util\Includes.h" />
@@ -876,11 +878,6 @@
     <ClInclude Include="Util\PS3.h" />
     <ClInclude Include="Util\Struct.h" />
     <ClInclude Include="Menu\SubMenu.h" />
-    <ClInclude Include="Util\Exports.hpp" />
-    <ClInclude Include="Util\FileSystem.hpp" />
-    <ClInclude Include="Util\NewDeleteOverride.hpp" />
-    <ClInclude Include="Util\SystemCalls.hpp" />
-    <ClInclude Include="Util\TimeHelpers.hpp" />
     <ClInclude Include="Util\Variables.h" />
   </ItemGroup>
   <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />

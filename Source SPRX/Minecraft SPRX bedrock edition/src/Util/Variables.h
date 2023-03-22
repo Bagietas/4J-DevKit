@@ -5,11 +5,6 @@ enum eMenus
 	MainMenu, MainOptions
 };
 
-enum eColors
-{
-	DarkRed, Red, Gold, Yellow, DarkGreen, Green, Aqua, DarkAqua, DarkBlue, Blue, LightPurple, DarkPurple, White, Gray, DarkGray, Black
-};
-
 namespace MC_Color
 {
 	int DarkRed[3] = { 170, 0, 0 };
@@ -46,6 +41,8 @@ namespace MC_Color
 //Initial Vars
 char* checkTxt = "";
 wchar_t charA2wcharA_[1000];
+int lastMenus[20];
+int lastMenuCount = 0;
 
 //Scroller
 bool gotTime[1000], keyPressed[100], freeFirst[100], resetWait[100], resetWait2[100], lockFirst[100];
@@ -60,6 +57,3 @@ bool ToggleTitle, TogglePosition = false;
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];
 int Rainbow[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
-
-int lastMenus[20];
-int lastMenuCount = 0;

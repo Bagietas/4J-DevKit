@@ -15,9 +15,9 @@ namespace Menu
 		DrawRectangle(430, 35, 160, 1, MC_Color::black_line);
 	}
 
-	void AddOption(const wchar_t* opt)
+	void AddOption(const wchar_t* option)
 	{
-		DrawText(opt, 438, 45 + (SpaceBetweenText * MaxOption), (MaxOption == CurrentOpt) ? color(MC_Color::ScrollColor) : color(MC_Color::White));
+		DrawText(option, 438, 45 + (SpaceBetweenText * MaxOption), (MaxOption == CurrentOpt) ? color(MC_Color::ScrollColor) : color(MC_Color::White));
 		MaxOption += 1;
 	}
 

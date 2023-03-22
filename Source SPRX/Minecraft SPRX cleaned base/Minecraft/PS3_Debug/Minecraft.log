@@ -1,0 +1,47 @@
+﻿  prx.cpp
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(459,2): warning 551: variable "FreeMemory" is used before its value is set
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(460,16): warning 551: variable "HeapFree" is used before its value is set
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(461,2): warning 551: variable "UsedMemory" is used before its value is set
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(500,8): warning 1070: returning pointer to local variable
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(552,9): warning 1070: returning pointer to local variable
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\PS3.h(555): warning 942: missing return statement at end of non-void function "SendRequest"
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Dialog.h(196,6): warning 178: variable "ret" was declared but never referenced
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Dialog.h(238,6): warning 552: variable "ret" was set but never used
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(23,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(27,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(66,7): warning 429: qualified name is not allowed in member declaration
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(43,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(52,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(55,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(58,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(61,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(92,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Vector.h(96,9): warning 432: returning reference to local temporary
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Struct.h(81,6): warning 1700: class "LevelRenderer" has virtual functions but non-virtual destructor
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Struct.h(134,6): warning 1700: class "MultiPlayerLevel" has virtual functions but non-virtual destructor
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Struct.h(249,6): warning 1700: class "MultiplayerLocalPlayer" has virtual functions but non-virtual destructor
+  
+C:\Users\randy\Desktop\Minecraft\Minecraft\Game.h(52,66): warning 1322: taking the address of a temporary
+  
+  Minecraft.vcxproj -> C:\Users\randy\Desktop\Minecraft\PS3_Debug\Minecraft.sprx
+  Cannot find the expected PRX Stub Library file: cellPrx_Minecraft_stub.a
