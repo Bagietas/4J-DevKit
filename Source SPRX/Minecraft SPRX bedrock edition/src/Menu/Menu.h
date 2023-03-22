@@ -2,7 +2,6 @@
 
 void Render()
 {
-	Menu::AddHuds();
 	RenderSubMenu();
 	Controller();
 }

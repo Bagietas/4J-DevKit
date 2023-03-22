@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-.\Util/Variables.h(41,17): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(47,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\Util/Dialog.h(196,6): warning 178: variable "ret" was declared but never referenced
   
@@ -45,33 +45,39 @@
   
 .\Games\GameFunction.h(21,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(25,63): warning 1322: taking the address of a temporary
+.\Games\GameFunction.h(25,64): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(25,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunction.h(25,82): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(25,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunction.h(25,85): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(29,89): warning 1322: taking the address of a temporary
+.\Games\GameFunction.h(29,63): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(33,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+.\Games\GameFunction.h(29,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(33,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunction.h(29,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(33,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunction.h(33,89): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(33,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+.\Games\GameFunction.h(37,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
   
-.\Games\GameFunction.h(125,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(37,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(125,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(37,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(142,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(37,60): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
   
-.\Games\GameFunction.h(142,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(129,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
   
-.\Games\GameFunction.h(206,31): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(129,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
   
-.\Games\GameFunction.h(206,34): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+.\Games\GameFunction.h(146,28): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(146,35): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(210,31): warning 1772: argument of type "float" is implicitly converted to parameter (2 of DrawTextWithShadow) of type "std::uint32_t"
+  
+.\Games\GameFunction.h(210,34): warning 1772: argument of type "float" is implicitly converted to parameter (3 of DrawTextWithShadow) of type "std::uint32_t"
   
 .\Games/Functions.h(22,38): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
@@ -79,20 +85,10 @@
   
 .\Games\Functions.h(61,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-.\Menu/Huds.h(104,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games/Options.h(43,23): warning 2520: invalid narrowing conversion from "double" to "int"
   
-.\Menu\Huds.h(110,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games\Options.h(43,77): warning 2520: invalid narrowing conversion from "double" to "int"
   
-.\Games/Options.h(26,23): warning 2520: invalid narrowing conversion from "double" to "int"
-  
-.\Games\Options.h(26,77): warning 2520: invalid narrowing conversion from "double" to "int"
-  
-.\Games\Options.h(26,131): warning 2520: invalid narrowing conversion from "double" to "int"
-  
-.\Menu/SubMenu.h(35): warning 1635: switch statement is missing case and default labels
-  
-.\Menu\SubMenu.h(55): warning 1635: switch statement is missing case and default labels
-  
-.\Menu\SubMenu.h(64): warning 1635: switch statement is missing case and default labels
+.\Games\Options.h(43,131): warning 2520: invalid narrowing conversion from "double" to "int"
   
   Minecraft.vcxproj -> C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin\Debug-PS3\Minecraft.sprx

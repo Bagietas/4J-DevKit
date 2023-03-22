@@ -2,24 +2,23 @@
 
 void LoopOptions()
 {
-	CheckSPRX();
-
 	if (Opened)
 	{
+		Options::Bedrock_UI(false);
 		*(int*)0x0155847C = 0x01000000;
 	}
 	else
 	{
+		Options::Bedrock_UI(true);
 		*(int*)0x0155847C = 0x00000000;
 	}
 
 	if (UsableMenu)
 	{
-		Options::Bedrock_UI();
+		Options::ShowTitle();
 		Options::ShowPosition();
 		DoRainbowColor();
 		Render();
-		logs::draw_logs();
 	}
 }
 

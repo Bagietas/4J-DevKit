@@ -285,24 +285,3 @@ void Controller()
 		}
 	}
 }
-
-void CheckSPRX()
-{
-	char CHECK_EBOOT[] = { 0x4D, 0x69, 0x73, 0x61, 0x6B, 0x69, 0x69, 0x69 }; //custom EBOOT check
-	char* CHECK_EBOOT_ADDRESS = (char*)0x14E8790; //custom location EBOOT check
-	//bool BLES = (*(int*)0x31E7782C = 0x424C4553);
-
-	for (int i = 0; i < 8; ++i)
-	{
-		if (CHECK_EBOOT_ADDRESS[i] == CHECK_EBOOT[i])
-		{
-			UsableMenu = true;
-			/*
-			if (BLES)
-			{
-				UsableMenu = true;
-			}
-			*/
-		}
-	}
-}

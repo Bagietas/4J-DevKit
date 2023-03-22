@@ -21,6 +21,10 @@ void DrawText(const wchar_t* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color, 0, 1);
 }
 
+void DrawTextF(const wchar_t* text, float x, float y, int* color) {
+	FUNCTIONS::DrawTextF(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color, 0, 1);
+}
+
 void DrawTextC(char* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(c2wc(text)), x, y, color, 0, 1);
 }

@@ -14,6 +14,9 @@ namespace mc.Tabs
 {
     public partial class HostOptions : Form
     {
+        public Guna2ToggleSwitch checkbox = new Guna2ToggleSwitch();
+        public GunaLabel label = new GunaLabel();
+
         int x = 10;
         int y = 12;
         int space = 10;
@@ -558,9 +561,6 @@ namespace mc.Tabs
         {
             for (int i = 0; i < 14; i++)
             {
-                var checkbox = new Guna2ToggleSwitch();
-                var label = new GunaLabel();
-
                 checkbox.Left = y;
                 checkbox.Top = x;
 

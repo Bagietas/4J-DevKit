@@ -2,7 +2,7 @@
 
 enum eMenus
 {
-	MainMenu, MainOptions, MicsMenu, TeleportMenu, NameMenu, SettingsMenu, ColorsMenu, EditableValMenu, CreditsMenu
+	MainMenu, MainOptions
 };
 
 enum eColors
@@ -32,12 +32,18 @@ namespace MC_Color
 	int BlackTheme[3] = { 32, 32, 32 };
 	int DescColor[4] = { 10, 10, 10, 50 };
 	int BoolColors[3] = { 65, 65, 65 };
+
+	//BEDROCK
+	int header_color1[3] = { 198, 198, 198 };
+	int header_color2[3] = { 88, 86, 89 };
+	int black_line[3] = { 6, 6, 6 };
+	int bg_color[3] = { 49, 50, 51 };
+	int ScrollColor[3] = { 85, 255, 85 };
+	int bool_on[3] = { 127, 127, 127 };
+	int bool_off[3] = { 64, 64, 64 };
 };
 
 //Initial Vars
-const wchar_t* titleSPRX = L"DownCraft SPRX";
-int MenuR = 0, MenuG = 147, MenuB = 255;
-int MenuX = -41, MenuY = 6;
 char* checkTxt = "";
 wchar_t charA2wcharA_[1000];
 
@@ -46,10 +52,10 @@ bool gotTime[1000], keyPressed[100], freeFirst[100], resetWait[100], resetWait2[
 int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[1000], scroll = 0;
 
 //Menu settings
-int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 11;
+int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 15;
 bool UsableMenu = true, Opened, Closed, FirstOpen;
 
-bool TogglePosition = true;
+bool ToggleTitle, TogglePosition = false;
 
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];
