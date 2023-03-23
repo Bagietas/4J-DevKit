@@ -16,6 +16,12 @@ SYS_MODULE_INFO( Minecraft, 0, 1, 1);
 SYS_MODULE_START(Minecraft_Main);
 SYS_MODULE_STOP(Minecraft_Stop);
 
+void Loop()
+{
+	RenderSubMenu();
+	Controller();
+}
+
 void RenderScreen_Stub(uint32_t r3, uint32_t r4)
 {
 	__nop(); __nop(); __nop(); __nop(); __nop();
@@ -25,10 +31,10 @@ void RenderScreen_Hook(uint32_t r3, uint32_t r4)
 {
 	RenderScreen_Stub(r3, r4);
 	mc = (TheMinecraft*)(0x014CF2E4);
-	drawText(L"Working", -80, -80, color(MC_Color::White));
-	RenderSubMenu();
-	Menu::Controller();
+	DrawText(L"Working", -80, -80, color(MC_Color::White));
 	MaxOption = 0;
+
+	Loop();
 }
 
 extern "C" int Minecraft_Main(void)

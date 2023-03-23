@@ -93,6 +93,11 @@ namespace injectSPRX
             inject();
             ConsoleEmpty();
             Console.Write("[+] Injecting done, the game will restart", Color.White);
+            ConsoleEmpty();
+            Console.Write("[+] The app will auto close in 10 seconds...", Color.White);
+
+            await Task.Delay(10000);
+            Environment.Exit(0);
         }
 
         #endregion

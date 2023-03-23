@@ -27,6 +27,9 @@ extern "C"
 	int            _sys_toupper(int c);
 }
 
+
+#include <cellstatus.h>
+#include <sys/prx.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -295,17 +298,6 @@ namespace NyTekCFW
 #pragma endregion
 #pragma region "Function Call and Memory Read / Write"
 
-#define DWORD_ADDRESS(address, address_name) \
-	uint32_t address_name##opd[2] = { address, TOC }; \
-	using address_name##_t = void(*); \
-	address_name##_t address_name = (address_name##_t)address_name##opd;
-
-
-#define CallFunction(address, return_type, func_name, args) \
-	uint32_t func_name##opd[2] = { address, TOC }; \
-	using func_name##_t = return_type(*)args; \
-	func_name##_t func_name = (func_name##_t)func_name##opd;
-
 template<typename R, typename... Arguments> inline R Call(long long function, Arguments... args)
 {
 	int toc_t[2] = { function, TOC };
@@ -313,8 +305,10 @@ template<typename R, typename... Arguments> inline R Call(long long function, Ar
 	return temp(args...);
 }
 
-//Usage CallV2: CallFunction(0xA7DB38, int, Font_width, (uintptr_t font, uint32_t text));
-//Usage Call: bool isSpectator(uint32_t r3) { return Call<bool>(0x009873D8, r3); }
+#define CallFunction(address, return_type, func_name, args) \
+	uint32_t func_name##opd[2] = { address, TOC }; \
+	using func_name##_t = return_type(*)args; \
+	func_name##_t func_name = (func_name##_t)func_name##opd;
 
 int32_t sys_dbg_read_process_memory(uint64_t address, void* data, size_t size)
 {
@@ -482,84 +476,94 @@ void get_temperature(uint32_t a, uint32_t* b)
 	system_call_2(383, (uint64_t)(uint32_t)a, (uint64_t)(uint32_t)b);
 }
 
-
 #pragma endregion
 #pragma region "Send Request"
 
-char* removespace(const char* notify)
+namespace HTTP
 {
-	char buffer[0x500];
-	_sys_strcat(buffer, notify);
-	for (int i = 0; i < 0x500; i++)
+	char* removespace(const char* notify)
 	{
-		if (buffer[i] == ' ')
+		char buffer[0x500];
+		_sys_strcat(buffer, notify);
+		for (int i = 0; i < 0x500; i++)
 		{
-			buffer[i] = '+';
+			if (buffer[i] == ' ')
+			{
+				buffer[i] = '+';
+			}
 		}
+		return buffer;
 	}
-	return buffer;
-}
 
-/*
-char* SendRequest(char* URL, char* Path)
-{
-	struct sockaddr_in SocketAddress;
-	char bufferReturn[500];
-	char RequestBuffer[1000];
-	memset(RequestBuffer, 0x00, 1000);
-	SocketAddress.sin_addr.s_addr = *((unsigned long*)gethostbyname(URL)->h_addr);
-	SocketAddress.sin_family = AF_INET;
-	SocketAddress.sin_port = htons(80);
-	int Socket = socket(AF_INET, SOCK_STREAM, 0);
-	if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
+	char* SendLocalRequest(char* Path)
 	{
-		return "";
-	}
-	_sys_strcat(RequestBuffer, "GET /");
-	_sys_strcat(RequestBuffer, Path);
-	_sys_strcat(RequestBuffer, "\r\nConnection: close\r\n\r\n");
+		struct sockaddr_in SocketAddress;
+		char bufferReturn[500];
+		char RequestBuffer[1000];
+		memset(RequestBuffer, 0x00, 1000);
+		SocketAddress.sin_addr.s_addr = 0x7F000001; //127.0.0.1 (localhost)
+		SocketAddress.sin_family = AF_INET;
+		SocketAddress.sin_port = htons(80); //http port (80)
+		int Socket = socket(AF_INET, SOCK_STREAM, 0);
+		if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
+		{
+			return "";
+		}
+		_sys_strcat(RequestBuffer, "GET /");
+		_sys_strcat(RequestBuffer, Path);
+		_sys_strcat(RequestBuffer, "\r\nConnection: close\r\n\r\n");
 
-	send(Socket, RequestBuffer, _sys_strlen(RequestBuffer), 0);
-	while (recv(Socket, bufferReturn, 500, 0) > 0)
+		send(Socket, RequestBuffer, _sys_strlen(RequestBuffer), 0);
+		while (recv(Socket, bufferReturn, 500, 0) > 0)
+		{
+			return bufferReturn;
+		}
+		socketclose(Socket);
+	}
+
+	void SendRequest(const char* cmd)
 	{
-		return bufferReturn;
+		char buffer[0x200];
+		_sys_snprintf(buffer, 0x200, cmd, "");
+		_sys_printf("%s\n", buffer);
+		SendLocalRequest(buffer);
 	}
-	socketclose(Socket);
-}
-*/
 
-char* SendRequest(char* Path)
-{
-	struct sockaddr_in SocketAddress;
-	char bufferReturn[500];
-	char RequestBuffer[1000];
-	memset(RequestBuffer, 0x00, 1000);
-	SocketAddress.sin_addr.s_addr = 0x7F000001; //127.0.0.1 (localhost)
-	SocketAddress.sin_family = AF_INET;
-	SocketAddress.sin_port = htons(80); //http port (80)
-	int Socket = socket(AF_INET, SOCK_STREAM, 0);
-	if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
+	///////////////////////////////////////////////
+
+	char* SendURLRequest(char* URL, char* Path)
 	{
-		return "";
-	}
-	_sys_strcat(RequestBuffer, "GET /");
-	_sys_strcat(RequestBuffer, Path);
-	_sys_strcat(RequestBuffer, "\r\nConnection: close\r\n\r\n");
+		struct sockaddr_in SocketAddress;
+		char bufferReturn[500];
+		char RequestBuffer[1000];
+		memset(RequestBuffer, 0x00, 1000);
+		SocketAddress.sin_addr.s_addr = *((unsigned long*)gethostbyname(URL)->h_addr);
+		SocketAddress.sin_family = AF_INET;
+		SocketAddress.sin_port = htons(80); //http port (80)
+		int Socket = socket(AF_INET, SOCK_STREAM, 0);
+		if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
+		{
+			return "";
+		}
+		_sys_strcat(RequestBuffer, "GET /");
+		_sys_strcat(RequestBuffer, Path);
+		_sys_strcat(RequestBuffer, "\r\nConnection: close\r\n\r\n");
 
-	send(Socket, RequestBuffer, _sys_strlen(RequestBuffer), 0);
-	while (recv(Socket, bufferReturn, 500, 0) > 0)
+		send(Socket, RequestBuffer, _sys_strlen(RequestBuffer), 0);
+		while (recv(Socket, bufferReturn, 500, 0) > 0)
+		{
+			return bufferReturn;
+		}
+		socketclose(Socket);
+	}
+
+	void SendURLRequestV2(const char* cmd)
 	{
-		return bufferReturn;
+		char buffer[0x200];
+		_sys_snprintf(buffer, 0x200, cmd, "");
+		_sys_printf("%s\n", buffer);
+		SendURLRequest("192.168.1.11", buffer);
 	}
-	socketclose(Socket);
-}
-
-void RestartGame()
-{
-	char buffer[0x200];
-	_sys_snprintf(buffer, 0x200, "xmb.ps3$reloadgame", "");
-	_sys_printf("%s\n", buffer);
-	SendRequest(buffer);
 }
 
 #pragma endregion

@@ -39,118 +39,115 @@ namespace Buttons
 	}
 }
 
-namespace Menu
+bool InWorld()
 {
-	bool InWorld()
-	{
-		return !(*(char*)0x3000CF6B != 0);
-	}
+	return !(*(char*)0x3000CF6B != 0);
+}
 
-	int getOption()
+int getOption()
+{
+	if (optionPress)
 	{
-		if (optionPress)
+		optionPress = false;
+		return CurrentOpt;
+	}
+	else return -1;
+}
+
+void openSubmenu(int menu)
+{
+	lastMenus[lastMenuCount] = CurrentMenu;
+	lastMenuCount++;
+	CurrentOpt = 0;
+	CurrentMenu = menu;
+}
+
+void closeMenu() {
+	lastMenuCount = 0;
+	CurrentOpt = 0;
+	Opened = false;
+}
+
+void goBack() {
+	if (lastMenuCount == 0) {
+		closeMenu();
+	}
+	else {
+		lastMenuCount--;
+		CurrentMenu = lastMenus[lastMenuCount];
+		CurrentOpt = 0;
+	}
+}
+
+void Controller()
+{
+	int wI = 0;
+	keyPressed[wI] = false;
+
+	if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::UP))
+	{
+		if (!Opened)
 		{
-			optionPress = false;
-			return CurrentOpt;
-		}
-		else return -1;
-	}
-
-	void openSubmenu(int menu)
-	{
-		lastMenus[lastMenuCount] = CurrentMenu;
-		lastMenuCount++;
-		CurrentOpt = 0;
-		CurrentMenu = menu;
-	}
-
-	void closeMenu() {
-		lastMenuCount = 0;
-		CurrentOpt = 0;
-		Opened = false;
-	}
-
-	void goBack() {
-		if (lastMenuCount == 0) {
-			closeMenu();
-		}
-		else {
-			lastMenuCount--;
-			CurrentMenu = lastMenus[lastMenuCount];
+			Opened = true;
+			CurrentMenu = MainMenu;
+			lastMenuCount = 0;
 			CurrentOpt = 0;
 		}
 	}
 
-	void Controller()
+	if (Opened)
 	{
-		int wI = 0;
-		keyPressed[wI] = false;
-
-		if (Buttons::IsMCButtonPressed(Buttons::L1) && Buttons::IsMCButtonPressed(Buttons::UP))
+		if (Buttons::IsMCButtonPressed(Buttons::UP))
 		{
-			if (!Opened)
+			if (scrollWait(firstWaitTime, waitTime, wI))
 			{
-				Opened = true;
-				CurrentMenu = MainMenu;
-				lastMenuCount = 0;
-				CurrentOpt = 0;
+				CurrentOpt = CurrentOpt - 1;
+				return;
 			}
 		}
 
-		if (Opened)
+		if (Buttons::IsMCButtonPressed(Buttons::DOWN))
 		{
-			if (Buttons::IsMCButtonPressed(Buttons::UP))
+			if (scrollWait(firstWaitTime, waitTime, wI))
 			{
-				if (scrollWait(firstWaitTime, waitTime, wI))
-				{
-					CurrentOpt = CurrentOpt - 1;
-					return;
-				}
+				CurrentOpt = CurrentOpt + 1;
+				return;
 			}
+		}
 
-			if (Buttons::IsMCButtonPressed(Buttons::DOWN))
+		int fix = MaxSubOptions;
+		fix -= 1;
+
+		if (CurrentOpt > fix)
+			CurrentOpt = 0;
+
+		if (CurrentOpt < 0)
+			CurrentOpt = fix;
+
+		if (Buttons::IsMCButtonPressed(Buttons::X))
+		{
+			if (scrollWait(firstWaitTime, waitTime, wI))
 			{
-				if (scrollWait(firstWaitTime, waitTime, wI))
-				{
-					CurrentOpt = CurrentOpt + 1;
-					return;
-				}
+				optionPress = true;
+				return;
 			}
+		}
 
-			int fix = MaxSubOptions;
-			fix -= 1;
-
-			if (CurrentOpt > fix)
-				CurrentOpt = 0;
-
-			if (CurrentOpt < 0)
-				CurrentOpt = fix;
-
-			if (Buttons::IsMCButtonPressed(Buttons::X))
+		if (Buttons::IsMCButtonPressed(Buttons::O))
+		{
+			if (scrollWait(firstWaitTime, waitTime, wI))
 			{
-				if (scrollWait(firstWaitTime, waitTime, wI))
-				{
-					optionPress = true;
-					return;
-				}
+				goBack();
+				return;
 			}
+		}
 
-			if (Buttons::IsMCButtonPressed(Buttons::O))
-			{
-				if (scrollWait(firstWaitTime, waitTime, wI))
-				{
-					goBack();
-					return;
-				}
-			}
-
-			if (!keyPressed[wI])
-			{
-				lockFirst[wI] = false;
-				freeFirst[wI] = true;
-				resetWait[wI] = true;
-				resetWait2[wI] = true;
-			}
+		if (!keyPressed[wI])
+		{
+			lockFirst[wI] = false;
+			freeFirst[wI] = true;
+			resetWait[wI] = true;
+			resetWait2[wI] = true;
 		}
 	}
 }

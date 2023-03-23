@@ -7,7 +7,7 @@
     <ProjectGuid>{7376DDDF-4C19-4621-86E4-174C6440BABF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>injectSPRX</RootNamespace>
-    <AssemblyName>injectSPRX</AssemblyName>
+    <AssemblyName>inject</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
