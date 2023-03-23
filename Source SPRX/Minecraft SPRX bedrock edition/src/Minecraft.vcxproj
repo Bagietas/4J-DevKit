@@ -72,7 +72,7 @@
       <GenerateSnMapFile>FullMapFile</GenerateSnMapFile>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST "$(TargetDir)InjectSPRX.exe"  "$(TargetDir)InjectSPRX.exe"</Command>
+      <Command>IF EXIST "$(TargetDir)run.exe"  "$(TargetDir)run.exe"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">

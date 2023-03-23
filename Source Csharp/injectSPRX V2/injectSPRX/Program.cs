@@ -1,4 +1,5 @@
-﻿using Colorful;
+﻿#region "Library"
+using Colorful;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,12 +11,23 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using Console = Colorful.Console;
+#endregion
 
 namespace injectSPRX
 {
+    /*
+     build normalement
+    décompile en PRX
+    rename le fichier en debug_nomdfichier
+    resign en HEN
+    décompile en PRX
+    */
+
     internal class Program
     {
         #region "Variables"
+
+        public static string debug_folder = AppDomain.CurrentDomain.BaseDirectory + "\\debug";
 
         WebClient web = new WebClient();
         public static void ConsoleEmpty() { Console.Write("\n"); }
@@ -25,6 +37,7 @@ namespace injectSPRX
         public static string ps3IP = null;
         public static string injectPath = null;
         public static string FileForInject = null;
+        public static string debug_sprx = null;
 
         public static bool ps3IP_found = false;
 
@@ -34,6 +47,11 @@ namespace injectSPRX
         {
             try
             {
+                if (!Directory.Exists(debug_folder)) 
+                {
+                    Directory.CreateDirectory(debug_folder);
+                }
+
                 string text = AppDomain.CurrentDomain.BaseDirectory + "\\settings.txt";
 
                 if (File.Exists(text))
@@ -45,6 +63,7 @@ namespace injectSPRX
                         filename = array[2];
                         FileForInject = array[3];
                         injectPath = array[4];
+                        debug_sprx = array[5];
                     }
                 }
             }
@@ -59,12 +78,32 @@ namespace injectSPRX
         #region "inject SPRX"
         public async static void inject()
         {
-            var PATH = AppDomain.CurrentDomain.BaseDirectory + "\\" + filename + "";
-            using (var client = new WebClient())
+            try
             {
-                client.Credentials = new NetworkCredential("", "");
-                client.UploadFile("ftp://" + ps3IP + injectPath + FileForInject, WebRequestMethods.Ftp.UploadFile, PATH);
-                client.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                var PATH = AppDomain.CurrentDomain.BaseDirectory + "\\" + filename + "";
+                using (var client = new WebClient())
+                {
+                    client.Credentials = new NetworkCredential("", "");
+                    client.UploadFile("ftp://" + ps3IP + injectPath + FileForInject, WebRequestMethods.Ftp.UploadFile, PATH);
+                    client.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                }
+
+                Console.Write("[+] Injecting done, the game will restart", Color.White);
+            }
+            catch(Exception ex) 
+            {
+                Console.Write("[+] Oops failed to inject to PS3, the application will close...", Color.Red);
+                await Task.Delay(5000);
+                Environment.Exit(0);
+            }
+        }
+
+        public async static void debug_output()
+        {
+            if (debug_sprx == "true") 
+            {
+                Console.Write("[+] SPRX is now debug, you can find it in the folder debug", Color.White);
+                ConsoleEmpty();
             }
         }
 
@@ -90,10 +129,10 @@ namespace injectSPRX
             ConsoleEmpty();
             Console.Write("[+] Connected to PS3, starting injecting to: ", Color.White);
             Console.Write(injectPath, Color.Green);
+            ConsoleEmpty();
             inject();
             ConsoleEmpty();
-            Console.Write("[+] Injecting done, the game will restart", Color.White);
-            ConsoleEmpty();
+            debug_output();
             Console.Write("[+] The app will auto close in 10 seconds...", Color.White);
 
             await Task.Delay(10000);

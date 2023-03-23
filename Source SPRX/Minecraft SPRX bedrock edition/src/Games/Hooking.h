@@ -34,7 +34,6 @@ void RenderScreen_Hook(uint32_t r3, uint32_t r4) {
 	RenderScreen_Stub(r3, r4);
 	mc = (TheMinecraft*)(0x014CF2E4);
 	MaxOption = 0;
-	DrawText(L"Working", -80, -80, color(MC_Color::White));
 	LoopOptions();
 }
 

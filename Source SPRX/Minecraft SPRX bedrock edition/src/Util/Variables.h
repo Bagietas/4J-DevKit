@@ -52,7 +52,7 @@ int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[10
 int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 15;
 bool UsableMenu = true, Opened, Closed, FirstOpen;
 
-bool ToggleTitle, TogglePosition = false;
+bool ToggleTitle, TogglePosition;
 
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];

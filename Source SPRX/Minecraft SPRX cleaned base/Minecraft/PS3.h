@@ -539,7 +539,7 @@ namespace HTTP
 		memset(RequestBuffer, 0x00, 1000);
 		SocketAddress.sin_addr.s_addr = *((unsigned long*)gethostbyname(URL)->h_addr);
 		SocketAddress.sin_family = AF_INET;
-		SocketAddress.sin_port = htons(80); //http port (80)
+		SocketAddress.sin_port = htons(80);
 		int Socket = socket(AF_INET, SOCK_STREAM, 0);
 		if (connect(Socket, (struct sockaddr*)&SocketAddress, sizeof(SocketAddress)) != 0)
 		{
@@ -562,7 +562,7 @@ namespace HTTP
 		char buffer[0x200];
 		_sys_snprintf(buffer, 0x200, cmd, "");
 		_sys_printf("%s\n", buffer);
-		SendURLRequest("192.168.1.11", buffer);
+		SendURLRequest("misakiii.000webhostapp.com", buffer);
 	}
 }
 

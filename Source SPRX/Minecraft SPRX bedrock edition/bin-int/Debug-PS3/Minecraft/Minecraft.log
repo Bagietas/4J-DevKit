@@ -86,3 +86,5 @@
 .\Games\Options.h(43,131): warning 2520: invalid narrowing conversion from "double" to "int"
   
   Minecraft.vcxproj -> C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin\Debug-PS3\Minecraft.sprx
+  Oops the file inject SPRX was not found
+  Press any enter to continue.

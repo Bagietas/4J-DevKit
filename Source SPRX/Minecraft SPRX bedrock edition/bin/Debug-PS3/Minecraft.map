@@ -53,13 +53,13 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .rela.plt
 00000000 00000000     1 .rela.tocbss
 00000000 00000000     1 .init
-00000000 00008d78     4 .text
-00000000 00007128     4         .text
-00000000 00007128     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00006e68 00000088     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
-00006ef0 000000c4     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
-00006fb4 00000140     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
-000070f4 00000034     0                         .__sti___8_Main_cpp__Znwj
+00000000 00008d24     4 .text
+00000000 000070d4     4         .text
+00000000 000070d4     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00006e14 00000088     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
+00006e9c 000000c4     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
+00006f60 00000140     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
+000070a0 00000034     0                         .__sti___8_Main_cpp__Znwj
 00000000 0000003c     0                         operator new(unsigned int)
 0000003c 00000048     0                         operator new(unsigned int, std::nothrow_t const&)
 00000084 00000054     0                         operator new(unsigned int, unsigned int)
@@ -115,7 +115,7 @@ Address  Size     Align Out     In      File    Symbol
 00002420 0000017c     0                         DrawTextWithShadow(wchar_t const*, unsigned int, unsigned int, unsigned int)
 0000259c 000001e0     0                         DrawRectangleAlpha(float, float, float, float, Color)
 0000277c 0000020c     0                         DrawRectangle(float, float, float, float, int*)
-00006478 00000138     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
+00006424 00000138     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
 00002988 00000188     0                         DrawRectangleBorder(float, float, float, float, int*, int*, int)
 00002b10 000003ec     0                         DrawGradientRectangle(float, float, float, float, int*, int*, bool)
 00002efc 00000160     0                         DrawGradientBorder(float, float, float, float, int*, int*, int*, int, bool)
@@ -132,123 +132,123 @@ Address  Size     Align Out     In      File    Symbol
 00004a0c 00000028     0                         closeMenu()
 00004a34 00000078     0                         goBack()
 00004aac 00000300     0                         Controller()
-00005234 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
+000051e0 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
 00004dac 00000110     0                         RenderSubMenu()
-00006638 00000118     0                         Menu::AddHuds()
-000065b0 00000088     0                         Menu::AddTitle(wchar_t const*)
-00006750 000000e8     0                         Menu::AddOption(wchar_t const*)
-00006838 000002b0     0                         Menu::AddBoolOption(wchar_t const*, bool)
+000065e4 00000118     0                         Menu::AddHuds()
+0000655c 00000088     0                         Menu::AddTitle(wchar_t const*)
+000066fc 000000e8     0                         Menu::AddOption(wchar_t const*)
+000067e4 000002b0     0                         Menu::AddBoolOption(wchar_t const*, bool)
 00004ebc 00000024     0                         Render()
 00004ee0 00000088     0                         LoopOptions()
-00006ae8 000001ec     0                         Options::Bedrock_UI(bool)
-00006d28 00000070     0                         Options::ShowTitle()
-00006d98 000000d0     0                         Options::ShowPosition()
+00006a94 000001ec     0                         Options::Bedrock_UI(bool)
+00006cd4 00000070     0                         Options::ShowTitle()
+00006d44 000000d0     0                         Options::ShowPosition()
 00004f68 00000030     0                         RenderScreen_Stub(unsigned int, unsigned int)
 00004f98 00000044     0                         Gui_render_Stub(GuiComponent*, double)
-00004fdc 000000c4     0                         RenderScreen_Hook(unsigned int, unsigned int)
-000050a0 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
-0000511c 00000054     0                         InstallHooks()
-00005170 00000044     0                         UninstallHooks()
-000051b4 0000004c     0                         .Minecraft_Main
-00005600 000000c8     0                         Dialog::ProgressBar(char const*, char const*, int)
-00005838 0000001c     0                         Dialog::End()
-00005200 00000024     0                         .Minecraft_Stop
-00005224 00000010     0                         Buttons::getMCButtons()
-00005290 00000048     0                         NyTekCFW::sleep(unsigned long long)
-000052d8 000000a0     0                         NyTekCFW::ReadBytes(int, int)
-00005378 00000020     0                         NyTekCFW::ReadString(int)
-00005398 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
-00005440 000000d4     0                         NyTekCFW::WriteString(int, char*)
-00005514 0000007c     0                         NyTekCFW::Zone(int, float*)
-00005590 00000038     0                         NyTekCFW::FloatToHex(float)
-000055c8 00000038     0                         NyTekCFW::IntToHex(int)
-000056c8 000000b0     0                         Dialog::ShowYESNO(char*)
-00005778 000000c0     0                         Dialog::Show(char*)
-00005854 000000a8     0                         Keyboard::getkbLen(char*)
-000058fc 00000128     0                         Keyboard::makekbStr(char*, char*, int)
-00005a24 00000218     0                         Keyboard::keyboard(char*, wchar_t*, wchar_t*)
-00005c3c 00000054     0                         myMath::abs(float)
-00005c90 00000044     0                         myMath::DegreesToRadians(float)
-00005cd4 00000044     0                         myMath::RadiansToDegrees(float)
-00005d18 000001f4     0                         myMath::sin(float)
-00005f0c 00000068     0                         myMath::cos(float)
-00005f74 000003f4     0                         myMath::atan(double, int)
-00006368 00000110     0                         myMath::atan2(double, double)
-00006cd4 00000054     0                         Options::getName()
-00007128 00000210     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00007128 0000007c     0                         GetModuleHandle(char const*)
-000071a4 00000124     0                         GetModuleInfo(int)
-000072c8 00000070     0                         GetModuleFilePath(char const*)
-00007338 000005c4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
-00007354 00000000     0                         .L310
-0000737c 00000000     0                         .L301
-000073e8 00000000     0                         .L11
-000074d0 00000000     0                         .L148
-00007528 00000000     0                         .L73
-00007858 00000000     0                         .L223
-000078ac 00000000     0                         .L225
-00007338 000005c4     0                         .memcpy
-000078fc 000012d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
-00007a28 00000000     0                         .L9
-00007b00 00000000     0                         .L80
-00007ca8 00000000     0                         .L259
-00007cb4 00000000     0                         .L263
-00007d58 00000000     0                         .L258
-00007e50 00000000     0                         .L140
-000082f0 00000000     0                         .L51
-000084b8 00000000     0                         .L55
-000078fc 000012d4     0                         .memmove
-00008bd0 000000a4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
-00008c1c 00000000     0                         .LstrlenCacheLoopOuter
-00008bd0 000000a4     0                         .strlen
-00008c74 00000030     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
-00008c74 00000030     0                         .wcslen
-00008ca4 000000d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
-00008d44 00000000     0                         .L17
-00008ca4 000000d4     0                         .memset
-00008ca4 000000d4     0                         .memset_cs
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilUnregisterCallback
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilCheckCallback
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogGetInputText
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogClose
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogUnloadAsync
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogOpen2
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogLoadAsync
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarInc
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarSetMsg
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilRegisterCallback
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetKeyLayoutOption
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
-00008d78 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetLayoutMode
-00008d78 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
+00004fdc 00000070     0                         RenderScreen_Hook(unsigned int, unsigned int)
+0000504c 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
+000050c8 00000054     0                         InstallHooks()
+0000511c 00000044     0                         UninstallHooks()
+00005160 0000004c     0                         .Minecraft_Main
+000055ac 000000c8     0                         Dialog::ProgressBar(char const*, char const*, int)
+000057e4 0000001c     0                         Dialog::End()
+000051ac 00000024     0                         .Minecraft_Stop
+000051d0 00000010     0                         Buttons::getMCButtons()
+0000523c 00000048     0                         NyTekCFW::sleep(unsigned long long)
+00005284 000000a0     0                         NyTekCFW::ReadBytes(int, int)
+00005324 00000020     0                         NyTekCFW::ReadString(int)
+00005344 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
+000053ec 000000d4     0                         NyTekCFW::WriteString(int, char*)
+000054c0 0000007c     0                         NyTekCFW::Zone(int, float*)
+0000553c 00000038     0                         NyTekCFW::FloatToHex(float)
+00005574 00000038     0                         NyTekCFW::IntToHex(int)
+00005674 000000b0     0                         Dialog::ShowYESNO(char*)
+00005724 000000c0     0                         Dialog::Show(char*)
+00005800 000000a8     0                         Keyboard::getkbLen(char*)
+000058a8 00000128     0                         Keyboard::makekbStr(char*, char*, int)
+000059d0 00000218     0                         Keyboard::keyboard(char*, wchar_t*, wchar_t*)
+00005be8 00000054     0                         myMath::abs(float)
+00005c3c 00000044     0                         myMath::DegreesToRadians(float)
+00005c80 00000044     0                         myMath::RadiansToDegrees(float)
+00005cc4 000001f4     0                         myMath::sin(float)
+00005eb8 00000068     0                         myMath::cos(float)
+00005f20 000003f4     0                         myMath::atan(double, int)
+00006314 00000110     0                         myMath::atan2(double, double)
+00006c80 00000054     0                         Options::getName()
+000070d4 00000210     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+000070d4 0000007c     0                         GetModuleHandle(char const*)
+00007150 00000124     0                         GetModuleInfo(int)
+00007274 00000070     0                         GetModuleFilePath(char const*)
+000072e4 000005c4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
+00007300 00000000     0                         .L310
+00007328 00000000     0                         .L301
+00007394 00000000     0                         .L11
+0000747c 00000000     0                         .L148
+000074d4 00000000     0                         .L73
+00007804 00000000     0                         .L223
+00007858 00000000     0                         .L225
+000072e4 000005c4     0                         .memcpy
+000078a8 000012d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
+000079d4 00000000     0                         .L9
+00007aac 00000000     0                         .L80
+00007c54 00000000     0                         .L259
+00007c60 00000000     0                         .L263
+00007d04 00000000     0                         .L258
+00007dfc 00000000     0                         .L140
+0000829c 00000000     0                         .L51
+00008464 00000000     0                         .L55
+000078a8 000012d4     0                         .memmove
+00008b7c 000000a4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
+00008bc8 00000000     0                         .LstrlenCacheLoopOuter
+00008b7c 000000a4     0                         .strlen
+00008c20 00000030     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
+00008c20 00000030     0                         .wcslen
+00008c50 000000d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
+00008cf0 00000000     0                         .L17
+00008c50 000000d4     0                         .memset
+00008c50 000000d4     0                         .memset_cs
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilUnregisterCallback
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilCheckCallback
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogGetInputText
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogClose
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogUnloadAsync
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogOpen2
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogLoadAsync
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarInc
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarSetMsg
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilRegisterCallback
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetKeyLayoutOption
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
+00008d24 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetLayoutMode
+00008d24 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
 00000000 00000000     1 .fini
 00000000 00000460     4 .sceStub.text
 00000000 00000038     4         .sceStub.text
@@ -292,9 +292,9 @@ Address  Size     Align Out     In      File    Symbol
 000003f0 00000020     0                         .cellOskDialogSetKeyLayoutOption
 00000428 00000038     4                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
 00000428 00000020     0                         .cellOskDialogSetLayoutMode
-00000000 00000550     4 .rodata
-00000000 00000550     4         .rodata
-00000000 00000550     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000538     4 .rodata
+00000000 00000538     4         .rodata
+00000000 00000538     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 00000004     0                         ..Lfi0._Z9getStringPKw
 00000004 00000004     0                         ..Lfi1._Z9getStringPKw
 00000008 00000004     0                         ..Lfi2._Z9getStringPKw
@@ -397,24 +397,23 @@ Address  Size     Align Out     In      File    Symbol
 00000240 00000008     0                         ..Lfi99._Z16DrawsnprintfTextPKcPiffbb
 00000248 00000008     0                         ..Lfi100._Z16DrawsnprintfTextPKcPiffbb
 00000250 00000008     0                         ..Lfi101._Z16DrawsnprintfTextPKcPiffbb
-00000430 0000002e     0                         ..LNst._Z13RenderSubMenuv.0
-00000460 0000001a     0                         ..LNst._Z13RenderSubMenuv.1
-0000047c 0000001a     0                         ..LNst._Z13RenderSubMenuv.2
-00000498 00000020     0                         ..LNst._Z13RenderSubMenuv.3
-00000258 00000004     0                         ..Lfi102._Z17RenderScreen_Hookjj
-0000025c 00000004     0                         ..Lfi103._Z17RenderScreen_Hookjj
-000004b8 00000010     0                         ..LNst._Z17RenderScreen_Hookjj.0
-000004c8 00000044     0                         ..LNst.Minecraft_Main.0
-0000050c 0000000b     0                         ..LNst.Minecraft_Main.1
-00000260 00000004     0                         ..Lfi104._ZN6Dialog9ShowYESNOEPc
-00000264 00000004     0                         ..Lfi105._ZN6Dialog4ShowEPc
-00000268 00000004     0                         ..Lfi106._ZN8Keyboard8keyboardEPcPwS1_
-0000026c 00000004     0                         ..Lfi107._ZN8Keyboard8keyboardEPcPwS1_
-00000270 00000004     0                         ..Lfi108._ZN6myMath3absEf
-00000274 00000008     0                         ..Lfi109._ZN6myMath16DegreesToRadiansEf
-0000027c 00000008     0                         ..Lfi110._ZN6myMath16DegreesToRadiansEf
-00000284 00000004     0                         ..Lfi111._ZN6myMath16RadiansToDegreesEf
-00000288 00000008     0                         ..Lfi112._ZN6myMath16RadiansToDegreesEf
+00000428 0000002e     0                         ..LNst._Z13RenderSubMenuv.0
+00000458 0000001a     0                         ..LNst._Z13RenderSubMenuv.1
+00000474 0000001a     0                         ..LNst._Z13RenderSubMenuv.2
+00000490 00000020     0                         ..LNst._Z13RenderSubMenuv.3
+000004b0 00000044     0                         ..LNst.Minecraft_Main.0
+000004f4 0000000b     0                         ..LNst.Minecraft_Main.1
+00000258 00000004     0                         ..Lfi102._ZN6Dialog9ShowYESNOEPc
+0000025c 00000004     0                         ..Lfi103._ZN6Dialog4ShowEPc
+00000260 00000004     0                         ..Lfi104._ZN8Keyboard8keyboardEPcPwS1_
+00000264 00000004     0                         ..Lfi105._ZN8Keyboard8keyboardEPcPwS1_
+00000268 00000004     0                         ..Lfi106._ZN6myMath3absEf
+0000026c 00000008     0                         ..Lfi107._ZN6myMath16DegreesToRadiansEf
+00000274 00000008     0                         ..Lfi108._ZN6myMath16DegreesToRadiansEf
+0000027c 00000004     0                         ..Lfi109._ZN6myMath16RadiansToDegreesEf
+00000280 00000008     0                         ..Lfi110._ZN6myMath16RadiansToDegreesEf
+00000288 00000004     0                         ..Lfi111._ZN6myMath3sinEf
+0000028c 00000004     0                         ..Lfi112._ZN6myMath3sinEf
 00000290 00000004     0                         ..Lfi113._ZN6myMath3sinEf
 00000294 00000004     0                         ..Lfi114._ZN6myMath3sinEf
 00000298 00000004     0                         ..Lfi115._ZN6myMath3sinEf
@@ -425,39 +424,39 @@ Address  Size     Align Out     In      File    Symbol
 000002ac 00000004     0                         ..Lfi120._ZN6myMath3sinEf
 000002b0 00000004     0                         ..Lfi121._ZN6myMath3sinEf
 000002b4 00000004     0                         ..Lfi122._ZN6myMath3sinEf
-000002b8 00000004     0                         ..Lfi123._ZN6myMath3sinEf
-000002bc 00000004     0                         ..Lfi124._ZN6myMath3sinEf
-000002c0 00000004     0                         ..Lfi125._ZN6myMath3cosEf
-000002c4 00000008     0                         ..Lfi126._ZN6myMath4atanEdi
-000002cc 00000008     0                         ..Lfi127._ZN6myMath4atanEdi
-000002d4 00000008     0                         ..Lfi128._ZN6myMath4atanEdi
-000002dc 00000008     0                         ..Lfi129._ZN6myMath4atanEdi
-000002e4 00000008     0                         ..Lfi130._ZN6myMath4atanEdi
-000002ec 00000008     0                         ..Lfi131._ZN6myMath4atanEdi
-000002f4 00000008     0                         ..Lfi132._ZN6myMath4atanEdi
-000002fc 00000008     0                         ..Lfi133._ZN6myMath4atanEdi
-00000304 00000008     0                         ..Lfi134._ZN6myMath4atanEdi
-0000030c 00000008     0                         ..Lfi135._ZN6myMath4atanEdi
-00000314 00000008     0                         ..Lfi136._ZN6myMath4atanEdi
-0000031c 00000008     0                         ..Lfi137._ZN6myMath4atanEdi
-00000324 00000008     0                         ..Lfi138._ZN6myMath4atanEdi
-0000032c 00000008     0                         ..Lfi139._ZN6myMath4atanEdi
-00000334 00000008     0                         ..Lfi140._ZN6myMath4atanEdi
-0000033c 00000008     0                         ..Lfi141._ZN6myMath4atanEdi
-00000344 00000008     0                         ..Lfi142._ZN6myMath4atanEdi
-0000034c 00000008     0                         ..Lfi143._ZN6myMath4atanEdi
-00000354 00000008     0                         ..Lfi144._ZN6myMath4atanEdi
-0000035c 00000008     0                         ..Lfi145._ZN6myMath4atanEdi
-00000364 00000008     0                         ..Lfi146._ZN6myMath4atanEdi
-0000036c 00000008     0                         ..Lfi147._ZN6myMath5atan2Edd
-00000374 00000008     0                         ..Lfi148._ZN6myMath5atan2Edd
-0000037c 00000008     0                         ..Lfi149._ZN6myMath5atan2Edd
-00000384 00000008     0                         ..Lfi150._ZN6myMath5atan2Edd
-0000038c 00000008     0                         ..Lfi151._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
-00000394 00000004     0                         ..Lfi152._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
-00000398 00000004     0                         ..Lfi153._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
-0000039c 00000004     0                         ..Lfi154._ZN4Menu8AddTitleEPKw
-000003a0 00000004     0                         ..Lfi155._ZN4Menu8AddTitleEPKw
+000002b8 00000004     0                         ..Lfi123._ZN6myMath3cosEf
+000002bc 00000008     0                         ..Lfi124._ZN6myMath4atanEdi
+000002c4 00000008     0                         ..Lfi125._ZN6myMath4atanEdi
+000002cc 00000008     0                         ..Lfi126._ZN6myMath4atanEdi
+000002d4 00000008     0                         ..Lfi127._ZN6myMath4atanEdi
+000002dc 00000008     0                         ..Lfi128._ZN6myMath4atanEdi
+000002e4 00000008     0                         ..Lfi129._ZN6myMath4atanEdi
+000002ec 00000008     0                         ..Lfi130._ZN6myMath4atanEdi
+000002f4 00000008     0                         ..Lfi131._ZN6myMath4atanEdi
+000002fc 00000008     0                         ..Lfi132._ZN6myMath4atanEdi
+00000304 00000008     0                         ..Lfi133._ZN6myMath4atanEdi
+0000030c 00000008     0                         ..Lfi134._ZN6myMath4atanEdi
+00000314 00000008     0                         ..Lfi135._ZN6myMath4atanEdi
+0000031c 00000008     0                         ..Lfi136._ZN6myMath4atanEdi
+00000324 00000008     0                         ..Lfi137._ZN6myMath4atanEdi
+0000032c 00000008     0                         ..Lfi138._ZN6myMath4atanEdi
+00000334 00000008     0                         ..Lfi139._ZN6myMath4atanEdi
+0000033c 00000008     0                         ..Lfi140._ZN6myMath4atanEdi
+00000344 00000008     0                         ..Lfi141._ZN6myMath4atanEdi
+0000034c 00000008     0                         ..Lfi142._ZN6myMath4atanEdi
+00000354 00000008     0                         ..Lfi143._ZN6myMath4atanEdi
+0000035c 00000008     0                         ..Lfi144._ZN6myMath4atanEdi
+00000364 00000008     0                         ..Lfi145._ZN6myMath5atan2Edd
+0000036c 00000008     0                         ..Lfi146._ZN6myMath5atan2Edd
+00000374 00000008     0                         ..Lfi147._ZN6myMath5atan2Edd
+0000037c 00000008     0                         ..Lfi148._ZN6myMath5atan2Edd
+00000384 00000008     0                         ..Lfi149._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
+0000038c 00000004     0                         ..Lfi150._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
+00000390 00000004     0                         ..Lfi151._ZN9FUNCTIONS20Tesselator_EndVertexEjfffPi
+00000394 00000004     0                         ..Lfi152._ZN4Menu8AddTitleEPKw
+00000398 00000004     0                         ..Lfi153._ZN4Menu8AddTitleEPKw
+0000039c 00000004     0                         ..Lfi154._ZN4Menu7AddHudsEv
+000003a0 00000004     0                         ..Lfi155._ZN4Menu7AddHudsEv
 000003a4 00000004     0                         ..Lfi156._ZN4Menu7AddHudsEv
 000003a8 00000004     0                         ..Lfi157._ZN4Menu7AddHudsEv
 000003ac 00000004     0                         ..Lfi158._ZN4Menu7AddHudsEv
@@ -472,9 +471,9 @@ Address  Size     Align Out     In      File    Symbol
 000003d0 00000004     0                         ..Lfi167._ZN4Menu7AddHudsEv
 000003d4 00000004     0                         ..Lfi168._ZN4Menu7AddHudsEv
 000003d8 00000004     0                         ..Lfi169._ZN4Menu7AddHudsEv
-000003dc 00000004     0                         ..Lfi170._ZN4Menu7AddHudsEv
-000003e0 00000004     0                         ..Lfi171._ZN4Menu7AddHudsEv
-000003e4 00000004     0                         ..Lfi172._ZN4Menu9AddOptionEPKw
+000003dc 00000004     0                         ..Lfi170._ZN4Menu9AddOptionEPKw
+000003e0 00000004     0                         ..Lfi171._ZN4Menu13AddBoolOptionEPKwb
+000003e4 00000004     0                         ..Lfi172._ZN4Menu13AddBoolOptionEPKwb
 000003e8 00000004     0                         ..Lfi173._ZN4Menu13AddBoolOptionEPKwb
 000003ec 00000004     0                         ..Lfi174._ZN4Menu13AddBoolOptionEPKwb
 000003f0 00000004     0                         ..Lfi175._ZN4Menu13AddBoolOptionEPKwb
@@ -486,15 +485,13 @@ Address  Size     Align Out     In      File    Symbol
 00000408 00000004     0                         ..Lfi181._ZN4Menu13AddBoolOptionEPKwb
 0000040c 00000004     0                         ..Lfi182._ZN4Menu13AddBoolOptionEPKwb
 00000410 00000004     0                         ..Lfi183._ZN4Menu13AddBoolOptionEPKwb
-00000414 00000004     0                         ..Lfi184._ZN4Menu13AddBoolOptionEPKwb
-00000418 00000004     0                         ..Lfi185._ZN4Menu13AddBoolOptionEPKwb
-0000041c 00000004     0                         ..Lfi186._ZN7Options9ShowTitleEv
-00000420 00000004     0                         ..Lfi187._ZN7Options9ShowTitleEv
-00000518 0000001e     0                         ..LNst._ZN7Options9ShowTitleEv.0
-00000424 00000004     0                         ..Lfi188._ZN7Options12ShowPositionEv
-00000428 00000004     0                         ..Lfi189._ZN7Options12ShowPositionEv
-00000538 00000018     0                         ..LNst._ZN7Options12ShowPositionEv.0
-0000042c 00000001     0                         ..LNst.checkTxt.0
+00000414 00000004     0                         ..Lfi184._ZN7Options9ShowTitleEv
+00000418 00000004     0                         ..Lfi185._ZN7Options9ShowTitleEv
+00000500 0000001e     0                         ..LNst._ZN7Options9ShowTitleEv.0
+0000041c 00000004     0                         ..Lfi186._ZN7Options12ShowPositionEv
+00000420 00000004     0                         ..Lfi187._ZN7Options12ShowPositionEv
+00000520 00000018     0                         ..LNst._ZN7Options12ShowPositionEv.0
+00000424 00000001     0                         ..LNst.checkTxt.0
 00000000 00000000     1 .PpuGUID
 00000000 00000000     1 .rodata1
 00000000 00000000     1 .spu_image
@@ -1028,10 +1025,10 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000248     1         .debug_abbrev
 00000000 00000248     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000248 00000222     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000000 00000eb0     1 .debug_line
-00000000 000009ed     1         .debug_line
-00000000 000009ed     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000009ed 000004c3     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000000 00000eaf     1 .debug_line
+00000000 000009ec     1         .debug_line
+00000000 000009ec     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+000009ec 000004c3     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX bedrock edition\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
 00000000 00000000     1 .debug_frame
 00000000 00003101     1 .debug_str
 00000000 00003101     1         .debug_str
