@@ -21,6 +21,13 @@ namespace Menu
 		MaxOption += 1;
 	}
 
+	void AddSubOption(const wchar_t* option)
+	{
+		DrawText(option, 438, 45 + (SpaceBetweenText * MaxOption), (MaxOption == CurrentOpt) ? color(MC_Color::ScrollColor) : color(MC_Color::White));
+		DrawText(L">     ", 580, 45 + (SpaceBetweenText * MaxOption), (MaxOption == CurrentOpt) ? color(MC_Color::ScrollColor) : color(MC_Color::White));
+		MaxOption += 1;
+	}
+
 	void AddBoolOption(const wchar_t* option, bool toggle)
 	{
 		DrawText(option, 465, 45 + (SpaceBetweenText * MaxOption), (MaxOption == CurrentOpt) ? color(MC_Color::ScrollColor) : color(MC_Color::White));
@@ -35,6 +42,7 @@ namespace Menu
 			DrawRectangleBorder(440, 45 + (SpaceBetweenText * MaxOption), 20, 7, MC_Color::bool_off, MC_Color::black_line, 1);
 			DrawRectangleBorder(438, 42 + (SpaceBetweenText * MaxOption), 5, 12, MC_Color::header_color1, MC_Color::black_line, 1);
 		}
+
 		MaxOption += 1;
 	}
 }

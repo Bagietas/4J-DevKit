@@ -2,6 +2,7 @@
 using Colorful;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,14 +16,6 @@ using Console = Colorful.Console;
 
 namespace injectSPRX
 {
-    /*
-     build normalement
-    décompile en PRX
-    rename le fichier en debug_nomdfichier
-    resign en HEN
-    décompile en PRX
-    */
-
     internal class Program
     {
         #region "Variables"
@@ -37,9 +30,13 @@ namespace injectSPRX
         public static string ps3IP = null;
         public static string injectPath = null;
         public static string FileForInject = null;
-        public static string debug_sprx = null;
-
+        public static bool sprx_injected = false;
         public static bool ps3IP_found = false;
+
+        //debug part
+        public static string file_debug = null;
+        public static string MAKE = "make.exe";
+        public static string UNSELF = "unself.exe";
 
         #endregion
         #region "Get Infos"
@@ -47,11 +44,6 @@ namespace injectSPRX
         {
             try
             {
-                if (!Directory.Exists(debug_folder)) 
-                {
-                    Directory.CreateDirectory(debug_folder);
-                }
-
                 string text = AppDomain.CurrentDomain.BaseDirectory + "\\settings.txt";
 
                 if (File.Exists(text))
@@ -63,48 +55,124 @@ namespace injectSPRX
                         filename = array[2];
                         FileForInject = array[3];
                         injectPath = array[4];
-                        debug_sprx = array[5];
                     }
                 }
             }
             catch(Exception ex)
             {
 
-            }
-          
+            }     
         }
 
         #endregion
         #region "inject SPRX"
-        public async static void inject()
+        public static void LoadFiles(string path, byte[] fileBytes)
         {
-            try
-            {
-                var PATH = AppDomain.CurrentDomain.BaseDirectory + "\\" + filename + "";
-                using (var client = new WebClient())
-                {
-                    client.Credentials = new NetworkCredential("", "");
-                    client.UploadFile("ftp://" + ps3IP + injectPath + FileForInject, WebRequestMethods.Ftp.UploadFile, PATH);
-                    client.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
-                }
+            File.WriteAllBytes(path, fileBytes);
+        }
 
-                Console.Write("[+] Injecting done, the game will restart", Color.White);
-            }
-            catch(Exception ex) 
+        public static string CMD(string command)
+        {
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + command)
             {
-                Console.Write("[+] Oops failed to inject to PS3, the application will close...", Color.Red);
-                await Task.Delay(5000);
-                Environment.Exit(0);
+                RedirectStandardError = true,
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            using (Process proc = new Process())
+            {
+                proc.StartInfo = procStartInfo;
+                proc.Start();
+
+                string output = proc.StandardOutput.ReadToEnd();
+
+                if (string.IsNullOrEmpty(output))
+                    output = proc.StandardError.ReadToEnd();
+
+                return output;
             }
         }
 
-        public async static void debug_output()
+        public static bool checkWebsite(string URL)
         {
-            if (debug_sprx == "true") 
+            try
             {
-                Console.Write("[+] SPRX is now debug, you can find it in the folder debug", Color.White);
-                ConsoleEmpty();
+                WebClient wc = new WebClient();
+                string HTMLSource = wc.DownloadString(URL);
+                return true;
             }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async static void inject()
+        {
+            if (checkWebsite("http://" + ps3IP))
+            {
+                try
+                {
+                    Console.Write("[+] Connected to PS3, starting injecting to: ", Color.White);
+                    Console.Write(injectPath, Color.Green);
+
+                    var PATH = AppDomain.CurrentDomain.BaseDirectory + "\\" + filename + "";
+                    using (var client = new WebClient())
+                    {
+                        client.Credentials = new NetworkCredential("", "");
+                        client.UploadFile("ftp://" + ps3IP + injectPath + FileForInject, WebRequestMethods.Ftp.UploadFile, PATH);
+                        client.DownloadString("http://" + ps3IP + "/xmb.ps3$reloadgame");
+                    }
+
+                    sprx_injected = true;
+                    ConsoleEmpty();
+                    Console.Write("[+] Injecting done, the game will restart", Color.White);
+                }
+                catch (Exception ex)
+                {
+                    sprx_injected = false;
+                    ConsoleEmpty();
+                    Console.Write("[+] Oops failed to inject to PS3, the application will close...", Color.Red);
+                    await Task.Delay(5000);
+                    Environment.Exit(0);
+                }
+            }
+            else
+            {
+                sprx_injected = false;
+                Console.Write("[+] Impossible connect to PS3... ", Color.Red);
+            }
+        }
+
+        public static void debug_output()
+        {
+            /*
+            if (sprx_injected == true)
+            {
+                if (!Directory.Exists(debug_folder))
+                {
+                    Directory.CreateDirectory(debug_folder);
+                }
+
+                LoadFiles(MAKE, Properties.Resources.make);
+                LoadFiles(UNSELF, Properties.Resources.unself);
+
+                string prx = filename.Replace("sprx", "prx");
+
+                CMD("unself.exe " + filename + "  debug_" + prx);
+                CMD("make.exe debug_" + prx + " " + filename);
+                CMD("unself.exe " + filename + " " + prx);
+
+                File.Move("debug_" + prx, debug_folder + @"\debug_" + prx);
+                File.Move(filename, debug_folder + @"\" + filename);
+                File.Move(prx, debug_folder + @"\" + prx);
+
+                File.Delete(MAKE);
+                File.Delete(UNSELF);
+            }
+            */
         }
 
         internal static async void InjectSPRX()
@@ -112,11 +180,12 @@ namespace injectSPRX
             getInfos();
             Console.Title = "SPRX Injector by Misaki";
             Console.WriteAscii("   " + "SPRX Injector", Color.DarkMagenta);
+            Console.Write("                                                version 1.0", Color.DarkMagenta);
             ConsoleEmpty();
-            Console.Write("[!] Welcome to SPRX Injector, made by Misaki.", Color.White);
             ConsoleEmpty();
+            Console.Write("[!] Welcome to SPRX Injector, made by Misaki.", Color.MediumPurple);
             ConsoleEmpty();
-            Console.Write("[!] This app has been created for inject any SPRX after build on VS.", Color.Green);
+            Console.Write("[!] This app has been created for inject any SPRX after have build it on VS.", Color.MediumPurple);
             ConsoleEmpty();
             ConsoleEmpty();
             Console.Write("[+] Checking file to inject...", Color.White);
@@ -126,9 +195,6 @@ namespace injectSPRX
             ConsoleEmpty();
             Console.Write("[+] Starting connection to PS3: ", Color.White);
             Console.Write(ps3IP, Color.Green);
-            ConsoleEmpty();
-            Console.Write("[+] Connected to PS3, starting injecting to: ", Color.White);
-            Console.Write(injectPath, Color.Green);
             ConsoleEmpty();
             inject();
             ConsoleEmpty();

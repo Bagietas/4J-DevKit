@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Colorful.Console, Version=1.2.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Colorful.Console.1.2.15\lib\net461\Colorful.Console.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,12 +44,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colorful.Console\ColorAlternator.cs" />
+    <Compile Include="Colorful.Console\ColorAlternatorFactory.cs" />
+    <Compile Include="Colorful.Console\ColorExtensions.cs" />
+    <Compile Include="Colorful.Console\ColorfulConsoleBack.cs" />
+    <Compile Include="Colorful.Console\ColorfulConsoleFront.cs" />
+    <Compile Include="Colorful.Console\ColorManager.cs" />
+    <Compile Include="Colorful.Console\ColorManagerFactory.cs" />
+    <Compile Include="Colorful.Console\ColorMapper.cs" />
+    <Compile Include="Colorful.Console\ColorMappingException.cs" />
+    <Compile Include="Colorful.Console\COLORREF.cs" />
+    <Compile Include="Colorful.Console\ColorStore.cs" />
+    <Compile Include="Colorful.Console\ConsoleAccessException.cs" />
+    <Compile Include="Colorful.Console\DefaultFonts.cs" />
+    <Compile Include="Colorful.Console\ExtensionMethods.cs" />
+    <Compile Include="Colorful.Console\Figlet.cs" />
+    <Compile Include="Colorful.Console\FigletFont.cs" />
+    <Compile Include="Colorful.Console\Formatter.cs" />
+    <Compile Include="Colorful.Console\FrequencyBasedColorAlternator.cs" />
+    <Compile Include="Colorful.Console\GradientGenerator.cs" />
+    <Compile Include="Colorful.Console\IPrototypable.cs" />
+    <Compile Include="Colorful.Console\MatchLocation.cs" />
+    <Compile Include="Colorful.Console\Pattern.cs" />
+    <Compile Include="Colorful.Console\PatternBasedColorAlternator.cs" />
+    <Compile Include="Colorful.Console\PatternCollection.cs" />
+    <Compile Include="Colorful.Console\StyleClass.cs" />
+    <Compile Include="Colorful.Console\StyledString.cs" />
+    <Compile Include="Colorful.Console\Styler.cs" />
+    <Compile Include="Colorful.Console\StyleSheet.cs" />
+    <Compile Include="Colorful.Console\TaskQueue.cs" />
+    <Compile Include="Colorful.Console\TextAnnotator.cs" />
+    <Compile Include="Colorful.Console\TextFormatter.cs" />
+    <Compile Include="Colorful.Console\TextPattern.cs" />
+    <Compile Include="Colorful.Console\TextPatternCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\make.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unself.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

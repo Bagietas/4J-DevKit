@@ -15,10 +15,10 @@ void LoopOptions()
 
 	if (UsableMenu)
 	{
+		Render();
 		Options::ShowTitle();
 		Options::ShowPosition();
 		DoRainbowColor();
-		Render();
 	}
 }
 
@@ -33,6 +33,7 @@ void Gui_render_Stub(GuiComponent* gui, double unk) {
 void RenderScreen_Hook(uint32_t r3, uint32_t r4) {
 	RenderScreen_Stub(r3, r4);
 	mc = (TheMinecraft*)(0x014CF2E4);
+	DrawText(L"Working", -80, -80, color(MC_Color::White));
 	MaxOption = 0;
 	LoopOptions();
 }
