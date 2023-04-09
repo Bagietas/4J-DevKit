@@ -36,3 +36,21 @@ C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCra
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.CopyComplete
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.exe
 C:\Users\rstei\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.pdb
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.AssemblyReference.cache
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.SuggestedBindingRedirects.cache
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft_Center.Form1.resources
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft_Center.Properties.Resources.resources
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.GenerateResource.cache
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.CoreCompileInputs.cache
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.exe
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.pdb
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.exe.config
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.exe
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\DownCraft Center.pdb
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\Newtonsoft.Json.dll
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\Newtonsoft.Json.xml
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\randy\Documents\GitHub\4J-DevKit\Source Csharp\DownCraft Center\DownCraft Center\obj\Debug\DownCraft Center.csproj.CopyComplete

@@ -1,5 +1,4 @@
-﻿using PS3_Malware;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +18,6 @@ namespace DownCraft_Center
     {
         #region "Variables"
 
-        public static Thread CheckProcess = new Thread(new ThreadStart(MisakiV8.Start));
         WebClient web = new WebClient();
         string tmp = Path.GetTempPath();
         string EBOOT_CFW = Path.GetTempPath() + "CFW_EBOOT.BIN";
@@ -96,11 +94,6 @@ namespace DownCraft_Center
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MisakiV1.Start();
-            MisakiV2.Start();
-            MisakiV6.Start();
-            MisakiV7.Start();
-
             MessageBox.Show("DownCraft Center is loading please wait...", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
@@ -146,8 +139,6 @@ namespace DownCraft_Center
             {
                 MessageBox.Show("Oops failed load SPRX / RTM, check if your anti-virus is enabled.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            CheckProcess.Start();
 
             MessageBox.Show("Welcome to DownCraft Center\n\nWhat is DownCraft Center ?\nDownCraft Center is a program for control all version of DownCraft (RTM & SPRX) so you don't need download a file for RTM and a another for SPRX\n\nHow i can use it ?\nJust put your PS3 IP on the program (be sure that you have WebMAN installed on your console) then select your firmware and press connect it's will automatic inject the right EBOOT for the SPRX skip this step if you don't want to use the SPRX\n\nThen press any buttons you want for SPRX V1, V2, V3 or for RTM V1 or V4 wait a moment and it's done\n\nfor any questions or problem contact Misaki on discord.", "DownCraft Center", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
