@@ -1,17 +1,4 @@
-﻿/*
- * Offsets Minecraft 1.84 made by Misakiii
- * 
- * This file contains all options 
- * for use it just use name_of_options(true); or name_of_options(false);
- * 
- * Credits to NELUxP MoDz, Mayhem Modding, Dublin Modz, Misakiii
- * 
- * Nobody know Minecraft codes better that us, so don't think you can do it better
- * 
- * -Misakiii (I'm still the best <3)
- */
-
-#region "Library"
+﻿#region "Library"
 
 using PS3Lib;
 using System;
@@ -74,8 +61,6 @@ namespace DownCraft
 
 
         #endregion
-
-
         #region "Changing Effect"
 
         public static byte[] ModEffectsSPEED = { 0x32, 0x1B, 0x8C, 0xD0 };
@@ -109,8 +94,6 @@ namespace DownCraft
         public static byte[] MobEffectsSLOW_FALLING = { 0x32, 0x1B, 0xB3, 0x20 };
 
         #endregion
-
-
         #region "Timer Regeneration"
 
         //timer changer for totem regenerations MAX = 25:00
@@ -124,8 +107,6 @@ namespace DownCraft
         public static byte[] MobEffectTimer8 = { 0x38, 0xA0, 0x70, 0x80 }; //default time for regeneration 24:00
 
         #endregion
-
-
         #region "Changing Items"
 
         public byte[] Items_air = { 0x32, 0x1C, 0x0A, 0x60 };
@@ -166,8 +147,6 @@ namespace DownCraft
         public byte[] Items_debug_four_items = { 0x32, 0x20, 0xCF, 0xB0 };
 
         #endregion
-
-
         #region "Changing Blocks"
 
         public byte[] Blocks_air = { 0x32, 0x18, 0x10, 0x20 };
@@ -179,15 +158,11 @@ namespace DownCraft
         public byte[] Blocks_bed = { 0x32, 0x18, 0x37, 0x80 };
 
         #endregion
-
-
         #region "Connect & Attach"
 
 
 
         #endregion
-
-
         #region "Bool Options Offset"
 
         //FIX ALL TEXT
@@ -7059,8 +7034,6 @@ namespace DownCraft
         }
 
         #endregion
-
-
         #region "Teleport Functions"
 
         public string getLocation()
@@ -7176,8 +7149,6 @@ namespace DownCraft
         }
 
         #endregion
-
-
         #region "SWAPPER"
 
         #region "Swapper Effect Regeneration"
@@ -7588,5 +7559,3 @@ namespace DownCraft
 
     }
 }
-
-//Jumping entity = 0x003ABE20

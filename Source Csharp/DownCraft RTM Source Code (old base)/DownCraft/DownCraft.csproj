@@ -69,9 +69,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Guna.UI.dll</HintPath>
@@ -88,9 +85,6 @@
     </Reference>
     <Reference Include="MetroFramework.Fonts">
       <HintPath>..\..\..\..\Desktop\PC\DownCraft Source\DownCraft Source CMS\DownCraftPremium CFW\DownCraftV5\bin\Debug\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Siticone.UI">
       <HintPath>..\..\..\..\..\..\Desktop\PC\Games\Minecraft Bedrock\DownCraft Bedrock\DownCraft Bedrock Edition\DownCraft Bedrock Edition\bin\Debug\Siticone.UI.dll</HintPath>
@@ -190,8 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
-    <Content Include="Resources\snuvcdsm.exe" />
-    <Content Include="Resources\xwizard.exe" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

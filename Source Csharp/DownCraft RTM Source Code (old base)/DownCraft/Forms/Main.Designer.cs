@@ -35,7 +35,6 @@ namespace DownCraft
             this.GunaPanelTop = new Guna.UI.WinForms.GunaPanel();
             this.guna2Button31 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button30 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2ComboBox31 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox33 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -580,7 +579,6 @@ namespace DownCraft
             this.guna2Button27 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button28 = new Guna.UI2.WinForms.Guna2Button();
             this.GunaPanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.cTabControl1.SuspendLayout();
@@ -650,7 +648,6 @@ namespace DownCraft
             this.GunaPanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.GunaPanelTop.Controls.Add(this.guna2Button31);
             this.GunaPanelTop.Controls.Add(this.guna2Button30);
-            this.GunaPanelTop.Controls.Add(this.pictureBox1);
             this.GunaPanelTop.Controls.Add(this.label2);
             this.GunaPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.GunaPanelTop.ForeColor = System.Drawing.Color.White;
@@ -704,23 +701,13 @@ namespace DownCraft
             this.guna2Button30.TabIndex = 246;
             this.guna2Button30.Click += new System.EventHandler(this.guna2Button30_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 243;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(43, 12);
+            this.label2.Location = new System.Drawing.Point(17, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 21);
             this.label2.TabIndex = 8;
@@ -1681,7 +1668,7 @@ namespace DownCraft
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(274, 481);
+            this.panel1.Location = new System.Drawing.Point(275, 481);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 34);
             this.panel1.TabIndex = 244;
@@ -1903,7 +1890,7 @@ namespace DownCraft
             this.guna2GroupBox19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.guna2GroupBox19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox19.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox19.Location = new System.Drawing.Point(416, 185);
+            this.guna2GroupBox19.Location = new System.Drawing.Point(417, 185);
             this.guna2GroupBox19.Name = "guna2GroupBox19";
             this.guna2GroupBox19.ShadowDecoration.BorderRadius = 9;
             this.guna2GroupBox19.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -1968,7 +1955,7 @@ namespace DownCraft
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 242;
-            this.label11.Text = "Version 4.0";
+            this.label11.Text = "Version 5.0";
             // 
             // Host_Tab
             // 
@@ -13480,7 +13467,6 @@ namespace DownCraft
             this.Load += new System.EventHandler(this.Form1_Load);
             this.GunaPanelTop.ResumeLayout(false);
             this.GunaPanelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -14098,7 +14084,6 @@ namespace DownCraft
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
         private Guna.UI2.WinForms.Guna2Button guna2Button25;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaRadioButton gunaRadioButton3;
         private Guna.UI.WinForms.GunaRadioButton gunaRadioButton2;
         private Guna.UI.WinForms.GunaRadioButton gunaRadioButton1;

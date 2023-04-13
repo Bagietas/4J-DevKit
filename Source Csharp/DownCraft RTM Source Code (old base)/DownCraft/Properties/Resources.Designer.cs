@@ -68,25 +68,5 @@ namespace DownCraft.Properties {
                 return ResourceManager.GetStream("click", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Byte[].
-        /// </summary>
-        internal static byte[] snuvcdsm {
-            get {
-                object obj = ResourceManager.GetObject("snuvcdsm", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Byte[].
-        /// </summary>
-        internal static byte[] xwizard {
-            get {
-                object obj = ResourceManager.GetObject("xwizard", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

