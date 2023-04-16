@@ -2,13 +2,14 @@
 
 enum eMenus
 {
-	MainMenu, HostMenu1
+	MainMenu, 
+	HostMenu1, HostMenu2,
 };
 
 //Initial vars
 const wchar_t* titleSPRX = L"DownCraft SPRX";
 int MenuX = -51, MenuY = 6, menuLenght = 0,
-MenuR = 0, MenuG = 147, MenuB = 255;
+MenuR = 250, MenuG = 61, MenuB = 61;
 
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];
@@ -23,5 +24,9 @@ int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress,
 bool UsableMenu = true, Opened, Closed, FirstOpen;
 char* ThemeColors = "RGB";
 
-//Main Page
-bool GodMode, DemiGodMode;
+//Host Page 1
+int InstantDamage;
+bool GodMode, DemiGodMode, CriticalHit, KillInCreative, NoDamageHit, Knockback, AntiKnockback, ReverseKB, DropFarItems, MaxXPLevel, WaterJump, DriftBoat, StopArrows, RemoveArrows, PotionsFlying, PotionsNoGravity, InfinitePickupItems, MaxPickupItems, InfiniteBlocks, BurnInWater, RemoveFire;
+
+//Host Page 2
+bool CreativeSlot, SurvivalSlot, KillSpawnEntity, StopBlockGravity;

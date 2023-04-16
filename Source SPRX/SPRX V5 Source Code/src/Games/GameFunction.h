@@ -28,6 +28,28 @@ void DrawTextC(char* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(c2wc(text)), x, y, color, 0, 1);
 }
 
+void DrawTextSnprintf(const char* text, int valeur, int X, int Y)
+{
+	char option4[0x100];
+	wchar_t woption4[0x100];
+	_sys_memset(option4, 0, 0x100);
+	_sys_memset(woption4, 0, 0x200);
+	_sys_snprintf(option4, 0x100, text, (valeur));
+	StringToWideCharacter(woption4, option4, strlen(option4));
+	DrawText(woption4, X, Y, color(MC_Color::WHITE));
+}
+
+void DrawTextSnprintfV2(const char* format, int* args, float x, float y)
+{
+	char option[0x100];
+	wchar_t woption[0x100];
+	_sys_memset(option, 0, 0x100);
+	_sys_memset(woption, 0, 0x200);
+	_sys_snprintf(option, 0x100, format, args[0], args[1], args[2], args[3], args[4]);
+	StringToWideCharacter(woption, option, strlen(option));
+	DrawText(woption, x, y, color(MC_Color::WHITE));
+}
+
 void DrawRectangle(float x, float y, float w, float h, int* color)
 {
 	uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());

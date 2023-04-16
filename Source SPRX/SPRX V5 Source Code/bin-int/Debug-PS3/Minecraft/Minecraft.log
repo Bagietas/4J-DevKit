@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-.\Util/Variables.h(24,20): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(25,20): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\PS3/PS3.h(451,2): warning 551: variable "FreeMemory" is used before its value is set
   
@@ -67,13 +67,13 @@
   
 .\Games\GameFunction.h(28,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(49,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+.\Games\GameFunction.h(71,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
   
-.\Games\GameFunction.h(49,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunction.h(71,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(49,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunction.h(71,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(49,65): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+.\Games\GameFunction.h(71,65): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
   
 .\Games/Offsets.h(98,17): warning 2520: invalid narrowing conversion from "int" to "char"
   
@@ -111,12 +111,10 @@
   
 .\Games\Functions.h(124,8): warning 176: subscript out of range
   
-.\Menu/Huds.h(31,6): warning 178: variable "index" was declared but never referenced
+.\Menu/Huds.h(56,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-.\Menu\Huds.h(65,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Menu\Huds.h(60,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
-.\Menu\Huds.h(71,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
-  
-  Minecraft.vcxproj -> C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\Minecraft SPRX V5 Source Code\bin\Debug-PS3\Minecraft.sprx
+  Minecraft.vcxproj -> C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin\Debug-PS3\Minecraft.sprx
   Oops the file inject SPRX was not found
   Press any enter to continue.

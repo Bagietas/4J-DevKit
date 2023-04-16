@@ -22,12 +22,12 @@ namespace MC_TextColor
 
 namespace MC_Color
 {
-	int DESC_COLOR[4] = { 10, 10, 10, 50 };
+	int DESC_COLOR[3] = { 10, 10, 10 };
+	int TOGGLE_COLOR[3] = { 29, 29, 29 };
 	int BLACK_THEME[3] = { 32, 32, 32 };
+	int TOGGLE_OFF[3] = { 51, 51, 51 };
 	int WHITE[3] = { 255, 255, 255 };
 	int BLACK[3] = { 25, 25, 25 };
-	int BLACK1[3] = { 15, 15, 15 };
-	int BLACK2[3] = { 10, 10, 10 };
 	int PINK[3] = { 255, 137, 214 };
 	int RED[3] = { 255, 16, 63 };
 	int ORANGE[3] = { 255, 143, 16 };
