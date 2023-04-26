@@ -53,13 +53,13 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .rela.plt
 00000000 00000000     1 .rela.tocbss
 00000000 00000000     1 .init
-00000000 000083f0     4 .text
-00000000 000067a0     4         .text
-00000000 000067a0     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000064e0 00000088     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
-00006568 000000c4     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
-0000662c 00000140     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
-0000676c 00000034     0                         .__sti___8_Main_cpp__Znwj
+00000000 0000c780     4 .text
+00000000 0000ab30     4         .text
+00000000 0000ab30     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+0000a870 00000088     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
+0000a8f8 000000c4     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
+0000a9bc 00000140     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
+0000aafc 00000034     0                         .__sti___8_Main_cpp__Znwj
 00000000 0000003c     0                         operator new(unsigned int)
 0000003c 00000048     0                         operator new(unsigned int, std::nothrow_t const&)
 00000084 00000054     0                         operator new(unsigned int, unsigned int)
@@ -116,7 +116,7 @@ Address  Size     Align Out     In      File    Symbol
 0000222c 00000158     0                         DrawTextSnprintf(char const*, int, int, int)
 00002384 00000184     0                         DrawTextSnprintfV2(char const*, int*, float, float)
 00002508 0000020c     0                         DrawRectangle(float, float, float, float, int*)
-00006334 00000140     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
+0000a6c4 00000140     0                         FUNCTIONS::Tesselator_EndVertex(unsigned int, float, float, float, int*)
 00002714 00000188     0                         DrawRectangleBorder(float, float, float, float, int*, int*, int)
 0000289c 00000200     0                         DrawRectangleAlpha(float, float, float, float, Color)
 00002a9c 000003e4     0                         DoRainbowColor()
@@ -127,156 +127,156 @@ Address  Size     Align Out     In      File    Symbol
 00002fec 00000028     0                         closeSubmenu()
 00003014 00000078     0                         goBack()
 0000308c 00000300     0                         Controller()
-00006484 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
-0000338c 00000ba8     0                         RenderSubMenu()
-00003f34 00000024     0                         Render()
-00003f58 0000006c     0                         LoopOptions()
-00003fc4 00000030     0                         RenderScreen_Stub(unsigned int, unsigned int)
-00003ff4 00000044     0                         Gui_render_Stub(GuiComponent*, double)
-00004038 00000108     0                         RenderScreen_Hook(unsigned int, unsigned int)
-00004140 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
-000041bc 00000054     0                         InstallHooks()
-00004210 00000044     0                         UninstallHooks()
-00004254 0000004c     0                         .Minecraft_Main
-000054bc 000000c8     0                         Dialog::ProgressBar(char const*, char const*, int)
-000056f4 0000001c     0                         Dialog::End()
-000042a0 00000024     0                         .Minecraft_Stop
-000042c4 00000020     0                         PS3Lib::ReadSingleFloat(int)
-000042e4 000000a4     0                         PS3Lib::ReadFloat(int, int)
-00004388 000000a0     0                         PS3Lib::ReadBytes(int, int)
-00004428 000000ac     0                         PS3Lib::WriteFloat(int, float*, int)
-000044d4 00000038     0                         PS3Lib::WriteSingleFloat(int, float)
-0000450c 000000a8     0                         PS3Lib::WriteBytes(int, char*, int)
-000045b4 00000038     0                         PS3Lib::WriteByte(int, unsigned char)
-000045ec 000000b8     0                         PS3Lib::ReadInt(int, int)
-000046a4 000000b0     0                         PS3Lib::WriteInt(int, int*, int)
-00004754 00000038     0                         PS3Lib::WriteInt32(int, int)
-0000478c 000000ac     0                         PS3Lib::WriteString(int, char*)
-00004838 00000168     0                         PS3Lib::ReadStringz(int)
-000049a0 000000a0     0                         PS3Lib::ReadBytesC(int, int)
-00004a40 000000f0     0                         PS3Lib::ReadStringC(int)
-00004b30 00000024     0                         PS3Lib::ReadInt32(int)
-00004b54 00000020     0                         PS3Lib::ReadString(int)
-00004b74 00000154     0                         PS3Lib::ReadStringzz(int, bool)
-00004cc8 00000048     0                         NyTekCFW::sleep(unsigned long long)
-00004d10 000000a0     0                         NyTekCFW::ReadBytes(int, int)
-00004db0 00000020     0                         NyTekCFW::ReadString(int)
-00004dd0 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
-00004e78 000000d4     0                         NyTekCFW::WriteString(int, char*)
-00004f4c 0000007c     0                         NyTekCFW::Zone(int, float*)
-00004fc8 00000038     0                         NyTekCFW::FloatToHex(float)
-00005000 00000038     0                         NyTekCFW::IntToHex(int)
-00005038 000000a0     0                         HTTP::removespace(char const*)
-000050d8 00000168     0                         HTTP::LocalRequest(char*)
-00005240 0000006c     0                         HTTP::SendLocalRequest(char const*)
-000052ac 0000018c     0                         HTTP::URLRequest(char*, char*)
-00005438 00000084     0                         HTTP::SendURLRequest(char*, char const*)
-00005584 000000b0     0                         Dialog::ShowYESNO(char*)
-00005634 000000c0     0                         Dialog::Show(char*)
-00005710 000000a8     0                         Keyboard::getkbLen(char*)
-000057b8 00000128     0                         Keyboard::makekbStr(char*, char*, int)
-000058e0 00000218     0                         Keyboard::keyboard(char*, wchar_t*, wchar_t*)
-00005af8 00000054     0                         myMath::abs(float)
-00005b4c 00000044     0                         myMath::DegreesToRadians(float)
-00005b90 00000044     0                         myMath::RadiansToDegrees(float)
-00005bd4 000001f4     0                         myMath::sin(float)
-00005dc8 00000068     0                         myMath::cos(float)
-00005e30 000003f4     0                         myMath::atan(double, int)
-00006224 00000110     0                         myMath::atan2(double, double)
-00006474 00000010     0                         Buttons::getMCButtons()
-000067a0 00000210     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-000067a0 0000007c     0                         GetModuleHandle(char const*)
-0000681c 00000124     0                         GetModuleInfo(int)
-00006940 00000070     0                         GetModuleFilePath(char const*)
-000069b0 000005c4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
-000069cc 00000000     0                         .L310
-000069f4 00000000     0                         .L301
-00006a60 00000000     0                         .L11
-00006b48 00000000     0                         .L148
-00006ba0 00000000     0                         .L73
-00006ed0 00000000     0                         .L223
-00006f24 00000000     0                         .L225
-000069b0 000005c4     0                         .memcpy
-00006f74 000012d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
-000070a0 00000000     0                         .L9
-00007178 00000000     0                         .L80
-00007320 00000000     0                         .L259
-0000732c 00000000     0                         .L263
-000073d0 00000000     0                         .L258
-000074c8 00000000     0                         .L140
-00007968 00000000     0                         .L51
-00007b30 00000000     0                         .L55
-00006f74 000012d4     0                         .memmove
-00008248 000000a4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
-00008294 00000000     0                         .LstrlenCacheLoopOuter
-00008248 000000a4     0                         .strlen
-000082ec 00000030     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
-000082ec 00000030     0                         .wcslen
-0000831c 000000d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
-000083bc 00000000     0                         .L17
-0000831c 000000d4     0                         .memset
-0000831c 000000d4     0                         .memset_cs
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_20.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.connect
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_21.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.socketclose
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_22.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.gethostbyname
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_33.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.socket
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_49.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.send
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_54.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sys_net.recv
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_head.o) (TOC#1,0)
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_3.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_strcat
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_20.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_strlen
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_printf
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilUnregisterCallback
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilCheckCallback
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogGetInputText
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogClose
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogUnloadAsync
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogOpen2
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogLoadAsync
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarInc
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarSetMsg
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilRegisterCallback
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetKeyLayoutOption
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
-000083f0 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetLayoutMode
-000083f0 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
+0000a814 0000005c     0                         Buttons::IsMCButtonPressed(unsigned int)
+0000338c 00004f38     0                         RenderSubMenu()
+000082c4 00000024     0                         Render()
+000082e8 0000006c     0                         LoopOptions()
+00008354 00000030     0                         RenderScreen_Stub(unsigned int, unsigned int)
+00008384 00000044     0                         Gui_render_Stub(GuiComponent*, double)
+000083c8 00000108     0                         RenderScreen_Hook(unsigned int, unsigned int)
+000084d0 0000007c     0                         Gui_render_Hook(GuiComponent*, double)
+0000854c 00000054     0                         InstallHooks()
+000085a0 00000044     0                         UninstallHooks()
+000085e4 0000004c     0                         .Minecraft_Main
+0000984c 000000c8     0                         Dialog::ProgressBar(char const*, char const*, int)
+00009a84 0000001c     0                         Dialog::End()
+00008630 00000024     0                         .Minecraft_Stop
+00008654 00000020     0                         PS3Lib::ReadSingleFloat(int)
+00008674 000000a4     0                         PS3Lib::ReadFloat(int, int)
+00008718 000000a0     0                         PS3Lib::ReadBytes(int, int)
+000087b8 000000ac     0                         PS3Lib::WriteFloat(int, float*, int)
+00008864 00000038     0                         PS3Lib::WriteSingleFloat(int, float)
+0000889c 000000a8     0                         PS3Lib::WriteBytes(int, char*, int)
+00008944 00000038     0                         PS3Lib::WriteByte(int, unsigned char)
+0000897c 000000b8     0                         PS3Lib::ReadInt(int, int)
+00008a34 000000b0     0                         PS3Lib::WriteInt(int, int*, int)
+00008ae4 00000038     0                         PS3Lib::WriteInt32(int, int)
+00008b1c 000000ac     0                         PS3Lib::WriteString(int, char*)
+00008bc8 00000168     0                         PS3Lib::ReadStringz(int)
+00008d30 000000a0     0                         PS3Lib::ReadBytesC(int, int)
+00008dd0 000000f0     0                         PS3Lib::ReadStringC(int)
+00008ec0 00000024     0                         PS3Lib::ReadInt32(int)
+00008ee4 00000020     0                         PS3Lib::ReadString(int)
+00008f04 00000154     0                         PS3Lib::ReadStringzz(int, bool)
+00009058 00000048     0                         NyTekCFW::sleep(unsigned long long)
+000090a0 000000a0     0                         NyTekCFW::ReadBytes(int, int)
+00009140 00000020     0                         NyTekCFW::ReadString(int)
+00009160 000000a8     0                         NyTekCFW::WriteBytes(int, char*, int)
+00009208 000000d4     0                         NyTekCFW::WriteString(int, char*)
+000092dc 0000007c     0                         NyTekCFW::Zone(int, float*)
+00009358 00000038     0                         NyTekCFW::FloatToHex(float)
+00009390 00000038     0                         NyTekCFW::IntToHex(int)
+000093c8 000000a0     0                         HTTP::removespace(char const*)
+00009468 00000168     0                         HTTP::LocalRequest(char*)
+000095d0 0000006c     0                         HTTP::SendLocalRequest(char const*)
+0000963c 0000018c     0                         HTTP::URLRequest(char*, char*)
+000097c8 00000084     0                         HTTP::SendURLRequest(char*, char const*)
+00009914 000000b0     0                         Dialog::ShowYESNO(char*)
+000099c4 000000c0     0                         Dialog::Show(char*)
+00009aa0 000000a8     0                         Keyboard::getkbLen(char*)
+00009b48 00000128     0                         Keyboard::makekbStr(char*, char*, int)
+00009c70 00000218     0                         Keyboard::keyboard(char*, wchar_t*, wchar_t*)
+00009e88 00000054     0                         myMath::abs(float)
+00009edc 00000044     0                         myMath::DegreesToRadians(float)
+00009f20 00000044     0                         myMath::RadiansToDegrees(float)
+00009f64 000001f4     0                         myMath::sin(float)
+0000a158 00000068     0                         myMath::cos(float)
+0000a1c0 000003f4     0                         myMath::atan(double, int)
+0000a5b4 00000110     0                         myMath::atan2(double, double)
+0000a804 00000010     0                         Buttons::getMCButtons()
+0000ab30 00000210     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+0000ab30 0000007c     0                         GetModuleHandle(char const*)
+0000abac 00000124     0                         GetModuleInfo(int)
+0000acd0 00000070     0                         GetModuleFilePath(char const*)
+0000ad40 000005c4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
+0000ad5c 00000000     0                         .L310
+0000ad84 00000000     0                         .L301
+0000adf0 00000000     0                         .L11
+0000aed8 00000000     0                         .L148
+0000af30 00000000     0                         .L73
+0000b260 00000000     0                         .L223
+0000b2b4 00000000     0                         .L225
+0000ad40 000005c4     0                         .memcpy
+0000b304 000012d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
+0000b430 00000000     0                         .L9
+0000b508 00000000     0                         .L80
+0000b6b0 00000000     0                         .L259
+0000b6bc 00000000     0                         .L263
+0000b760 00000000     0                         .L258
+0000b858 00000000     0                         .L140
+0000bcf8 00000000     0                         .L51
+0000bec0 00000000     0                         .L55
+0000b304 000012d4     0                         .memmove
+0000c5d8 000000a4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
+0000c624 00000000     0                         .LstrlenCacheLoopOuter
+0000c5d8 000000a4     0                         .strlen
+0000c67c 00000030     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
+0000c67c 00000030     0                         .wcslen
+0000c6ac 000000d4     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
+0000c74c 00000000     0                         .L17
+0000c6ac 000000d4     0                         .memset
+0000c6ac 000000d4     0                         .memset_cs
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_20.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.connect
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_21.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.socketclose
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_22.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.gethostbyname
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_33.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.socket
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_49.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.send
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_54.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sys_net.recv
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_head.o) (TOC#1,0)
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_3.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_strcat
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_snprintf
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_20.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_strlen
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memalign
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_memset
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_my_module_id
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_info
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_printf
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_malloc
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser.sys_prx_get_module_id_by_name
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.sysPrxForUser._sys_free
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilUnregisterCallback
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilCheckCallback
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogGetInputText
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogClose
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogUnloadAsync
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogOpen2
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogLoadAsync
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarInc
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellMsgDialogProgressBarSetMsg
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellSysutilRegisterCallback
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetKeyLayoutOption
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
+0000c780 00000000     0                         _.prx.link.border.mark.cellSysutil.cellOskDialogSetLayoutMode
+0000c780 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
 00000000 00000000     1 .fini
 00000000 00000658     4 .sceStub.text
 00000000 00000038     4         .sceStub.text
@@ -338,9 +338,9 @@ Address  Size     Align Out     In      File    Symbol
 000005e8 00000020     0                         .cellOskDialogSetKeyLayoutOption
 00000620 00000038     4                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
 00000620 00000020     0                         .cellOskDialogSetLayoutMode
-00000000 00000678     4 .rodata
-00000000 00000678     4         .rodata
-00000000 00000678     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000016f0     4 .rodata
+00000000 000016f0     4         .rodata
+00000000 000016f0     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 00000004     0                         ..Lfi0._Z9getStringPKw
 00000004 00000004     0                         ..Lfi1._Z9getStringPKw
 00000008 00000004     0                         ..Lfi2._Z9getStringPKw
@@ -376,51 +376,206 @@ Address  Size     Align Out     In      File    Symbol
 000000dc 00000008     0                         ..Lfi32._Z18DrawRectangleAlphaffff5Color
 00000274 00000008     0                         ..LNst._Z13GetThemeColorv.0
 0000026c 00000004     0                         ..LNst.ThemeColors.0
+00000a0c 0000001c     0                         ..LNst._Z13RenderSubMenuv.69
+00000c5c 00000018     0                         ..LNst._Z13RenderSubMenuv.93
+00000358 00000002     0                         ..LNst._Z13RenderSubMenuv.8
+00000c74 0000001a     0                         ..LNst._Z13RenderSubMenuv.94
+00000c90 0000001e     0                         ..LNst._Z13RenderSubMenuv.95
+00000cb0 0000001e     0                         ..LNst._Z13RenderSubMenuv.96
+00000cd0 0000001c     0                         ..LNst._Z13RenderSubMenuv.97
+00000cec 00000012     0                         ..LNst._Z13RenderSubMenuv.98
+00000d00 00000012     0                         ..LNst._Z13RenderSubMenuv.99
+00000d14 00000022     0                         ..LNst._Z13RenderSubMenuv.100
+00000d38 00000026     0                         ..LNst._Z13RenderSubMenuv.101
+00000d60 00000016     0                         ..LNst._Z13RenderSubMenuv.102
+00000d78 0000001a     0                         ..LNst._Z13RenderSubMenuv.103
+00000d94 00000020     0                         ..LNst._Z13RenderSubMenuv.104
+00000db4 00000020     0                         ..LNst._Z13RenderSubMenuv.105
+00000dd4 00000018     0                         ..LNst._Z13RenderSubMenuv.106
+00000dec 0000001a     0                         ..LNst._Z13RenderSubMenuv.107
+00000e08 0000001a     0                         ..LNst._Z13RenderSubMenuv.108
+00000e24 0000001e     0                         ..LNst._Z13RenderSubMenuv.109
+00000e44 00000018     0                         ..LNst._Z13RenderSubMenuv.110
+00000e5c 00000018     0                         ..LNst._Z13RenderSubMenuv.111
+00000e74 00000012     0                         ..LNst._Z13RenderSubMenuv.112
+00000e88 00000018     0                         ..LNst._Z13RenderSubMenuv.113
+00000ea0 00000018     0                         ..LNst._Z13RenderSubMenuv.114
+000005b8 00000014     0                         ..LNst._Z13RenderSubMenuv.30
+00000a28 00000018     0                         ..LNst._Z13RenderSubMenuv.70
+00000a40 00000014     0                         ..LNst._Z13RenderSubMenuv.71
+00000a54 00000016     0                         ..LNst._Z13RenderSubMenuv.72
+00000a6c 0000001a     0                         ..LNst._Z13RenderSubMenuv.73
+00000a88 0000001c     0                         ..LNst._Z13RenderSubMenuv.74
+00000aa4 00000016     0                         ..LNst._Z13RenderSubMenuv.75
+00000abc 00000018     0                         ..LNst._Z13RenderSubMenuv.76
+00000ad4 00000016     0                         ..LNst._Z13RenderSubMenuv.77
+00000aec 0000001a     0                         ..LNst._Z13RenderSubMenuv.78
+00000b08 00000018     0                         ..LNst._Z13RenderSubMenuv.79
+00000b20 00000016     0                         ..LNst._Z13RenderSubMenuv.80
+00000b38 00000016     0                         ..LNst._Z13RenderSubMenuv.81
+00000b50 00000012     0                         ..LNst._Z13RenderSubMenuv.82
+00000b64 0000001c     0                         ..LNst._Z13RenderSubMenuv.83
+00000b80 00000018     0                         ..LNst._Z13RenderSubMenuv.84
+00000b98 0000001a     0                         ..LNst._Z13RenderSubMenuv.85
+00000bb4 00000014     0                         ..LNst._Z13RenderSubMenuv.86
+00000bc8 00000014     0                         ..LNst._Z13RenderSubMenuv.87
+00000bdc 0000001e     0                         ..LNst._Z13RenderSubMenuv.88
+00000bfc 0000001c     0                         ..LNst._Z13RenderSubMenuv.89
+00000c18 00000018     0                         ..LNst._Z13RenderSubMenuv.90
+00000c30 00000012     0                         ..LNst._Z13RenderSubMenuv.91
+00000c44 00000016     0                         ..LNst._Z13RenderSubMenuv.92
+00000330 00000014     0                         ..LNst._Z13RenderSubMenuv.6
+00000834 00000022     0                         ..LNst._Z13RenderSubMenuv.53
+00000858 00000026     0                         ..LNst._Z13RenderSubMenuv.54
+00000880 00000024     0                         ..LNst._Z13RenderSubMenuv.55
+000008a4 00000018     0                         ..LNst._Z13RenderSubMenuv.56
+000008bc 0000001c     0                         ..LNst._Z13RenderSubMenuv.57
+000008d8 00000016     0                         ..LNst._Z13RenderSubMenuv.58
+000008f0 00000018     0                         ..LNst._Z13RenderSubMenuv.59
+00000908 0000001c     0                         ..LNst._Z13RenderSubMenuv.60
+00000924 0000001c     0                         ..LNst._Z13RenderSubMenuv.61
+00000940 0000001c     0                         ..LNst._Z13RenderSubMenuv.62
+0000095c 00000018     0                         ..LNst._Z13RenderSubMenuv.63
+00000974 00000020     0                         ..LNst._Z13RenderSubMenuv.64
+00000994 0000001a     0                         ..LNst._Z13RenderSubMenuv.65
+000009b0 0000001c     0                         ..LNst._Z13RenderSubMenuv.66
+000009cc 00000024     0                         ..LNst._Z13RenderSubMenuv.67
+000009f0 0000001c     0                         ..LNst._Z13RenderSubMenuv.68
+000005cc 0000001c     0                         ..LNst._Z13RenderSubMenuv.31
+000005e8 0000001c     0                         ..LNst._Z13RenderSubMenuv.32
+00000604 00000024     0                         ..LNst._Z13RenderSubMenuv.33
+00000628 00000022     0                         ..LNst._Z13RenderSubMenuv.34
+0000064c 0000001a     0                         ..LNst._Z13RenderSubMenuv.35
+00000668 0000001c     0                         ..LNst._Z13RenderSubMenuv.36
+00000684 0000001c     0                         ..LNst._Z13RenderSubMenuv.37
+000006a0 0000001e     0                         ..LNst._Z13RenderSubMenuv.38
+000006c0 00000020     0                         ..LNst._Z13RenderSubMenuv.39
+000006e0 00000020     0                         ..LNst._Z13RenderSubMenuv.40
+00000700 0000001c     0                         ..LNst._Z13RenderSubMenuv.41
+0000071c 0000001e     0                         ..LNst._Z13RenderSubMenuv.42
+0000073c 00000018     0                         ..LNst._Z13RenderSubMenuv.43
+00000754 00000018     0                         ..LNst._Z13RenderSubMenuv.44
+0000076c 0000001c     0                         ..LNst._Z13RenderSubMenuv.45
+00000788 00000014     0                         ..LNst._Z13RenderSubMenuv.46
+0000079c 0000000e     0                         ..LNst._Z13RenderSubMenuv.47
+000007ac 00000020     0                         ..LNst._Z13RenderSubMenuv.48
+000007cc 0000001a     0                         ..LNst._Z13RenderSubMenuv.49
+000007e8 0000001c     0                         ..LNst._Z13RenderSubMenuv.50
+00000804 0000001a     0                         ..LNst._Z13RenderSubMenuv.51
+00000820 00000012     0                         ..LNst._Z13RenderSubMenuv.52
+00000344 00000012     0                         ..LNst._Z13RenderSubMenuv.7
+0000035c 0000001c     0                         ..LNst._Z13RenderSubMenuv.9
+00000378 0000001e     0                         ..LNst._Z13RenderSubMenuv.10
+00000398 0000001a     0                         ..LNst._Z13RenderSubMenuv.11
+000003b4 00000022     0                         ..LNst._Z13RenderSubMenuv.12
+000003d8 0000001c     0                         ..LNst._Z13RenderSubMenuv.13
+000003f4 00000014     0                         ..LNst._Z13RenderSubMenuv.14
+00000408 0000001e     0                         ..LNst._Z13RenderSubMenuv.15
+00000428 00000016     0                         ..LNst._Z13RenderSubMenuv.16
+00000440 0000001e     0                         ..LNst._Z13RenderSubMenuv.17
+00000460 0000001a     0                         ..LNst._Z13RenderSubMenuv.18
+0000047c 00000016     0                         ..LNst._Z13RenderSubMenuv.19
+00000494 00000016     0                         ..LNst._Z13RenderSubMenuv.20
+000004ac 00000018     0                         ..LNst._Z13RenderSubMenuv.21
+000004c4 0000001c     0                         ..LNst._Z13RenderSubMenuv.22
+000004e0 0000001c     0                         ..LNst._Z13RenderSubMenuv.23
+000004fc 0000001e     0                         ..LNst._Z13RenderSubMenuv.24
+0000051c 00000022     0                         ..LNst._Z13RenderSubMenuv.25
+00000540 00000022     0                         ..LNst._Z13RenderSubMenuv.26
+00000564 00000020     0                         ..LNst._Z13RenderSubMenuv.27
+00000584 0000001c     0                         ..LNst._Z13RenderSubMenuv.28
+000005a0 00000018     0                         ..LNst._Z13RenderSubMenuv.29
 0000027c 00000014     0                         ..LNst._Z13RenderSubMenuv.0
 00000290 0000001a     0                         ..LNst._Z13RenderSubMenuv.1
 000002ac 00000022     0                         ..LNst._Z13RenderSubMenuv.2
 000002d0 00000020     0                         ..LNst._Z13RenderSubMenuv.3
 000002f0 00000020     0                         ..LNst._Z13RenderSubMenuv.4
-00000310 00000012     0                         ..LNst._Z13RenderSubMenuv.5
-00000324 00000014     0                         ..LNst._Z13RenderSubMenuv.6
-00000338 00000012     0                         ..LNst._Z13RenderSubMenuv.7
-0000034c 0000001c     0                         ..LNst._Z13RenderSubMenuv.8
-00000368 0000001e     0                         ..LNst._Z13RenderSubMenuv.9
-00000388 0000001a     0                         ..LNst._Z13RenderSubMenuv.10
-000003a4 00000022     0                         ..LNst._Z13RenderSubMenuv.11
-000003c8 0000001c     0                         ..LNst._Z13RenderSubMenuv.12
-000003e4 00000014     0                         ..LNst._Z13RenderSubMenuv.13
-000003f8 0000001e     0                         ..LNst._Z13RenderSubMenuv.14
-00000418 00000016     0                         ..LNst._Z13RenderSubMenuv.15
-00000430 0000001e     0                         ..LNst._Z13RenderSubMenuv.16
-00000450 0000001a     0                         ..LNst._Z13RenderSubMenuv.17
-0000046c 00000016     0                         ..LNst._Z13RenderSubMenuv.18
-00000484 00000016     0                         ..LNst._Z13RenderSubMenuv.19
-0000049c 00000018     0                         ..LNst._Z13RenderSubMenuv.20
-000004b4 0000001c     0                         ..LNst._Z13RenderSubMenuv.21
-000004d0 0000001c     0                         ..LNst._Z13RenderSubMenuv.22
-000004ec 0000001e     0                         ..LNst._Z13RenderSubMenuv.23
-0000050c 00000022     0                         ..LNst._Z13RenderSubMenuv.24
-00000530 00000022     0                         ..LNst._Z13RenderSubMenuv.25
-00000554 00000020     0                         ..LNst._Z13RenderSubMenuv.26
-00000574 0000001c     0                         ..LNst._Z13RenderSubMenuv.27
-00000590 00000018     0                         ..LNst._Z13RenderSubMenuv.28
-000005a8 00000014     0                         ..LNst._Z13RenderSubMenuv.29
-000005bc 0000001c     0                         ..LNst._Z13RenderSubMenuv.30
-000005d8 0000001c     0                         ..LNst._Z13RenderSubMenuv.31
+00000310 00000020     0                         ..LNst._Z13RenderSubMenuv.5
+00001638 0000001a     0                         ..LNst._Z13RenderSubMenuv.185
+00001654 00000018     0                         ..LNst._Z13RenderSubMenuv.186
+00001550 0000001a     0                         ..LNst._Z13RenderSubMenuv.177
+0000156c 00000016     0                         ..LNst._Z13RenderSubMenuv.178
+00001584 0000001c     0                         ..LNst._Z13RenderSubMenuv.179
+000015a0 0000001a     0                         ..LNst._Z13RenderSubMenuv.180
+000015bc 0000001e     0                         ..LNst._Z13RenderSubMenuv.181
+000015dc 00000014     0                         ..LNst._Z13RenderSubMenuv.182
+000015f0 00000022     0                         ..LNst._Z13RenderSubMenuv.183
+00001614 00000022     0                         ..LNst._Z13RenderSubMenuv.184
+000013e8 0000001a     0                         ..LNst._Z13RenderSubMenuv.165
+00001404 0000001e     0                         ..LNst._Z13RenderSubMenuv.166
+00001424 0000001e     0                         ..LNst._Z13RenderSubMenuv.167
+00001444 0000001c     0                         ..LNst._Z13RenderSubMenuv.168
+00001460 00000016     0                         ..LNst._Z13RenderSubMenuv.169
+00001478 0000001e     0                         ..LNst._Z13RenderSubMenuv.170
+00001498 0000001c     0                         ..LNst._Z13RenderSubMenuv.171
+000014b4 0000001e     0                         ..LNst._Z13RenderSubMenuv.172
+000014d4 00000020     0                         ..LNst._Z13RenderSubMenuv.173
+000014f4 0000001e     0                         ..LNst._Z13RenderSubMenuv.174
+00001514 0000001a     0                         ..LNst._Z13RenderSubMenuv.175
+00001530 00000020     0                         ..LNst._Z13RenderSubMenuv.176
+0000135c 00000018     0                         ..LNst._Z13RenderSubMenuv.159
+00001374 0000001a     0                         ..LNst._Z13RenderSubMenuv.160
+00001390 00000018     0                         ..LNst._Z13RenderSubMenuv.161
+000013a8 00000016     0                         ..LNst._Z13RenderSubMenuv.162
+000013c0 00000016     0                         ..LNst._Z13RenderSubMenuv.163
+000013d8 00000010     0                         ..LNst._Z13RenderSubMenuv.164
+0000111c 00000014     0                         ..LNst._Z13RenderSubMenuv.137
+00001130 00000018     0                         ..LNst._Z13RenderSubMenuv.138
+00001148 00000014     0                         ..LNst._Z13RenderSubMenuv.139
+0000115c 00000012     0                         ..LNst._Z13RenderSubMenuv.140
+00001170 00000016     0                         ..LNst._Z13RenderSubMenuv.141
+00001188 0000001a     0                         ..LNst._Z13RenderSubMenuv.142
+000011a4 0000001e     0                         ..LNst._Z13RenderSubMenuv.143
+000011c4 00000020     0                         ..LNst._Z13RenderSubMenuv.144
+000011e4 0000001c     0                         ..LNst._Z13RenderSubMenuv.145
+00001200 0000001a     0                         ..LNst._Z13RenderSubMenuv.146
+0000121c 00000018     0                         ..LNst._Z13RenderSubMenuv.147
+00001234 0000001e     0                         ..LNst._Z13RenderSubMenuv.148
+00001254 00000018     0                         ..LNst._Z13RenderSubMenuv.149
+0000126c 00000014     0                         ..LNst._Z13RenderSubMenuv.150
+00001280 00000016     0                         ..LNst._Z13RenderSubMenuv.151
+00001298 0000001c     0                         ..LNst._Z13RenderSubMenuv.152
+000012b4 00000022     0                         ..LNst._Z13RenderSubMenuv.153
+000012d8 00000018     0                         ..LNst._Z13RenderSubMenuv.154
+000012f0 00000018     0                         ..LNst._Z13RenderSubMenuv.155
+00001308 00000020     0                         ..LNst._Z13RenderSubMenuv.156
+00001328 00000016     0                         ..LNst._Z13RenderSubMenuv.157
+00001340 0000001c     0                         ..LNst._Z13RenderSubMenuv.158
+00000eb8 00000010     0                         ..LNst._Z13RenderSubMenuv.115
+00000ec8 00000022     0                         ..LNst._Z13RenderSubMenuv.116
+00000eec 0000001c     0                         ..LNst._Z13RenderSubMenuv.117
+00000f08 00000020     0                         ..LNst._Z13RenderSubMenuv.118
+00000f28 00000020     0                         ..LNst._Z13RenderSubMenuv.119
+00000f48 0000001e     0                         ..LNst._Z13RenderSubMenuv.120
+00000f68 0000001a     0                         ..LNst._Z13RenderSubMenuv.121
+00000f84 00000016     0                         ..LNst._Z13RenderSubMenuv.122
+00000f9c 00000020     0                         ..LNst._Z13RenderSubMenuv.123
+00000fbc 0000001a     0                         ..LNst._Z13RenderSubMenuv.124
+00000fd8 00000016     0                         ..LNst._Z13RenderSubMenuv.125
+00000ff0 00000016     0                         ..LNst._Z13RenderSubMenuv.126
+00001008 0000001c     0                         ..LNst._Z13RenderSubMenuv.127
+00001024 0000001e     0                         ..LNst._Z13RenderSubMenuv.128
+00001044 00000022     0                         ..LNst._Z13RenderSubMenuv.129
+00001068 00000018     0                         ..LNst._Z13RenderSubMenuv.130
+00001080 0000001a     0                         ..LNst._Z13RenderSubMenuv.131
+0000109c 0000001c     0                         ..LNst._Z13RenderSubMenuv.132
+000010b8 0000001a     0                         ..LNst._Z13RenderSubMenuv.133
+000010d4 00000018     0                         ..LNst._Z13RenderSubMenuv.134
+000010ec 0000001a     0                         ..LNst._Z13RenderSubMenuv.135
+00001108 00000014     0                         ..LNst._Z13RenderSubMenuv.136
 000000e4 00000004     0                         ..Lfi33._Z17RenderScreen_Hookjj
 000000e8 00000004     0                         ..Lfi34._Z17RenderScreen_Hookjj
 000000ec 00000004     0                         ..Lfi35._Z17RenderScreen_Hookjj
 000000f0 00000004     0                         ..Lfi36._Z17RenderScreen_Hookjj
 000000f4 00000004     0                         ..Lfi37._Z17RenderScreen_Hookjj
 000000f8 00000004     0                         ..Lfi38._Z17RenderScreen_Hookjj
-000005f4 00000010     0                         ..LNst._Z17RenderScreen_Hookjj.0
-00000604 00000044     0                         ..LNst.Minecraft_Main.0
-00000648 0000000b     0                         ..LNst.Minecraft_Main.1
+0000166c 00000010     0                         ..LNst._Z17RenderScreen_Hookjj.0
+0000167c 00000044     0                         ..LNst.Minecraft_Main.0
+000016c0 0000000b     0                         ..LNst.Minecraft_Main.1
 00000270 00000001     0                         ..LNst.checkTxt.0
-00000654 00000006     0                         ..LNst._ZN4HTTP12LocalRequestEPc.0
-0000065c 00000018     0                         ..LNst._ZN4HTTP12LocalRequestEPc.1
-00000674 00000004     0                         ..LNst._ZN4HTTP16SendLocalRequestEPKc.0
+000016cc 00000006     0                         ..LNst._ZN4HTTP12LocalRequestEPc.0
+000016d4 00000018     0                         ..LNst._ZN4HTTP12LocalRequestEPc.1
+000016ec 00000004     0                         ..LNst._ZN4HTTP16SendLocalRequestEPKc.0
 000000fc 00000004     0                         ..Lfi39._ZN6Dialog9ShowYESNOEPc
 00000100 00000004     0                         ..Lfi40._ZN6Dialog4ShowEPc
 00000104 00000004     0                         ..Lfi41._ZN8Keyboard8keyboardEPcPwS1_
@@ -758,13 +913,13 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .eh_frame
 00000000 00000000     1 .gcc_except_table
 00000000 00000000     1 .toc1
-00000000 00000620     8 .opd
-00000000 00000510     8         .opd
-00000000 00000510     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-000004f8 00000008     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
-000004f0 00000008     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
-00000500 00000008     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
-00000508 00000008     0                         __sti___8_Main_cpp__Znwj
+00000000 00000ab0     8 .opd
+00000000 000009a0     8         .opd
+00000000 000009a0     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000988 00000008     0                         [local to Main_cpp]::Dialog::cb_dialogText2(int, void*)
+00000980 00000008     0                         [local to Main_cpp]::Dialog::cb_dialogText1(int, void*)
+00000990 00000008     0                         [local to Main_cpp]::Keyboard::sysutil_callback(unsigned long long, unsigned long long, void*)
+00000998 00000008     0                         __sti___8_Main_cpp__Znwj
 00000000 00000008     0                         operator new(unsigned int)
 00000008 00000008     0                         operator new(unsigned int, std::nothrow_t const&)
 00000010 00000008     0                         operator new(unsigned int, unsigned int)
@@ -916,54 +1071,200 @@ Address  Size     Align Out     In      File    Symbol
 000004a0 00000008     0                         Address::REMOVE_FIRE(bool)
 000004a8 00000008     0                         Address::CREATIVE_SLOT(bool)
 000004b0 00000008     0                         Address::SURVIVAL_SLOT(bool)
-000004b8 00000008     0                         Address::INSTANT_DAMAGE(int)
-000004c0 00000008     0                         draw_menu::AddTitle(wchar_t const*)
-000004c8 00000008     0                         draw_menu::AddHuds(int)
-000004d0 00000008     0                         draw_menu::Description(wchar_t const*)
-000004d8 00000008     0                         draw_menu::AddSubOption(wchar_t const*)
-000004e0 00000008     0                         draw_menu::AddBoolOption(wchar_t const*, bool)
-000004e8 00000008     0                         draw_menu::AddIntOption(wchar_t const*, int, int, int, int&)
-00000510 000000e8     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000510 00000008     0                         GetModuleHandle(char const*)
-00000518 00000008     0                         GetModuleInfo(int)
-00000520 00000008     0                         GetModuleFilePath(char const*)
-00000528 00000008     0                         std::char_traits<char>::assign(char&, char const&)
-00000530 00000008     0                         std::char_traits<char>::length(char const*)
-00000538 00000008     0                         std::char_traits<char>::copy(char*, char const*, unsigned int)
-00000540 00000008     0                         std::char_traits<char>::move(char*, char const*, unsigned int)
-00000548 00000008     0                         std::_String_base::_Xlen() const
-00000550 00000008     0                         std::_String_base::_Xran() const
-00000558 00000008     0                         std::allocator<char>::deallocate(char*, unsigned int)
-00000560 00000008     0                         char* std::_Allocate<char>(unsigned int, char*)
-00000568 00000008     0                         std::allocator<char>::allocate(unsigned int)
-00000570 00000008     0                         std::allocator<char>::max_size() const
-00000578 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
-00000580 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
-00000588 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr()
-00000590 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Eos(unsigned int)
-00000598 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(bool, unsigned int)
-000005a0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Inside(char const*)
-000005a8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size() const
-000005b0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::erase(unsigned int, unsigned int)
-000005b8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::max_size() const
-000005c0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(unsigned int, unsigned int)
-000005c8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Grow(unsigned int, bool)
-000005d0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr() const
-000005d8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int, unsigned int)
-000005e0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*, unsigned int)
-000005e8 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*)
-000005f0 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*)
-000005f8 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
-000005f8 00000008     0                         memcpy
-00000600 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
-00000600 00000008     0                         memmove
-00000608 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
-00000608 00000008     0                         strlen
-00000610 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
-00000610 00000008     0                         wcslen
-00000618 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
-00000618 00000008     0                         memset
-00000618 00000008     0                         memset_cs
+000004b8 00000008     0                         Address::KILL_SPAWN_ENTITY(bool)
+000004c0 00000008     0                         Address::STOP_BLOCKS_GRAVITY(bool)
+000004c8 00000008     0                         Address::NO_DELAY_HIT(bool)
+000004d0 00000008     0                         Address::BYPASS_MAX_ITEMS(bool)
+000004d8 00000008     0                         Address::INFINITE_FOOD(bool)
+000004e0 00000008     0                         Address::MOBS_IGNORE_ME(bool)
+000004e8 00000008     0                         Address::DISABLE_PORTALS(bool)
+000004f0 00000008     0                         Address::KILL_ON_RESPAWN(bool)
+000004f8 00000008     0                         Address::FREEZE_ALL_ENTITY(bool)
+00000500 00000008     0                         Address::STOP_ENDERMAN_TP(bool)
+00000508 00000008     0                         Address::IGNORING_PRESSURE(bool)
+00000510 00000008     0                         Address::ALL_ENCHANT(bool)
+00000518 00000008     0                         Address::ITEMS_ON_HEAD(bool)
+00000520 00000008     0                         Address::STOP_BOAT(bool)
+00000528 00000008     0                         Address::NO_WEB(bool)
+00000530 00000008     0                         Address::ENTITY_GOD_MODE(bool)
+00000538 00000008     0                         Address::REGENERATE_HEART(bool)
+00000540 00000008     0                         Address::LOCK_GAMEMODE(bool)
+00000548 00000008     0                         Address::LOCK_WEATHER(bool)
+00000550 00000008     0                         Address::FAST_BOW(bool)
+00000558 00000008     0                         Address::DIRECTION_ARROWS(bool)
+00000560 00000008     0                         Address::INSTANT_DAMAGE(int)
+00000568 00000008     0                         Address::GOD_MODE_FOR_ME(bool)
+00000570 00000008     0                         Address::TOTEM_GIVE_HEALTH(bool)
+00000578 00000008     0                         Address::TNT_NUCLEAR(bool)
+00000580 00000008     0                         Address::TNT_BIG_PARTICLES(bool)
+00000588 00000008     0                         Address::TNT_FLYING(bool)
+00000590 00000008     0                         Address::TNT_INSTANT_EXPLODE(bool)
+00000598 00000008     0                         Address::TNT_GO_IN_GROUND(bool)
+000005a0 00000008     0                         Address::TNT_SOUND_OFF(bool)
+000005a8 00000008     0                         Address::BIG_CREEPER(bool)
+000005b0 00000008     0                         Address::CREEPER_NUCLEAR(bool)
+000005b8 00000008     0                         Address::CREEPER_FIRE(bool)
+000005c0 00000008     0                         Address::DISABLE_TOTEM(bool)
+000005c8 00000008     0                         Address::GLITCHED_DEAD_ENTITY(bool)
+000005d0 00000008     0                         Address::DISABLE_SPAWN_MOBS(bool)
+000005d8 00000008     0                         Address::SUPER_SPEED(int)
+000005e0 00000008     0                         Address::MULTI_JUMP(bool)
+000005e8 00000008     0                         Address::JUMP_FOR_BUILD(bool)
+000005f0 00000008     0                         Address::JUMP_IN_SKY(bool)
+000005f8 00000008     0                         Address::SUPER_JUMP(bool)
+00000600 00000008     0                         Address::JUMP_FORWARD(bool)
+00000608 00000008     0                         Address::REMOVE_JUMP(bool)
+00000610 00000008     0                         Address::JUMP_SPEED(bool)
+00000618 00000008     0                         Address::SWIM_FLY(bool)
+00000620 00000008     0                         Address::MOVEMENT_SWIM(bool)
+00000628 00000008     0                         Address::SWIM_GLITCH(bool)
+00000630 00000008     0                         Address::NO_COLISSION(bool)
+00000638 00000008     0                         Address::FLY_MODE_X(bool)
+00000640 00000008     0                         Address::ITEMS_IDS(bool)
+00000648 00000008     0                         Address::ANTI_KICK(bool)
+00000650 00000008     0                         Address::STUCK_IN_BLOCK(bool)
+00000658 00000008     0                         Address::FUNNY_SOUND(bool)
+00000660 00000008     0                         Address::FLOAT_UP(bool)
+00000668 00000008     0                         Address::ESP_CHESTS(bool)
+00000670 00000008     0                         Address::CAMERA_DOWN(bool)
+00000678 00000008     0                         Address::INSTANT_MINE(bool)
+00000680 00000008     0                         Address::INFINITE_CRAFT(bool)
+00000688 00000008     0                         Address::HUD_MINI_GAME(bool)
+00000690 00000008     0                         Address::ANTI_TELEPORT(bool)
+00000698 00000008     0                         Address::UFO_MODE(bool)
+000006a0 00000008     0                         Address::ANTI_AFK(bool)
+000006a8 00000008     0                         Address::SENSIBILITY_FAST(bool)
+000006b0 00000008     0                         Address::SENSIBILITY_EXTREM(bool)
+000006b8 00000008     0                         Address::WALK_ALONE(bool)
+000006c0 00000008     0                         Address::NAME_OVER_HEAD(bool)
+000006c8 00000008     0                         Address::NAME_OVER_HEAD_V2(bool)
+000006d0 00000008     0                         Address::STATIC_MOVEMENT(bool)
+000006d8 00000008     0                         Address::WALK_IN_SKY(bool)
+000006e0 00000008     0                         Address::GRAVITY_MOON(bool)
+000006e8 00000008     0                         Address::LOOK_FORBACK(bool)
+000006f0 00000008     0                         Address::CAMERA_DOWN_R3(bool)
+000006f8 00000008     0                         Address::BETTER_TIME(bool)
+00000700 00000008     0                         Address::SEE_OUT_MAP(bool)
+00000708 00000008     0                         Address::SCAFFOLD(bool)
+00000710 00000008     0                         Address::DAY_NIGHT(bool)
+00000718 00000008     0                         Address::ESP_PLAYERS(bool)
+00000720 00000008     0                         Address::CAN_FLY(bool)
+00000728 00000008     0                         Address::NO_COLISSION_ENTITY(bool)
+00000730 00000008     0                         Address::ALWAYS_CROUCH(bool)
+00000738 00000008     0                         Address::GET_PLAYERS_IDS(bool)
+00000740 00000008     0                         Address::PLAYERS_ON_ELYTRA(bool)
+00000748 00000008     0                         Address::WATER_SLOWDOWN(bool)
+00000750 00000008     0                         Address::JUMP_IN_LAVA(bool)
+00000758 00000008     0                         Address::CROUCH_MOVEMENT(bool)
+00000760 00000008     0                         Address::POSITION_PLACE_BLOCK(bool)
+00000768 00000008     0                         Address::DESTROY_GAME(bool)
+00000770 00000008     0                         Address::LEVITATION(bool)
+00000778 00000008     0                         Address::RETURN_IN_XMB(bool)
+00000780 00000008     0                         Address::RETURN_IN_XMB_V2(bool)
+00000788 00000008     0                         Address::ADD_FAKE_CLONE(bool)
+00000790 00000008     0                         Address::INVISIBLE_PLAYERS(bool)
+00000798 00000008     0                         Address::AUTO_LADDER(bool)
+000007a0 00000008     0                         Address::AIR_TO_WATER(bool)
+000007a8 00000008     0                         Address::MULTI_JUMP_V2(bool)
+000007b0 00000008     0                         Address::SUICIDE_MODE(bool)
+000007b8 00000008     0                         Address::GAME_SPEED_STATIC(bool)
+000007c0 00000008     0                         Address::AUTO_JUMP(bool)
+000007c8 00000008     0                         Address::AUTO_CHANGE_VIEW(bool)
+000007d0 00000008     0                         Address::AUTO_CROUCH(bool)
+000007d8 00000008     0                         Address::AUTO_MINE(bool)
+000007e0 00000008     0                         Address::AUTO_HIT(bool)
+000007e8 00000008     0                         Address::AUTO_BUILD(bool)
+000007f0 00000008     0                         Address::BAT_EGGS_CRASH(bool)
+000007f8 00000008     0                         Address::BAT_EGGS_FREEZE(bool)
+00000800 00000008     0                         Address::REACH_ATTACK(bool)
+00000808 00000008     0                         Address::AUTO_SPRINT(bool)
+00000810 00000008     0                         Address::AUTO_SPRINT_V2(bool)
+00000818 00000008     0                         Address::INSTANT_HIT(bool)
+00000820 00000008     0                         Address::KILL_AURA(bool)
+00000828 00000008     0                         Address::FAST_BUILD(bool)
+00000830 00000008     0                         Address::CRITICAL_MODE(bool)
+00000838 00000008     0                         Address::CRITICAL_MODE_V1(bool)
+00000840 00000008     0                         Address::NO_SLOW_DOWN(bool)
+00000848 00000008     0                         Address::REMOVE_HURT_CAM(bool)
+00000850 00000008     0                         Address::PRESS_X_FOR_HIT(bool)
+00000858 00000008     0                         Address::SHOW_ARMOR(bool)
+00000860 00000008     0                         Address::UNFAIR_ATTACK(bool)
+00000868 00000008     0                         Address::HITBOX_BETA(bool)
+00000870 00000008     0                         Address::BLOCK_STATIC_CRACK(bool)
+00000878 00000008     0                         Address::NO_VELOCITY(bool)
+00000880 00000008     0                         Address::BIG_VELOCITY(bool)
+00000888 00000008     0                         Address::ALL_PLAYERS_FAST_MINE(bool)
+00000890 00000008     0                         Address::ALL_PLAYERS_CANNOT_MINE(bool)
+00000898 00000008     0                         Address::ALL_PLAYERS_CANT_RUN(bool)
+000008a0 00000008     0                         Address::ALL_PLAYERS_SUPER_SPEED(bool)
+000008a8 00000008     0                         Address::ALL_PLAYERS_SUPER_RUN(bool)
+000008b0 00000008     0                         Address::ALL_PLAYERS_CANT_JOIN_THE_WORLD(bool)
+000008b8 00000008     0                         Address::ALL_PLAYERS_CHANGE_HAND(bool)
+000008c0 00000008     0                         Address::ALL_PLAYERS_SUFFOCATE(bool)
+000008c8 00000008     0                         Address::ALL_PLAYERS_IN_FIRE(bool)
+000008d0 00000008     0                         Address::ALL_PLAYERS_FREEZE_PS3()
+000008d8 00000008     0                         Address::WEATHER_DARK_STORM(bool)
+000008e0 00000008     0                         Address::WEATHER_RAINBOW_STORM(bool)
+000008e8 00000008     0                         Address::WEATHER_RAIN_TO_SNOW(bool)
+000008f0 00000008     0                         Address::WEATHER_RAINBOW_WITH_STORM(bool)
+000008f8 00000008     0                         Address::WEATHER_FLASH_SKY(bool)
+00000900 00000008     0                         Address::WEATHER_LIGHTNINGBOLD_V1(bool)
+00000908 00000008     0                         Address::WEATHER_LIGHTNINGBOLD_V2(bool)
+00000910 00000008     0                         Address::XRAY_VISON(bool)
+00000918 00000008     0                         Address::ENTITY_ESP(bool)
+00000920 00000008     0                         Address::ESP_TRACER(bool)
+00000928 00000008     0                         Address::ESP_COD(bool)
+00000930 00000008     0                         Address::ESP_WAYPOINT(bool)
+00000938 00000008     0                         Address::GET_SPECIAL_ITEMS(bool)
+00000940 00000008     0                         Address::PHASE_MODE(bool)
+00000948 00000008     0                         draw_menu::AddTitle(wchar_t const*)
+00000950 00000008     0                         draw_menu::AddHuds(int)
+00000958 00000008     0                         draw_menu::Description(wchar_t const*)
+00000960 00000008     0                         draw_menu::AddSubOption(wchar_t const*)
+00000968 00000008     0                         draw_menu::AddOption(wchar_t const*)
+00000970 00000008     0                         draw_menu::AddBoolOption(wchar_t const*, bool, wchar_t const*)
+00000978 00000008     0                         draw_menu::AddIntOption(wchar_t const*, int, int, int, int&)
+000009a0 000000e8     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+000009a0 00000008     0                         GetModuleHandle(char const*)
+000009a8 00000008     0                         GetModuleInfo(int)
+000009b0 00000008     0                         GetModuleFilePath(char const*)
+000009b8 00000008     0                         std::char_traits<char>::assign(char&, char const&)
+000009c0 00000008     0                         std::char_traits<char>::length(char const*)
+000009c8 00000008     0                         std::char_traits<char>::copy(char*, char const*, unsigned int)
+000009d0 00000008     0                         std::char_traits<char>::move(char*, char const*, unsigned int)
+000009d8 00000008     0                         std::_String_base::_Xlen() const
+000009e0 00000008     0                         std::_String_base::_Xran() const
+000009e8 00000008     0                         std::allocator<char>::deallocate(char*, unsigned int)
+000009f0 00000008     0                         char* std::_Allocate<char>(unsigned int, char*)
+000009f8 00000008     0                         std::allocator<char>::allocate(unsigned int)
+00000a00 00000008     0                         std::allocator<char>::max_size() const
+00000a08 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
+00000a10 00000008     0                         std::_String_val<char, std::allocator<char>>::_String_val(std::allocator<char>)
+00000a18 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr()
+00000a20 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Eos(unsigned int)
+00000a28 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Tidy(bool, unsigned int)
+00000a30 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Inside(char const*)
+00000a38 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size() const
+00000a40 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::erase(unsigned int, unsigned int)
+00000a48 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::max_size() const
+00000a50 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Copy(unsigned int, unsigned int)
+00000a58 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Grow(unsigned int, bool)
+00000a60 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::_Myptr() const
+00000a68 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int, unsigned int)
+00000a70 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*, unsigned int)
+00000a78 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(char const*)
+00000a80 00000008     0                         std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*)
+00000a88 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
+00000a88 00000008     0                         memcpy
+00000a90 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
+00000a90 00000008     0                         memmove
+00000a98 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
+00000a98 00000008     0                         strlen
+00000aa0 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
+00000aa0 00000008     0                         wcslen
+00000aa8 00000008     4                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
+00000aa8 00000008     0                         memset
+00000aa8 00000008     0                         memset_cs
 00000000 00000000     1 .dynamic
 00000000 00000004     1 .ctors
 00000000 00000004     1         .ctors
@@ -989,14 +1290,14 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .scommon
 00000000 00000000     1 .plt
 00000000 00000000     1 .dynbss
-00000000 0001b968     8 .bss
-00000000 0001b968     8         .bss
-00000000 0001b968     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-0001b960 00000008     0                         LS.46.stat
-000025b4 0000000c     0                         _colorX
-000025c0 000007d0     0                         charA2wcharA_
+00000000 0001ba00     8 .bss
+00000000 0001ba00     8         .bss
+00000000 0001ba00     8                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+0001b9f8 00000008     0                         LS.46.stat
+0000264c 0000000c     0                         _colorX
+00002658 000007d0     0                         charA2wcharA_
 00000054 000003e8     0                         gotTime
-00002d90 00000004     0                         mc
+00002e28 00000004     0                         mc
 00000630 00000fa0     0                         getTime
 000015d4 00000fa0     0                         timeMath
 0000043c 00000064     0                         keyPressed
@@ -1017,11 +1318,92 @@ Address  Size     Align Out     In      File    Symbol
 00002588 00000004     0                         optionPress
 0000257c 00000004     0                         CurrentOpt
 00002578 00000004     0                         CurrentMenu
-00002d98 00000050     0                         lastMenus
-00002de8 00000004     0                         lastMenuCount
+00002e30 00000050     0                         lastMenus
+00002e80 00000004     0                         lastMenuCount
 00002590 00000001     0                         Opened
 00002584 00000004     0                         MaxSubOptions
-00002dec 00000004     0                         Menu
+00002e84 00000004     0                         Menu
+000025f1 00000001     0                         CameraDown
+000025f2 00000001     0                         InstantMine
+000025f3 00000001     0                         InfiniteCraft
+000025f4 00000001     0                         HudMiniGame
+000025f6 00000001     0                         UFOMode
+000025f7 00000001     0                         AntiAFK
+000025f8 00000001     0                         SensibilityFast
+000025f9 00000001     0                         SensibilityExtrem
+000025fa 00000001     0                         WalkAlone
+000025fb 00000001     0                         NameOverHead
+000025fc 00000001     0                         NameOverHeadV2
+000025fd 00000001     0                         StaticMovement
+000025fe 00000001     0                         WalkInSky
+000025ff 00000001     0                         GravityMoon
+00002600 00000001     0                         Lookforback
+00002601 00000001     0                         CameraDownR3
+00002602 00000001     0                         BetterTime
+00002603 00000001     0                         SeeOutMap
+00002604 00000001     0                         Scaffold
+00002605 00000001     0                         DayAndNight
+00002606 00000001     0                         ESPPlayers
+000025d4 00000004     0                         SuperSpeed
+000025dc 00000001     0                         BunnyHop
+000025dd 00000001     0                         PhaseMode
+000025de 00000001     0                         BlockStaticCrack
+000025df 00000001     0                         InfiniteJump
+000025e0 00000001     0                         JumpForBuild
+000025e1 00000001     0                         JumpInSky
+000025d8 00000004     0                         SuperJump
+000025e2 00000001     0                         JumpForward
+000025e3 00000001     0                         RemoveJump
+000025e4 00000001     0                         JumpSpeed
+000025e5 00000001     0                         FlyModeX
+000025e6 00000001     0                         SwimFly
+000025e7 00000001     0                         MovementSwim
+000025e8 00000001     0                         SwimGlitch
+000025e9 00000001     0                         NoColission
+000025ea 00000001     0                         ItemsIds
+000025eb 00000001     0                         AntiKick
+000025ec 00000001     0                         InBlock
+000025ed 00000001     0                         PositionView
+000025ee 00000001     0                         FunnySound
+000025ef 00000001     0                         FloatUp
+000025f0 00000001     0                         ESPChests
+000025c3 00000001     0                         DirectionArrows
+000025c4 00000001     0                         TotemGiveHealth
+000025c5 00000001     0                         TntNuclear
+000025c6 00000001     0                         TntBigParticles
+000025c7 00000001     0                         TntFlying
+000025c8 00000001     0                         TntInstantExplode
+000025c9 00000001     0                         DisableSpawnMobs
+000025ca 00000001     0                         TntGoInGround
+000025cb 00000001     0                         TntSoundOff
+000025cc 00000001     0                         BigCreeper
+000025cd 00000001     0                         CreeperNuclear
+000025ce 00000001     0                         CreeperFire
+000025cf 00000001     0                         DisableTotem
+000025d0 00000001     0                         GlitchDeadEntity
+000025d1 00000001     0                         PlayersInfos
+000025ad 00000001     0                         CreativeSlot
+000025ae 00000001     0                         SurvivalSlot
+000025af 00000001     0                         KillSpawnEntity
+000025b0 00000001     0                         StopBlockGravity
+000025b1 00000001     0                         NoHitDelay
+000025b2 00000001     0                         BypassMaxItems
+000025b3 00000001     0                         InfiniteFood
+000025b4 00000001     0                         MobIgnoreMe
+000025b5 00000001     0                         DisablePortals
+000025b6 00000001     0                         KillOnRespawn
+000025b7 00000001     0                         FreezeAllEntity
+000025b8 00000001     0                         StopEndermanTP
+000025b9 00000001     0                         IgnoringPressure
+000025ba 00000001     0                         AllEnchant
+000025bb 00000001     0                         ItemsOnHead
+000025bc 00000001     0                         StopBoat
+000025bd 00000001     0                         NoWeb
+000025be 00000001     0                         EntityGodMode
+000025bf 00000001     0                         RegenerateHealth
+000025c0 00000001     0                         LockGameMode
+000025c1 00000001     0                         LockWeather
+000025c2 00000001     0                         FastBow
 00002598 00000001     0                         GodMode
 00002599 00000001     0                         DemiGodMode
 00002594 00000004     0                         InstantDamage
@@ -1044,23 +1426,90 @@ Address  Size     Align Out     In      File    Symbol
 000025aa 00000001     0                         InfiniteBlocks
 000025ab 00000001     0                         BurnInWater
 000025ac 00000001     0                         RemoveFire
-000025ad 00000001     0                         CreativeSlot
-000025ae 00000001     0                         SurvivalSlot
-00002d94 00000004     0                         Offsets
+0000264b 00000001     0                         XrayVision
+00002644 00000001     0                         DarkStorm
+00002645 00000001     0                         RainbowStorm
+00002646 00000001     0                         RainToSnow
+00002647 00000001     0                         RainbowWithSnow
+00002648 00000001     0                         FlashSky
+00002649 00000001     0                         LightningBoldV1
+0000264a 00000001     0                         LightningBoldV2
+0000263a 00000001     0                         AllPlayersFastMine
+0000263b 00000001     0                         AllPlayersCantMine
+0000263c 00000001     0                         AllPlayersCantRun
+0000263d 00000001     0                         AllPlayersSpeed
+0000263e 00000001     0                         AllPlayersSuperRun
+0000263f 00000001     0                         AllPlayersZoomFOV
+00002640 00000001     0                         PlayersCantJoin
+00002641 00000001     0                         AllChangeHand
+00002642 00000001     0                         AllPlayersSuffocate
+00002643 00000001     0                         AllPlayersInFire
+00002633 00000001     0                         HitBoxBETA
+00002634 00000001     0                         BigVelocity
+00002635 00000001     0                         NoVelocity
+00002637 00000001     0                         ESPEntity
+00002638 00000001     0                         ESPTracer
+00002639 00000001     0                         ESPCOD
+0000261d 00000001     0                         AutoChangeView
+0000261e 00000001     0                         AutoCrouch
+0000261f 00000001     0                         AutoMine
+00002620 00000001     0                         AutoHit
+00002621 00000001     0                         AutoBuild
+00002622 00000001     0                         ESPWaypoint
+00002623 00000001     0                         BatEggsCrash
+00002624 00000001     0                         BatEggsFreeze
+00002625 00000001     0                         GetSpecialItems
+00002626 00000001     0                         ReachAttack
+00002627 00000001     0                         AutoSprint
+00002628 00000001     0                         AutoSprintV2
+00002629 00000001     0                         InstantHit
+0000262a 00000001     0                         KillAura
+0000262b 00000001     0                         FastBuild
+0000262c 00000001     0                         CriticalMode
+0000262d 00000001     0                         CriticalModeV2
+0000262e 00000001     0                         NoSlowDown
+0000262f 00000001     0                         NoHurtCam
+00002630 00000001     0                         PressXForHit
+00002631 00000001     0                         ShowArmor
+00002632 00000001     0                         UnfairAttack
+00002607 00000001     0                         CanFly
+00002608 00000001     0                         NoColissionEntity
+00002609 00000001     0                         AlwaysOnCrouch
+0000260a 00000001     0                         GetPlayersID
+0000260b 00000001     0                         PlayersOnElytra
+0000260c 00000001     0                         WaterSlowDown
+0000260d 00000001     0                         JumpInLava
+0000260e 00000001     0                         CrouchMovement
+0000260f 00000001     0                         PosPlaceBlock
+00002610 00000001     0                         DestroyGame
+00002611 00000001     0                         Levitation
+00002612 00000001     0                         ReturnInXMB
+00002613 00000001     0                         ReturnInXMBV2
+00002614 00000001     0                         AddFakeClone
+00002615 00000001     0                         InvisiblePlayer
+00002616 00000001     0                         AutoLadder
+00002617 00000001     0                         AirToWater
+00002618 00000001     0                         MultiJumpV2
+00002619 00000001     0                         SuicideMode
+0000261a 00000001     0                         GameSpeedStatic
+0000261b 00000001     0                         Get64Items
+0000261c 00000001     0                         AutoJump
+00002e2c 00000004     0                         Offsets
+000025f5 00000001     0                         AntiTeleport
 00002580 00000004     0                         MaxOption
-00002df0 00000190     0                         PS3Lib::floatArray
-00002f80 00000064     0                         PS3Lib::byteArrayz
-00002fe4 00000190     0                         PS3Lib::intArray
-00003174 000186a0     0                         PS3Lib::ReturnRead
-0001b814 00000004     0                         PS3Lib::strcount
-0001b818 00000064     0                         PS3Lib::byteArray
-0001b87c 00000064     0                         PS3Lib::returnRead
-0001b8e0 00000064     0                         PS3Lib::returnReadd
-0001b944 00000010     0                         NyTekCFW::byteArrayz
-0001b954 00000001     0                         Dialog::Finished
-0001b955 00000001     0                         Dialog::YESNO
-0001b958 00000004     0                         Buttons::R2
-0001b95c 00000004     0                         Buttons::L2
+00002e88 00000190     0                         PS3Lib::floatArray
+00003018 00000064     0                         PS3Lib::byteArrayz
+0000307c 00000190     0                         PS3Lib::intArray
+0000320c 000186a0     0                         PS3Lib::ReturnRead
+0001b8ac 00000004     0                         PS3Lib::strcount
+0001b8b0 00000064     0                         PS3Lib::byteArray
+0001b914 00000064     0                         PS3Lib::returnRead
+0001b978 00000064     0                         PS3Lib::returnReadd
+0001b9dc 00000010     0                         NyTekCFW::byteArrayz
+0001b9ec 00000001     0                         Dialog::Finished
+0001b9ed 00000001     0                         Dialog::YESNO
+0001b9f0 00000004     0                         Buttons::R2
+0001b9f4 00000004     0                         Buttons::L2
 00000048 0000000c     0                         Rainbow
 00000000 00000004     0                         g_Level
 00000004 00000004     0                         g_Localplayer
@@ -1073,45 +1522,44 @@ Address  Size     Align Out     In      File    Symbol
 0000258c 00000004     0                         returnPress
 00002591 00000001     0                         Closed
 00002592 00000001     0                         FirstOpen
-000025af 00000001     0                         KillSpawnEntity
-000025b0 00000001     0                         StopBlockGravity
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_20.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_21.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_22.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_33.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_49.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_54.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_head.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_3.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_20.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
-0001b968 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
+00002636 00000001     0                         AntiVoidtoggle
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memcpy.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memmove.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(strlen.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(wcslen.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\fno-exceptions\libc.a(memset.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_20.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_21.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_22.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_33.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_49.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_54.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libnet_stub.a(_sys_net_0001_head.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_3.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_6.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_20.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_23.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_43.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_49.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_55.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_67.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_90.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_102.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_115.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\liblv2_stub.a(_sysPrxForUser_0001_head.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_3.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_15.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_17.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_23.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_40.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_79.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_90.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_103.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_107.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_108.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_128.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_161.o) (TOC#1,0)
+0001ba00 00000000     1                 C:\usr\local\cell\target\ppu\lib\libsysutil_stub.a(_cellSysutil_0001_head.o) (TOC#1,0)
 00000000 00000000     1 .common
 00000000 00000000     1 .stab
 00000000 00000000     1 .stabstr
@@ -1124,30 +1572,30 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000000     1 .line
 00000000 00000000     1 .debug_srcinfo
 00000000 00000000     1 .debug_sfnames
-00000000 00000618     1 .debug_aranges
-00000000 00000520     1         .debug_aranges
-00000000 00000520     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00000520 000000f8     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000000 000019b5     1 .debug_pubnames
-00000000 00001673     1         .debug_pubnames
-00000000 00001673     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00001673 00000342     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000000 0000897f     1 .debug_info
-00000000 00006a8f     1         .debug_info
-00000000 00006a8f     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00006a8f 00001ef0     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000000 00000aa8     1 .debug_aranges
+00000000 000009b0     1         .debug_aranges
+00000000 000009b0     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+000009b0 000000f8     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000000 00003314     1 .debug_pubnames
+00000000 00002fd2     1         .debug_pubnames
+00000000 00002fd2     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00002fd2 00000342     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000000 0000f74b     1 .debug_info
+00000000 0000d85b     1         .debug_info
+00000000 0000d85b     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+0000d85b 00001ef0     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
 00000000 00000465     1 .debug_abbrev
 00000000 00000243     1         .debug_abbrev
 00000000 00000243     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000243 00000222     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
-00000000 00001267     1 .debug_line
-00000000 00000db0     1         .debug_line
-00000000 00000db0     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00000db0 000004b7     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
+00000000 000028b7     1 .debug_line
+00000000 00002400     1         .debug_line
+00000000 00002400     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00002400 000004b7     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\FileSystem.o (TOC#1,0)
 00000000 00000000     1 .debug_frame
-00000000 000035f7     1 .debug_str
-00000000 000035f7     1         .debug_str
-00000000 000035f7     1                 Dwarf1 (TOC#1,0)
+00000000 00005847     1 .debug_str
+00000000 00005847     1         .debug_str
+00000000 00005847     1                 Dwarf1 (TOC#1,0)
 00000000 00000000     1 .debug_loc
 00000000 00000000     1 .debug_macinfo
 00000000 00000000     1 .debug_weaknames
@@ -1264,10 +1712,590 @@ Address  Size     Align Out     In      File    Symbol
 00000000 00000080     4         .text._ZN7Address13SURVIVAL_SLOTEb
 00000000 00000080     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 00000080     0                         Address::SURVIVAL_SLOT(bool)
+00000000 00000060     4 .text._ZN7Address17KILL_SPAWN_ENTITYEb
+00000000 00000060     4         .text._ZN7Address17KILL_SPAWN_ENTITYEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::KILL_SPAWN_ENTITY(bool)
+00000000 00000058     4 .text._ZN7Address19STOP_BLOCKS_GRAVITYEb
+00000000 00000058     4         .text._ZN7Address19STOP_BLOCKS_GRAVITYEb
+00000000 00000058     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000058     0                         Address::STOP_BLOCKS_GRAVITY(bool)
+00000000 00000058     4 .text._ZN7Address12NO_DELAY_HITEb
+00000000 00000058     4         .text._ZN7Address12NO_DELAY_HITEb
+00000000 00000058     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000058     0                         Address::NO_DELAY_HIT(bool)
+00000000 00000060     4 .text._ZN7Address16BYPASS_MAX_ITEMSEb
+00000000 00000060     4         .text._ZN7Address16BYPASS_MAX_ITEMSEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::BYPASS_MAX_ITEMS(bool)
+00000000 00000060     4 .text._ZN7Address13INFINITE_FOODEb
+00000000 00000060     4         .text._ZN7Address13INFINITE_FOODEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::INFINITE_FOOD(bool)
+00000000 00000060     4 .text._ZN7Address14MOBS_IGNORE_MEEb
+00000000 00000060     4         .text._ZN7Address14MOBS_IGNORE_MEEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::MOBS_IGNORE_ME(bool)
+00000000 0000005c     4 .text._ZN7Address15DISABLE_PORTALSEb
+00000000 0000005c     4         .text._ZN7Address15DISABLE_PORTALSEb
+00000000 0000005c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000005c     0                         Address::DISABLE_PORTALS(bool)
+00000000 00000060     4 .text._ZN7Address15KILL_ON_RESPAWNEb
+00000000 00000060     4         .text._ZN7Address15KILL_ON_RESPAWNEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::KILL_ON_RESPAWN(bool)
+00000000 00000060     4 .text._ZN7Address17FREEZE_ALL_ENTITYEb
+00000000 00000060     4         .text._ZN7Address17FREEZE_ALL_ENTITYEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::FREEZE_ALL_ENTITY(bool)
+00000000 00000060     4 .text._ZN7Address16STOP_ENDERMAN_TPEb
+00000000 00000060     4         .text._ZN7Address16STOP_ENDERMAN_TPEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::STOP_ENDERMAN_TP(bool)
+00000000 0000005c     4 .text._ZN7Address17IGNORING_PRESSUREEb
+00000000 0000005c     4         .text._ZN7Address17IGNORING_PRESSUREEb
+00000000 0000005c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000005c     0                         Address::IGNORING_PRESSURE(bool)
+00000000 0000005c     4 .text._ZN7Address11ALL_ENCHANTEb
+00000000 0000005c     4         .text._ZN7Address11ALL_ENCHANTEb
+00000000 0000005c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000005c     0                         Address::ALL_ENCHANT(bool)
+00000000 00000060     4 .text._ZN7Address13ITEMS_ON_HEADEb
+00000000 00000060     4         .text._ZN7Address13ITEMS_ON_HEADEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::ITEMS_ON_HEAD(bool)
+00000000 00000060     4 .text._ZN7Address9STOP_BOATEb
+00000000 00000060     4         .text._ZN7Address9STOP_BOATEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::STOP_BOAT(bool)
+00000000 0000005c     4 .text._ZN7Address6NO_WEBEb
+00000000 0000005c     4         .text._ZN7Address6NO_WEBEb
+00000000 0000005c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000005c     0                         Address::NO_WEB(bool)
+00000000 00000060     4 .text._ZN7Address15ENTITY_GOD_MODEEb
+00000000 00000060     4         .text._ZN7Address15ENTITY_GOD_MODEEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::ENTITY_GOD_MODE(bool)
+00000000 0000005c     4 .text._ZN7Address16REGENERATE_HEARTEb
+00000000 0000005c     4         .text._ZN7Address16REGENERATE_HEARTEb
+00000000 0000005c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000005c     0                         Address::REGENERATE_HEART(bool)
+00000000 00000060     4 .text._ZN7Address13LOCK_GAMEMODEEb
+00000000 00000060     4         .text._ZN7Address13LOCK_GAMEMODEEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::LOCK_GAMEMODE(bool)
+00000000 00000060     4 .text._ZN7Address12LOCK_WEATHEREb
+00000000 00000060     4         .text._ZN7Address12LOCK_WEATHEREb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::LOCK_WEATHER(bool)
+00000000 00000060     4 .text._ZN7Address8FAST_BOWEb
+00000000 00000060     4         .text._ZN7Address8FAST_BOWEb
+00000000 00000060     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000060     0                         Address::FAST_BOW(bool)
+00000000 00000058     4 .text._ZN7Address16DIRECTION_ARROWSEb
+00000000 00000058     4         .text._ZN7Address16DIRECTION_ARROWSEb
+00000000 00000058     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000058     0                         Address::DIRECTION_ARROWS(bool)
 00000000 00000090     4 .text._ZN7Address14INSTANT_DAMAGEEi
 00000000 00000090     4         .text._ZN7Address14INSTANT_DAMAGEEi
 00000000 00000090     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 00000090     0                         Address::INSTANT_DAMAGE(int)
+00000000 000000d8     4 .text._ZN7Address15GOD_MODE_FOR_MEEb
+00000000 000000d8     4         .text._ZN7Address15GOD_MODE_FOR_MEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::GOD_MODE_FOR_ME(bool)
+00000000 00000108     4 .text._ZN7Address17TOTEM_GIVE_HEALTHEb
+00000000 00000108     4         .text._ZN7Address17TOTEM_GIVE_HEALTHEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::TOTEM_GIVE_HEALTH(bool)
+00000000 00000108     4 .text._ZN7Address11TNT_NUCLEAREb
+00000000 00000108     4         .text._ZN7Address11TNT_NUCLEAREb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::TNT_NUCLEAR(bool)
+00000000 000000d8     4 .text._ZN7Address17TNT_BIG_PARTICLESEb
+00000000 000000d8     4         .text._ZN7Address17TNT_BIG_PARTICLESEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::TNT_BIG_PARTICLES(bool)
+00000000 000000e8     4 .text._ZN7Address10TNT_FLYINGEb
+00000000 000000e8     4         .text._ZN7Address10TNT_FLYINGEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::TNT_FLYING(bool)
+00000000 000000d8     4 .text._ZN7Address19TNT_INSTANT_EXPLODEEb
+00000000 000000d8     4         .text._ZN7Address19TNT_INSTANT_EXPLODEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::TNT_INSTANT_EXPLODE(bool)
+00000000 000000d8     4 .text._ZN7Address16TNT_GO_IN_GROUNDEb
+00000000 000000d8     4         .text._ZN7Address16TNT_GO_IN_GROUNDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::TNT_GO_IN_GROUND(bool)
+00000000 00000108     4 .text._ZN7Address13TNT_SOUND_OFFEb
+00000000 00000108     4         .text._ZN7Address13TNT_SOUND_OFFEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::TNT_SOUND_OFF(bool)
+00000000 000000d8     4 .text._ZN7Address11BIG_CREEPEREb
+00000000 000000d8     4         .text._ZN7Address11BIG_CREEPEREb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::BIG_CREEPER(bool)
+00000000 000000e8     4 .text._ZN7Address15CREEPER_NUCLEAREb
+00000000 000000e8     4         .text._ZN7Address15CREEPER_NUCLEAREb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::CREEPER_NUCLEAR(bool)
+00000000 00000108     4 .text._ZN7Address12CREEPER_FIREEb
+00000000 00000108     4         .text._ZN7Address12CREEPER_FIREEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::CREEPER_FIRE(bool)
+00000000 00000108     4 .text._ZN7Address13DISABLE_TOTEMEb
+00000000 00000108     4         .text._ZN7Address13DISABLE_TOTEMEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::DISABLE_TOTEM(bool)
+00000000 000000d8     4 .text._ZN7Address20GLITCHED_DEAD_ENTITYEb
+00000000 000000d8     4         .text._ZN7Address20GLITCHED_DEAD_ENTITYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::GLITCHED_DEAD_ENTITY(bool)
+00000000 000000d8     4 .text._ZN7Address18DISABLE_SPAWN_MOBSEb
+00000000 000000d8     4         .text._ZN7Address18DISABLE_SPAWN_MOBSEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::DISABLE_SPAWN_MOBS(bool)
+00000000 00000090     4 .text._ZN7Address11SUPER_SPEEDEi
+00000000 00000090     4         .text._ZN7Address11SUPER_SPEEDEi
+00000000 00000090     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000090     0                         Address::SUPER_SPEED(int)
+00000000 000000d8     4 .text._ZN7Address10MULTI_JUMPEb
+00000000 000000d8     4         .text._ZN7Address10MULTI_JUMPEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::MULTI_JUMP(bool)
+00000000 000000e8     4 .text._ZN7Address14JUMP_FOR_BUILDEb
+00000000 000000e8     4         .text._ZN7Address14JUMP_FOR_BUILDEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::JUMP_FOR_BUILD(bool)
+00000000 000000d8     4 .text._ZN7Address11JUMP_IN_SKYEb
+00000000 000000d8     4         .text._ZN7Address11JUMP_IN_SKYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::JUMP_IN_SKY(bool)
+00000000 00000108     4 .text._ZN7Address10SUPER_JUMPEb
+00000000 00000108     4         .text._ZN7Address10SUPER_JUMPEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::SUPER_JUMP(bool)
+00000000 000000d8     4 .text._ZN7Address12JUMP_FORWARDEb
+00000000 000000d8     4         .text._ZN7Address12JUMP_FORWARDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::JUMP_FORWARD(bool)
+00000000 000000d8     4 .text._ZN7Address11REMOVE_JUMPEb
+00000000 000000d8     4         .text._ZN7Address11REMOVE_JUMPEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::REMOVE_JUMP(bool)
+00000000 000000d8     4 .text._ZN7Address10JUMP_SPEEDEb
+00000000 000000d8     4         .text._ZN7Address10JUMP_SPEEDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::JUMP_SPEED(bool)
+00000000 00000198     4 .text._ZN7Address8SWIM_FLYEb
+00000000 00000198     4         .text._ZN7Address8SWIM_FLYEb
+00000000 00000198     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000198     0                         Address::SWIM_FLY(bool)
+00000000 000000d8     4 .text._ZN7Address13MOVEMENT_SWIMEb
+00000000 000000d8     4         .text._ZN7Address13MOVEMENT_SWIMEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::MOVEMENT_SWIM(bool)
+00000000 000000d8     4 .text._ZN7Address11SWIM_GLITCHEb
+00000000 000000d8     4         .text._ZN7Address11SWIM_GLITCHEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::SWIM_GLITCH(bool)
+00000000 00000158     4 .text._ZN7Address12NO_COLISSIONEb
+00000000 00000158     4         .text._ZN7Address12NO_COLISSIONEb
+00000000 00000158     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000158     0                         Address::NO_COLISSION(bool)
+00000000 000000d8     4 .text._ZN7Address10FLY_MODE_XEb
+00000000 000000d8     4         .text._ZN7Address10FLY_MODE_XEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::FLY_MODE_X(bool)
+00000000 00000168     4 .text._ZN7Address9ITEMS_IDSEb
+00000000 00000168     4         .text._ZN7Address9ITEMS_IDSEb
+00000000 00000168     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000168     0                         Address::ITEMS_IDS(bool)
+00000000 000000d8     4 .text._ZN7Address9ANTI_KICKEb
+00000000 000000d8     4         .text._ZN7Address9ANTI_KICKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ANTI_KICK(bool)
+00000000 000000d8     4 .text._ZN7Address14STUCK_IN_BLOCKEb
+00000000 000000d8     4         .text._ZN7Address14STUCK_IN_BLOCKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::STUCK_IN_BLOCK(bool)
+00000000 000000d8     4 .text._ZN7Address11FUNNY_SOUNDEb
+00000000 000000d8     4         .text._ZN7Address11FUNNY_SOUNDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::FUNNY_SOUND(bool)
+00000000 000000d8     4 .text._ZN7Address8FLOAT_UPEb
+00000000 000000d8     4         .text._ZN7Address8FLOAT_UPEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::FLOAT_UP(bool)
+00000000 000000e8     4 .text._ZN7Address10ESP_CHESTSEb
+00000000 000000e8     4         .text._ZN7Address10ESP_CHESTSEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::ESP_CHESTS(bool)
+00000000 000000f8     4 .text._ZN7Address11CAMERA_DOWNEb
+00000000 000000f8     4         .text._ZN7Address11CAMERA_DOWNEb
+00000000 000000f8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000f8     0                         Address::CAMERA_DOWN(bool)
+00000000 000000d8     4 .text._ZN7Address12INSTANT_MINEEb
+00000000 000000d8     4         .text._ZN7Address12INSTANT_MINEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::INSTANT_MINE(bool)
+00000000 000000d8     4 .text._ZN7Address14INFINITE_CRAFTEb
+00000000 000000d8     4         .text._ZN7Address14INFINITE_CRAFTEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::INFINITE_CRAFT(bool)
+00000000 000000d8     4 .text._ZN7Address13HUD_MINI_GAMEEb
+00000000 000000d8     4         .text._ZN7Address13HUD_MINI_GAMEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::HUD_MINI_GAME(bool)
+00000000 00000108     4 .text._ZN7Address13ANTI_TELEPORTEb
+00000000 00000108     4         .text._ZN7Address13ANTI_TELEPORTEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ANTI_TELEPORT(bool)
+00000000 00000108     4 .text._ZN7Address8UFO_MODEEb
+00000000 00000108     4         .text._ZN7Address8UFO_MODEEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::UFO_MODE(bool)
+00000000 000000e8     4 .text._ZN7Address8ANTI_AFKEb
+00000000 000000e8     4         .text._ZN7Address8ANTI_AFKEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::ANTI_AFK(bool)
+00000000 000000e8     4 .text._ZN7Address16SENSIBILITY_FASTEb
+00000000 000000e8     4         .text._ZN7Address16SENSIBILITY_FASTEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::SENSIBILITY_FAST(bool)
+00000000 000000e8     4 .text._ZN7Address18SENSIBILITY_EXTREMEb
+00000000 000000e8     4         .text._ZN7Address18SENSIBILITY_EXTREMEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::SENSIBILITY_EXTREM(bool)
+00000000 000000e8     4 .text._ZN7Address10WALK_ALONEEb
+00000000 000000e8     4         .text._ZN7Address10WALK_ALONEEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::WALK_ALONE(bool)
+00000000 000000d8     4 .text._ZN7Address14NAME_OVER_HEADEb
+00000000 000000d8     4         .text._ZN7Address14NAME_OVER_HEADEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::NAME_OVER_HEAD(bool)
+00000000 00000108     4 .text._ZN7Address17NAME_OVER_HEAD_V2Eb
+00000000 00000108     4         .text._ZN7Address17NAME_OVER_HEAD_V2Eb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::NAME_OVER_HEAD_V2(bool)
+00000000 00000108     4 .text._ZN7Address15STATIC_MOVEMENTEb
+00000000 00000108     4         .text._ZN7Address15STATIC_MOVEMENTEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::STATIC_MOVEMENT(bool)
+00000000 000000d8     4 .text._ZN7Address11WALK_IN_SKYEb
+00000000 000000d8     4         .text._ZN7Address11WALK_IN_SKYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::WALK_IN_SKY(bool)
+00000000 000000d8     4 .text._ZN7Address12GRAVITY_MOONEb
+00000000 000000d8     4         .text._ZN7Address12GRAVITY_MOONEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::GRAVITY_MOON(bool)
+00000000 000000d8     4 .text._ZN7Address12LOOK_FORBACKEb
+00000000 000000d8     4         .text._ZN7Address12LOOK_FORBACKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::LOOK_FORBACK(bool)
+00000000 00000108     4 .text._ZN7Address14CAMERA_DOWN_R3Eb
+00000000 00000108     4         .text._ZN7Address14CAMERA_DOWN_R3Eb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::CAMERA_DOWN_R3(bool)
+00000000 000000d8     4 .text._ZN7Address11BETTER_TIMEEb
+00000000 000000d8     4         .text._ZN7Address11BETTER_TIMEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::BETTER_TIME(bool)
+00000000 000000d8     4 .text._ZN7Address11SEE_OUT_MAPEb
+00000000 000000d8     4         .text._ZN7Address11SEE_OUT_MAPEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::SEE_OUT_MAP(bool)
+00000000 000000d8     4 .text._ZN7Address8SCAFFOLDEb
+00000000 000000d8     4         .text._ZN7Address8SCAFFOLDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::SCAFFOLD(bool)
+00000000 000000d8     4 .text._ZN7Address9DAY_NIGHTEb
+00000000 000000d8     4         .text._ZN7Address9DAY_NIGHTEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::DAY_NIGHT(bool)
+00000000 00000178     4 .text._ZN7Address11ESP_PLAYERSEb
+00000000 00000178     4         .text._ZN7Address11ESP_PLAYERSEb
+00000000 00000178     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000178     0                         Address::ESP_PLAYERS(bool)
+00000000 000000d8     4 .text._ZN7Address7CAN_FLYEb
+00000000 000000d8     4         .text._ZN7Address7CAN_FLYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::CAN_FLY(bool)
+00000000 000000d8     4 .text._ZN7Address19NO_COLISSION_ENTITYEb
+00000000 000000d8     4         .text._ZN7Address19NO_COLISSION_ENTITYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::NO_COLISSION_ENTITY(bool)
+00000000 000000d8     4 .text._ZN7Address13ALWAYS_CROUCHEb
+00000000 000000d8     4         .text._ZN7Address13ALWAYS_CROUCHEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ALWAYS_CROUCH(bool)
+00000000 000000d8     4 .text._ZN7Address15GET_PLAYERS_IDSEb
+00000000 000000d8     4         .text._ZN7Address15GET_PLAYERS_IDSEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::GET_PLAYERS_IDS(bool)
+00000000 00000108     4 .text._ZN7Address17PLAYERS_ON_ELYTRAEb
+00000000 00000108     4         .text._ZN7Address17PLAYERS_ON_ELYTRAEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::PLAYERS_ON_ELYTRA(bool)
+00000000 00000108     4 .text._ZN7Address14WATER_SLOWDOWNEb
+00000000 00000108     4         .text._ZN7Address14WATER_SLOWDOWNEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::WATER_SLOWDOWN(bool)
+00000000 00000108     4 .text._ZN7Address12JUMP_IN_LAVAEb
+00000000 00000108     4         .text._ZN7Address12JUMP_IN_LAVAEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::JUMP_IN_LAVA(bool)
+00000000 000000d8     4 .text._ZN7Address15CROUCH_MOVEMENTEb
+00000000 000000d8     4         .text._ZN7Address15CROUCH_MOVEMENTEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::CROUCH_MOVEMENT(bool)
+00000000 000000d8     4 .text._ZN7Address20POSITION_PLACE_BLOCKEb
+00000000 000000d8     4         .text._ZN7Address20POSITION_PLACE_BLOCKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::POSITION_PLACE_BLOCK(bool)
+00000000 000000d8     4 .text._ZN7Address12DESTROY_GAMEEb
+00000000 000000d8     4         .text._ZN7Address12DESTROY_GAMEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::DESTROY_GAME(bool)
+00000000 000000d8     4 .text._ZN7Address10LEVITATIONEb
+00000000 000000d8     4         .text._ZN7Address10LEVITATIONEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::LEVITATION(bool)
+00000000 000000d8     4 .text._ZN7Address13RETURN_IN_XMBEb
+00000000 000000d8     4         .text._ZN7Address13RETURN_IN_XMBEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::RETURN_IN_XMB(bool)
+00000000 000000d8     4 .text._ZN7Address16RETURN_IN_XMB_V2Eb
+00000000 000000d8     4         .text._ZN7Address16RETURN_IN_XMB_V2Eb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::RETURN_IN_XMB_V2(bool)
+00000000 000000d8     4 .text._ZN7Address14ADD_FAKE_CLONEEb
+00000000 000000d8     4         .text._ZN7Address14ADD_FAKE_CLONEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ADD_FAKE_CLONE(bool)
+00000000 00000178     4 .text._ZN7Address17INVISIBLE_PLAYERSEb
+00000000 00000178     4         .text._ZN7Address17INVISIBLE_PLAYERSEb
+00000000 00000178     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000178     0                         Address::INVISIBLE_PLAYERS(bool)
+00000000 000000d8     4 .text._ZN7Address11AUTO_LADDEREb
+00000000 000000d8     4         .text._ZN7Address11AUTO_LADDEREb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_LADDER(bool)
+00000000 000000d8     4 .text._ZN7Address12AIR_TO_WATEREb
+00000000 000000d8     4         .text._ZN7Address12AIR_TO_WATEREb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AIR_TO_WATER(bool)
+00000000 000000d8     4 .text._ZN7Address13MULTI_JUMP_V2Eb
+00000000 000000d8     4         .text._ZN7Address13MULTI_JUMP_V2Eb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::MULTI_JUMP_V2(bool)
+00000000 000000e8     4 .text._ZN7Address12SUICIDE_MODEEb
+00000000 000000e8     4         .text._ZN7Address12SUICIDE_MODEEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::SUICIDE_MODE(bool)
+00000000 000000d8     4 .text._ZN7Address17GAME_SPEED_STATICEb
+00000000 000000d8     4         .text._ZN7Address17GAME_SPEED_STATICEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::GAME_SPEED_STATIC(bool)
+00000000 000000d8     4 .text._ZN7Address9AUTO_JUMPEb
+00000000 000000d8     4         .text._ZN7Address9AUTO_JUMPEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_JUMP(bool)
+00000000 000000d8     4 .text._ZN7Address16AUTO_CHANGE_VIEWEb
+00000000 000000d8     4         .text._ZN7Address16AUTO_CHANGE_VIEWEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_CHANGE_VIEW(bool)
+00000000 000000d8     4 .text._ZN7Address11AUTO_CROUCHEb
+00000000 000000d8     4         .text._ZN7Address11AUTO_CROUCHEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_CROUCH(bool)
+00000000 000000d8     4 .text._ZN7Address9AUTO_MINEEb
+00000000 000000d8     4         .text._ZN7Address9AUTO_MINEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_MINE(bool)
+00000000 000000d8     4 .text._ZN7Address8AUTO_HITEb
+00000000 000000d8     4         .text._ZN7Address8AUTO_HITEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_HIT(bool)
+00000000 000000d8     4 .text._ZN7Address10AUTO_BUILDEb
+00000000 000000d8     4         .text._ZN7Address10AUTO_BUILDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_BUILD(bool)
+00000000 000000d8     4 .text._ZN7Address14BAT_EGGS_CRASHEb
+00000000 000000d8     4         .text._ZN7Address14BAT_EGGS_CRASHEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::BAT_EGGS_CRASH(bool)
+00000000 000000d8     4 .text._ZN7Address15BAT_EGGS_FREEZEEb
+00000000 000000d8     4         .text._ZN7Address15BAT_EGGS_FREEZEEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::BAT_EGGS_FREEZE(bool)
+00000000 000002e8     4 .text._ZN7Address12REACH_ATTACKEb
+00000000 000002e8     4         .text._ZN7Address12REACH_ATTACKEb
+00000000 000002e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000002e8     0                         Address::REACH_ATTACK(bool)
+00000000 000000d8     4 .text._ZN7Address11AUTO_SPRINTEb
+00000000 000000d8     4         .text._ZN7Address11AUTO_SPRINTEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_SPRINT(bool)
+00000000 000000d8     4 .text._ZN7Address14AUTO_SPRINT_V2Eb
+00000000 000000d8     4         .text._ZN7Address14AUTO_SPRINT_V2Eb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::AUTO_SPRINT_V2(bool)
+00000000 000000d8     4 .text._ZN7Address11INSTANT_HITEb
+00000000 000000d8     4         .text._ZN7Address11INSTANT_HITEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::INSTANT_HIT(bool)
+00000000 000000d8     4 .text._ZN7Address9KILL_AURAEb
+00000000 000000d8     4         .text._ZN7Address9KILL_AURAEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::KILL_AURA(bool)
+00000000 000000d8     4 .text._ZN7Address10FAST_BUILDEb
+00000000 000000d8     4         .text._ZN7Address10FAST_BUILDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::FAST_BUILD(bool)
+00000000 000000e8     4 .text._ZN7Address13CRITICAL_MODEEb
+00000000 000000e8     4         .text._ZN7Address13CRITICAL_MODEEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::CRITICAL_MODE(bool)
+00000000 000002a8     4 .text._ZN7Address16CRITICAL_MODE_V1Eb
+00000000 000002a8     4         .text._ZN7Address16CRITICAL_MODE_V1Eb
+00000000 000002a8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000002a8     0                         Address::CRITICAL_MODE_V1(bool)
+00000000 000000d8     4 .text._ZN7Address12NO_SLOW_DOWNEb
+00000000 000000d8     4         .text._ZN7Address12NO_SLOW_DOWNEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::NO_SLOW_DOWN(bool)
+00000000 000000e8     4 .text._ZN7Address15REMOVE_HURT_CAMEb
+00000000 000000e8     4         .text._ZN7Address15REMOVE_HURT_CAMEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::REMOVE_HURT_CAM(bool)
+00000000 000000d8     4 .text._ZN7Address15PRESS_X_FOR_HITEb
+00000000 000000d8     4         .text._ZN7Address15PRESS_X_FOR_HITEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::PRESS_X_FOR_HIT(bool)
+00000000 00000108     4 .text._ZN7Address10SHOW_ARMOREb
+00000000 00000108     4         .text._ZN7Address10SHOW_ARMOREb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::SHOW_ARMOR(bool)
+00000000 000000d8     4 .text._ZN7Address13UNFAIR_ATTACKEb
+00000000 000000d8     4         .text._ZN7Address13UNFAIR_ATTACKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::UNFAIR_ATTACK(bool)
+00000000 00000168     4 .text._ZN7Address11HITBOX_BETAEb
+00000000 00000168     4         .text._ZN7Address11HITBOX_BETAEb
+00000000 00000168     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000168     0                         Address::HITBOX_BETA(bool)
+00000000 000000d8     4 .text._ZN7Address18BLOCK_STATIC_CRACKEb
+00000000 000000d8     4         .text._ZN7Address18BLOCK_STATIC_CRACKEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::BLOCK_STATIC_CRACK(bool)
+00000000 00000288     4 .text._ZN7Address11NO_VELOCITYEb
+00000000 00000288     4         .text._ZN7Address11NO_VELOCITYEb
+00000000 00000288     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000288     0                         Address::NO_VELOCITY(bool)
+00000000 00000288     4 .text._ZN7Address12BIG_VELOCITYEb
+00000000 00000288     4         .text._ZN7Address12BIG_VELOCITYEb
+00000000 00000288     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000288     0                         Address::BIG_VELOCITY(bool)
+00000000 00000108     4 .text._ZN7Address21ALL_PLAYERS_FAST_MINEEb
+00000000 00000108     4         .text._ZN7Address21ALL_PLAYERS_FAST_MINEEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_FAST_MINE(bool)
+00000000 00000108     4 .text._ZN7Address23ALL_PLAYERS_CANNOT_MINEEb
+00000000 00000108     4         .text._ZN7Address23ALL_PLAYERS_CANNOT_MINEEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_CANNOT_MINE(bool)
+00000000 00000108     4 .text._ZN7Address20ALL_PLAYERS_CANT_RUNEb
+00000000 00000108     4         .text._ZN7Address20ALL_PLAYERS_CANT_RUNEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_CANT_RUN(bool)
+00000000 00000108     4 .text._ZN7Address23ALL_PLAYERS_SUPER_SPEEDEb
+00000000 00000108     4         .text._ZN7Address23ALL_PLAYERS_SUPER_SPEEDEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_SUPER_SPEED(bool)
+00000000 000000d8     4 .text._ZN7Address21ALL_PLAYERS_SUPER_RUNEb
+00000000 000000d8     4         .text._ZN7Address21ALL_PLAYERS_SUPER_RUNEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ALL_PLAYERS_SUPER_RUN(bool)
+00000000 000000d8     4 .text._ZN7Address31ALL_PLAYERS_CANT_JOIN_THE_WORLDEb
+00000000 000000d8     4         .text._ZN7Address31ALL_PLAYERS_CANT_JOIN_THE_WORLDEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ALL_PLAYERS_CANT_JOIN_THE_WORLD(bool)
+00000000 00000108     4 .text._ZN7Address23ALL_PLAYERS_CHANGE_HANDEb
+00000000 00000108     4         .text._ZN7Address23ALL_PLAYERS_CHANGE_HANDEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_CHANGE_HAND(bool)
+00000000 00000108     4 .text._ZN7Address21ALL_PLAYERS_SUFFOCATEEb
+00000000 00000108     4         .text._ZN7Address21ALL_PLAYERS_SUFFOCATEEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ALL_PLAYERS_SUFFOCATE(bool)
+00000000 000000d8     4 .text._ZN7Address19ALL_PLAYERS_IN_FIREEb
+00000000 000000d8     4         .text._ZN7Address19ALL_PLAYERS_IN_FIREEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::ALL_PLAYERS_IN_FIRE(bool)
+00000000 00000228     4 .text._ZN7Address22ALL_PLAYERS_FREEZE_PS3Ev
+00000000 00000228     4         .text._ZN7Address22ALL_PLAYERS_FREEZE_PS3Ev
+00000000 00000228     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000228     0                         Address::ALL_PLAYERS_FREEZE_PS3()
+00000000 000000e8     4 .text._ZN7Address18WEATHER_DARK_STORMEb
+00000000 000000e8     4         .text._ZN7Address18WEATHER_DARK_STORMEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::WEATHER_DARK_STORM(bool)
+00000000 000000e8     4 .text._ZN7Address21WEATHER_RAINBOW_STORMEb
+00000000 000000e8     4         .text._ZN7Address21WEATHER_RAINBOW_STORMEb
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         Address::WEATHER_RAINBOW_STORM(bool)
+00000000 000000d8     4 .text._ZN7Address20WEATHER_RAIN_TO_SNOWEb
+00000000 000000d8     4         .text._ZN7Address20WEATHER_RAIN_TO_SNOWEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::WEATHER_RAIN_TO_SNOW(bool)
+00000000 00000168     4 .text._ZN7Address26WEATHER_RAINBOW_WITH_STORMEb
+00000000 00000168     4         .text._ZN7Address26WEATHER_RAINBOW_WITH_STORMEb
+00000000 00000168     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000168     0                         Address::WEATHER_RAINBOW_WITH_STORM(bool)
+00000000 000000d8     4 .text._ZN7Address17WEATHER_FLASH_SKYEb
+00000000 000000d8     4         .text._ZN7Address17WEATHER_FLASH_SKYEb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::WEATHER_FLASH_SKY(bool)
+00000000 000000d8     4 .text._ZN7Address24WEATHER_LIGHTNINGBOLD_V1Eb
+00000000 000000d8     4         .text._ZN7Address24WEATHER_LIGHTNINGBOLD_V1Eb
+00000000 000000d8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000d8     0                         Address::WEATHER_LIGHTNINGBOLD_V1(bool)
+00000000 00000168     4 .text._ZN7Address24WEATHER_LIGHTNINGBOLD_V2Eb
+00000000 00000168     4         .text._ZN7Address24WEATHER_LIGHTNINGBOLD_V2Eb
+00000000 00000168     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000168     0                         Address::WEATHER_LIGHTNINGBOLD_V2(bool)
+00000000 00000108     4 .text._ZN7Address10XRAY_VISONEb
+00000000 00000108     4         .text._ZN7Address10XRAY_VISONEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::XRAY_VISON(bool)
+00000000 00000698     4 .text._ZN7Address10ENTITY_ESPEb
+00000000 00000698     4         .text._ZN7Address10ENTITY_ESPEb
+00000000 00000698     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000698     0                         Address::ENTITY_ESP(bool)
+00000000 00000108     4 .text._ZN7Address10ESP_TRACEREb
+00000000 00000108     4         .text._ZN7Address10ESP_TRACEREb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ESP_TRACER(bool)
+00000000 00000108     4 .text._ZN7Address7ESP_CODEb
+00000000 00000108     4         .text._ZN7Address7ESP_CODEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ESP_COD(bool)
+00000000 00000108     4 .text._ZN7Address12ESP_WAYPOINTEb
+00000000 00000108     4         .text._ZN7Address12ESP_WAYPOINTEb
+00000000 00000108     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000108     0                         Address::ESP_WAYPOINT(bool)
+00000000 00000eec     4 .text._ZN7Address17GET_SPECIAL_ITEMSEb
+00000000 00000eec     4         .text._ZN7Address17GET_SPECIAL_ITEMSEb
+00000000 00000eec     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 00000eec     0                         Address::GET_SPECIAL_ITEMS(bool)
+00000000 000002b8     4 .text._ZN7Address10PHASE_MODEEb
+00000000 000002b8     4         .text._ZN7Address10PHASE_MODEEb
+00000000 000002b8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000002b8     0                         Address::PHASE_MODE(bool)
 00000000 000001bc     4 .text._ZN9draw_menu8AddTitleEPKw
 00000000 000001bc     4         .text._ZN9draw_menu8AddTitleEPKw
 00000000 000001bc     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
@@ -1284,10 +2312,14 @@ Address  Size     Align Out     In      File    Symbol
 00000000 0000016c     4         .text._ZN9draw_menu12AddSubOptionEPKw
 00000000 0000016c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 0000016c     0                         draw_menu::AddSubOption(wchar_t const*)
-00000000 00000210     4 .text._ZN9draw_menu13AddBoolOptionEPKwb
-00000000 00000210     4         .text._ZN9draw_menu13AddBoolOptionEPKwb
-00000000 00000210     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00000000 00000210     0                         draw_menu::AddBoolOption(wchar_t const*, bool)
+00000000 000000e8     4 .text._ZN9draw_menu9AddOptionEPKw
+00000000 000000e8     4         .text._ZN9draw_menu9AddOptionEPKw
+00000000 000000e8     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 000000e8     0                         draw_menu::AddOption(wchar_t const*)
+00000000 0000021c     4 .text._ZN9draw_menu13AddBoolOptionEPKwbS1_
+00000000 0000021c     4         .text._ZN9draw_menu13AddBoolOptionEPKwbS1_
+00000000 0000021c     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
+00000000 0000021c     0                         draw_menu::AddBoolOption(wchar_t const*, bool, wchar_t const*)
 00000000 000002cc     4 .text._ZN9draw_menu12AddIntOptionEPKwiiiRi
 00000000 000002cc     4         .text._ZN9draw_menu12AddIntOptionEPKwiiiRi
 00000000 000002cc     4                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
@@ -1312,14 +2344,14 @@ Address  Size     Align Out     In      File    Symbol
 00000000 0000000e     2         .rodata._ZZN9draw_menu12AddSubOptionEPKwEs
 00000000 0000000e     2                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
 00000000 0000000e     0                         draw_menu::AddSubOption(wchar_t const*)::string
-00000000 00000008     1 .rodata._ZZN9draw_menu13AddBoolOptionEPKwbEs
-00000000 00000008     1         .rodata._ZZN9draw_menu13AddBoolOptionEPKwbEs
+00000000 00000008     1 .rodata._ZZN9draw_menu13AddBoolOptionEPKwbS1_Es
+00000000 00000008     1         .rodata._ZZN9draw_menu13AddBoolOptionEPKwbS1_Es
 00000000 00000008     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00000000 00000008     0                         draw_menu::AddBoolOption(wchar_t const*, bool)::string
-00000000 00000009     1 .rodata._ZZN9draw_menu13AddBoolOptionEPKwbEs_0
-00000000 00000009     1         .rodata._ZZN9draw_menu13AddBoolOptionEPKwbEs_0
+00000000 00000008     0                         draw_menu::AddBoolOption(wchar_t const*, bool, wchar_t const*)::string
+00000000 00000009     1 .rodata._ZZN9draw_menu13AddBoolOptionEPKwbS1_Es_0
+00000000 00000009     1         .rodata._ZZN9draw_menu13AddBoolOptionEPKwbS1_Es_0
 00000000 00000009     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)
-00000000 00000009     0                         draw_menu::AddBoolOption(wchar_t const*, bool)::string
+00000000 00000009     0                         draw_menu::AddBoolOption(wchar_t const*, bool, wchar_t const*)::string
 00000000 0000000b     1 .rodata._ZZN9draw_menu12AddIntOptionEPKwiiiRiEs
 00000000 0000000b     1         .rodata._ZZN9draw_menu12AddIntOptionEPKwiiiRiEs
 00000000 0000000b     1                 C:\Users\randy\Documents\GitHub\4J-DevKit\Source SPRX\SPRX V5 Source Code\bin-int\Debug-PS3\Minecraft\Main.o (TOC#1,0)

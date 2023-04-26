@@ -47,7 +47,7 @@ public:
 		MaxOption += 1;
 	}
 
-	void AddBoolOption(const wchar_t* option, bool toggle)
+	void AddBoolOption(const wchar_t* option, bool toggle, const wchar_t* description = L"")
 	{
 		DrawText(option, MenuX + 513, MenuY + 63 + (SpaceBetweenText * MaxOption), color(MC_TextColor::White));
 

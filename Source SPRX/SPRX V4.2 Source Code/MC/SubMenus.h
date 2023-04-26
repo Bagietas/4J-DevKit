@@ -294,7 +294,7 @@ namespace SubMenu
 		AddHud(submmenuMax);
 		AddTitle(L"DownCraft SPRX");
 		AddDescription(L"Players Menu");
-	    AddBoolOption(L"Plrs Fast Mine", !AllPlayersFastMine);
+	        AddBoolOption(L"Plrs Fast Mine", !AllPlayersFastMine);
 		AddBoolOption(L"Plrs Cant Mine", !AllPlayersCantMine);
 		AddBoolOption(L"Plrs Cant Run", !AllPlayersCantRun);
 		AddBoolOption(L"Plrs Speed", !AllPlayersSpeed);
