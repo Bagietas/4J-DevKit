@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 void RenderSubMenu()
 {
@@ -7,16 +7,22 @@ void RenderSubMenu()
 		switch (CurrentMenu)
 		{
 		case(MainMenu):
-			MaxSubOptions = 4;
+			MaxSubOptions = 12;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Main Menu");
-			Menu->AddSubOption(L"Host Options");
-			Menu->AddSubOption(L"Non Host Options");
-			Menu->AddSubOption(L"Players Options");
-			Menu->AddSubOption(L"Weather Options");
-			Menu->AddSubOption(L"Visions Options");
-			Menu->AddSubOption(L"Modules Options");
+			Menu->AddSubOption(L"Host Menu");
+			Menu->AddSubOption(L"Non-Host Menu");
+			Menu->AddSubOption(L"Players Menu");
+			Menu->AddSubOption(L"Weather Menu");
+			Menu->AddSubOption(L"Visions Menu");
+			Menu->AddSubOption(L"Modules Menu");
+			Menu->AddSubOption(L"Name Changer");
+			Menu->AddSubOption(L"Game Editor");
+			Menu->AddSubOption(L"Mini-Game Menu");
+			Menu->AddSubOption(L"Teleport Menu");
+			Menu->AddSubOption(L"Settings Menu");
+			Menu->AddSubOption(L"Credits Menu");
 			switch (getOption()) {
 			case(0): openSubmenu(HostMenu); break;
 			case(1): openSubmenu(NonHostMenu); break;
@@ -24,6 +30,12 @@ void RenderSubMenu()
 			case(3): openSubmenu(WeatherMenu); break;
 			case(4): openSubmenu(VisionsMenu); break;
 			case(5): openSubmenu(ModulesMenu); break;
+			case(6): openSubmenu(NameMenu); break;
+			case(7): openSubmenu(GameEditor); break;
+			case(8): openSubmenu(MiniGameMenu); break;
+			case(9): openSubmenu(TeleportMenu); break;
+			case(10): openSubmenu(SettingsMenu); break;
+			case(11): openSubmenu(CreditsMenu); break;
 			}
 			break;
 
@@ -140,7 +152,7 @@ void RenderSubMenu()
 			break;
 
 		case(HostMenu3):
-			MaxSubOptions = 23;
+			MaxSubOptions = 16;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Host Menu");
@@ -405,7 +417,7 @@ void RenderSubMenu()
 			break;
 
 		case(NonHostMenu5):
-			MaxSubOptions = 23;
+			MaxSubOptions = 6;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Non-Host Menu");
@@ -429,7 +441,7 @@ void RenderSubMenu()
         #pragma region "Players Options"
 
 		case(PlayerMenu):
-			MaxSubOptions = 4;
+			MaxSubOptions = 11;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Players Menu");
@@ -463,7 +475,7 @@ void RenderSubMenu()
         #pragma region "Weather Options"
 
 		case(WeatherMenu):
-			MaxSubOptions = 6;
+			MaxSubOptions = 7;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Weather Menu");
@@ -654,7 +666,7 @@ void RenderSubMenu()
 			break;
 
 		case(VisionsMenu4):
-			MaxSubOptions = 23;
+			MaxSubOptions = 17;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Visions Menu");
@@ -700,14 +712,14 @@ void RenderSubMenu()
         #pragma region "Modules Options"
 
 		case(ModulesMenu):
-			MaxSubOptions = 23;
+			MaxSubOptions = 7;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Modules Menu");
 			Menu->AddBoolOption(L"Zoom Mode", Zoom);
 			Menu->AddBoolOption(L"TP Aura", TPAura);
 			Menu->AddBoolOption(L"Nuker", Nuker);
-			Menu->AddIntOption(L"Nuker Radius", 3, -255, 255 sizeNuker);
+			Menu->AddIntOption(L"Nuker Radius", 3, -255, 255, sizeNuker);
 			Menu->AddBoolOption(L"Auto Toss", AutoTossItems);
 			Menu->AddBoolOption(L"Anti Void", AntiVoidtoggle);
 			Menu->AddBoolOption(L"Key Strokes", keystrokes);
@@ -717,6 +729,169 @@ void RenderSubMenu()
 			break;
 
 #pragma endregion
+        #pragma region "Name Changer"
+
+		case(NameMenu):
+			MaxSubOptions = 9;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Name Changer");
+			Menu->AddOption(L"Enter a text");
+			Menu->AddOption(L"DownCraft SPRX");
+			Menu->AddOption(L"ABCDEFGHIJKLMNO...");
+			Menu->AddOption(L"Your IP is...");
+			Menu->AddOption(L"No Name");
+			Menu->AddOption(L"Long Name");
+			Menu->AddOption(L"*************");
+			Menu->AddOption(L"Hentai");
+			Menu->AddOption(L"сука блять");
+			switch (getOption()) {
+			case(0): Offsets->setName("ok"); break;
+			case(1): Offsets->setName("DownCraft SPRX"); break;
+			}
+			break;
+
+         #pragma endregion
+        #pragma region "Game Editor"
+
+		case(GameEditor):
+			MaxSubOptions = 6;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Game Editor");
+			Menu->AddSubOption(L"Block Changer");
+			Menu->AddSubOption(L"Eggs Changer");
+			Menu->AddSubOption(L"Items Changer");
+			Menu->AddSubOption(L"Enchant Changer");
+			Menu->AddSubOption(L"Particles Changer");
+			Menu->AddSubOption(L"Sounds Changer");
+			switch (getOption()) {
+			case(0): break;
+			}
+			break;
+
+        #pragma endregion
+        #pragma region "Mini-Game Options"
+
+		case(MiniGameMenu):
+			MaxSubOptions = 12;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Mini-Games Menu");
+			Menu->AddBoolOption(L"Can Craft", !CanCraft);
+			Menu->AddBoolOption(L"Can Place Block", !CanPlaceBlocks);
+			Menu->AddBoolOption(L"See Spectator", !CanSeeSpectator);
+			Menu->AddBoolOption(L"Plrs Starved", !PlayersAreStarved);
+			Menu->AddBoolOption(L"Allow Portals", !AllowPortals);
+			Menu->AddBoolOption(L"Tnt Can Destroy", !TntCanDestroyBlocks);
+			Menu->AddBoolOption(L"Max In Small Map", !MaxPlayersSmallMap);
+			Menu->AddBoolOption(L"Crea Inv Lobby", !CreativeInventory);
+			Menu->AddBoolOption(L"Destroy Block", !CanDestroyBlocks);
+			Menu->AddBoolOption(L"Game Survival", !GameModeToSurvival);
+			Menu->AddBoolOption(L"Inv Crea Tumble", !InventoryCreaTumbleActive);
+			Menu->AddSubOption(L"Teleport Location");
+			switch (getOption()) {
+			case(0): break;
+			}
+			break;
+
+		case(MiniGameTPLocation):
+			MaxSubOptions = 4;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Teleport Location");
+			Menu->AddOption(L"TP To Lobby");
+			Menu->AddOption(L"TP To Cavern");
+			Menu->AddOption(L"TP To Cove");
+			Menu->AddOption(L"TP To Crucible");
+			switch (getOption()) {
+			case(0): break;
+			}
+			break;
+
+        #pragma endregion
+        #pragma region "Teleport Options"
+
+		case(TeleportMenu):
+			MaxSubOptions = 8;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Teleport Menu");
+			Menu->AddOption(L"Change: +X");
+			Menu->AddOption(L"Change: +Y");
+			Menu->AddOption(L"Change: +Z");
+			Menu->AddOption(L"Change: -X");
+			Menu->AddOption(L"Change: -Y");
+			Menu->AddOption(L"Change: -Z");
+			Menu->AddOption(L"Get Teleport");
+			Menu->AddOption(L"Set Teleport");
+			switch (getOption()) {
+			case(0): break;
+			}
+			break;
+
+        #pragma endregion
+        #pragma region "Settings Options"
+
+		case(SettingsMenu):
+			MaxSubOptions = 1;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Settings Menu");
+			Menu->AddSubOption(L"Theme Colors");
+			switch (getOption()) {
+			case(0): openSubmenu(ThemeMenu); break;
+			}
+			break;
+
+		case(ThemeMenu):
+			MaxSubOptions = 11;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Settings Menu");
+			Menu->AddOption(L"Default Theme");
+			Menu->AddOption(L"White Theme");
+			Menu->AddOption(L"Pink Theme");
+			Menu->AddOption(L"Red Theme");
+			Menu->AddOption(L"Orange Theme");
+			Menu->AddOption(L"Cyan Theme");
+			Menu->AddOption(L"Green Theme");
+			Menu->AddOption(L"Lime Theme");
+			Menu->AddOption(L"Yellow Theme");
+			Menu->AddOption(L"Purple Theme");
+			Menu->AddBoolOption(L"Rainbow Theme", RainbowTheme);
+			switch (getOption()) {
+			case(0): openSubmenu(ModulesMenu); break;
+			}
+			break;
+
+#pragma endregion
+        #pragma region "Credits Options"
+
+		case(CreditsMenu):
+			MaxSubOptions = 13;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Credits Menu");
+			Menu->AddOption(L"Misakiii (Creator)");
+			Menu->AddOption(L"NyTekCFW (Helper)");
+			Menu->AddOption(L"PrismoMxdz (Helper)");
+			Menu->AddOption(L"Magethsi (Helper)");
+			Menu->AddOption(L"mizdx (Helper)");
+			Menu->AddOption(L"TheRouletteBoi (helper)");
+			Menu->AddOption(L"TheWaffleMan1337 (helper)");
+			Menu->AddOption(L"Dublin Modz (helper)");
+			Menu->AddOption(L"MayhemModding (helper)");
+			Menu->AddOption(L"NELUxP MoDz (helper)");
+			Menu->AddOption(L"d.s.j (helper)");
+			Menu->AddOption(L"silver14818 (helper)");
+			Menu->AddOption(L"gopro2027 (design idea)");
+			switch (getOption()) {
+			case(0): break;
+			}
+			break;
+
+        #pragma endregion
 		}
 	}
 }

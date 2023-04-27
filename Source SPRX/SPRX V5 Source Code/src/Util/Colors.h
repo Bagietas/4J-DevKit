@@ -37,4 +37,5 @@ namespace MC_Color
 	int BLUE[3] = { 0, 147, 255 };
 	int PURPLE[3] = { 128, 0, 128 };
 	int YELLOW[3] = { 255, 255, 0 };
+	Color BLACK_OPACITY{ 15, 15, 15, 200 };
 };

@@ -9,12 +9,19 @@ enum eMenus
 	WeatherMenu,
 	VisionsMenu, VisionsMenu2, VisionsMenu3, VisionsMenu4,
 	ModulesMenu,
+	NameMenu,
+	GameEditor,
+	MiniGameMenu, MiniGameTPLocation,
+	TeleportMenu,
+	SettingsMenu, ThemeMenu,
+	CreditsMenu,
 };
 
 //Initial vars
 const wchar_t* titleSPRX = L"DownCraft SPRX";
 int MenuX = -51, MenuY = 6, menuLenght = 0,
 MenuR = 250, MenuG = 61, MenuB = 61;
+signed char logs_count = -1;
 
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];
@@ -41,7 +48,6 @@ bool CreativeSlot, SurvivalSlot, KillSpawnEntity, StopBlockGravity, NoHitDelay, 
 //Host Page 3
 bool FastBow, DirectionArrows, TotemGiveHealth, TntNuclear, TntBigParticles, TntFlying, TntInstantExplode, DisableSpawnMobs, TntGoInGround, TntSoundOff, BigCreeper, CreeperNuclear, CreeperFire, DisableTotem, GlitchDeadEntity, PlayersInfos;
 
-
 //Non-Host Page
 int SuperSpeed, SuperJump;
 bool BunnyHop, PhaseMode, BlockStaticCrack, InfiniteJump, JumpForBuild, JumpInSky, JumpForward, RemoveJump, JumpSpeed, FlyModeX, SwimFly, MovementSwim, SwimGlitch, NoColission, ItemsIds, AntiKick, InBlock, PositionView, FunnySound, FloatUp, ESPChests;
@@ -56,23 +62,26 @@ bool CanFly, NoColissionEntity, AlwaysOnCrouch, GetPlayersID, PlayersOnElytra, W
 bool AutoChangeView, AutoCrouch, AutoMine, AutoHit, AutoBuild, ESPWaypoint, BatEggsCrash, BatEggsFreeze, GetSpecialItems, ReachAttack, AutoSprint, AutoSprintV2, InstantHit, KillAura, FastBuild, CriticalMode, CriticalModeV2, NoSlowDown, NoHurtCam, PressXForHit, ShowArmor, UnfairAttack;
 
 //Non-host page 5
-bool HitBoxBETA, BigVelocity, NoVelocity, AntiVoidtoggle, ESPEntity, ESPTracer, ESPCOD;
-
+bool HitBoxBETA, BigVelocity, NoVelocity, ESPEntity, ESPTracer, ESPCOD;
 
 //Player menu
 bool AllPlayersFastMine, AllPlayersCantMine, AllPlayersCantRun, AllPlayersSpeed, AllPlayersSuperRun, AllPlayersZoomFOV, PlayersCantJoin, AllChangeHand, AllPlayersSuffocate, AllPlayersInFire;
 
-
 //Weather menu
 bool DarkStorm, RainbowStorm, RainToSnow, RainbowWithSnow, FlashSky, LightningBoldV1, LightningBoldV2;
 
-
 //Visions Menu
-bool XrayVision, NightVision, Apocalipse, FunnySound, HorrorView, AnimationRun, SkyRainbow, WTFView, SizeHUD, BrokenTexture, ShockWave, WallHack, WallHackV2, WallhackV3, PlasticTexture, GhostPlastic, BlueFog, BestSky, ShakeCamera, MoreLight, FlatItems, VibrateWalk, HUDInvDown, SmallGraphic, ParticlesFly, PaperModel, CameraLeft, CameraRight, BigParticles, HudLoading, StarsInSky, FootStepFast, FootStepSlow, SkinsDebug, ShadowSkins, SkinsPlayersRed, ParticlesFly1, LineBlockMove, DisablePlayers, SmallText, PosHudText, ArmsBroken, BlackFog, SkyNether, SmokeLobby, LookUnderWorld, FreeCam, RemoveHand, TornadoParticles, HitDamageRed, DisableFog, FovWithoutHand, ZoomWithoutHand, IronHelmet, EntityBaby, NoDetailedSkins, AimOn3thPerson, RenderEntity, RotationCam, TextureToBlack, GammaToMax, NameShadowBlack, AnimationCharacter, BigAnimCharacter, RotationBody, EntityBodyLight, NetherVision, ParticlesHitSpam, RobloxAnimation, Elytra, MoveHeadNoBody, StopAnimation, GiantGameplay, WorldLightWhite, WorldRainbowLight, ShadowSkins, DoubleName, OptimizeChunks, StopChunksLoad, RealJumpAnim, RainbowSky;
+bool XrayVision, NightVision, Apocalipse, HorrorView, AnimationRun, SkyRainbow, WTFView, SizeHUD, BrokenTexture, ShockWave, WallHack, WallHackV2, WallhackV3, PlasticTexture, GhostPlastic, BlueFog, BestSky, ShakeCamera, MoreLight, FlatItems, VibrateWalk, HUDInvDown, SmallGraphic, ParticlesFly, PaperModel, CameraLeft, CameraRight, BigParticles, HudLoading, StarsInSky, FootStepFast, FootStepSlow, SkinsDebug, ShadowSkins, SkinsPlayersRed, ParticlesFly1, LineBlockMove, DisablePlayers, SmallText, PosHudText, ArmsBroken, BlackFog, SkyNether, SmokeLobby, LookUnderWorld, FreeCam, RemoveHand, TornadoParticles, HitDamageRed, DisableFog, FovWithoutHand, ZoomWithoutHand, IronHelmet, EntityBaby, NoDetailedSkins, AimOn3thPerson, RenderEntity, RotationCam, TextureToBlack, GammaToMax, NameShadowBlack, AnimationCharacter, BigAnimCharacter, RotationBody, EntityBodyLight, NetherVision, ParticlesHitSpam, RobloxAnimation, Elytra, MoveHeadNoBody, StopAnimation, GiantGameplay, WorldLightWhite, WorldRainbowLight, DoubleName, OptimizeChunks, StopChunksLoad, RealJumpAnim, RainbowSky;
 int ValueFOV, BigModel;
 
-
 //Modules Menu
-bool Zoom, TPAura, Nuker, AutoTossItems, AntiVoidtoggle, keystrokes;
 int sizeNuker;
+bool Zoom, TPAura, Nuker, AutoTossItems, AntiVoidtoggle, keystrokes;
+
+//Mini-Game Menu
+bool CanCraft, CanPlaceBlocks, CanSeeSpectator, PlayersAreStarved, AllowPortals, TntCanDestroyBlocks, MaxPlayersSmallMap, CreativeInventory, CanDestroyBlocks, GameModeToSurvival, InventoryCreaTumbleActive;
+
+//Theme Menu
+bool RainbowTheme;
+
 #pragma endregion

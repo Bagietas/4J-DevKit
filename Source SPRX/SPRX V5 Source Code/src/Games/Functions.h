@@ -277,4 +277,58 @@ void Controller()
 		}
 	}
 }
+
+typedef int64_t _QWORD;
+struct timer_fade
+{
+	wchar_t* message;
+	int color[3];
+	_QWORD start_time;
+	_QWORD end_time;
+	int duration;
+};
+timer_fade logs[12];
+
+void AddNotification(wchar_t* notification = L"", int* color = MC_Color::WHITE, int duration = 10000)
+{
+	for (byte a = 11; a > 0; a--)
+	{
+		logs[a].message = logs[a - 1].message;
+		logs[a].color[0] = logs[a - 1].color[0];
+		logs[a].color[1] = logs[a - 1].color[1];
+		logs[a].color[2] = logs[a - 1].color[2];
+		logs[a].color[3] = 0xFF;
+		logs[a].start_time = logs[a - 1].start_time;
+		logs[a].end_time = logs[a - 1].end_time;
+	}
+	logs[0].message = notification;
+	logs[0].color[0] = color[0];
+	logs[0].color[1] = color[1];
+	logs[0].color[2] = color[2];
+	logs[0].start_time = get_time_now();
+	logs[0].end_time = logs[0].start_time + duration;
+	if (logs_count < 11)
+		logs_count++;
+}
+
+void draw_notif()
+{
+	if (logs[0].message != NULL)
+	{
+		if (logs_count > -1)
+		{
+			DrawRectangleAlpha(0, 257, 190, 246 - (10 * logs_count), MC_Color::BLACK_OPACITY);
+		}
+
+		for (byte a = 0; a < logs_count + 1; a++)
+		{
+			DrawText(logs[a].message, 5, 248 - ((a * 10)), color(logs[a].color));
+			if (get_time_now() >= logs[a].end_time)
+			{
+				logs[a].message = L"";
+				logs_count--;
+			}
+		}
+	}
+}
 #pragma endregion
