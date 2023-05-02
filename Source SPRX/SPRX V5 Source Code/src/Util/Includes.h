@@ -99,13 +99,14 @@ Level* g_Level2;
 #include "PS3/NewDeleteOverride.hpp"
 
 //INCLUDES SOURCE
-#include "Util/Variables.h"
 #include "Util/Colors.h"
+#include "Util/Variables.h"
 #include "PS3/PS3.h"
 #include "PS3/Dialog.h"
 #include "PS3/Vector.h"
 #include "Util/Struct.h"
-#include "Games/GameFunction.h"
+#include "Games/IDs.h"
+#include "Games/GameFunctions.h"
 #include "Games/Offsets.h"
 #include "Games/Functions.h"
 #include "Menu/Huds.h"

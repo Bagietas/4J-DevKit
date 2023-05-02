@@ -4344,13 +4344,11 @@ public:
 		mc->theMinecraft->cMultiplayerLocalPlayer->SetPosition(x + 0.5, y + 1 + 0.5, z + 0.5);
 	}
 
-	int* getLocation()
+	void getLocation()
 	{
-		int* xyz;
-		xyz[0] = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX;
-		xyz[1] = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY;
-		xyz[2] = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ;
-		return xyz;
+		TeleportX = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posX;
+		TeleportY = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posY;
+		TeleportZ = (int)mc->theMinecraft->cMultiplayerLocalPlayer->posZ;
 	}
 };
 #pragma endregion

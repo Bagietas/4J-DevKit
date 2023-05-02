@@ -277,58 +277,187 @@ void Controller()
 		}
 	}
 }
+#pragma endregion
+#pragma region "Send Notification"
 
-typedef int64_t _QWORD;
-struct timer_fade
+namespace logs
 {
-	wchar_t* message;
-	int color[3];
-	_QWORD start_time;
-	_QWORD end_time;
-	int duration;
-};
-timer_fade logs[12];
-
-void AddNotification(wchar_t* notification = L"", int* color = MC_Color::WHITE, int duration = 10000)
-{
-	for (byte a = 11; a > 0; a--)
+	Color BLACK_OPACITY{ 15, 15, 15, 200 };
+	typedef int64_t _QWORD;
+	signed char logs_count = -1;
+	uint64_t get_time_now()
 	{
-		logs[a].message = logs[a - 1].message;
-		logs[a].color[0] = logs[a - 1].color[0];
-		logs[a].color[1] = logs[a - 1].color[1];
-		logs[a].color[2] = logs[a - 1].color[2];
-		logs[a].color[3] = 0xFF;
-		logs[a].start_time = logs[a - 1].start_time;
-		logs[a].end_time = logs[a - 1].end_time;
+		return sys_time_get_system_time() / 1000;
 	}
-	logs[0].message = notification;
-	logs[0].color[0] = color[0];
-	logs[0].color[1] = color[1];
-	logs[0].color[2] = color[2];
-	logs[0].start_time = get_time_now();
-	logs[0].end_time = logs[0].start_time + duration;
-	if (logs_count < 11)
-		logs_count++;
-}
-
-void draw_notif()
-{
-	if (logs[0].message != NULL)
+	struct timer_fade
 	{
-		if (logs_count > -1)
-		{
-			DrawRectangleAlpha(0, 257, 190, 246 - (10 * logs_count), MC_Color::BLACK_OPACITY);
-		}
+		wchar_t* message;
+		int color[3];
+		_QWORD start_time;
+		_QWORD end_time;
+		int duration;
+	};
+	timer_fade logs[12];
 
-		for (byte a = 0; a < logs_count + 1; a++)
+	void debugMessage(wchar_t* logsmsg = L"", int* color = MC_Color::WHITE, int duration = 10000)//10sec
+	{
+		for (byte a = 11; a > 0; a--)
 		{
-			DrawText(logs[a].message, 5, 248 - ((a * 10)), color(logs[a].color));
-			if (get_time_now() >= logs[a].end_time)
+			logs[a].message = logs[a - 1].message;
+			logs[a].color[0] = logs[a - 1].color[0];
+			logs[a].color[1] = logs[a - 1].color[1];
+			logs[a].color[2] = logs[a - 1].color[2];
+			logs[a].color[3] = 0xFF;
+			logs[a].start_time = logs[a - 1].start_time;
+			logs[a].end_time = logs[a - 1].end_time;
+		}
+		logs[0].message = logsmsg;
+		logs[0].color[0] = color[0];
+		logs[0].color[1] = color[1];
+		logs[0].color[2] = color[2];
+		logs[0].start_time = get_time_now();
+		logs[0].end_time = logs[0].start_time + duration;
+		if (logs_count < 11)
+			logs_count++;
+
+		//PlayUISound(SoundEvent::RANDOM_ORB);
+	}
+
+	void draw_logs()
+	{
+		if (logs[0].message != NULL)
+		{
+			if (logs_count > -1)
 			{
-				logs[a].message = L"";
-				logs_count--;
+				Color BLACK_OPACITY{ 15, 15, 15, 210 };
+				DrawRectangleAlpha(0, 257, 190, 246 - (10 * logs_count), BLACK_OPACITY);
+			}
+
+			for (byte a = 0; a < logs_count + 1; a++)
+			{
+				DrawText(logs[a].message, 5, 248 - ((a * 10)), color(logs[a].color));
+				if (get_time_now() >= logs[a].end_time)
+				{
+					logs[a].message = L"";
+					logs_count--;
+				}
 			}
 		}
 	}
 }
+
+
+#pragma endregion
+#pragma region "Show Debug Player"
+
+void ShowDebugPlayer()
+{
+	if (mc->theMinecraft->cMultiplayerLocalPlayer->isInWeb == true)
+	{
+		DrawTextWithRectangle(L"[In Web]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	if (mc->theMinecraft->cMultiplayerLocalPlayer->IsSprinting())
+	{
+		DrawTextWithRectangle(L"[Sprinting]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->IsSneaking())
+	{
+		DrawTextWithRectangle(L"[Sneaking]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->IsSpectator())
+	{
+		DrawTextWithRectangle(L"[Spectator]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->IsBurning())
+	{
+		DrawTextWithRectangle(L"[Burning]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->isInWater())
+	{
+		DrawTextWithRectangle(L"[In Water]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->fallDistance > 0)
+	{
+		DrawTextWithRectangle(L"[Falling]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->onGround == true)
+	{
+		DrawTextWithRectangle(L"[On Ground]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+	else if (mc->theMinecraft->cMultiplayerLocalPlayer->isDead == true)
+	{
+		DrawTextWithRectangle(L"[Is Dead]", 0, 116, MC_Color::BLACK_THEME, MC_Color::WHITE, true);
+	}
+}
+
+#pragma endregion
+#pragma region "Show Keystrokes"
+
+void ShowKeystrokes()
+{
+	bool KeyPressedUP, KeyPressedDOWN, KeyPressedLEFT, KeyPressedRIGHT, KeyPressedSPACE;
+	char* keystrokes_text[] = { "W    ", "S    ", "Q    ", "D    " };
+
+	if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_UP))
+		KeyPressedUP = true; else KeyPressedUP = false;
+
+	if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_DOWN))
+		KeyPressedDOWN = true; else KeyPressedDOWN = false;
+
+	if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_LEFT))
+		KeyPressedLEFT = true; else KeyPressedLEFT = false;
+
+	if (Buttons::IsMCButtonPressed(Buttons::JOYSTICK_L3_RIGHT))
+		KeyPressedRIGHT = true; else KeyPressedRIGHT = false;
+
+	if (Buttons::IsMCButtonPressed(Buttons::X))
+		KeyPressedSPACE = true; else KeyPressedSPACE = false;
+
+	int* KeyUPColor = KeyPressedUP ? GetThemeRainbow() : GetThemeColor();
+	int* KeyDOWNColor = KeyPressedDOWN ? GetThemeRainbow() : GetThemeColor();
+	int* KeyLEFTColor = KeyPressedLEFT ? GetThemeRainbow() : GetThemeColor();
+	int* KeyRIGHTColor = KeyPressedRIGHT ? GetThemeRainbow() : GetThemeColor();
+	int* KeySPACEColor = KeyPressedSPACE ? GetThemeRainbow() : GetThemeColor();
+
+	int* keystrokesHudColor2[] = { KeyUPColor, KeyDOWNColor, KeyLEFTColor, KeyRIGHTColor, KeySPACEColor, MC_Color::WHITE };
+
+	for (byte a = 0; a < 6; a++)
+		DrawRectangleBorder(keystrokesBase_x + keystrokesHudX[a], keystrokesBase_y + keystrokesHudY[a], HudW[a], HudH[a], keystrokesHudColor1[a], keystrokesHudColor2[a], 1);
+
+	for (byte b = 0; b < 4; b++)
+		DrawTextC(keystrokes_text[b], keystrokesBase_x + keystrokes_TextX[b], keystrokesBase_y + keystrokes_TextY[b], color(keystrokes_TextColor[b]));
+}
+
+#pragma endregion
+#pragma region "Get Teleport XYZ"
+
+void GetTeleportXYZ()
+{
+	DrawRectangleBorder(447 + MenuX, 52 + MenuY, 50, 33, MC_Color::BLACK, GetThemeColor(), 1);
+
+	char option4[0x100];
+	wchar_t woption4[0x100];
+	_sys_memset(option4, 0, 0x100);
+	_sys_memset(woption4, 0, 0x200);
+	_sys_snprintf(option4, 0x100, "X: %i   ", (TeleportX));
+	StringToWideCharacter(woption4, option4, _sys_strlen(option4));
+	DrawTextC(option4, 450 + MenuX, 55 + MenuY, color(MC_TextColor::White));
+
+	char option8[0x100];
+	wchar_t woption8[0x100];
+	_sys_memset(option8, 0, 0x100);
+	_sys_memset(woption8, 0, 0x200);
+	_sys_snprintf(option8, 0x100, "Y: %i   ", (TeleportY));
+	StringToWideCharacter(woption8, option8, _sys_strlen(option8));
+	DrawTextC(option8, 450 + MenuX, 65 + MenuY, color(MC_TextColor::White));
+
+	char option16[0x100];
+	wchar_t woption16[0x100];
+	_sys_memset(option16, 0, 0x100);
+	_sys_memset(woption16, 0, 0x200);
+	_sys_snprintf(option16, 0x100, "Z: %i   ", (TeleportZ));
+	StringToWideCharacter(woption16, option16, _sys_strlen(option16));
+	DrawTextC(option16, 450 + MenuX, 75 + MenuY, color(MC_TextColor::White));
+}
+
 #pragma endregion

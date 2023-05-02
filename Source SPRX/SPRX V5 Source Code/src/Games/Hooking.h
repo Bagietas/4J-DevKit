@@ -1,5 +1,12 @@
 #pragma once
 
+void InitialStart()
+{
+	*(int*)0x30927421 = 0x00000000; //TEXT INVENTORY
+	*(int*)0x3092CD81 = 0x00000000; //TEXT CREATIVE
+	*(int*)0x31E7786C = 0x3F80CCCC; //OPACITY FOR BANNER
+}
+
 void Render()
 {
 	RenderSubMenu();

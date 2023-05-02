@@ -13,15 +13,14 @@ enum eMenus
 	GameEditor,
 	MiniGameMenu, MiniGameTPLocation,
 	TeleportMenu,
-	SettingsMenu, ThemeMenu,
+	SettingsMenu, ThemeMenu, MenuEditing,
 	CreditsMenu,
 };
 
 //Initial vars
 const wchar_t* titleSPRX = L"DownCraft SPRX";
 int MenuX = -51, MenuY = 6, menuLenght = 0,
-MenuR = 250, MenuG = 61, MenuB = 61;
-signed char logs_count = -1;
+MenuR = 211, MenuG = 189, MenuB = 253;
 
 //Rainbow color
 int MenuColourTime = 0, RainbowTime = 0, RainbowRED1, RainbowGREEN1, RainbowBLUE1, RainbowRED2, RainbowGREEN2, RainbowBLUE2, RainbowColor[3];
@@ -33,8 +32,18 @@ int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[10
 
 //Menu settings
 int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 11;
-bool UsableMenu = true, Opened, Closed, FirstOpen;
+bool UsableMenu = true, Opened, Closed, FirstOpen, DescInfo, BorderMenu, CustomBanner;
 char* ThemeColors = "RGB";
+
+//Keystrockes
+int keystrokesBase_x = 0, keystrokesBase_y = 0;
+int keystrokes_TextX[] = { 60,60,42,78 }, keystrokes_TextY[] = { 254,272,272,272 };
+int* keystrokes_TextColor[] = { MC_Color::WHITE, MC_Color::WHITE, MC_Color::WHITE, MC_Color::WHITE };
+int keystrokesHudX[] = { 55,55,37,73,37,40 }, keystrokesHudY[] = { 250,268,268,268,288,294 }, HudW[] = { 15,15,15,15,51,45 }, HudH[] = { 15,15,15,15,10,0 };
+int* keystrokesHudColor1[] = { MC_Color::BLACK_THEME, MC_Color::BLACK_THEME, MC_Color::BLACK_THEME, MC_Color::BLACK_THEME, MC_Color::BLACK_THEME, MC_Color::WHITE };
+
+//Teleport Menu
+int TeleportX, TeleportY, TeleportZ;
 
 #pragma region "vars options"
 

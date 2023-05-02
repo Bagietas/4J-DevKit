@@ -18,10 +18,11 @@ SYS_MODULE_STOP(Minecraft_Stop);
 extern "C" int Minecraft_Main(void)
 {
 	Dialog::msgdialog_mode = Dialog::MODE_RUNNING;
-	Dialog::ProgressBar("DownCraft SPRX V5\nOpen menu press  + \nMenu made by Misakiii !", "Loading...", 20);
+	Dialog::ProgressBar("DownCraft SPRX\nVersion: 5.0\n\nInstruction: for open the menu press  + \nThis menu has been created by Misaki\nFor any informations, join the discord server\n\ndiscord.gg/yv35ubUr4U", "DownCraft", 20);
 	Dialog::End();
 
 	InstallHooks();
+	//InitialStart();
 	return SYS_PRX_RESIDENT;
 }
 extern "C" int Minecraft_Stop(void)

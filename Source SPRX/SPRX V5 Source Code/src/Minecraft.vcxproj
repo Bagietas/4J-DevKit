@@ -102,10 +102,11 @@
     <ClCompile Include="PS3\FileSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Games\IDs.h" />
     <ClInclude Include="Games\Offsets.h" />
     <ClInclude Include="PS3\Dialog.h" />
     <ClInclude Include="Games\Functions.h" />
-    <ClInclude Include="Games\GameFunction.h" />
+    <ClInclude Include="Games\GameFunctions.h" />
     <ClInclude Include="Games\Hooking.h" />
     <ClInclude Include="PS3\Exports.hpp" />
     <ClInclude Include="PS3\FileSystem.hpp" />

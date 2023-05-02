@@ -474,11 +474,6 @@ void get_temperature(uint32_t a, uint32_t* b)
 	system_call_2(383, (uint64_t)(uint32_t)a, (uint64_t)(uint32_t)b);
 }
 
-uint64_t get_time_now()
-{
-	return sys_time_get_system_time() / 1000;
-}
-
 #pragma endregion
 #pragma region "Send Request"
 

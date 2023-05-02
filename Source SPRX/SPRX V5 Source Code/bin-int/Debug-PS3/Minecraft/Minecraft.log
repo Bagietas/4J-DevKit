@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-.\Util/Variables.h(37,20): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Util/Variables.h(36,20): warning 2623: conversion from a string literal to "char *" is deprecated
   
 .\PS3/PS3.h(451,2): warning 551: variable "FreeMemory" is used before its value is set
   
@@ -7,19 +7,19 @@
   
 .\PS3\PS3.h(453,2): warning 551: variable "UsedMemory" is used before its value is set
   
-.\PS3\PS3.h(498,9): warning 1070: returning pointer to local variable
+.\PS3\PS3.h(493,9): warning 1070: returning pointer to local variable
   
-.\PS3\PS3.h(513,10): warning 2623: conversion from a string literal to "char *" is deprecated
+.\PS3\PS3.h(508,10): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\PS3\PS3.h(522,10): warning 1070: returning pointer to local variable
+.\PS3\PS3.h(517,10): warning 1070: returning pointer to local variable
   
-.\PS3\PS3.h(525,1): warning 942: missing return statement at end of non-void function "HTTP::LocalRequest"
+.\PS3\PS3.h(520,1): warning 942: missing return statement at end of non-void function "HTTP::LocalRequest"
   
-.\PS3\PS3.h(549,10): warning 2623: conversion from a string literal to "char *" is deprecated
+.\PS3\PS3.h(544,10): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\PS3\PS3.h(558,10): warning 1070: returning pointer to local variable
+.\PS3\PS3.h(553,10): warning 1070: returning pointer to local variable
   
-.\PS3\PS3.h(561,1): warning 942: missing return statement at end of non-void function "HTTP::URLRequest"
+.\PS3\PS3.h(556,1): warning 942: missing return statement at end of non-void function "HTTP::URLRequest"
   
 .\PS3/Dialog.h(196,6): warning 178: variable "ret" was declared but never referenced
   
@@ -53,27 +53,31 @@
   
 .\Util\Struct.h(856,17): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Games/GameFunction.h(20,85): warning 1322: taking the address of a temporary
+.\Games/GameFunctions.h(25,65): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(24,63): warning 1322: taking the address of a temporary
+.\Games\GameFunctions.h(26): warning 942: missing return statement at end of non-void function "GetTextWidth"
   
-.\Games\GameFunction.h(24,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunctions.h(34,85): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(24,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunctions.h(38,63): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(28,63): warning 1322: taking the address of a temporary
+.\Games\GameFunctions.h(38,81): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(28,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunctions.h(38,84): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(28,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunctions.h(42,63): warning 1322: taking the address of a temporary
   
-.\Games\GameFunction.h(71,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
+.\Games\GameFunctions.h(42,87): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
   
-.\Games\GameFunction.h(71,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+.\Games\GameFunctions.h(42,90): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
   
-.\Games\GameFunction.h(71,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+.\Games\GameFunctions.h(85,47): warning 1772: argument of type "float" is implicitly converted to parameter (2) of type "std::uint32_t"
   
-.\Games\GameFunction.h(71,65): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
+.\Games\GameFunctions.h(85,50): warning 1772: argument of type "float" is implicitly converted to parameter (3) of type "std::uint32_t"
+  
+.\Games\GameFunctions.h(85,53): warning 1772: argument of type "float" is implicitly converted to parameter (4) of type "std::uint32_t"
+  
+.\Games\GameFunctions.h(85,65): warning 1772: argument of type "float" is implicitly converted to parameter (5) of type "std::uint32_t"
   
 .\Games/Offsets.h(98,17): warning 2520: invalid narrowing conversion from "int" to "char"
   
@@ -101,8 +105,6 @@
   
 .\Games\Offsets.h(4340,1): warning 942: missing return statement at end of non-void function "Address::setName"
   
-.\Games\Offsets.h(4350,2): warning 551: variable "xyz" is used before its value is set
-  
 .\Games/Functions.h(115,8): warning 1070: returning pointer to local variable
   
 .\Games\Functions.h(122,33): warning 176: subscript out of range
@@ -111,15 +113,23 @@
   
 .\Games\Functions.h(124,8): warning 176: subscript out of range
   
-.\Games\Functions.h(292,45): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+.\Games\Functions.h(302,38): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-.\Games\Functions.h(300,2): warning 176: subscript out of range
+.\Games\Functions.h(310,3): warning 176: subscript out of range
   
-.\Games\Functions.h(328,20): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+.\Games\Functions.h(341,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-.\Menu/Huds.h(56,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games\Functions.h(399,29): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Menu\Huds.h(60,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games\Functions.h(399,38): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Functions.h(399,47): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Games\Functions.h(399,56): warning 2623: conversion from a string literal to "char *" is deprecated
+  
+.\Menu/Huds.h(91,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+.\Menu\Huds.h(95,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 .\Menu/SubMenu.h(749,29): warning 1628: argument of type "const char *" is incompatible with parameter (1 of setName) of type "char *"
   
