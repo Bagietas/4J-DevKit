@@ -5,32 +5,15 @@ class draw_menu
 public:
 	void AddTitle(const wchar_t* title)
 	{
-		if (CustomBanner)
+		if (!DescInfo)
 		{
-			if (Opened)
-			{
-				*(int*)0x31E7781C = 0x3F384000; *(int*)0x31E77828 = 0x3F300000;
-				*(int*)0x31E7782C = 0x443A1000; *(int*)0x31E77830 = 0xC3DB0000;
-			}
-			else
-			{
-				*(int*)0x31E7782C = 0x48410000; *(int*)0x31E77830 = 0xC8EE0000;
-			}
+			DrawRectangle(MenuX + 508, MenuY + 48, 152 + menuLenght, 13, GetThemeColor());
+			DrawTextShadow(title, MenuX + 550, MenuY + 51, color(MC_TextColor::White));
 		}
 		else
 		{
-			*(int*)0x31E7782C = 0x48410000; *(int*)0x31E77830 = 0xC8EE0000;
-
-			if (!DescInfo)
-			{
-				DrawRectangle(MenuX + 508, MenuY + 48, 152 + menuLenght, 13, GetThemeColor());
-				DrawTextShadow(title, MenuX + 550, MenuY + 51, color(MC_TextColor::White));
-			}
-			else
-			{
-				DrawRectangle(MenuX + 508, MenuY + 35, 152 + menuLenght, 13, GetThemeColor());
-				DrawTextShadow(title, MenuX + 550, MenuY + 38, color(MC_TextColor::White));
-			}
+			DrawRectangle(MenuX + 508, MenuY + 35, 152 + menuLenght, 13, GetThemeColor());
+			DrawTextShadow(title, MenuX + 550, MenuY + 38, color(MC_TextColor::White));
 		}
 		DrawRectangle(MenuX + 508, MenuY + 61 + (SpaceBetweenText * CurrentOpt), 152 + menuLenght, 11, GetThemeColor());
 	}
@@ -59,13 +42,10 @@ public:
 			DrawText(description, MenuX + 510, MenuY + 51, color(MC_TextColor::White));
 			int index[] = { CurrentOpt + 1, MaxSubOptions };
 
-			if (MaxSubOptions > 9)
-				DrawTextSnprintfV2("%i/%i     ", index, MenuX + 636 + menuLenght, MenuY + 51);
+			if (CurrentOpt > 8)
+				DrawTextSnprintfV2("%i/%i     ", index, MenuX + 631 + menuLenght, MenuY + 51);
 			else
-				DrawTextSnprintfV2("%i/%i     ", index, MenuX + 641 + menuLenght, MenuY + 51);
-
-			if (CurrentOpt > 9)
-				DrawTextSnprintfV2("%i/%i     ", index, MenuX + 628 + menuLenght, MenuY + 51);
+				DrawTextSnprintfV2("%i/%i     ", index, MenuX + 636 + menuLenght, MenuY + 51);
 		}
 	}
 
@@ -125,7 +105,7 @@ public:
 			}
 		}
 
-		DrawTextSnprintf("< %i >    ", (int)IntOption, MenuX + 630 + menuLenght, MenuY + 63 + (SpaceBetweenText * MaxOption));
+		DrawTextSnprintf("< %i >    ", (int)IntOption, MenuX + 626 + menuLenght, MenuY + 63 + (SpaceBetweenText * MaxOption));
 		MaxOption += 1;
 	}
 };

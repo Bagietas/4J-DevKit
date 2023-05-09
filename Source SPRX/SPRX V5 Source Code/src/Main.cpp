@@ -22,7 +22,6 @@ extern "C" int Minecraft_Main(void)
 	Dialog::End();
 
 	InstallHooks();
-	//InitialStart();
 	return SYS_PRX_RESIDENT;
 }
 extern "C" int Minecraft_Stop(void)

@@ -17,7 +17,7 @@ sys_prx_module_info_t GetModuleInfo(sys_prx_id_t handle)
     info.size = sizeof(info);
     info.segments = segments;
     info.segments_num = sizeof(segments) / sizeof(sys_prx_segment_info_t);
-    info.filename = filename;
+    info.filename = filename; https://prod.liveshare.vsengsaas.visualstudio.com/join?91074D7C163564E8E8C3B7400CAD526DD359
     info.filename_size = sizeof(filename);
 
     sys_prx_get_module_info(handle, 0, &info);

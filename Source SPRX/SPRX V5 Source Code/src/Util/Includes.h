@@ -109,6 +109,7 @@ Level* g_Level2;
 #include "Games/GameFunctions.h"
 #include "Games/Offsets.h"
 #include "Games/Functions.h"
+#include "Games/Startup.h"
 #include "Menu/Huds.h"
 #include "Menu/SubMenu.h"
 #include "Games/Hooking.h"

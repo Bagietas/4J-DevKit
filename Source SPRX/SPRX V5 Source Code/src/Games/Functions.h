@@ -164,6 +164,15 @@ namespace Buttons
 
 #pragma endregion
 #pragma region "Menu Function"
+
+void ToggleHUD()
+{
+	if (Opened)
+		*(int*)0x0155847C = 0x01000000;
+	else
+		*(int*)0x0155847C = 0x00000000;
+}
+
 int getOption()
 {
 	if (optionPress)
@@ -299,7 +308,7 @@ namespace logs
 	};
 	timer_fade logs[12];
 
-	void debugMessage(wchar_t* logsmsg = L"", int* color = MC_Color::WHITE, int duration = 10000)//10sec
+	void SendMessageDebug(wchar_t* logsmsg = L"", int* color = MC_TextColor::White, int duration = 10000)//10sec
 	{
 		for (byte a = 11; a > 0; a--)
 		{
@@ -327,8 +336,12 @@ namespace logs
 	{
 		if (logs[0].message != NULL)
 		{
+			//Color BLACK_OPACITY = { 25, 25, 25, 200 };
+			//(15, 246 - (logs_count * 10), 160, 12 + (10 * logs_count), BLACK_OPACITY);
+
 			if (logs_count > -1)
 			{
+				//DrawRectangle(0, 246 - (logs_count * 10), 190, 12 + (10 * logs_count), UI::Color::BLACK);
 				Color BLACK_OPACITY{ 15, 15, 15, 210 };
 				DrawRectangleAlpha(0, 257, 190, 246 - (10 * logs_count), BLACK_OPACITY);
 			}
@@ -345,7 +358,6 @@ namespace logs
 		}
 	}
 }
-
 
 #pragma endregion
 #pragma region "Show Debug Player"
@@ -458,6 +470,38 @@ void GetTeleportXYZ()
 	_sys_snprintf(option16, 0x100, "Z: %i   ", (TeleportZ));
 	StringToWideCharacter(woption16, option16, _sys_strlen(option16));
 	DrawTextC(option16, 450 + MenuX, 75 + MenuY, color(MC_TextColor::White));
+}
+
+#pragma endregion
+#pragma region "Banner Function"
+
+void ToggleBanner()
+{
+	CustomBanner = !CustomBanner; 
+	if (CustomBanner) 
+	{ MenuX -= 62; MenuY += 8; menuLenght = 64; }
+	else 
+	{ MenuX += 62; MenuY -= 8; menuLenght = 0; }
+}
+
+void ShowBanner()
+{
+	if (CustomBanner)
+	{
+		if (Opened)
+		{
+			*(int*)0x31E7781C = 0x3F384000; *(int*)0x31E77828 = 0x3F300000;
+			*(int*)0x31E7782C = 0x443A1000; *(int*)0x31E77830 = 0xC3A00000;
+		}
+		else
+		{
+			*(int*)0x31E7782C = 0x68410000; *(int*)0x31E77830 = 0xF8EE0000;
+		}
+	}
+	else
+	{
+		*(int*)0x31E7782C = 0x68410000; *(int*)0x31E77830 = 0xF8EE0000;
+	}
 }
 
 #pragma endregion

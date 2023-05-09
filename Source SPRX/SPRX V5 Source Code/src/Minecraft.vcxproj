@@ -104,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="Games\IDs.h" />
     <ClInclude Include="Games\Offsets.h" />
+    <ClInclude Include="Games\Startup.h" />
     <ClInclude Include="PS3\Dialog.h" />
     <ClInclude Include="Games\Functions.h" />
     <ClInclude Include="Games\GameFunctions.h" />

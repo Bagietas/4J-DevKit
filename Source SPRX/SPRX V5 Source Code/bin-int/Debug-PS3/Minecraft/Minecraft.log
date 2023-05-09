@@ -113,23 +113,29 @@
   
 .\Games\Functions.h(124,8): warning 176: subscript out of range
   
-.\Games\Functions.h(302,38): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+.\Games\Functions.h(311,42): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-.\Games\Functions.h(310,3): warning 176: subscript out of range
+.\Games\Functions.h(319,3): warning 176: subscript out of range
   
-.\Games\Functions.h(341,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
+.\Games\Functions.h(354,21): warning 2624: conversion from a string literal to pointer-to-character (non-const) is deprecated
   
-.\Games\Functions.h(399,29): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Games\Functions.h(411,29): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Games\Functions.h(399,38): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Games\Functions.h(411,38): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Games\Functions.h(399,47): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Games\Functions.h(411,47): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Games\Functions.h(399,56): warning 2623: conversion from a string literal to "char *" is deprecated
+.\Games\Functions.h(411,56): warning 2623: conversion from a string literal to "char *" is deprecated
   
-.\Menu/Huds.h(91,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games/Startup.h(7,24): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
   
-.\Menu\Huds.h(95,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+.\Games\Startup.h(8,24): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+.\Games\Startup.h(9,24): warning 1628: argument of type "const wchar_t *" is incompatible with parameter (1 of SendMessageDebug) of type "wchar_t *"
+  
+.\Menu/Huds.h(71,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
+  
+.\Menu\Huds.h(75,13): warning 1628: argument of type "const char *" is incompatible with parameter (1 of DrawTextC) of type "char *"
   
 .\Menu/SubMenu.h(749,29): warning 1628: argument of type "const char *" is incompatible with parameter (1 of setName) of type "char *"
   

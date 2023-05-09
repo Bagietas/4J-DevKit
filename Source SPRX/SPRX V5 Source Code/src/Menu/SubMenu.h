@@ -813,28 +813,19 @@ void RenderSubMenu()
         #pragma region "Teleport Options"
 
 		case(TeleportMenu):
-			MaxSubOptions = 8;
+			MaxSubOptions = 5;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Teleport Menu");
-			Menu->AddOption(L"Change: +X");
-			Menu->AddOption(L"Change: +Y");
-			Menu->AddOption(L"Change: +Z");
-			Menu->AddOption(L"Change: -X");
-			Menu->AddOption(L"Change: -Y");
-			Menu->AddOption(L"Change: -Z");
+			Menu->AddIntOption(L"Teleport Y", 0, -999, 999, TeleportX);
+			Menu->AddIntOption(L"Teleport X", 1, -999, 999, TeleportY);
+			Menu->AddIntOption(L"Teleport Y", 2, -999, 999, TeleportZ);
 			Menu->AddOption(L"Get Teleport");
 			Menu->AddOption(L"Set Teleport");
 			GetTeleportXYZ();
 			switch (getOption()) {
-			case(0): TeleportX += 1; break;
-			case(1): TeleportY += 1; break;
-			case(2): TeleportZ += 1; break;
-			case(3): TeleportX -= 1; break;
-			case(4): TeleportY -= 1; break;
-			case(5): TeleportZ -= 1; break;
-			case(6): Offsets->getLocation(); break;
-			case(7): Offsets->setLocation(TeleportX, TeleportY, TeleportZ); break;
+			case(3): Offsets->getLocation(); break;
+			case(4): Offsets->setLocation(TeleportX, TeleportY, TeleportZ); break;
 			}
 			break;
 
@@ -842,15 +833,17 @@ void RenderSubMenu()
         #pragma region "Settings Options"
 
 		case(SettingsMenu):
-			MaxSubOptions = 2;
+			MaxSubOptions = 3;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Settings Menu");
 			Menu->AddSubOption(L"Theme Colors");
 			Menu->AddSubOption(L"Menu Editing");
+			Menu->AddSubOption(L"Banner Menu");
 			switch (getOption()) {
 			case(0): openSubmenu(ThemeMenu); break;
 			case(1): openSubmenu(MenuEditing); break;
+			case(2): openSubmenu(BannerMenu); break;
 			}
 			break;
 
@@ -868,27 +861,29 @@ void RenderSubMenu()
 			break;
 
 		case(MenuEditing):
-			MaxSubOptions = 8;
+			MaxSubOptions = 5;
 			Menu->AddHuds(MaxSubOptions);
 			Menu->AddTitle(titleSPRX);
 			Menu->Description(L"Menu Editing");
-			Menu->AddOption(L"Menu X +");
-			Menu->AddOption(L"Menu X -");
-			Menu->AddOption(L"Menu Y +");
-			Menu->AddOption(L"Menu Y -");
+			Menu->AddIntOption(L"Menu X", 0, -999, 999, MenuX);
+			Menu->AddIntOption(L"Menu Y", 1, -999, 999, MenuY);
 			Menu->AddBoolOption(L"Add Description", DescInfo);
 			Menu->AddBoolOption(L"Border Menu", BorderMenu);
-			Menu->AddBoolOption(L"Custom Banner", CustomBanner);
 			Menu->AddIntOption(L"Menu Lenght", 7, -255, 500, menuLenght);
 			switch (getOption()) {
-			case(0): MenuX += 1; break;
-			case(1): MenuX -= 1; break;
-			case(2): MenuY += 1; break;
-			case(3): MenuY -= 1; break;
-			case(4): DescInfo =! DescInfo; break;
-			case(5): BorderMenu =! BorderMenu; break;
-			case(6): CustomBanner = !CustomBanner; if (CustomBanner) { MenuX -= 62; MenuY += 8; menuLenght = 64; } else { MenuX += 62; MenuY -= 8; menuLenght = 0; } break;
-			case(7): CustomBanner = !CustomBanner; break;
+			case(2): DescInfo =! DescInfo; break;
+			case(3): BorderMenu =! BorderMenu; break;
+			}
+			break;
+
+		case(BannerMenu):
+			MaxSubOptions = 1;
+			Menu->AddHuds(MaxSubOptions);
+			Menu->AddTitle(titleSPRX);
+			Menu->Description(L"Banner Menu");
+			Menu->AddBoolOption(L"Custom Banner", CustomBanner);
+			switch (getOption()) {
+			case(0): ToggleBanner(); break;
 			}
 			break;
 

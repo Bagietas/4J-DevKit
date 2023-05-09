@@ -13,7 +13,7 @@ enum eMenus
 	GameEditor,
 	MiniGameMenu, MiniGameTPLocation,
 	TeleportMenu,
-	SettingsMenu, ThemeMenu, MenuEditing,
+	SettingsMenu, ThemeMenu, MenuEditing, BannerMenu,
 	CreditsMenu,
 };
 
@@ -32,7 +32,7 @@ int getTime[1000], firstWaitTime = 15, waitTime = 5, scrollTick = 0, timeMath[10
 
 //Menu settings
 int CurrentMenu, CurrentOpt, MaxOption, MaxSubOptions, optionPress, returnPress, SpaceBetweenText = 11;
-bool UsableMenu = true, Opened, Closed, FirstOpen, DescInfo, BorderMenu, CustomBanner;
+bool InitializeSPRX = true, UsableMenu = true, Opened, Closed, FirstOpen, DescInfo, BorderMenu, CustomBanner;
 char* ThemeColors = "RGB";
 
 //Keystrockes
