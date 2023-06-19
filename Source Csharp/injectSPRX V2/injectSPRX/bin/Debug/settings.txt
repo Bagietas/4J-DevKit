@@ -3,3 +3,4 @@ useLoader=true
 Minecraft.sprx
 Minecraft.sprx
 /dev_hdd0/tmp/
+true

@@ -30,6 +30,7 @@ namespace injectSPRX
         public static string ps3IP = null;
         public static string injectPath = null;
         public static string FileForInject = null;
+        public static string ResignHEN = null;
         public static bool sprx_injected = false;
         public static bool ps3IP_found = false;
 
@@ -55,6 +56,7 @@ namespace injectSPRX
                         filename = array[2];
                         FileForInject = array[3];
                         injectPath = array[4];
+                        ResignHEN = array[5];
                     }
                 }
             }
@@ -109,6 +111,15 @@ namespace injectSPRX
             }
         }
 
+        public async static void ResignToHEN()
+        {
+            if (ResignHEN == "true")
+            {
+                Process.Start(AppDomain.CurrentDomain.BaseDirectory + @"\HEN.bat");
+                await Task.Delay(5000);
+            }
+        }
+
         public async static void inject()
         {
             if (checkWebsite("http://" + ps3IP))
@@ -146,35 +157,6 @@ namespace injectSPRX
             }
         }
 
-        public static void debug_output()
-        {
-            /*
-            if (sprx_injected == true)
-            {
-                if (!Directory.Exists(debug_folder))
-                {
-                    Directory.CreateDirectory(debug_folder);
-                }
-
-                LoadFiles(MAKE, Properties.Resources.make);
-                LoadFiles(UNSELF, Properties.Resources.unself);
-
-                string prx = filename.Replace("sprx", "prx");
-
-                CMD("unself.exe " + filename + "  debug_" + prx);
-                CMD("make.exe debug_" + prx + " " + filename);
-                CMD("unself.exe " + filename + " " + prx);
-
-                File.Move("debug_" + prx, debug_folder + @"\debug_" + prx);
-                File.Move(filename, debug_folder + @"\" + filename);
-                File.Move(prx, debug_folder + @"\" + prx);
-
-                File.Delete(MAKE);
-                File.Delete(UNSELF);
-            }
-            */
-        }
-
         internal static async void InjectSPRX()
         {
             getInfos();
@@ -193,12 +175,15 @@ namespace injectSPRX
             Console.Write("[+] File found: ", Color.White);
             Console.Write(filename, Color.Green);
             ConsoleEmpty();
+            Console.Write("[+] Resign to HEN: ", Color.White);
+            Console.Write(ResignHEN, Color.DarkMagenta);
+            ConsoleEmpty();
+            ResignToHEN();
             Console.Write("[+] Starting connection to PS3: ", Color.White);
             Console.Write(ps3IP, Color.Green);
             ConsoleEmpty();
             inject();
             ConsoleEmpty();
-            debug_output();
             Console.Write("[+] The app will auto close in 10 seconds...", Color.White);
 
             await Task.Delay(10000);
