@@ -1,0 +1,4 @@
+Use VIsual Studio 2010 or 2013 with the PS3 SDK to compile SPRX files.
+Use https://github.com/skiff/libpsutil to fix any missing libraries.
+
+- EternalModz

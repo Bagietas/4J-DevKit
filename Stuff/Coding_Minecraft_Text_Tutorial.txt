@@ -1,0 +1,154 @@
+							LEARNING HOW TO CODE MINECRAFT
+						*MAKE SURE TO LABEL FUNCTIONS, BOOLS, AND MODS*
+Understanding the function:
+Local Player: 1.83 address: 0x00ACC9E8
+
+IDA CODE:
+seg003:0000000000ACC968                   LOCAL_PLAYER_FUNC:                      # CODE XREF: sub_28228:loc_283C4?p
+seg003:0000000000ACC968                                                           # sub_367B0+3C?p ...
+seg003:0000000000ACC968 3C 60 01 4E                       lis       r3, LOCAL_PLAYER@ha # r0 = 00965FB4
+seg003:0000000000ACC968                                                           # r3 = 00156A8B0 = 01415498
+seg003:0000000000ACC96C 80 63 F5 64                       lwz       r3, (LOCAL_PLAYER & 0xFFFF)(r3) # Load Word and Zero
+seg003:0000000000ACC970 4E 80 00 20                       blr                     # Branch unconditionally
+
+Breakpoint of the function:
+				LOCAL PLAYER Function 1.82: 0x00ACC9E8 for 1.83: 0x00ACCA68
+ r0=0000000000965FB4        r8=0000000032693378       r16=0000000001570000       r24=00000000016D0000
+ r1=00000000D0010840        r9=0103005500000000       r17=0000000000964F64       r25=000000000156A8B0
+ r2=00000000014DDD20       r10=0000000001030055       r18=0000000000000000       r26=00000000016D0000
+ r3=000000000156A8B0       r11=0000000000000000       r19=0000000032438F60       r27=00000000016D0000
+ r4=00000000FFFFFFFF       r12=0000000001780308       r20=000000000156A8B0       r28=00000000320E9130
+ r5=0000000000000000       r13=0000000010007060       r21=0000000001567C58       r29=0000000000000000
+ r6=0000000000000013       r14=0000000000000000       r22=00000000015684A8       r30=0000000000000001
+ r7=0000000000000085       r15=000000000156B970       r23=00000000016D0000       r31=0000000032438DE0
+
+ xer=0000000000000000       ctr=000000000176512C        lr=000000000096092C     fpscr=BF204100
+
+ cr=82000042               cr0=LT cr1=EQ cr2=   cr3=   cr4=   cr5=   cr6=GT cr7=EQ
+
+ pc=0000000000ACC9E8
+
+can't see in IDA, go to debugger, type in the address so for example:
+0156A8B0, Go into Debugger and you will see bytes that says 0156A8B0: 01 41 54 98
+Type 01415498 into the search box in IDA by pressing "G". MAKE SURE TO LABEL THE FUNCTION BY PRSSING "N" AND ADD NOTES BY PRESSING "SHIFT + ;" So it will
+show ":".
+
+01415498 would be in bytes, press "D" 3 times so it would be in dword so it shows the next address as 0x14ABDA0. That is what you call tables.
+
+As shown above, the function is calling for Register(r3) with the local player.
+How do you know it's Local player?
+To know how what addresses names is, you would need to follow it.
+In r0 it says 0x00965FB4, when you go to that address you will see this as a result if your on 1.83:
+000965F3C 80 7B D9 F8                       lwz       r3, (PROFILE & 0xFFFF)(r27) PROFILE = 016CD9F8.
+How did I know it was Profile?
+Type 016CD9F8 in debugger and search it. You will see the bytes be 30 00 AB 80. Search it in Debugger and you should see these bytes: 01 42 BB F8.
+Press "G" and search 0142BBF8 in IDA, you will see bytes but press "D" 3 times and you will see it show: 0x14D39C0. Click the address and you will see:
+0014D39C0 00 C6 72 1C 01 4D+                OPD_s <sub_C6721C, TOC> (FOR 1.82 BUT IN 1.83 ITS 0x00C6729C)
+That is the TOC, which is the Table Of Contents for all functions in the game. Click the function and you will see within that function which brings you
+to the breakpoint below.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+IDA CODE:
+seg003:0000000000C6721C                   sub_C6721C:                             # DATA XREF: OPD:00000000014D39C0?o
+seg003:0000000000C6721C
+seg003:0000000000C6721C                   .set back_chain, -0x80
+seg003:0000000000C6721C                   .set var_10, -0x10
+seg003:0000000000C6721C                   .set var_8, -8
+seg003:0000000000C6721C                   .set sender_lr,  0x10
+seg003:0000000000C6721C
+seg003:0000000000C6721C                   Arg_1 = r4                              # r4 = 3000AB80 = 0142BBF8
+seg003:0000000000C6721C                   Arg_2 = r3                              # r3 = D000FDB0 = Pointer
+seg003:0000000000C6721C                   Arg_3 = r31                             # r31 = D000FDB0 = Pointer
+seg003:0000000000C6721C                   Arg_4 = r5                              # r5 = 00000000
+seg003:0000000000C6721C F8 21 FF 81                       stdu      sp, back_chain(sp) # Store Double Word with Update
+seg003:0000000000C67220 7C 08 02 A6                       mflr      r0            # r0 = 0090FC54 = Minigame hud lowers
+seg003:0000000000C67224 F8 01 00 90                       std       r0, 0x80+sender_lr(sp) # Store Double Word
+seg003:0000000000C67228 FB E1 00 78                       std       Arg_3, 0x80+var_8(sp) # Store Double Word
+seg003:0000000000C6722C 60 9F 00 00                       mr        Arg_3, Arg_1  # Move Register(mr) moving r4 into r31
+seg003:0000000000C6722C                                                           # r4 = 3000AB80 = 0142BBF8
+seg003:0000000000C67230 FB C1 00 70                       std       r30, 0x80+var_10(sp) # r30 = 015684AC
+seg003:0000000000C67234 60 A4 00 00                       mr        Arg_1, Arg_4  # Move Register
+seg003:0000000000C67238 60 7E 00 00                       mr        r30, Arg_2    # Move Register
+seg003:0000000000C6723C 63 E3 00 00                       mr        Arg_2, Arg_3  # Move Register
+seg003:0000000000C67240 80 BF 00 00                       lwz       Arg_4, 0(Arg_3) # Load Word and Zero
+seg003:0000000000C67244 80 A5 00 7C                       lwz       Arg_4, 0x7C(Arg_4) # Load Word and Zero
+seg003:0000000000C67248 80 A5 00 00                       lwz       Arg_4, 0(Arg_4) # Load Word and Zero
+seg003:0000000000C6724C 7C A9 03 A6                       mtctr     Arg_4         # Move to count register
+seg003:0000000000C67250 4E 9E 04 21                       bcctrl    20, 4*cr7+eq, 0 # Branch Conditional to Count Register
+seg003:0000000000C67254 60 65 00 00                       mr        Arg_4, Arg_2  # Move Register
+seg003:0000000000C67258 63 C3 00 00                       mr        Arg_2, r30    # Move Register
+seg003:0000000000C6725C 63 E4 00 00                       mr        Arg_1, Arg_3  # Move Register
+seg003:0000000000C67260 4B FF FD FD                       bl        PLAYER_NAME_FUNCTION # Branch
+seg003:0000000000C67264 E8 01 00 90                       ld        r0, 0x80+sender_lr(sp) # Load Double Word
+seg003:0000000000C67268 7C 08 03 A6                       mtlr      r0            # Move to link register
+seg003:0000000000C6726C EB C1 00 70                       ld        r30, 0x80+var_10(sp) # Load Double Word
+seg003:0000000000C67270 EB E1 00 78                       ld        Arg_3, 0x80+var_8(sp) # Load Double Word
+seg003:0000000000C67274 38 21 00 80                       addi      sp, sp, 0x80  # Add Immediate
+seg003:0000000000C67278 4E 80 00 20                       blr                     # Branch unconditionally
+seg003:0000000000C67278                   # End of function sub_C6721C
+
+LOCAL PLAYER, PLAYER FUNCTION DEFINES 1.82: 00C6721C for 1.83: 0x00C6729C
+ r0=000000000090FC54        r8=0000000000000011       r16=0000000032438E24       r24=0000000000000000
+ r1=00000000D000FCB0        r9=000000000000000F       r17=000000000156A8B0       r25=00000000016D0000
+ r2=00000000014DDD20       r10=0000000030638290       r18=0000000001567C58       r26=0000000032438DE0
+ r3=00000000D000FDB0       r11=0000000000000031       r19=00000000016D0000       r27=0000000000000001
+ r4=000000003000AB80       r12=0000000030638290       r20=0000000031F37660       r28=0000000000000004
+ r5=0000000000000000       r13=0000000010007060       r21=00000000015684A8       r29=0000000000000018
+ r6=0000000000C6729C       r14=00000000D0010968       r22=0000000000000000       r30=00000000015684AC
+ r7=0000000000000000       r15=0000000000000001       r23=0000000000000000       r31=00000000D000FDB0
+
+ xer=0000000000000000       ctr=0000000000C6729C        lr=000000000090FC7C     fpscr=BF222100
+
+ cr=28000088               cr0=EQ cr1=LT cr2=   cr3=   cr4=   cr5=   cr6=LT cr7=LT
+
+ pc=0000000000C6729C
+
+As you see, I already commented the registers. You see r4 = 3000AB80 = 0142BBF8, when you go into the table in IDA you will see it goes to itself.
+What its doing is grabbing the registers. You see 015684AC is nothing in Debugger, its because the registers is writing to it. Remember 014DDD20
+means Table Of Contents(TOC). As you see in the function, its just Registers. This function is getting the Arguments for the next function which is the
+PLAYER_NAME_FUNCTION.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+00C6705C                   PLAYER_NAME_FUNCTION:                   # CODE XREF: PLAYER_NAME_ARGS+44?p
+seg003:0000000000C6705C
+seg003:0000000000C6705C                   .set back_chain, -0xA0
+seg003:0000000000C6705C                   .set var_28, -0x28
+seg003:0000000000C6705C                   .set var_20, -0x20
+seg003:0000000000C6705C                   .set var_18, -0x18
+seg003:0000000000C6705C                   .set var_10, -0x10
+seg003:0000000000C6705C                   .set var_8, -8
+seg003:0000000000C6705C                   .set sender_lr,  0x10
+seg003:0000000000C6705C
+seg003:0000000000C6705C                   Arg_1 = r5                              # r5 = 3000ABE4 = Player Name
+seg003:0000000000C6705C                   Arg_2 = r3                              # r3 = D000FDB0 = Pointer
+seg003:0000000000C6705C                   Arg_3 = r30                             # r30 = D000FDB0 = Pointer
+seg003:0000000000C6705C F8 21 FF 61                       stdu      sp, back_chain(sp) # Store Double Word with Update
+seg003:0000000000C67060 7C 08 02 A6                       mflr      r0            # r0 = 00C672D4
+seg003:0000000000C67064 F8 01 00 B0                       std       r0, 0xA0+sender_lr(sp) # Store Double Word
+seg003:0000000000C67068 FB C1 00 90                       std       Arg_3, 0xA0+var_10(sp) # Store Double Word
+seg003:0000000000C6706C FB E1 00 98                       std       r31, 0xA0+var_8(sp) # Store Double Word
+seg003:0000000000C67070 60 BE 00 00                       mr        Arg_3, Arg_1  # Gets player name
+				(FUNCTION IS TOO BIG TO PASTE HERE)
+
+PLAYER NAME FUNCTION 1.82: 00C6705C for 1.83: 0x00C670DC 
+ r0=0000000000C672D4        r8=0000000000000011       r16=0000000032438E24       r24=0000000000000000
+ r1=00000000D000FC30        r9=000000000000000F       r17=000000000156A8B0       r25=00000000016D0000
+ r2=00000000014DDD20       r10=0000000030638290       r18=0000000001567C58       r26=0000000032438DE0
+ r3=00000000D000FDB0       r11=0000000000000031       r19=00000000016D0000       r27=0000000000000001
+ r4=000000003000AB80       r12=0000000030638290       r20=0000000031F37660       r28=0000000000000004
+ r5=000000003000ABE4       r13=0000000010007060       r21=00000000015684A8       r29=0000000000000018
+ r6=0000000000000001       r14=00000000D0010968       r22=0000000000000000       r30=00000000D000FDB0
+ r7=0000000000000000       r15=0000000000000001       r23=0000000000000000       r31=000000003000AB80
+
+ xer=0000000000000000       ctr=0000000000C67044        lr=0000000000C672E4     fpscr=BF208100
+
+ cr=28000088               cr0=EQ cr1=LT cr2=   cr3=   cr4=   cr5=   cr6=LT cr7=LT
+
+ pc=0000000000C670DC
+When you go by r5 which was called in the beginning, you will see it moves the register 3000ABE4 to r30. When you type that address in, you will see it goes
+to your name. The args is then moved around everywhere in that function as for Player Name.
+
+Now a quick note, Floats are found in functions also which is flt_address. Some mods are bools like beq = 41 which is off, 40 is on. You will see alot of
+that used in the functions. I will teach more next time. If you have any questions Telegram Dublinmodz2, youtube DUBLIN MODZ, or discord SprxCreator#5716.
+Hope this helps and hope your able to find more cool mods for minecraft. If you liked this, please let me know.
