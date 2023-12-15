@@ -1,5 +1,6 @@
 #pragma once
 
+int DebugX = 0, DebugY = 0, DebugW = 0, DebugH = 0;
 void LoopOptions()
 {
 	if (Opened)
@@ -7,9 +8,10 @@ void LoopOptions()
 	else
 		*(int*)0x0155847C = 0x00000000;
 
-	Options::GOD_MODE();
-	Options::SUPER_SPEED();
-
+	GetPlayerInfo();
+	DrawLogo();
+	Loader();
+	logs::draw_logs();
 	DoRainbowColor();
 	Render();
 }
@@ -26,6 +28,8 @@ void RenderScreen_Hook(uint32_t r3, uint32_t r4) {
 	RenderScreen_Stub(r3, r4);
 	mc = (TheMinecraft*)(0x014CF2E4);
 	MaxOption = 0;
+	MaxArrayList = 0;
+	MaxSubOptions = 0;
 	DrawText(L"Working", -80, -80, color(MC_Color::White));
 	LoopOptions();
 }
