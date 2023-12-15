@@ -106,6 +106,7 @@ Level* g_Level2;
 #include "Games/Dialog.h"
 #include "Games/Vector.h"
 #include "Games/Struct.h"
+#include "Games/IDs.h"
 #include "Games/GamesFunctions.h"
 #include "Games/Functions.h"
 #include "Menu/Huds.h"
