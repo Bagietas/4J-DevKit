@@ -37,7 +37,7 @@ typedef void* PVOID;
 typedef long long __int64;
 typedef unsigned int uint;
 
-namespace NyTekCFW
+namespace PS3LibV2
 {
 	typedef unsigned char byte;
 	typedef char* String;

@@ -73,7 +73,7 @@
       <GenerateSnMapFile>FullMapFile</GenerateSnMapFile>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST "$(TargetDir)InjectSPRX.exe"  "$(TargetDir)InjectSPRX.exe"</Command>
+      <Command>IF EXIST "$(TargetDir)run.exe"  "$(TargetDir)run.exe"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
@@ -110,6 +110,7 @@
     <ClInclude Include="Games\Functions.h" />
     <ClInclude Include="Games\GamesFunctions.h" />
     <ClInclude Include="Games\Hooking.h" />
+    <ClInclude Include="Games\IDs.h" />
     <ClInclude Include="Games\Options.h" />
     <ClInclude Include="Games\Vector.h" />
     <ClInclude Include="Menu\Huds.h" />

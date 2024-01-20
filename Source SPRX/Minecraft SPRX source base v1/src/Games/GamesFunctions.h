@@ -32,6 +32,17 @@ namespace FUNCTIONS
 
 #pragma region "Functions Caller"
 
+void DrawRectangle(float x, float y, float w, float h, int* color)
+{
+	uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
+	FUNCTIONS::Tesselator_Begin(pTesselator);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, x, h + y, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, h + y, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, y, 0, color);
+	FUNCTIONS::Tesselator_EndVertex(pTesselator, x, y, 0, color);
+	FUNCTIONS::Tesselator_End(pTesselator);
+}
+
 void PlayUISound(uintptr_t* SoundEvent) {
 	uintptr_t ConsoleUIController = 0x1558228;
 	FUNCTIONS::ConsoleUIController_PlayUISFX(ConsoleUIController, *SoundEvent);
@@ -53,6 +64,13 @@ void DrawText(const wchar_t* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x, y, color, 0, 1);
 }
 
+void DrawArrayText(const wchar_t* text, uint32_t color) {
+
+	int x = 640, width = Font_width(text);
+	DrawRectangle(x - width - 9, 3 + (SpaceBetweenText * MaxArrayList), width + 4, 11, MC_Color::BlackTheme);
+	FUNCTIONS::DrawTextWithShadow(g_GuiComponent, mc->theMinecraft->fontRenderer, (uint32_t)&getString(text), x - width - 7, 5 + (SpaceBetweenText * MaxArrayList), color);
+}
+
 void DrawTextC(char* text, float x, float y, uint32_t color) {
 	FUNCTIONS::DrawText(mc->theMinecraft->fontRenderer, (uint32_t)&getString(c2wc(text)), x, y, color, 0, 1);
 }
@@ -65,18 +83,7 @@ void DrawRectangleAlpha(float x, float y, float width, float height, Color color
 	FUNCTIONS::DrawRectangleAlpha(g_GuiComponent, x, y, width, height, color.ToHex());
 }
 
-void DrawRectangle(float x, float y, float w, float h, int* color)
-{
-	uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
-	FUNCTIONS::Tesselator_End(pTesselator);
-	FUNCTIONS::Tesselator_EndVertex(pTesselator, x, h + y, 0, color);
-	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, h + y, 0, color);
-	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, y, 0, color);
-	FUNCTIONS::Tesselator_EndVertex(pTesselator, x, y, 0, color);
-	FUNCTIONS::Tesselator_End(pTesselator);
-}
-
-void DrawRectangleBorder(float x, float y, float w, float h, int* Color1, int* Color2, int borderSize)
+void DrawRectangleBorder(float x, float y, float w, float h, int* Color1, int* Color2, float borderSize)
 {
 	DrawRectangle(x - borderSize, y - borderSize, w + borderSize * 2, h + borderSize * 2, Color2);
 	DrawRectangle(x, y, w, h, Color1);
@@ -87,7 +94,7 @@ void DrawGradientRectangle(float x, float y, float w, float h, int* color1, int*
 	if (LeftOrUp)
 	{
 		uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
-		FUNCTIONS::Tesselator_End(pTesselator);
+		FUNCTIONS::Tesselator_Begin(pTesselator);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, x, h + y, 0, color2);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, h + y, 0, color1);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, y, 0, color1);
@@ -97,7 +104,7 @@ void DrawGradientRectangle(float x, float y, float w, float h, int* color1, int*
 	else
 	{
 		uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
-		FUNCTIONS::Tesselator_End(pTesselator);
+		FUNCTIONS::Tesselator_Begin(pTesselator);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, x, h + y, 0, color1);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, h + y, 0, color1);
 		FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, y, 0, color2);
@@ -115,7 +122,7 @@ void DrawGradientBorder(float x, float y, float w, float h, int* color1, int* co
 void DrawGradientRectangleV2(float x, float y, float w, float h, int* color1, int* color2, int* color3, int* color4)
 {
 	uint32_t pTesselator = FUNCTIONS::ReadTesselatorInstance(FUNCTIONS::Tesselator_GetInstance());
-	FUNCTIONS::Tesselator_End(pTesselator);
+	FUNCTIONS::Tesselator_Begin(pTesselator);
 	FUNCTIONS::Tesselator_EndVertex(pTesselator, x, h + y, 0, color1);
 	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, h + y, 0, color2);
 	FUNCTIONS::Tesselator_EndVertex(pTesselator, w + x, y, 0, color3);
@@ -144,14 +151,14 @@ void drawLine(const Vector2& start, const Vector2& end, int* color)
 	FUNCTIONS::Tesselator_End(pTesselator);
 }
 
-void DrawTextWithRectangle(const wchar_t* text, float x, float y, int* bgColor, int* textColor, bool underline)
+void DrawTextWithRectangle(const wchar_t* text, float x, float y, int* bgColor, int* textColor, bool underline, float radius = 2)
 {
 	if (underline)
 	{
 		int RAINBOW[3] = { RainbowRED1, RainbowGREEN1, RainbowBLUE1 };
 		int width = Font_width(text);
 		DrawRectangle(x, y, width + 4, 11, bgColor);
-		DrawRectangle(x, y + 11, width + 4, 2, RAINBOW);
+		DrawRectangle(x, y + 11, width + 4, radius, RAINBOW);
 		DrawText(text, x + 2, y + 2, color(textColor));
 	}
 	else
